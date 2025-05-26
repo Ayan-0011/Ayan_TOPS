@@ -1,0 +1,72 @@
+<html>
+<head>
+
+  <title>Feedback Form</title>
+ 
+</head>
+<body>
+<fieldset>
+<div align="center">
+  <div class="container">
+    <div class="header">
+      <h2>YourCompany</h2>
+      <h3>We value your feedback.</h3>
+      <p>Please complete the following form and help us improve our customer experience.</p>
+    </div>
+
+    <div class="section">
+      <table border="1">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Very Satisfied</th>
+            <th>Satisfied</th>
+            <th>Neutral</th>
+            <th>Unsatisfied</th>
+            <th>Very Unsatisfied</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>How satisfied are you with our product?</td>
+            <td><input type="radio" name="product" value="Very Satisfied"></td>
+            <td><input type="radio" name="product" value="Satisfied" checked></td>
+            <td><input type="radio" name="product" value="Neutral"></td>
+            <td><input type="radio" name="product" value="Unsatisfied"></td>
+            <td><input type="radio" name="product" value="Very Unsatisfied"></td>
+          </tr>
+          <tr>
+            <td>How satisfied are you with our service?</td>
+            <td><input type="radio" name="service" value="Very Satisfied" checked></td>
+            <td><input type="radio" name="service" value="Satisfied"></td>
+            <td><input type="radio" name="service" value="Neutral"></td>
+            <td><input type="radio" name="service" value="Unsatisfied"></td>
+            <td><input type="radio" name="service" value="Very Unsatisfied"></td>
+          </tr>
+          <tr>
+            <td>How satisfied are you with our team?</td>
+            <td><input type="radio" name="team" value="Very Satisfied"></td>
+            <td><input type="radio" name="team" value="Satisfied"></td>
+            <td><input type="radio" name="team" value="Neutral"></td>
+            <td><input type="radio" name="team" value="Unsatisfied" checked></td>
+            <td><input type="radio" name="team" value="Very Unsatisfied"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <label for="improve">Tell us how we can improve</label>
+      <textarea id="improve" name="improve"></textarea>
+    </div>
+
+    <div class="section contact-option">
+      <p>Would you like a representative to contact you?*</p>
+      <label><input type="radio" name="contact" value="Yes" checked> Yes</label>
+      <label><input type="radio" name="contact" value="No"> No</label>
+    </div>
+  </div>
+  </div>
+  </fieldset>
+</body>
+</html>
