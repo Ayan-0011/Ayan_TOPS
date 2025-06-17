@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        .col-1 {
+            width: 8.33%
+        }
+
+        .col-2 {
+            width: 16.66%
+        }
+
+        .col-3 {
+            width: 25%
+        }
+
+        .col-4 {
+            width: 33.33%
+        }
+
+        .col-5 {
+            width: 41.66%
+        }
+
+        .col-6 {
+            width: 50%
+        }
+
+        .col-7 {
+            width: 58.33%
+        }
+
+        .col-8 {
+            width: 66.66%
+        }
+
+        .col-9 {
+            width: 75%
+        }
+
+        .col-10 {
+            width: 83.33%
+        }
+
+        .col-11 {
+            width: 91.66%
+        }
+
+        .col-12 {
+            width: 100%
+        }
+
+        .header {
+            height: 60px;
+            display: flex;
+            position: sticky;
+            z-index: 3;
+            top: 50px;
+        }
+
+        .navbar {
+            width: 75%;
+            height: 100px;
+            background-color: rgb(129, 146, 175);
+            border-radius: 15px;
+            border: solid 3px;
+            position: sticky;
+            top: 0px;
+            margin-left: 260px;
+            margin-top: 50px;
+            display: flex;
+            z-index: 15;
+
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: rgb(111, 18, 112);
+            text-align: center;
+            padding: 30px;
+            text-decoration: none;
+
+        }
+
+        .navbar a:hover {
+            background-color: white;
+            color: green;
+        }
+
+
+        .mainbar {
+            height: 400px;
+            width: 80%;
+            background-color: rgb(144, 188, 225);
+            border-radius: 20px;
+            position: absolute;
+            top: 190px;
+            left: 210px;
+            z-index: 5;
+            padding: 60px;
+            font-size: large;
+
+        }
+
+        .box {
+            height: 100px;
+            width: 60%;
+            background-color: blueviolet;
+            border-radius: 10px;
+        }
+
+        .button {
+
+            background-color: #36296e;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            position: absolute;
+            top: 560px;
+            left: 700px;
+            border-radius: 10px;
+            z-index: 10;
+        }
+
+        .menu {
+
+            padding: 10px;
+            padding-right: 20px ;
+            border: 1px solid;
+            border-radius: 5px;
+
+        }
+
+        .wp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 20;
+        }
+
+        .plan {
+            position: relative;
+            top: 400px;
+        }
+
+        .fisrt {
+            width: 35%;
+            height: auto;
+            background-color: aquamarine;
+            position: relative;
+            top: 400px;
+            display: flex;
+            padding: 10px;
+            ;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 20px;
+
+
+        }
+
+        .card-container {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 450px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px 20px;
+            width: 300px;
+            display: flex;
+            align-items: flex-start;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            width: 100px;
+            margin-right: 15px;
+            margin-top: 10px;
+        }
+
+        .text p {
+            margin: 0 0 5px 0;
+            color: #333;
+        }
+
+        .text a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .text a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            width: 100%;
+            height: 280px;
+            padding-top: 90px;
+            padding-left: 90px;
+            display: flex;
+            gap: 30px;
+            margin-top: 50px;
+            background-color: black;
+            color: white;
+
+
+
+        }
+
+        .footer h1 {
+            font-size: 50px;
+            color: white;
+
+        }
+
+        .footer span {
+            padding-left: 700px;
+            padding-top: 50px;
+
+        }
+
+        .mm {
+            position: absolute;
+            top: 0px;
+            z-index: 1;
+        }
+        .con{
+            position: relative;
+            top:400px;
+
+        }
+        .con img{
+             float: left;
+            clip-path: circle(40%);
+        }
+
+
+        
+    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="header">
+        <img src="mmt.png">
+    </div>
+
+    <div class="navbar">
+        <a href="#"> <i class="fa-solid fa-plane-departure"></i><br>Flight</a>
+        <a href="#"> <i class="fa-solid fa-hotel"></i><br>hotel</a>
+        <a href="#"> <i class="fa-solid fa-house"></i><br>Homestays & Villas</a>
+        <a href="#"> <i class="fa-solid fa-gift"></i><br>holiday package</a>
+        <a href="#"> <i class="fa-solid fa-train"></i><br>train</a>
+        <a href="#"> <i class="fa-solid fa-bus"></i><br>bus</a>
+        <a href="#"> <i class="fa-solid fa-car"></i><br>cab</a>
+        <a href="#"> <i class="fa-solid fa-passport"></i><br>visa</a>
+        <a href="#"> <i class="fa-solid fa-credit-card"></i><br>forex card</a>
+        <a href="#"> <i class="fa-solid fa-globe"></i> <br>travel insuraance</a>
+    </div>
+
+    <div class="mainbar">
+        <input type="radio" name="male"> one way
+        <input type="radio" name="male"> Round trip
+        <input type="radio" name="male">Multi trip
+
+        <p align="right">Book International and Domestic Flights</p>
+
+        <div class="row">
+            <div class="col-3 menu">
+                <p> From</p>
+                    <h1> Bangaluru</h1>
+                    <p>BLR, Bengaluru International Airport India</p>
+            </div>
+
+            <div class="col-3 menu">
+                <p> To</p>
+                    <h1>Delhi</h1>
+                    <p>DEL, Delhi<br> Airport India</p>
+
+            </div>
+
+            <div class="col-2 menu">
+                <p> departure</p>
+                <h2> 11 june 25</h2>
+                <p>wed</p>
+
+            </div>
+
+            <div class="col-2 menu">
+
+                <p> return</p>
+                <h2> 18 june 25</h2>
+                <p>wed</p>
+            </div>
+
+            <div class="col-2 menu">
+                <p> Travellers & Class</p>
+                <h2> 1 Traveller</h2>
+                <p> Economic/Premuime Economy</p>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <button class="button">Serch</button>
+
+<!--
+   
+        <div class="con">
+            <img src="p2.jpg" alt="Pineapple" width="300" height="300">
+            <h1>hhhhh</h1>
+        </div>
+         -->
+    
+    <br><br>
+
+    <div class="wp">
+
+        <img src="wp.jpg" width="80px">
+    </div>
+
+    <div class="plan">
+        <img src="plan.png" width="100%">
+    </div>
+
+
+    <div class="card-container">
+        <div class="card">
+            <img src="mmt.png" alt="Flight Icon">
+            <div class="text">
+                <p>Planning to book an international flight?</p>
+                <a href="#">Check Travel Guidelines</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="mmt.png" alt="Language Icon">
+            <div class="text">
+                <p>We are now available in hindi</p>
+                <a href="#">Change Language</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="mmt.png" alt="Web Check-in Icon">
+            <div class="text">
+                <p>Complete your web check-in on MakeMyTrip in easy steps.</p>
+                <a href="#">Know More</a>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="footer">
+
+        <h1><i class="fa-brands fa-instagram"></i></h1>
+        <h1><i class="fa-brands fa-square-facebook"></i></h1>
+        <h1><i class="fa-brands fa-linkedin"></i></h1>
+        <h1><i class="fa-brands fa-square-x-twitter"></i></h1>
+
+        <span> © 2025 MAKEMYTRIP PVT. LTD. </span>
+    </div>
+
+    <div class="mm">
+        <img src="mountain.jpg" width="100%" height="630px">
+    </div>
+
+</body>
+
+</html>
