@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+
+
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        .col-1 {
+            width: 8.33%
+        }
+
+        .col-2 {
+            width: 16.66%
+        }
+
+        .col-3 {
+            width: 25%
+        }
+
+        .col-4 {
+            width: 33.33%
+        }
+
+        .col-5 {
+            width: 41.66%
+        }
+
+        .col-6 {
+            width: 50%
+        }
+
+        .col-7 {
+            width: 58.33%
+        }
+
+        .col-8 {
+            width: 66.66%
+        }
+
+        .col-9 {
+            width: 75%
+        }
+
+        .col-10 {
+            width: 83.33%
+        }
+
+        .col-11 {
+            width: 91.66%
+        }
+
+        .col-12 {
+            width: 100%
+        }
+
+        .header {
+            display: flex;
+            background-color: #cfa6ad;
+            height: 60px;
+            padding: 15px;
+            color: rgb(128, 111, 91);
+
+        }
+
+        .header p {
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+
+        .nav {
+            height: 80px;
+            background-color: aliceblue;
+            display: flex;
+            padding-left: 20px;
+            padding-top: 15px;
+
+
+        }
+
+        .nav ul {
+            display: flex;
+            list-style-type: none;
+            margin-left: 260px;
+
+        }
+
+        .nav ul li {
+            padding: 15px;
+            font-size: 20px;
+            margin-right: 20px;
+   
+           
+
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .nav a:hover {
+            color: #E87A8B;
+        }
+
+        .nav button {
+            height: 50px;
+            width: 70px;
+            margin-left: 450px;
+            color: white;
+            background-color: #E87A8B;
+            border-radius: 10px;
+        }
+
+        .main {
+            text-align: center;
+            padding-top: 90px;
+            height: 550px;
+            background-image: linear-gradient(rgb(0, 0, 0, 0.5)), url(carousel-1.jpg);
+            background-repeat: no-repeat;
+            background-position: top center;
+
+            background-size: cover;
+            color: aliceblue;
+
+        }
+
+        .main p {
+            font-size: 20px;
+        }
+
+        .main h2 {
+            font-size: 50px;
+        }
+
+        i {
+            margin-left: 900px;
+            margin-right: 20px;
+        }
+
+        .wp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 20;
+        }
+    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-12 header">
+            <p> &#9742; +91 9106856105</p><span>|</span>
+            <p> &#128386;support@rajvicosmeticclinic.com</p>
+            <i style='font-size:30px' class='fab'>&#xf16d; </i>
+            <a class="fa-brands fa-square-facebook" style="font-size:30px; font-weight: bolder;"> </a>
+
+
+        </div>
+
+        <div class="col-12 nav">
+
+            <h1>Rajvi <span style="color: #E87A8B;"> Cosmetic Clinic </span></h1>
+
+            <ul>
+                <li><a href="#">Home </a></li>
+                <li><a href="#">About </a></li>
+                <li><a href="#">Blog </a></li>
+                <li><a href="#">Contact </a></li>
+
+
+            </ul>
+
+            <button>Login</button>
+        </div>
+
+        <div class="col-12 main">
+
+
+            <p> Hair & Skin Treatment<br></p><br>
+            <h2> Hydra Facial Treatment<br></h2><br>
+            <p>Reveal Your Beauty at Rajvi Cosmetic Clinic Where Science meets artitry</p>
+
+        </div>
+        <div class="wp">
+
+            <img src="wp.jpg" width="60px">
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>
