@@ -1,0 +1,244 @@
+// async function getStoreDetails() {
+//     const url = "https://1b6f-2409-4050-e8b-f676-118-1d1c-33e6-e9c4.in.ngrok.io" + "/widget/getShopDetails"
+//     const response = await fetch(url, {
+//         method: 'GET',
+//         headers: {
+//             "ngrok-skip-browser-warning": "skip",
+//             shop: window.Shopify.shop
+//         },
+//     });
+//     const storeDetails = await response.json();
+// }
+
+// async function getUserApiKey() {
+//     return "user--api";
+// }
+
+// async function getBrandApiKey() {
+//     return "brand--api";
+// }
+
+let userApiKey;
+let brandApiKey;
+let cartAmountValue;
+let cartItemsCount;
+let cartLoadedState = false;
+
+async function getUserStoreDetails() {
+  const buttons = document.querySelectorAll("button");
+  const cartIconBubble = document.getElementById("cart-icon-bubble");
+  const drawerCloseButton = document.querySelector(".drawer__close");
+  const drawerOverlay = document.querySelector(".cart-drawer__overlay");
+  cartLoadedState = false;
+  // console.log("cart drawer open? ", cartLoadedState);
+  // if (cartIconBubble) {
+  //   cartIconBubble.addEventListener("click", function () {
+  //     cartLoadedState = true;
+  //   });
+  // }
+  // if (drawerCloseButton) {
+  //   drawerCloseButton.addEventListener("click", function () {
+  //     cartLoadedState = false;
+  //     console.log("close button listener::Cart Drawer Open? ", cartLoadedState);
+  //   });
+  // }
+  // if (drawerOverlay) {
+  //   drawerOverlay.addEventListener("click", function () {
+  //     cartLoadedState = false;
+  //     console.log(
+  //       "overlay event listenser::Cart Drawer Open? ",
+  //       cartLoadedState
+  //     );
+  //   });
+  // }
+  // buttons.forEach((button) => {
+  //   const buttonText = button.textContent.toLowerCase().replace(/\s/g, "");
+  //   if (
+  //     buttonText.includes("buynow") ||
+  //     buttonText.includes("checkout") ||
+  //     buttonText.includes("buyitnow") ||
+  //     buttonText.includes("addtocart") ||
+  //     buttonText === "addtocart"
+  //   ) {
+  //     button.addEventListener("click", () => {
+  //       // getBestDiscountCodeAutomatically(userApiKey, brandApiKey);
+  //       // console.log("clicked!!!!!");
+  //       cartLoadedState = true;
+  //       console.log(
+  //         "button event listener::Cart Drawer Open? ",
+  //         cartLoadedState
+  //       );
+  //     });
+  //   }
+  // });
+  const userId = window.ytapp.customerId;
+  const userEmail = window.ytapp.customerEmail;
+  const storeId = window.ytapp.storeId;
+  const cartAmount = window.ytapp.cartAmount;
+  const cartQty = window.ytapp.cartQty;
+  // console.log(userId)
+  // const storeDoamin = window.ytapp.storeDomain;
+  userApiKey = userEmail;
+  brandApiKey = storeId;
+  cartAmountValue = cartAmount;
+  cartItemsCount = cartQty;
+  // let userApiKey;
+  // if (userId && userEmail) {
+  //     userApiKey = await getUserApiKey(userId, userEmail);
+  // } else {
+  //     userApiKey = "";
+  // }
+  // let brandApiKey;
+  // if (storeId && storeDoamin) {
+  //     brandApiKey = await getBrandApiKey(storeId, storeDoamin);
+  // } else {
+  //     brandApiKey = "";
+  // }
+  addScriptTag(
+    // cartLoadedState,
+    userApiKey,
+    brandApiKey,
+    cartAmountValue,
+    cartQty
+  );
+}
+
+function setCookie(name, value, days = 365) {
+  let expires = "";
+  let date = new Date();
+  date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+  expires = "; expires=" + date.toUTCString();
+  document.cookie =
+    name + "=" + (value || "") + expires + "; path=/" + ";SameSite=lax;";
+}
+
+function setDiscountCookie(value) {
+  setCookie("discount_code", value, 7);
+}
+
+// DONOT DELETE, this served purpose earlier, but this feature is not here at least for now
+// async function getBestDiscountCodeAutomatically(userEmail, storeId) {
+//   const url = "https://api.yourtoken.io/api/v1/discount/user/maxDiscount";
+
+//   const response = await fetch(url, {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify({
+//       email: userEmail,
+//       brandShopifyStoreId: storeId,
+//     }),
+//   });
+
+//   if (!response.ok) {
+//     throw new Error("Network response was not ok");
+//   }
+//   const data = await response.json();
+//   setDiscountCookie(data.discountCode);
+//   console.log(data.discountCode);
+// }
+
+function listenAddToCartBtn() {
+  const addToCartForm = document.querySelectorAll("form[action='/cart/add']");
+  addToCartForm.forEach((_f) => {
+    _f.addEventListener("submit", () => {
+      addScriptTag(
+        userApiKey,
+        brandApiKey,
+        cartAmountValue,
+        cartItemsCount,
+        "true"
+      );
+      // setDiscountCookie("GQ0HCRE");
+      // getBestDiscountCodeAutomatically(userApiKey, brandApiKey);
+    });
+  });
+}
+
+const scriptContainerId = "yt0001-script-container-box";
+function addScriptTag(
+  // cartLoadedState,
+  userApiKey,
+  brandApiKey,
+  cartAmount,
+  cartQty,
+  cartpopup = false
+) {
+  const _oldScript = document.getElementById(scriptContainerId);
+  if (_oldScript) {
+    _oldScript.remove();
+  }
+
+  const scriptYt = document.createElement("script");
+  scriptYt.id = scriptContainerId;
+  scriptYt.async = "";
+  scriptYt.setAttribute(
+    "data-web-sdk-base-url",
+    "https://websdk-yourtoken.pages.dev"
+  );
+  scriptYt.setAttribute("data-user-api", userApiKey);
+  scriptYt.setAttribute("data-brand-api", brandApiKey);
+  scriptYt.setAttribute("data-cart-amount", cartAmount);
+  scriptYt.setAttribute("data-cart-qty", cartQty);
+  // scriptYt.setAttribute("data-cart-drawer-open", cartLoadedState);
+  if (cartpopup) {
+    scriptYt.setAttribute("data-add-to-cart", "true");
+  }
+  scriptYt.type = "module";
+  scriptYt.src = "https://yourtoken-widget.pages.dev/assets/index.js";
+  document.querySelector("#yt-widget-div").append(scriptYt);
+}
+async function fetchDataToInject() {
+  console.log("fetching data to inject");
+  let storeId = window.ytapp.storeId;
+  let apiEndpoint = `https://api.yourtoken.io/api/v1/brand/shopify/${storeId}`;
+
+  try {
+    const response = await fetch(apiEndpoint);
+    const data = await response.json();
+    window.ytapp.tokenCreditPercentage = data?.tokenCreditPercentage;
+    window.ytapp.enableLoyaltyTiers = data?.enableLoyaltyTiers;
+    window.ytapp.widgetThemeColor = data?.widgetThemeColor;
+    window.ytapp.pointsValueWithInr = data?.pointsValueWithInr;
+    window.ytapp.brandLogoId = data?.brandLogo?.id;
+    window.ytapp.brandLogoPath = data?.brandLogo?.path;
+    window.ytapp.r2LogoPath = data?.r2LogoPath;
+    window.ytapp.loyaltyPointsCapOnCartAmount =
+      data?.loyaltyPointsCapOnCartAmount;
+    window.ytapp.shopifyStoreTheme = data?.shopifyStoreTheme;
+    window.ytapp.enableRedeemInCartOffers = data?.enableRedeemInCartOffers;
+    window.ytapp.brandTokenName = data?.brandTokenName;
+    window.ytapp.widgetRegistrationType = data?.widgetRegistrationType;
+    window.ytapp.maxTokensRedeemableAsDiscount =
+      data?.maxTokensRedeemableAsDiscount;
+    window.ytapp.loyaltyRibbonTextColor = data?.loyaltyRibbonTextColor;
+    window.ytapp.signinCTAVisibility = data?.signinCTAVisibility;
+    window.ytapp.brandId = data?.brandId;
+    window.ytapp.brandName = data?.brandName;
+    localStorage.setItem(
+      "ytBrandData",
+      JSON.stringify({ ...data, timestamp: new Date().getTime() })
+    );
+    // console.log(window.ytapp);
+  } catch (error) {
+    console.error("Error fetching percentage data: ", error);
+    return 0;
+  }
+}
+function main() {
+  getUserStoreDetails();
+  listenAddToCartBtn();
+  fetchDataToInject();
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const link = document.createElement("link");
+    link.href =
+      "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap";
+    // "https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap";
+    link.rel = "stylesheet";
+    document.head.appendChild(link);
+  });
+}
+
+main();

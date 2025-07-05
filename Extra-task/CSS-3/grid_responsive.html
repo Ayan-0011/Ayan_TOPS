@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        
+     /*   default work on Mobile less 600 Resolution  */
+        [class*="col-"]{
+	        width:100%;
+        }
+
+
+
+        /*   class work on tablet >600 && <768 */
+    @media only screen and (min-width: 600px) {
+            .col-s-1 {width: 8.33%;}
+            .col-s-2 {width: 16.66%;}
+            .col-s-3 {width: 25%;}
+            .col-s-4 {width: 33.33%;}
+            .col-s-5 {width: 41.66%;}
+            .col-s-6 {width: 50%;}
+            .col-s-7 {width: 58.33%;}
+            .col-s-8 {width: 66.66%;}
+            .col-s-9 {width: 75%;}
+            .col-s-10 {width: 83.33%;}
+            .col-s-11 {width: 91.66%;}
+            .col-s-12 {width: 100%;}
+        }
+
+
+
+
+
+      /*   class work on Desktop >768 */
+     @media only screen and (min-width: 768px) {
+        .col-1{ width:8.33% }
+        .col-2{ width:16.66% }
+        .col-3{ width:25% }
+        .col-4{ width:33.33% }
+        .col-5{ width:41.66% }
+        .col-6{ width:50% }
+        .col-7{ width:58.33% }
+        .col-8{ width:66.66% }
+        .col-9{ width:75% }
+        .col-10{ width:83.33% }
+        .col-11{ width:91.66% }
+        .col-12{ width:100% }
+
+ }
+
+        .header {
+            width: 100%;
+            height: 100px;
+            background-color: blueviolet;
+        }
+
+        .sidebar {
+            background-color: rgb(8, 97, 52);
+           
+
+        }
+
+        .main {
+            background-color: chartreuse;
+        }
+
+        .footer {
+            background-color: #c50e0e;
+            width: 100%;
+        }
+        .box{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="row">
+        <div class="col-12 col-s-12 header">
+            <h1> I m Header </h1>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-2 col-s-4 sidebar">
+            <h1> i m sidebar</h1>
+        </div>
+
+        <div class="col-8 col-s-8 main">
+
+            <h1> i m main </h1>
+            <h1> i m main </h1>
+            <h1> i m main </h1>
+            <h1> i m main </h1>
+            <h1> i m main </h1>
+            <h1> i m main </h1>
+            <h1> i m main </h1>
+            <h1> i m main </h1>
+           
+        </div>
+
+        <div class="col-2 col-s-12 sidebar">
+
+            <h1> i m sidebar</h1>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-12 col-s-12 footer">
+            <h1> i am footer </h1>
+        </div>
+
+    </div>
+
+    <div class="row">
+    
+            <div class="col-3 col-s-6 box">
+                <h1> im box </h1>
+        </div>
+
+        <div class="col-3 col-s-6 box">
+                 <h1> im box2 </h1>
+        </div>
+
+         <div class="col-3 col-s-6 box">
+             <h1> im box3 </h1>
+        </div>
+
+        <div class="col-3 col-s-6 box">
+             <h1> im box4 </h1>
+         </div>
+    
+    </div>
+
+
+
+</body>
+
+</html>
