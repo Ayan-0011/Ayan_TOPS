@@ -4,7 +4,7 @@
         margin: 0;
 
     }
-
+   
     .row {
         display: flex;
         flex-wrap: wrap;
@@ -516,7 +516,7 @@
         top: 0;
         align-self: flex-start; /* Flex layout me sticky ko kaam karne me help karta hai */
         background: #fff; /* Zarurat ho to background color fix kar do */
-        z-index: 10;
+        z-index:-10;
 }
 
 .items p{
@@ -838,6 +838,68 @@
     visibility: visible;
 }
 
+/* Accessories div hide/show css  */
+
+.acc_hover{
+     position: absolute;
+    top:60px;
+    left: 40px;
+    background-color: white;
+    width: 94%;
+    display: flex;
+    visibility: hidden;
+
+}
+.acc{
+    padding: 0px 20px;
+   
+}
+.acc span{
+    display: flex;
+    padding: 8px 10px;
+    font-family: Montserrat;
+    font-weight: 300;
+  
+}
+
+.acc p{
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: Montserrat;
+    font-weight: 700;
+}
+.accimg{
+        margin-left: 150px;
+        width: 550px;
+        padding-top: 30px;
+}
+
+.Accessories:hover .acc_hover{
+    visibility: visible;
+}
+
+/*offer div hide/show ki css  */
+    .clear_hover{
+
+        position: absolute;
+        width: 200px;
+        height: 30px;
+        top: 60px;
+        background-color:rgba(202, 202, 202, 0.836);
+        color: black;
+        visibility: hidden;
+       
+    }   
+    .clear p{
+        font-family:Montserrat, sans-serif;
+        font-weight: 300;
+        font-size: 20px;
+        padding: 3px 8px;
+    } 
+.clearness:hover .clear_hover{
+    visibility: visible;
+}
+
 /* nav me mucle sport div hide/remove ke css */
    
   .mucle_hover{
@@ -847,20 +909,51 @@
     background-color: white;
     width: 94%;
     display: flex;
-    visibility: hidden;
+   visibility: hidden;
   }
 
   .mucle_sport{
     width: 130px;
-    border: 2px solid;
+    margin-right: 10px;
+    margin-top: 9px;
   }
 
-  .mucle_sport span{
-        padding: 5px 10px;
+  .mucle_sport li{
+        padding-top: -20px;
+        padding-right: 10px;
   }
 
   .mucleimg{
-    width: 650px;
+    width: 700px;
+    margin-left: 100px;
+    margin-top: 20px;
+  }
+.mucle:hover .mucle_hover{
+    visibility: visible;
+}
+
+  /*  appelepage ke css */
+
+  .cr{
+    width: 28px;
+    height: 27px;
+    background-color: #000000;
+    margin-left: 10px;
+}
+.cr:hover{
+    transform: scale(1.2);
+    
+  }
+  .color{
+    display: flex;
+    
   }
 
-  /*   */
+  .Black{background-color: black;}
+  .blue{background-color: blue; }
+  .green{background-color: green; }
+  .gray{background-color: rgba(54, 51, 51, 0.4) }
+  .orng{background-color: orange;}
+  .red{background-color: red;}
+  .white{background-color:rgba(219, 209, 209, 0.4)}
+
