@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 10px 10px 10px 10px;
+            padding: auto;
+
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+
+        .row1 {
+            display: flex;
+
+            padding: auto;
+        }
+
+        .col-1 {
+            width: 8.33%
+        }
+
+        .col-2 {
+            width: 16.66%
+        }
+
+        .col-3 {
+            width: 25%
+        }
+
+        .col-4 {
+            width: 33.33%
+        }
+
+        .col-5 {
+            width: 41.66%
+        }
+
+        .col-6 {
+            width: 50%
+        }
+
+        .col-7 {
+            width: 58.33%
+        }
+
+        .col-8 {
+            width: 66.66%
+        }
+
+        .col-9 {
+            width: 75%
+        }
+
+        .col-10 {
+            width: 83.33%
+        }
+
+        .col-11 {
+            width: 91.66%
+        }
+
+        .col-12 {
+            width: 100%
+        }
+
+        body {
+            background-color: rgb(116, 248, 248);
+            font-family: Arial, sans-serif;
+            padding: 20px;
+
+        }
+
+        .head {
+            background-color: white;
+            height: 100px;
+            padding: 5px;
+            width: 99%;
+        }
+
+        .form-container {
+            width: 600px;
+            height: 70%;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            float: left;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .main{
+            height: 700px;
+        }
+
+        .form-row input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-row textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: vertical;
+        }
+
+        .form-container button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #c9302c;
+        }
+
+        .map-container {
+            border: 1px solid #ccc;
+            padding: 10px;
+            background: #fff;
+            display: inline-block;
+           
+        }
+      
+
+        iframe {
+            width: 600px;
+            height: 300px;
+            border: none;
+            float: left;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin: 5px;
+        }
+
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+            border-radius: 3px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>CONTACT US</h1>
+    <hr>
+    <div class="row">
+        <div class="col-12 head">
+            <p style="font-size: 15px;">ADDRESS :</p>
+            <P>Saint Marco Street, 6th <span class="contact-details">📞 +91 1234567890<br></P>
+            <p>floor, tokyo, japan, 123456.<span> 📧 example@gmail.com</span><br><br></p>
+
+        </div>
+        <div class="row">
+
+            <div class="col-6 main">
+                <div class="form-container">
+                    <form>
+                        <div class="form-row">
+                            <input type="text" placeholder="Name :" required />
+                            <input type="text" placeholder="Company :" />
+                        </div>
+                        <div class="form-row">
+                            <input type="email" placeholder="Email :" required />
+                            <input type="tel" placeholder="Mobile :" required />
+                        </div>
+                        <div class="form-row">
+                            <textarea placeholder="Message :" required></textarea>
+                        </div>
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+                
+                
+            </div>
+        </div>
+        
+        
+        <div class="col-6 map-container" style="height: 500px; border-radius: 5px;">
+            <div class="map-container">
+                <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8223.381954115914!2d72.60945866327862!3d22.996593432992558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e85c2fc005927%3A0x918e69150ca1c935!2sTOPS%20Technologies!5e0!3m2!1sen!2sin!4v1750140595391!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+            <!-- Social Icons -->
+            <div class="social-icons">
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" alt="Facebook" /></a>
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/145/145812.png" alt="Twitter" /></a>
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn" /></a>
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" /></a>
+            </div>
+        </div>
+    </div>
+</div>
+    
+</body>
+
+</html>
