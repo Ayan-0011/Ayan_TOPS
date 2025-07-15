@@ -1,0 +1,37 @@
+<style>
+/* Basic Grid */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.col-4 {
+  width: 32%;
+  background-color: #ccc;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* ✅ Responsive for tablets */
+@media (max-width: 768px) {
+  .col-4 {
+    width: 48%;
+  }
+}
+
+/* ✅ Responsive for phones */
+@media (max-width: 480px) {
+  .col-4 {
+    width: 100%;
+  }
+}
+
+</style>
+
+<div class="row">
+  <div class="col-4">Product 1</div>
+  <div class="col-4">Product 2</div>
+  <div class="col-4">Product 3</div>
+</div>
