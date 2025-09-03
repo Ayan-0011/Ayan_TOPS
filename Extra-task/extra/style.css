@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.row{
+    display: flex;
+    flex-wrap:nowrap;
+    justify-content: center;
+    
+}
+body{
+    width: 100vw;
+    
+}
+
+        .col-1{ width:8.33% }
+        .col-2{ width:16.66% }
+        .col-3{ width:25% }
+        .col-4{ width:33.33% }
+        .col-5{ width:41.66% }
+        .col-6{ width:50% }
+        .col-7{ width:58.33% }
+        .col-8{ width:66.66% }
+        .col-9{ width:75% }
+        .col-10{ width:83.33% }
+        .col-11{ width:91.66% }
+        .col-12{ width:100% }
+
+
+header{
+    width: 100vw;
+    height: 100vh;
+    /*background: radial-gradient(circle, rgb(118, 121, 151) 0%, rgba(148, 187, 233, 1) 100%);*/
+}
+
+
+
+nav{
+    width: 80vw;
+    margin: auto;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+nav img{
+    width: 15vw;
+}
+nav i{
+    font-size: 22px;
+
+}
+.icon{
+    display: none;
+}
+
+.link ul li{
+    display:flex;
+    padding: 15px;
+    margin: 0 5px;
+    list-style:none;
+    position:relative;
+    float: left;
+
+}
+.link a{
+    text-decoration: none;
+    font-size: 20px;
+    font-family:sans-serif;
+    color: black;
+}
+.link ul li::after{
+    content: '';
+    position: absolute;
+    top:40px;
+    left:10px;
+    width:0;
+    height: 3px;
+    background-color: rgb(21, 96, 188);
+    transition: 1s;
+}
+
+.link ul li:hover::after{
+    width: 80%;
+    
+}
+.link a:hover{
+    color: rgba(45, 45, 174, 0.773);
+}
+.link ul span{
+    display: none;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.mo{
+    height: 300px;
+    width: 30%;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(201, 23, 23);
+}
+.mi{
+    height: 350px;
+    background-color: rgb(201, 23, 23);
+    margin-left: 15px;
+    margin-bottom: 10px;
+    width: 30%;
+    
+}
+
+
+@media(max-width:600px){
+    nav img{
+        width: 25vw;
+    }
+    .icon{
+        display: block;
+    }
+    .link ul li:hover::after{
+     width: 80%;
+    }  
+    .link i{
+        display: block;
+    }
+    .link ul span{
+        display: block;
+    }
+
+    .link{
+        position: absolute;
+        top:0px;
+        right: 0px;
+        width: 180px;
+        height: 100vh;
+        background-color:rgba(220, 20, 60, 0.83);
+        z-index: 2; 
+        display: none;    
+    }
+    main{
+        flex-direction: column;
+    }
+    .mo{
+        width: 50vw;
+        height:80vh;
+    }
+    .col-4{
+        width: 70%;
+        height: 300px;
+    }
+    .row{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+  
+   
+  
+}

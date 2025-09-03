@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+    
+✅ Practice Task for You:
+Try changing background color or font size in both methods.
+Phir batao kis method me easy laga ya clean laga.
+-->
+
+
+<!--this is inline methods-->
+<p id="test">hy im html</p>
+<button id="btn" onclick="chnage()">click me </button>
+
+<script>
+    function chnage(){
+        document.getElementById('test').innerHTML = "<h1> i m javascript </h1>"
+        document.getElementById('test').setAttribute("style","color:red");
+    }
+</script>
+
+
+<!--this is eventlistner method -->
+<p id="ex">i m addEventListener</p>
+<button id="but">click me </button>
+
+<script>
+    var test1 = document.getElementById('ex');
+    var btn1 = document.getElementById('but');
+
+    btn1.addEventListener("click",function(){
+        test1.innerHTML="<h1> im javasscript </h1> ";
+        test1.style.color="green";
+    });
+</script>
+
+
+
+</body>
+</html>

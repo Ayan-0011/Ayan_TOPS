@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            margin-top: 35px;
+        }
+        .contaner{
+            border: 2px solid;
+            height: 80vh;
+            width: 40vw;
+            padding:12px;
+            border-radius: 15px;
+        }
+        .contaner h1{
+            text-align: center;
+        }
+        #msg1{
+            text-align: center;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="contaner">
+
+        <form method="post" onclick="return valid(this)">
+
+            
+            
+            <h1> validation Form</h1>
+            <h3 id="msg1"></h3>
+            
+            <label>User Name: </label><input type="text" id="uname" placeholder="Enter User Name"><br><br>
+            
+            
+            <label>Password: </label><input type="text" id="pass" placeholder="Enter your password"><br> <br>
+
+        <label>Email: </label><input type="email" id="email" placeholder="Enter your email"><br><br>
+
+        <input type="radio" name="gen" value="male">Male
+        <input type="radio" name="gen" value="female">Femle<br><br>
+       
+        <label>hobbys</label><br><br>
+
+        gaming<input type="checkbox" name="check" value="gaming">
+        playing<input type="checkbox" name="check" value="playing">
+        runnig<input type="checkbox" name="check" value="running">
+        redaing<ipnut type="checkbox" name="check" value="reading">
+
+       
+     
+         
+         <br><br>
+         
+         
+         <label>Country</label>
+         <select id="Country">
+            <option>Select Country</option>
+            <option>India</option>
+            <option>USA</option>
+            <option>Dubai</option>
+            <option>Singapur</option>
+         </select>
+         <br><br>
+
+         <label>Address:</label>
+         <textarea name="add" id="add" row="5" col="5"></textarea>
+         <br><br>
+
+         <label> upload Profile pic</label>
+         <input type="file"  id="photo" onchange="return check(this)">
+         <br><br>
+         
+         <label>Upload your Resume</label>
+         <input type="file"  id="resume" onchange="return check1(this)">
+         <br><br>
+         
+         <input type="submit" id="submit">
+
+         
+    </form>
+</div>
+<script src="validation.js"></script>
+</body>
+</html>

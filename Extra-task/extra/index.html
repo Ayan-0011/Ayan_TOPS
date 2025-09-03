@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+<body>
+<header>
+    
+    <nav>
+        <img src="../CSS/mmt.png" width="20%">
+        
+        <div class="link" id="navlink">
+            <ul>
+                <span onclick="hidemenu()"><i class="fa-solid fa-xmark"></i></span>
+                <li><a href="#">home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">contact</a></li>
+                <li><a href="#">blog</a></li>
+            </ul>
+        </div>
+
+        <div class="icon">
+            <i class="fa-solid fa-bars" onclick="showmenu()"></i>
+        </div> 
+    </nav>
+    <main>
+        <div class="mo"></div>
+        <div class="mo"></div>
+        <div class="mo"></div>
+    </main>
+
+    <div class="row">
+        <div class="col-4 mi"></div>
+        <div class="col-4 mi"></div>
+        <div class="col-4 mi"></div>
+    </div>
+</header>
+    
+    
+    <script>
+        var navlink = document.getElementById("navlink");
+        function showmenu(){
+            navlink.style.display="block";
+        }
+        function hidemenu(){
+            navlink.style.display="none";
+        }
+
+    </script>
+</body>
+</html>
+<!--
+<li class="icon"><i class="fa fa-xmark"></i></li>
+  --->

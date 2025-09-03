@@ -11,6 +11,11 @@
         box-sizing: border-box;
     }
 
+    [class*="col-"] {
+        width: 100%; /* Mobile default */
+    }
+ 
+
     
 
         .col-1{ width:8.33% }
@@ -25,16 +30,29 @@
         .col-10{ width:83.33% }
         .col-11{ width:91.66% }
         .col-12{ width:100% }
+        
+header{
+    width: 100vw;
+    height: 40px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+header p{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
+}
 
-    .header {
-        text-align: center;
-        background-color: black;
-        color: white;
-        height: 50px;
-        padding-top: 15px;
-        font-size: 16px;
 
+@media(max-width:500px){
+    header{
+        width: 100vw;
+        font-size: 10px;
     }
+
+}
 
 
     .nav {
@@ -45,6 +63,7 @@
         font-size: 15px;
         border: 1px solid rgba(137, 135, 135, 0.4);
         position: relative;
+        
 
     }
 

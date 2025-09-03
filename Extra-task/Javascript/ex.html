@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, iure a. Necessitatibus quo ut ullam, deleniti sunt repellendus quibusdam perspiciatis adipisci. Error, at.</p>
+    
+    <button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+    
+    <button type="button" onclick="document.getElementById('demo').style.display='none'">hide</button>
+    
+    <script>
+        document.getElementById('demo').style.color="red";
+
+        
+    //     document.write("<br> <br> hello");
+
+    //     var a=10;
+    //     var b=20;
+    //     var c=a+b;
+
+    //    document.write(`<h1> Sum of a & b are : ${c} </h1>`);
+
+    //    var age=18;
+
+    //    if(age!=18){
+    //     document.write(`<h1> you are aligible </h1>`);
+    //    }
+    //    else{
+    //     document.write(`<h1> you are not aligible </h1>`);
+    //    }
+
+
+        //objct
+       var obj={name:"ayan",no:17, add:"nadiad"};
+       document.write(`<h1> ${obj.name} </h1>`);
+
+
+       //array
+      let arry=[ "ayan","xyz","abc","oop"];
+      document.write(arry[2]);
+
+      //arry obj
+        var arr_obj=[{name:"ayan",no:"17",mo:"123465"},
+                    {name:"xyz",no:"1457",mo:"5566"},
+                    {name:"vk",no:"18",mo:"89745"}     
+        ];
+
+        document.write(`<h1> ${arr_obj[1].name} </h1>`)
+        document.write(`<h1> ${arr_obj[1].no} </h1>`)  
+        document.write(`<h1> ${arr_obj[2].no} </h1>`)
+
+
+        
+        
+	</script>
+</body>
+</html>

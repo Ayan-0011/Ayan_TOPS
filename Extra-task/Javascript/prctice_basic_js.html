@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript partice </title>
+</head>
+<body>
+    <script>
+// Create 4 variables with following values:
+// 1. Your name (string)
+// 2. Your age (number)
+// 3. Is student (boolean)
+// 4. Favorite color (string)
+
+// Then use console.log() to print all of them.
+
+
+
+var name="ayan";
+var age=20;
+var student=true;
+var faavcolor="blue";
+
+
+console.log(name, age, student, faavcolor);
+
+
+// Create a variable for marks. If marks are greater than 35, print "Pass", else "Fail".
+
+
+// Your output should be: Pass
+
+let marks = 40;
+
+if(maarks>=40){
+    console.log("you are pass");
+
+}
+else{
+    
+    console.log("you are fail");
+}
+
+
+// Create a variable for any number.
+// Check if it's even or odd and print "Even" or "Odd".
+
+
+// Your code here...
+
+let num = 7;
+
+if (num % 2 == 0) {
+    console.log("number is even");
+} else {
+    console.log("number is odd");
+}
+
+
+// Compare two numbers and print which one is greater
+
+let a = 25;
+let b = 30;
+
+if (a > b) {
+    console.log("a is greater");
+} else {
+    console.log("b is greater");
+}
+
+
+
+// Given 3 numbers, find out which one is the greatest.
+
+// let a = 40;
+// let b = 75;
+// let c = 65;
+
+
+if (a > b && a > c) {
+  console.log("a is grate");
+} else if (b>a && b>c) {
+     console.log("b is grate");
+} else {
+    console.log("c is grate");
+}
+
+// Use a for loop to print numbers from 1 to 10
+
+
+for(var i=0; i<=10;i++){
+    console.log("Number is", i);
+}
+
+// Print all even numbers from 2 to 20 using a for loop
+
+for (let i = 2; i <= 20; i += 2) {
+  console.log("Even number is", i);
+}
+
+
+for (let i = 1; i <= 20; i++) {
+  if (i % 2 === 0) {
+    console.log("Even number is", i);
+  }
+}
+
+
+//Try same logic for odd numbers from 1 to 19
+
+for (var i = 1; i <= 19; i++) {
+    if (i % 2 != 0) {
+        console.log("odd number is", i);
+    }
+}
+
+
+//Print table of 5, like this:
+
+var number = 5;
+
+for (var i = 1; i <= 10; i++) {
+    console.log(number + " x " + i + " = " + (number * i));
+}
+
+
+
+
+
+
+let i = 1;            // Initialization
+
+while (i <= 10) {      // Condition
+  console.log(i);     // Statement
+  i++;                // Increment
+}
+
+
+//📘 Question 1 – Create a function that prints: "I love JavaScript"
+// Steps:
+// Function ka naam sayLove
+// Uske andar ek console.log() likhna hai
+// Function ko call karna hai
+
+function sayLove(){
+    console.log("i love javascript");
+}
+sayLove();
+
+
+// 📘 Question 2 – Function to greet any name
+
+function greet(name){
+    console.log("my name is",name);
+}
+greet("ayan");
+greet("ravi");
+
+// Make a function add(a, b) that returns the sum of a and b
+
+
+function add(a, b) {
+    return a + b; // function gives back the result
+}
+
+let res = add(5, 7);  // call the function and store the result
+console.log("Sum is", res);
+
+
+// Make a function that multiplies two numbers and returns result
+
+function mul(a, b){
+    return a * b;
+}
+
+let result=mul(a,b);
+    console.log("resulr is",result);
+
+</script>
+
+
+
+<button id="multiBtn">Try Me</button>
+
+<script>
+    // Add your 3 events here
+
+let btn = document.getElementById("multiBtn");
+
+btn.addEventListener("click",function(){
+    console.log("your are button cliked");
+});
+
+btn.addEventListener("mousehover",function(){
+    console.log("your are mouse hover");
+});
+
+btn.addEventListener("mouseout",function(){
+    console.log("your are mouse out");
+});
+
+</script>
+
+
+<!--
+✅ Add a <p> tag
+✅ On button click, change the <p> text using JavaScript   -->
+ 
+
+<p id="test">Hi I'm HTML</p>
+<button id="btn" onclick="change()">Click Me</button>
+
+<script>
+  function change() {
+    document.getElementById('test').innerHTML = "<h1>Hi I'm JavaScript</h1>";
+    document.getElementById('btn').innerText = "Changed!";
+  }
+</script>
+
+
+
+    </script>
+</body>
+</html>

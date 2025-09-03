@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+     
+   
+        button{
+            margin: 10px 22px;
+            width: 30px;
+            height: 20px;
+            border-radius: 15px;
+        }
+        .main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 20vh;
+            width: 30vw;
+            margin: auto;
+            border: 2px solid;
+            border-radius: 22px;
+        }
+        h1{
+            text-align: center;
+            
+        }
+    </style>
+    
+</head>
+<body>
+    <h1> counting number </h1> <br>
+    <div class="main">
+        
+        <button onclick="incres()">+</button>
+        <h1 id="result">0</h1>
+        <button onclick="dicres()">-</button>
+    </div>
+
+
+        
+    <script>
+
+        function incres(){
+           var plus= document.getElementById('result').innerHTML;
+            plus++;
+            document.getElementById('result').innerHTML=plus;
+	     }
+
+
+        function dicres(){
+           var minus= document.getElementById('result').innerHTML;
+           if(minus>0){
+            minus--;
+            document.getElementById('result').innerHTML=minus;
+	     }
+     }
+     
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zay eCommerce</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Default mobile-first approach */
+        [class*="col-"] {
+            width: 100%;
+        }
+
+        /* Tablet view */
+        @media only screen and (min-width: 600px) {
+            .col-s-1 {width: 8.33%;}
+            .col-s-2 {width: 16.66%;}
+            .col-s-3 {width: 25%;}
+            .col-s-4 {width: 33.33%;}
+            .col-s-5 {width: 41.66%;}
+            .col-s-6 {width: 50%;}
+            .col-s-7 {width: 58.33%;}
+            .col-s-8 {width: 66.66%;}
+            .col-s-9 {width: 75%;}
+            .col-s-10 {width: 83.33%;}
+            .col-s-11 {width: 91.66%;}
+            .col-s-12 {width: 100%;}
+        }
+
+        /* Desktop view */
+        @media only screen and (min-width: 768px) {
+            .col-1 {width: 8.33%;}
+            .col-2 {width: 16.66%;}
+            .col-3 {width: 25%;}
+            .col-4 {width: 33.33%;}
+            .col-5 {width: 41.66%;}
+            .col-6 {width: 50%;}
+            .col-7 {width: 58.33%;}
+            .col-8 {width: 66.66%;}
+            .col-9 {width: 75%;}
+            .col-10 {width: 83.33%;}
+            .col-11 {width: 91.66%;}
+            .col-12 {width: 100%;}
+        }
+
+        /* Header */
+        .header {
+            height: auto;
+            background-color: rgb(38, 37, 48);
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .call {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 300;
+        }
+
+        .call .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .call .contact-info p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .icon {
+            display: flex;
+            gap: 10px;
+        }
+
+        .icon i {
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        /* Navigation */
+        .nav {
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            flex-wrap: wrap;
+        }
+
+        .nav h1 {
+            font-size: 40px;
+            color: rgb(113, 194, 113);
+            margin: 0;
+        }
+
+        .link {
+            display: flex;
+        }
+
+        .link ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .link a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .link a:hover {
+            color: rgb(129, 182, 129);
+        }
+
+        .sym {
+            display: flex;
+            gap: 15px;
+            font-size: 20px;
+        }
+
+        .sym i {
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .sym i:hover {
+            transform: scale(1.2);
+        }
+
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+        }
+
+        .menu-icon i {
+            font-size: 25px;
+        }
+
+        /* Mobile Navigation */
+        @media only screen and (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav h1 {
+                font-size: 30px;
+            }
+
+            .link {
+                display: none;
+                width: 100%;
+                margin-top: 20px;
+            }
+
+            .link.active {
+                display: block;
+            }
+
+            .link ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .sym {
+                position: absolute;
+                right: 60px;
+                top: 70px;
+            }
+
+            .menu-icon {
+                display: block;
+                position: absolute;
+                right: 20px;
+                top: 75px;
+            }
+
+            .call .contact-info {
+                justify-content: center;
+            }
+
+            .icon {
+                margin-top: 10px;
+            }
+        }
+
+        /* Main Section */
+        .main1 {
+            background-color: #efeeee;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 400px;
+        }
+
+        .main1 p:first-child {
+            color: rgb(124, 175, 124);
+            font-size: clamp(30px, 6vw, 50px);
+            margin-bottom: 10px;
+        }
+
+        .main1 p:nth-child(2) {
+            color: black;
+            font-size: clamp(18px, 4vw, 28px);
+            margin-bottom: 20px;
+        }
+
+        .main1 span {
+            font-size: clamp(16px, 3vw, 20px);
+            line-height: 1.6;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .main1 a {
+            color: rgb(55, 100, 55);
+        }
+
+        .main img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        /* Categories */
+        .cate {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .cate h1 {
+            font-size: clamp(28px, 5vw, 40px);
+            font-weight: 300;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin-bottom: 15px;
+        }
+
+        .cate p {
+            font-size: clamp(16px, 3vw, 25px);
+            font-weight: 200;
+            line-height: 1.5;
+        }
+
+        /* Products */
+        .product {
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .product img {
+            border-radius: 50%;
+            height: 250px;
+            width: 80%;
+            max-width: 300px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .product img:hover {
+            transform: scale(1.05);
+        }
+
+        .product p {
+            font-size: 20px;
+            margin: 15px 0;
+        }
+
+        .product button {
+            padding: 12px 20px;
+            background-color: rgb(114, 219, 114);
+            color: rgb(43, 38, 38);
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .product button:hover {
+            background-color: black;
+            color: wheat;
+        }
+
+        /* Featured Products */
+        .Featured {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .Featured h1 {
+            font-size: clamp(30px, 5vw, 45px);
+            margin-bottom: 15px;
+        }
+
+        .Featured p {
+            font-size: clamp(16px, 3vw, 20px);
+            line-height: 1.5;
+        }
+
+        .ff {
+            background-color: rgba(122, 156, 182, 0.5);
+            padding: 20px;
+        }
+
+        .feaproduct {
+            border: 2px solid #ddd;
+            border-radius: 7px;
+            background-color: azure;
+            transition: transform 0.3s;
+            padding: 20px;
+            margin: 15px 0;
+        }
+
+        .feaproduct:hover {
+            transform: scale(1.05);
+        }
+
+        .feaproduct img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .feaproduct .rate {
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        .feaproduct .rate span {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .feaproduct .rate i {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .feaproduct h1 {
+            font-size: 22px;
+            margin: 15px 0 10px 0;
+        }
+
+        .feaproduct p {
+            font-size: 14px;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        /* Responsive featured products */
+        @media only screen and (min-width: 600px) {
+            .feaproduct {
+                width: calc(50% - 20px);
+                margin: 10px;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            .feaproduct {
+                width: calc(33.33% - 20px);
+                margin: 10px;
+            }
+        }
+
+        /* Footer */
+        .fu {
+            background-color: rgb(43, 52, 76);
+            color: white;
+            padding: 40px 20px 20px 20px;
+        }
+
+        .footer {
+            margin-bottom: 30px;
+        }
+
+        .footer p {
+            font-size: clamp(24px, 4vw, 40px);
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .footer:first-child p {
+            color: rgb(113, 194, 113);
+        }
+
+        .footer hr {
+            margin-bottom: 20px;
+            border-color: #666;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer li {
+            padding-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .footer li i {
+            margin-right: 10px;
+            width: 20px;
+        }
+
+        .mail {
+            border-top: 1px solid #666;
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .mail .social-icons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .mail .social-icons i {
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .mail .social-icons i:hover {
+            transform: scale(1.2);
+        }
+
+        .mail .newsletter {
+            display: flex;
+            justify-content: center;
+            gap: 0;
+        }
+
+        .mail input {
+            height: 40px;
+            padding: 0 15px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            flex: 1;
+            max-width: 300px;
+        }
+
+        .mail button {
+            height: 40px;
+            padding: 0 20px;
+            background-color: rgb(59, 143, 59);
+            color: white;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+
+        @media only screen and (min-width: 768px) {
+            .mail {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .mail .social-icons {
+                justify-content: flex-start;
+            }
+        }
+
+        /* Copyright */
+        .copy {
+            background-color: rgb(30, 37, 56);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .copy p {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        /* Mobile specific adjustments */
+        @media only screen and (max-width: 600px) {
+            .call .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .main1 {
+                padding: 20px;
+            }
+
+            .product img {
+                height: 200px;
+            }
+
+            .feaproduct {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="col-12 header">
+            <div class="call">
+                <div class="contact-info">
+                    <p>📧 info@company.com</p>
+                    <p>📱 +91 9106856105</p>
+                </div>
+                <div class="icon">
+                    <i class="fa-brands fa-square-facebook"></i>
+                    <i class="fa-brands fa-square-x-twitter"></i>
+                    <i class="fa-brands fa-square-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 nav">
+            <h1>Zay</h1>
+            <div class="link" id="navLinks">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="sym">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-bag-shopping"></i>
+            </div>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6 col-s-12 main1">
+            <p>Zay eCommerce</p>
+            <p>Tiny and Perfect eCommerce Template</p>
+            <span>Zay Shop is an eCommerce HTML5 CSS template with latest version</span>
+            <span>of Bootstrap 5 (beta 1). This template is 100% free provided by <a href="#">TemplateMo</a></span>
+            <span>website. Image credits go to <a href="#">Freepik Stories, Unsplash</a> and <a href="#">Icons 8.</a></span>
+        </div>
+        <div class="col-6 col-s-12 main">
+            <img src="https://via.placeholder.com/600x400/4CAF50/FFFFFF?text=Banner+Image" alt="Banner Image">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 cate">
+            <h1>Categories of The Month</h1>
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+        <div class="col-4 col-s-12 product">
+            <img src="https://via.placeholder.com/300x300/8BC34A/FFFFFF?text=Watches" alt="Watches">
+            <p>Watches</p>
+            <button>Go Shop</button>
+        </div>
+        <div class="col-4 col-s-12 product">
+            <img src="https://via.placeholder.com/300x300/8BC34A/FFFFFF?text=Shoes" alt="Shoes">
+            <p>Shoes</p>
+            <button>Go Shop</button>
+        </div>
+        <div class="col-4 col-s-12 product">
+            <img src="https://via.placeholder.com/300x300/8BC34A/FFFFFF?text=Accessories" alt="Accessories">
+            <p>Accessories</p>
+            <button>Go Shop</button>
+        </div>
+    </div>
+
+    <div class="row ff">
+        <div class="col-12 Featured">
+            <h1>Featured Product</h1>
+            <p>Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+        </div>
+
+        <div class="feaproduct">
+            <div class="rate">
+                <img src="https://via.placeholder.com/300x200/FF9800/FFFFFF?text=Gym+Weight" alt="Gym Weight">
+                <span>$240.00</span>
+            </div>
+            <div>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-regular fa-star" style="color: #15181e;"></i>
+                <i class="fa-regular fa-star" style="color: #15181e;"></i>
+            </div>
+            <h1>Gym Weight</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt in culpa qui officia deserunt.</p>
+            <p style="margin-top: 12px; font-weight: 300;">Reviews (24)</p>
+        </div>
+
+        <div class="feaproduct">
+            <div class="rate">
+                <img src="https://via.placeholder.com/300x200/2196F3/FFFFFF?text=Nike+Shoes" alt="Nike Shoes">
+                <span>$480.00</span>
+            </div>
+            <div>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-regular fa-star" style="color: #15181e;"></i>
+                <i class="fa-regular fa-star" style="color: #15181e;"></i>
+            </div>
+            <h1>Cloud Nike Shoes</h1>
+            <p>Aenean gravida dignissim finibus. Nullam ipsum diam, posuere vitae pharetra sed, commodo ullamcorper.</p>
+            <p style="margin-top: 12px; font-weight: 300;">Reviews (48)</p>
+        </div>
+
+        <div class="feaproduct">
+            <div class="rate">
+                <img src="https://via.placeholder.com/300x200/9C27B0/FFFFFF?text=Adidas+Shoes" alt="Adidas Shoes">
+                <span>$360.00</span>
+            </div>
+            <div>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+            </div>
+            <h1>Summer Adidas Shoes</h1>
+            <p>Curabitur ac mi sit amet diam luctus porta. Phasellus pulvinar sagittis diam, et scelerisque ipsum lobortis nec.</p>
+            <p style="margin-top: 12px; font-weight: 300;">Reviews (74)</p>
+        </div>
+    </div>
+
+    <div class="row fu">
+        <div class="col-4 col-s-12 footer">
+            <p>Zay Shop</p>
+            <hr>
+            <ul>
+                <li><i class="fa-solid fa-location-dot"></i> 123 Consectetur at ligula 10660</li>
+                <li><i class="fa-solid fa-phone"></i> 010-020-0340</li>
+                <li><i class="fa-solid fa-envelope"></i> info@company.com</li>
+            </ul>
+        </div>
+        <div class="col-4 col-s-12 footer">
+            <p>Products</p>
+            <hr>
+            <ul>
+                <li>Luxury</li>
+                <li>Sport Wear</li>
+                <li>Men's Shoes</li>
+                <li>Women's Shoes</li>
+                <li>Popular Dress</li>
+                <li>Gym Accessories</li>
+                <li>Sport Shoes</li>
+            </ul>
+        </div>
+        <div class="col-4 col-s-12 footer">
+            <p>Further Info</p>
+            <hr>
+            <ul>
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Shop Locations</li>
+                <li>FAQs</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+
+        <div class="col-12 mail">
+            <div class="social-icons">
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-x-twitter"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fa-brands fa-linkedin"></i>
+            </div>
+            <div class="newsletter">
+                <input type="email" placeholder="Email Address">
+                <button>Subscribe</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 copy">
+            <p>Copyright © 2021 Company Name | Designed by TemplateMo</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

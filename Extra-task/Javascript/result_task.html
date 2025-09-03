@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+
+            background: #EEAECA;
+            background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+        }
+        div{
+            width: 40vw;
+            height: 70vh;
+            margin: auto;
+            border: 2px solid;
+            padding: 20px;
+            text-align: center;
+            margin-top: 100px;
+            border-radius: 20px;
+            box-shadow: 8px 10px 20px rgba(56, 56, 146, 0.521);
+            backdrop-filter: blur(15px);
+        }
+        button{
+            width: 80px;
+            height: 30px;
+            border-radius: 12px;
+            background-color:turquoise;
+        }
+        button:hover{
+            background-color: rgb(33, 189, 194);
+            color: black;
+        }
+        input{
+            width: 130px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Marks </h1>
+  <form> 
+   
+	   English:<input type="number"  id="english" placeholder="Enter English Marks" required min="0" max="100"> <br><br><br>
+	   Hindi:<input type="number" id="hindi" placeholder="Enter hindi Marks" required min="0" max="100"><br><br><br>
+	   Gujarati:<input type="number"id="gujarati" placeholder="Enter gujarati Marks"  required min="0" max="100"><br><br><br>
+	   <button class="btn btn-primary" onclick="return result()">Submit</button>
+   
+  </form>
+		<h1 id="test1">Total is : </h1>
+		<h1 id="test2">Per is :</h1>
+		<h1 id="test3">Grade is :</h1>
+  </div>
+
+
+  <script>
+   function result(){
+		
+		var english =document.getElementById('english').value;
+		var hindi =document.getElementById('hindi').value;
+		var gujarati =document.getElementById('gujarati').value;
+		
+		var total=+english +  +hindi + +gujarati; // 102030 =60
+		
+		
+		document.getElementById('test1').innerHTML="Total is : " + total;
+		
+		
+		var per=(total*100)/300;
+		document.getElementById('test2').innerHTML="Per is : " + per + "%";
+		
+		if(per>90)
+		{
+			document.getElementById('test3').innerHTML="Grade is : O";
+		}
+		else if(per>80)
+		{
+			document.getElementById('test3').innerHTML="Grade is : A++";
+		}
+		else if(per>70)
+		{
+			document.getElementById('test3').innerHTML="Grade is : A";
+		}
+		else if(per>60)
+		{
+			document.getElementById('test3').innerHTML="Grade is : B";
+		}
+		else if(per>50)
+		{
+			document.getElementById('test3').innerHTML="Grade is : C";
+		}
+		else if(per>40)
+		{
+			document.getElementById('test3').innerHTML="Grade is : Pass";
+		}
+		else
+		{
+			document.getElementById('test3').innerHTML="Grade is : Fail";
+		}
+		return false;
+		
+	}
+
+
+  </script>
+</body>
+</html>

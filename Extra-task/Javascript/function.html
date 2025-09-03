@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="change()">  click me  </button>
+    <button ondblclick="change()"> click me  </button>
+    <button onmouseover="change()"> click me  </button>
+    <button onclick="change()">  click me  </button>
+    <p id="test">hi im html</p>
+
+
+    <img src="/CSS/amazon.jpeg" width="10%" id="big" onmouseover="bigg()" onmouseout="small()">
+
+
+    
+    <script>
+        function change(){
+          document.getElementById('test').innerHTML="<h1> hi im javascript </h1>";
+        }
+
+        function bigg(){
+            document.getElementById('big').style.width="50%";
+        }
+
+        function small(){
+            document.getElementById('big').style.width="10%";
+        }
+
+       
+
+
+
+       
+    </script>
+</body>
+</html>

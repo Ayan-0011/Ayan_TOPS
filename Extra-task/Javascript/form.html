@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            border: 2px solid blue;
+            border-radius: 15px;
+            width: 30vw;
+            height: 35vh;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+        }
+        #submit{
+            width: 18vw;
+            height: 30px;
+            border: none;
+            border-radius: 25px;
+            background-color: coral;
+        }
+        
+        
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <form action="" method="post" onclick="return validation(this)">
+        
+        <h1>Validation Form</h1>
+        
+        Enter first name:<input style="text" name="first" id="first"><br><br>
+        
+        Enter last name:<input style="text" name="last" id="last"><br><br>
+
+        <input type="submit" name="submit" id="submit">
+
+        <p id="msg" style="color:red; font-size:20px"></p>
+
+
+        <script>
+            function validation(arg){
+
+                var first= arg.first.value;
+                if(first==""){
+                    document.getElementById('msg').innerHTML="*Fisrt name is Required";
+                    arg.first.focus();
+                    return false;
+                }
+
+                var last= arg.last.value;
+                if(last==""){
+                    document.getElementById('msg').innerHTML="*Last name is Required";
+                    arg.last.focus();
+                    return false;
+                }
+            }
+        </script>
+
+
+
+
+    </form>
+</div>
+</body>
+</html>

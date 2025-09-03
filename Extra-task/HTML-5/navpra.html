@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            width:100vw;
+            background-image:linear-gradient(rgba(0, 0, 0, 0.551)),url("dubai.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+           
+            
+        }
+        /*
+       .he{
+            width: 80vw;
+            border: 2px solid;
+            height:auto;
+            margin: auto;
+        }
+  
+        .main{
+            background-color: black;
+            height: 15vh;
+            width: 15vw;
+            transition: all 2s;
+            margin: auto;
+           
+        }
+        .main:hover{
+            transform:scaleY(1.5)  
+        }
+            */
+
+            nav{
+                background-color: cadetblue;
+                box-sizing: border-box;
+            }
+
+        nav ul{
+            width: 100%;
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            
+        }
+        nav li{
+            height: 50px;
+        }
+        nav a{
+            height: 100%;
+            padding: 0 30px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            color: black;
+            font-size: 20px;
+        }
+        nav a:hover{
+            color: red;
+        }
+        nav li:first-child{
+            margin-right: auto;
+        }
+        .sidebar{
+            position: absolute;
+            right: 0;
+            top:0;
+            height: 100vh;
+            width: 250px;
+            z-index: 10;
+            background-color: rgba(215, 215, 215, 0.221);
+            backdrop-filter:blur(10px);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            display: none;
+        }
+        .sidebar li{
+            width: 100%;
+        }
+        .sidebar a{
+            width: 100%;
+        }
+        .menu-btn{
+            display: none;
+        }
+
+        @media (max-width:600px) {
+            .hidemobile{
+                display: none;
+            }
+            .menu-btn{
+                display: block;
+            }
+            
+        }
+
+      
+    </style>
+</head>
+<body>
+    <!--
+        <header>
+            <div class="he">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique saepe voluptas asperiores eos inventore, magnam corrupti iusto repellendus, amet vitae dolorem. Atque voluptatum laudantium repellat cum, aliquid excepturi commodi? Quia?</p>
+        </div>
+    </header>
+    <nav>
+        <div class="nav">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium velit, quo cumque perspiciatis quasi eaque aliquid accusantium voluptate nesciunt in ex impedit rerum!
+        </div>
+    </nav>
+    
+    <div class="main">
+        
+    </div>
+    -->
+
+
+   <nav>
+       <ul class="sidebar">
+           <li onclick="hidesidebar()"><a href="#"><img src="close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"></a></li>
+           <li><a href="#">home </a></li>
+           <li><a href="#"> about </a></li>
+           <li><a href="#"> contact us</a></li>
+           <li><a href="#"> service</a></li>
+        </ul>     
+       <ul>
+           <li class="hidemobile"><a href="#">HELLO</a></li>
+           <li class="hidemobile"><a href="#">home </a></li>
+           <li class="hidemobile"><a href="#"> about </a></li>
+           <li class="hidemobile"><a href="#"> contact us</a></li>
+           <li class="hidemobile"><a href="#"> service</a></li>
+           <li  class="menu-btn" onclick="Showsidebar()"><a href="#"><img src="menu_24dp_E3E3E3_FILL0_wght500_GRAD0_opsz40.png"></a></li>
+        </ul>     
+    </nav>
+
+    <script>
+        function Showsidebar(){
+            const sidebar=document.querySelector('.sidebar')
+            sidebar.style.display='flex'
+        }
+
+        function hidesidebar(){
+           const sidebar=document.querySelector('.sidebar')
+            sidebar.style.display='none'
+        }
+    </script>
+</body>
+</html>
