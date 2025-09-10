@@ -17,14 +17,14 @@
     <div class="row bg-primary">
         <div class="col-md-12">
             <img src="img/logo.png" width="200px">
-            <button type="button" class="btn btn-info float-end">download</button>
+            <button type="button" class="btn btn-getstarted float-end">download</button>
         </div>
     </div>
 
     <div class="container">
         <div class="row mt-3">
             <div class="col-md">
-                <nav class="navbar navbar-expand-lg navbar-dark">
+                <nav class="navbar navbar-expand-lg navbar-dark" id="navbar1">
                     <div class="container-fluid">
                         <h1><span class="text-dark">Medi</span><span class="text-info">Nest</span></h1>
 
@@ -44,7 +44,7 @@
                                     <a class="nav-link text-dark" href="about.html">About</a>
                                 </li>
                                 <li class="nav-item mx-2">
-                                    <a class="nav-link text-dark" href="Department.html">Departments</a>
+                                    <a class="nav-link text-dark" href="doctors.html">Departments</a>
                                 </li>
                                 <li class="nav-item mx-2">
                                     <a class="nav-link text-dark" href="service.html">Services</a>
@@ -73,7 +73,7 @@
     <!--mainpage--->
     <div class="row">
         <div class="col-md-12 text-center pt-5 pb-5 mb-4">
-            <h1>Departments</h1>
+            <h1>Services</h1>
             <p>Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a
                 odio voluptatem.<br>
                 Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
@@ -83,140 +83,142 @@
             <nav aria-label="breadcrumb" class="bg-body-secondary ps-5 pt-4 pb-3">
                 <ol class="breadcrumb joint">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Department</li>
+                    <li class="breadcrumb-item active" aria-current="page">Services</li>
                 </ol>
             </nav>
         </div>
     </div>
     <div class="container">
-        <div class="row mt-5 mb-3">
-            <div class="col-md-6 mt-4">
-                <div class="card" id="dep-card">
-                    <div class="col-md-12 symbol">
+
+        <div class="row mt-5">
+            <div class="col-md-4 mt-3">
+                <div class="card" id="service-card">
+                    <div class="col-md-12 symbol2">
                         <i class="bi bi-heart-pulse-fill"></i>
-                        <h3>Cardiology</h3>
-                        <p>Heart & Vascular</p>
+                        <span class="badge rounded-pill bg-primary float-end mt-3 me-4">Primary care</span>
                     </div>
-                    <div class="col-md-12">
-                        <p style="padding-left: 10px;">Pellentesque habitant morbi tristique senectus et netus et
-                            malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</p>
-                    </div>
-                    <div class="col-md-12 pt-1 bgd">
-                        <span class="badge rounded-pill bg-primary">24/7 Emergency</span>
-                        <span class="badge rounded-pill bg-info">Advanced Diagnostics</span>
-                    </div>
-                    <div style="height: 250px; overflow: hidden;">
-                        <img src="img/cardiology-2 (1).webp" width="100%" height="280px">
+                    <div class="container">
+
+                        <h3>General Consultation</h3>
+                        <p class="mt-2">Comprehensive health assessments and preventive care planning for all family
+                            members.</p>
+                        <span class="badge rounded-pill bg-secondary">Health Monitoring</span>
+                        <span class="badge rounded-pill bg-secondary">Wellness Programs</span>
+                        <span class="badge rounded-pill bg-secondary">Preventive Care</span>
+
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-outline-primary mt-4 mb-4 rounded-5" type="button">Schedule
+                                Visit</button>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="col-md-4 mt-3">
+                <div class="card" id="service-card">
+                    <div class="col-md-12 symbol2">
+                        <i class="fa-solid fa-heart"></i>
+                        <span class="badge rounded-pill bg-primary float-end mt-3 me-4">Specialty</span>
+                    </div>
+                    <div class="container">
+                        <h3>Cardiology Services</h3>
+                        <p class="mt-2">Advanced heart care including diagnostics, treatment, and post-operative
+                            rehabilitation programs.</p>
+                        <span class="badge rounded-pill bg-secondary">Heart Surgery</span>
+                        <span class="badge rounded-pill bg-secondary">ECG Testing</span>
+                        <span class="badge rounded-pill bg-secondary">Cardiac Rehab</span>
 
-            <div class="col-md-6 mt-4">
-                <div class="card" id="dep-card">
-                    <div class="col-md-12 symbol">
-                        <i class="fa-solid fa-brain"></i>
-                        <h3>Neurology</h3>
-                        <p>Brain & Nervous System</p>
-                    </div>
-                    <div class="col-md-12">
-                        <p style="padding-left: 10px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                    <div class="col-md-12 pt-1 bgd">
-                        <span class="badge rounded-pill bg-primary">MRI Available</span>
-                        <span class="badge rounded-pill bg-info">Specialist Team</span>
-                    </div>
-                    <div style="height: 250px; overflow: hidden;">
-                        <img src="img/neurology-3.webp" width="100%" height="280px">
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-outline-primary mt-4 mb-4 rounded-5" type="button"> Book
+                                Appointment</button>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="col-md-6 mt-4">
-                <div class="card" id="dep-card">
-                    <div class="col-md-12 symbol">
-                        <i class="fa-solid fa-bone"></i>
-                        <h3>Orthopedics</h3>
-                        <p>Bones & Joints</p>
-                    </div>
-                    <div class="col-md-12">
-                        <p style="padding-left: 10px;">Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat duis aute.</p>
-                    </div>
-                    <div class="col-md-12 pt-1 bgd">
-                        <span class="badge rounded-pill bg-primary">Sports Medicine</span>
-                        <span class="badge rounded-pill bg-info">Joint Replacement</span>
-                    </div>
-                    <div style="height: 250px; overflow: hidden;">
-                        <img src="img/orthopedics-1.webp" width="100%" height="280px">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 mt-4">
-                <div class="card" id="dep-card">
-                    <div class="col-md-12 symbol">
-                        <i class="fa-solid fa-person-circle-check"></i>
-                        <h3>Pediatrics</h3>
-                        <p>Children's Health</p>
-                    </div>
-                    <div class="col-md-12">
-                        <p style="padding-left: 10px;">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                            officia deserunt mollit anim id est laborum sed.</p>
-                    </div>
-                    <div class="col-md-12 pt-1 bgd">
-                        <span class="badge rounded-pill bg-primary">Child-Friendly</span>
-                        <span class="badge rounded-pill bg-info">Vaccination Center</span>
-                    </div>
-                    <div style="height: 250px; overflow: hidden;">
-                        <img src="img/pediatrics-4.webp" width="100%" height="280px">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 mt-4">
-                <div class="card" id="dep-card">
-                    <div class="col-md-12 symbol">
+            <div class="col-md-4 mt-3">
+                <div class="card" id="service-card">
+                    <div class="col-md-12 symbol2">
                         <i class="fa-solid fa-flask"></i>
-                        <h3>Laboratory</h3>
-                        <p>Diagnostic Services</p>
+                        <span class="badge rounded-pill bg-primary float-end mt-3 me-4">Laboratory Testing</span>
                     </div>
-                    <div class="col-md-12">
-                        <p style="padding-left: 10px;">Nulla facilisi morbi tempus iaculis urna id volutpat lacus
-                            laoreet non curabitur gravida arcu ac tortor dignissim.</p>
-                    </div>
-                    <div class="col-md-12 pt-1 bgd">
-                        <span class="badge rounded-pill bg-primary">Quick Results</span>
-                        <span class="badge rounded-pill bg-info">Digital Reports</span>
-                    </div>
-                    <div style="height: 250px; overflow: hidden;">
-                        <img src="img/laboratory-3.webp" width="100%" height="280px">
+                    <div class="container">
+                        <h3>Laboratory Testing</h3>
+                        <p class="mt-2">Complete range of diagnostic tests with quick turnaround times and accurate
+                            results</p>
+                        <span class="badge rounded-pill bg-secondary">Blood Work</span>
+                        <span class="badge rounded-pill bg-secondary">Pathology</span>
+                        <span class="badge rounded-pill bg-secondary">Same-Day Results</span>
+
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-outline-primary mt-4 mb-4 rounded-5" type="button">Order
+                                Tests</button>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-6 mt-4">
-                <div class="card" id="dep-card">
-                    <div class="col-md-12 symbol">
-                        <i class="bi bi-heart-pulse-fill"></i>
-                        <h3>Emergency</h3>
-                        <p>24/7 Critical Care</p>
+            <div class="col-md-4 mt-3">
+                <div class="card" id="service-card">
+                    <div class="col-md-12 symbol2">
+                        <i class="fa-solid fa-bus"></i>
+                        <span class="badge rounded-pill bg-success float-end mt-3 me-4">24/7 service</span>
+                        <span class="badge rounded-pill bg-primary float-end mt-3 me-4">Emergency</span>
                     </div>
-                    <div class="col-md-12">
-                        <p style="padding-left: 10px;">Convallis tellus id interdum velit laoreet id donec ultrices
-                            tincidunt arcu non sodales neque sodales ut etiam.</p>
-                    </div>
-                    <div class="col-md-12 pt-1 bgd">
-                        <span class="badge rounded-pill bg-primary">Round-the-Clock</span>
-                        <span class="badge rounded-pill bg-info">Trauma Center</span>
-                    </div>
-                    <div style="height: 250px; overflow: hidden;">
-                        <img src="img/emergency-4.webp" width="100%" height="280px">
+                    <div class="container">
+                        <h3>Emergency Care</h3>
+                        <p class="mt-2">Round-the-clock emergency services with trauma center and critical care
+                            capabilities.</p>
+                        <span class="badge rounded-pill bg-secondary">Trauma Center</span>
+                        <span class="badge rounded-pill bg-secondary">Critical Care</span>
+                        <span class="badge rounded-pill bg-secondary">Emergency Surgery</span>
+
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-danger mt-4 mb-4 rounded-5" type="button">Call Emergency</button>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="col-md-4 mt-3">
+                <div class="card" id="service-card">
+                    <div class="col-md-12 symbol2">
+                        <i class="fa-solid fa-person-circle-check"></i>
+                        <span class="badge rounded-pill bg-primary float-end mt-3 me-4">Maternal Health</span>
+                    </div>
+                    <div class="container">
+                        <h3>Women's Health</h3>
+                        <p class="mt-2">Comprehensive maternal care from prenatal checkups to delivery and postnatal
+                            support</p>
+                        <span class="badge rounded-pill bg-secondary">Prenatal Care</span>
+                        <span class="badge rounded-pill bg-secondary">Delivery Support</span>
+                        <span class="badge rounded-pill bg-secondary">Family Planning</span>
+                        <button class="btn btn-outline-primary mt-4 mb-4 w-100 rounded-5" type="button">Learn
+                            More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mt-3">
+                <div class="card" id="service-card">
+                    <div class="col-md-12 symbol2">
+                        <i class="fa-solid fa-syringe"></i>
+                        <span class="badge rounded-pill bg-primary float-end mt-3 me-4">Prevention</span>
+                    </div>
+                    <div class="container">
+                        <h3>Vaccination Services</h3>
+                        <p class="mt-2">Complete immunization programs for all ages including travel vaccines and
+                            seasonal shots.</p>
+                        <span class="badge rounded-pill bg-secondary">Travel Vaccines</span>
+                        <span class="badge rounded-pill bg-secondary">Flu Shots</span>
+                        <span class="badge rounded-pill bg-secondary">Child Immunizations</span>
 
-            <div class="footer">
+                        <button class="btn btn-outline-primary mt-4 mb-4 w-100 rounded-5" type="button">Schedule
+                            Shot</button>
+                    </div>
+                </div>
+            </div>
+       
+
+
+    </div>
+     <div class="footer">
             <hr>
                 <div class="row mt-5 mb-4">
                     <div class="col-md-2 col-sm-4 col-12 p-2">
@@ -286,5 +288,6 @@
             </div>
         </div>
     </div>
+
 </body>
 </html>

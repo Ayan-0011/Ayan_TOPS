@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Project</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="row bg-primary">
+        <div class="col-md-12">
+            <img src="img/logo.png" width="200px">
+            <button type="button" class="btn btn-info float-end">download</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col-md">
+                <nav class="navbar navbar-expand-lg navbar-dark" id="navbar1">
+                    <div class="container-fluid">
+                        <h1><span class="text-dark">Medi</span><span class="text-info">Nest</span></h1>
+
+                        <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#mynavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="mynavbar">
+                            <ul class="navbar-nav me-auto ms-5">
+
+                                <li class="nav-item active mx-3">
+                                    <a class="nav-link text-info" href="index.html">Home</a>
+                                </li>
+
+                                <li class="nav-item mx-2">
+                                    <a class="nav-link text-dark" href="about.html">About</a>
+                                </li>
+                                <li class="nav-item mx-2">
+                                    <a class="nav-link text-dark" href="doctors.html">Departments</a>
+                                </li>
+                                <li class="nav-item mx-2">
+                                    <a class="nav-link text-dark" href="service.html">Services</a>
+                                </li>
+                                <li class="nav-item mx-2">
+                                    <a class="nav-link text-dark" href="doctors.html">Doctors</a>
+                                </li>
+                                <li class="nav-item mx-2">
+                                    <a class="nav-link text-dark" href="#">More Pages</a>
+                                </li>
+                                <li class="nav-item mx-2">
+                                    <a class="nav-link text-dark" href="#">Dropdown</a>
+                                </li>
+                                <li class="nav-item mx-2">
+                                    <a class="nav-link text-dark" href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                            <button class="btn btn-primary" type="button">Appointment</button>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!--mainpage--->
+    <div class="row">
+        <div class="col-md-12 text-center pt-5 pb-5 mb-4">
+            <h1>Doctors</h1>
+            <p>Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a
+                odio voluptatem.<br> Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum
+                dolorem.</p>
+        </div>
+
+        <div class="container-fluid">
+            <nav aria-label="breadcrumb" class="bg-body-secondary ps-5 pt-4 pb-3">
+                <ol class="breadcrumb joint">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Doctors</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-12" id="serch">
+                <div class="row pt-3">
+                    <div class="col-md-4 p-2 ps-3">
+                        <p>Search Doctors</p>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Types a name or keybord</label>
+                        </div>
+                    </div>
+                    <div class="col-md-3 p-2">
+                        <p>Department</p>
+                        <div class="form-floating">
+                            <select class="form-select" id="floatingSelect">
+                                <option selected>All Department</option>
+                                <option value="1">Cardiology</option>
+                                <option value="2">Neurological</option>
+                                <option value="3">Orthopedic</option>
+                                <option value="4">Pediatric</option>
+                                <option value="5">Dermatological</option>
+                                <option value="6">Oncological</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-3 p-2">
+                        <p>Location</p>
+                        <div class="form-floating">
+                            <select class="form-select" id="floatingSelect">
+                                <option selected>All Location</option>
+                                <option value="1">All Location</option>
+                                <option value="2">Downtoen medical center</option>
+                                <option value="3">North side clinic</option>
+                                <option value="4">Wesr End hospital</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-2 pt-3 mt-5 col-12 mb-3">
+                        <button type="button" class="btn btn-info w-100">Apply filter</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 mt-3" id="bd">
+                <span class="badge rounded-pill bg-primary">All</span></h4>
+                <span class="badge rounded-pill bg-light text-dark">Cardiology</span>
+                <span class="badge rounded-pill bg-light text-dark">Pediatric</span>
+                <span class="badge rounded-pill bg-light text-dark">Dermatorogy</span>
+                <span class="badge rounded-pill bg-light text-dark">Orthopedic</span>
+            </div>
+
+            <!---dr profile-->
+            <div class="row mt-3">
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <div class="card" id="dr-card">
+                        <img src="img/staff-3.webp" class="card-img-top" height="200px">
+                        <span class="badge bg-info"
+                            style="position: absolute;top: 10px;left: 10px;">Cardiology</span><br>
+                        <div class="card-body">
+                            <h5 class="card-title">Dr. Amelia Brooks</h5>
+                            <h5 class="card-title" style="font-weight: 300; font-size: 15px;">Cardiologist • MD, FACC
+                            </h5>
+                            <p class="card-text">Nostrud tempor magna minim excepteur, id cillum laboris aute proident.
+                            </p>
+                            <span class="badge bg-secondary mb-3">Cardiology</span><br>
+                            <button type="button" class="btn btn-primary btn-sm mb-2">Book Appointment</button>
+                            <button type="button" class="btn btn-outline-info btn-sm">View Profile</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-2">
+                    <div class="card" id="dr-card">
+                        <img src="img/staff-7.webp" class="card-img-top" height="200px">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr. Noah Turner</h5>
+                            <h5 class="card-title" style="font-weight: 300; font-size: 15px;">Pediatrician • DO</h5>
+                            <p class="card-text">Quis irure pariatur sed eiusmod, elit laboris consequat cupidatat.</p>
+                            <span class="badge bg-secondary mb-3">Pediatrics</span><br>
+                            <button type="button" class="btn btn-primary btn-sm">Book Appointment</button>
+                            <button type="button" class="btn btn-outline-info btn-sm">View Profile</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-2">
+                    <div class="card" id="dr-card">
+                        <img src="img/staff-12.webp" class="card-img-top" height="200px">
+                        <span class="badge bg-info" style="position: absolute;top: 10px;left: 10px;">New</span><br>
+                        <div class="card-body">
+                            <h5 class="card-title">Dr. Sofia Bennett</h5>
+                            <h5 class="card-title" style="font-weight: 300; font-size: 15px;">Dermatologist • MBBS, MD
+                            </h5>
+                            <p class="card-text">Dolor commodo laboris lorem ad, amet consequat mollit deserunt.</p>
+                            <span class="badge bg-secondary mb-3">Dermatology</span><br>
+                            <button type="button" class="btn btn-primary btn-sm mb-2">Book Appointment</button>
+                            <button type="button" class="btn btn-outline-info btn-sm">View Profile</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-2">
+                    <div class="card" id="dr-card">
+                        <img src="img/staff-5.webp" class="card-img-top" height="200px">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr. Ethan Cole</h5>
+                            <h5 class="card-title" style="font-weight: 300; font-size: 15px;">Orthopedic Surgeon • MS,
+                                FRCS</h5>
+                            <p class="card-text">Velit laborum minim laboris, eiusmod elit irure in exercitation.</p>
+                            <span class="badge bg-secondary mb-3">Orthopedics</span><br>
+                            <button type="button" class="btn btn-primary btn-sm">Book Appointment</button>
+                            <button type="button" class="btn btn-outline-info btn-sm">View Profile</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-2">
+                    <div class="card" id="dr-card">
+                        <img src="img/staff-6.webp" class="card-img-top" height="200px">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr. Liam Carter</h5>
+                            <h5 class="card-title" style="font-weight: 300; font-size: 15px;">Sports Medicine • MD</h5>
+                            <p class="card-text">Deserunt pariatur eiusmod duis, officia aute laboris consectetur.</p>
+                            <span class="badge bg-secondary mb-3">Orthopedics</span><br>
+                            <button type="button" class="btn btn-primary btn-sm mb-3">Book Appointment</button>
+                            <button type="button" class="btn btn-outline-info btn-sm">View Profile</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-2">
+                    <div class="card" id="dr-card">
+                        <img src="img/staff-10.webp" class="card-img-top" height="200px">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr. Maya Patel</h5>
+                            <h5 class="card-title" style="font-weight: 300; font-size: 15px;">Interventional
+                                Cardiologist • MD</h5>
+                            <p class="card-text">Cupidatat fugiat sint enim laboris, sed do ut aliquip dolor.</p>
+                            <span class="badge bg-secondary mb-3">Cardiology</span><br>
+                            <button type="button" class="btn btn-primary btn-sm">Book Appointment</button>
+                            <button type="button" class="btn btn-outline-info btn-sm">View Profile</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-2">
+                    <div class="card" id="dr-card">
+                        <img src="img/staff-2.webp" class="card-img-top" height="200px">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr. Oliver Hayes</h5>
+                            <h5 class="card-title" style="font-weight: 300; font-size: 15px;">Pediatric Specialist • MD
+                            </h5>
+                            <p class="card-text">Exercitation id ea nisi fugiat, ullamco veniam cillum nostrud.</p>
+                            <span class="badge bg-secondary mb-3">Pediatrics</span><br>
+                            <button type="button" class="btn btn-primary btn-sm">Book Appointment</button>
+                            <button type="button" class="btn btn-outline-info btn-sm">View Profile</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-2">
+                    <div class="card" id="dr-card">
+                        <img src="img/staff-9.webp" class="card-img-top" height="200px">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr. Harper Lane</h5>
+                            <h5 class="card-title" style="font-weight: 300; font-size: 15px;">Cosmetic Dermatologist •
+                                MD</h5>
+                            <p class="card-text">Aliquip laboris anim minim, irure commodo qui occaecat velit.</p>
+                            <span class="badge bg-secondary mb-3">Dermatology</span><br>
+                            <button type="button" class="btn btn-primary btn-sm">Book Appointment</button>
+                            <button type="button" class="btn btn-outline-info btn-sm">View Profile</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5 mb-3">
+            <div class="col-md-5">
+                <img src="img/staff-12.webp" width="95%" class="rounded-4">
+            </div>
+            <div class="col-md-7 mt-5">
+                <span class="badge bg-secondary">Chief Surgeon</span>
+                <span class="badge bg-light" style="color: rgb(24, 194, 216);">12+ Years Experience</span>
+                <span class="badge bg-light" style="color: rgb(24, 194, 216);">Board Certified</span>
+
+                <h4 class="mt-3">Dr. Natalia Rivera</h4>
+                <p style="font-size: 15px;font-weight: 300;">General Surgery • MD, FACS</p>
+                <p class="mb-4">Commodo incididunt aliqua minim, eiusmod in laboris nulla. Amet do occaecat quis,
+                    excepteur in magna id dolore incididunt. Tempor in aute ullamco, irure officia aliqua nostrud.</p>
+                <p><i class="fa-solid fa-graduation-cap text-info"></i> Residency: St. Mary’s Medical Center</p>
+                <p><i class="fa-solid fa-school text-info"></i> Fellowship: Advanced Laparoscopy</p>
+                <p><i class="fa-solid fa-award text-info"></i> Publications: 14 peer-reviewed articles</p>
+
+                <button type="button" class="btn btn-info">Book Appointment</button>
+                <button type="button" class="btn btn-outline-info">View CV</button>
+            </div>
+        </div>
+
+        <div class="row g-2 mt-3 mb-3">
+            <div class="col-md-2 col-sm-6">
+                <div class="card" id="dr-profile">
+                    <img src="img/staff-2.webp" class="rounded-pill m-2" width="35%">
+                    <span>Dr. Oliver Hayes</span>
+                    <p style="font-weight: 300;">Pediatrics</p>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-6">
+                <div class="card" id="dr-profile">
+                    <img src="img/staff-7.webp" class="rounded-pill m-2" width="35%">
+                    <span>Dr. Noah Turner</span>
+                    <p style="font-weight: 300;">Pediatrics</p>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-6">
+                <div class="card" id="dr-profile">
+                    <img src="img/staff-6.webp" class="rounded-pill m-2" width="35%">
+                    <span>Dr. Liam Carter</span>
+                    <p style="font-weight: 300;">Orthopedic</p>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-6">
+                <div class="card" id="dr-profile">
+                    <img src="img/staff-3.webp" class="rounded-pill m-2" width="35%">
+                    <span>Dr. Amelia Brooks</span>
+                    <p style="font-weight: 300;">Cardiology</p>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-6">
+                <div class="card" id="dr-profile">
+                    <img src="img/staff-9.webp" class="rounded-pill m-2" width="35%">
+                    <span>Dr. Harper Lane</span>
+                    <p style="font-weight: 300;">Dermatology</p>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-6">
+                <div class="card" id="dr-profile">
+                    <img src="img/staff-11.webp" class="rounded-pill m-2" width="35%">
+                    <span>Dr. Lucas Grant</span>
+                    <p style="font-weight: 300;">Pulmonology</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card" style="border: 1px solid;">
+                    <img src="img/staff-4.webp" class="img-thumbnail card-img-top" width="30%">
+                    <h4 class="card-title ms-3">Dr. Henry James</h4>
+                    <p class="card-title ms-3">Oncology • MBBS, MD</p>
+                    <span class="card-link"><span class="badge bg-primary ms-3 mb-3">Board Certified</span></span>
+                </div>
+            </div>
+            <div class="col-md-8 mt-3">
+                    <button type="button" class="btn btn-link dr-btn" data-bs-toggle="collapse" data-bs-target="#bio">Bio</button>
+                    <button type="button" class="btn btn-link dr-btn" data-bs-toggle="collapse" data-bs-target="#Schedule">Schedule</button>
+                    <button type="button" class="btn btn-link dr-btn" data-bs-toggle="collapse" data-bs-target="#Reviews">Reviews</button>
+
+                <div class="col-md-12 mt-4 collapse show" id="bio">
+                    <p>Fugiat proident aliqua laboris, excepteur sunt ad pariatur occaecat. Veniam minim eu laboris,
+                        magna irure velit anim excepteur exercitation.</p>
+                    <p><i class="fa-solid fa-circle-check"></i> Special interest in immunotherapy</p>
+                    <p><i class="fa-solid fa-circle-check"></i> Member of ASCO</p>
+                    <p><i class="fa-solid fa-circle-check"></i> Community outreach programs</p>
+                </div>
+                
+                <div class="col-md-12  mt-4 mb-3 collapse" id="Schedule">
+                    <div class="row g-2">
+                        <div class="col-md-5 sch">
+                            <span class="ps-3">Mon</span><span class="float-end me-3">9:00 AM - 1:00 PM</span>
+                        </div>
+                        <div class="offset-md-1 col-md-5 sch">
+                            <span class="ps-3">Tue</span><span class="float-end me-3">12:00 PM - 6:00 PM</span>
+                        </div>
+                        <div class="col-md-5 sch">
+                            <span class="ps-3">Wed</span><span class="float-end me-3">9:00 AM - 3:00 PM</span>
+                        </div>
+                        <div class="col-md-5 sch">
+                            <span class="ps-3">Thu</span><span class="float-end me-3">10:00 AM - 4:00 PM</span>
+                        </div>
+                        <div class="col-md-5 sch">
+                            <span class="ps-3">Fri</span><span class="float-end me-3">Closed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 mt-3" id='Reviews'>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-regular fa-star-half"></i>
+                    <span>4.5/5 • 32 reviews</span>
+                    <p>Id magna consequat minim in, lorem dolore fugiat. Officia irure ex anim, velit nulla cupidatat laboris enim.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <hr>
+            <div class="row mt-5 mb-4">
+                <div class="col-md-2 col-sm-4 col-12 p-2">
+                    <h3>MediNest</h3>
+                    <p>A108 Adam Street<br>
+                        New York, NY 535022</p>
+                    <span><b>Phone:</b> +1 5589 55488 55</span><br>
+                    <span><b>Email:</b> info@example.com</span><br>
+
+                    <i class="fa-brands fa-square-x-twitter"></i>
+                    <i class="fa-brands fa-square-facebook"></i>
+                    <i class="fa-brands fa-square-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+                <div class="offset-md-2 col-md-2 offset-sm-1 col-sm-4">
+                    <ul>
+                        <h5>Useful Links</h5>
+                        <li>Home</li>
+                        <li>About us</li>
+                        <li>Services</li>
+                        <li>Terms of service</li>
+                        <li>Privacy policy</li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-sm-4">
+                    <ul>
+                        <h5>Our Services</h5>
+                        <li>Web Design</li>
+                        <li>Web Development</li>
+                        <li>Product Management</li>
+                        <li>Marketing</li>
+                        <li>Graphic Design</li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-sm-4">
+                    <ul>
+                        <h5>Hic solutasetp</h5>
+                        <li>Molestiae accusamus</li>
+                        <li>Excepturi dignissimos</li>
+                        <li>Suscipit distinctio</li>
+                        <li>Dilecta</li>
+                        <li>Sit quas consectetur</li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-sm-4">
+                    <ul>
+                        <h5>Nobis illum</h5>
+                        <li>Ipsam</li>
+                        <li>Laudantium dolorum</li>
+                        <li>Dinera</li>
+                        <li>Trodelas</li>
+                        <li>Flexo</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <span>© Copyright <b> MediNest</b> All Rights Reserved</span>
+                <p>Designed by <span style="color: rgb(35, 189, 189);">BootstrapMade</span></p>
+
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

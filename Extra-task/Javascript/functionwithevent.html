@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="text-align: center;">
+    <!---1no of example-->
+    <p id="demo">I am html</p>
+    <button onclick="changeText()">Click Me</button>
+
+    <script>
+        function changeText() {
+            document.getElementById("demo").innerHTML = "and I am Javascript";
+        }
+    </script>
+
+    <!---2no of example-->
+    <p id="hover" onmouseover="changeColor()">Hover over me</p>
+
+    <script>
+        function changeColor() {
+            document.getElementById("hover").style.color = "red";
+        }
+    </script>
+
+    <!---3no of example-->
+    <input type="text" id="name" onchange="showName()">
+    <p id="output"></p>
+
+    <script>
+        function showName() {
+            let name = document.getElementById("name").value;
+            document.getElementById("output").innerHTML = "Hello " + name;
+        }
+    </script>
+
+    <!---4no of example-->
+    <img id="pic" src="https://via.placeholder.com/150" ondblclick="changeImage()">
+
+    <script>
+        function changeImage() {
+            document.getElementById("pic").src = "https://via.placeholder.com/200";
+        }
+    </script>
+
+    <!---4no of example-->
+    <input type="text" onkeydown="showKey(event)">
+    <p id="result"></p>
+
+    <script>
+        function showKey(e) {
+            document.getElementById("result").innerHTML = "You pressed: " + e.key;
+        }
+    </script>
+
+</body>
+</html>

@@ -13,6 +13,11 @@
         width: 100%;
     }
 }
+@media (max-width:760px) {
+    .main-img img{
+        width: 100%;
+    }
+}
 
 .img-card {
     width: 100%;
@@ -77,6 +82,7 @@
     }
 
 }
+
 
 .box {
     width: 100%;
@@ -275,7 +281,7 @@
     }
 }
 #card-1:hover{
-    transform: scale(1.1);
+    transform: translateY(-5px)
 }
 #card-1{
     transition: all 0.6s;
@@ -516,4 +522,119 @@ body{
 }
 #dep-card:hover{
     transform:translateY(-10px);
+}
+
+/*service css*/
+.symbol2 i{
+    width: 60px;
+    height: 60px;
+    padding: 8px 12px;
+    margin: 10px;
+    float: left;
+    border: 2px solid;
+    border-radius: 12px;
+    background-color: rgba(19, 159, 177, 0.544);
+    color: white;
+    transform: all 0.6s;
+}
+#service-card{
+    transition: all 0.6s;
+}
+#service-card:hover{
+    border: 2px solid rgb(19, 159, 177);
+    box-shadow: 2px 2px 2px rgb(19, 159, 177);
+    transform: translateY(-12px);
+}
+#service-card:hover i{
+    transform: rotate(10deg);
+}
+/* doctor css*/
+#serch{
+    background-color: rgba(197, 202, 202, 0.585);
+    border-radius: 12px;
+}
+#bd span{
+    font-size: 15px;
+}
+#bd :hover span{
+    border: 1px solid rgb(19, 159, 177);
+    color: rgb(19, 159, 177);
+}
+/*doctor css*/
+#dr-card:hover{
+    box-shadow: 0 0 0 0 white;
+    transform: translateY(-8px);
+}
+#dr-card{
+    border: 1px solid;
+}
+#dr-card img{
+    position: relative;
+}
+.dr-img{
+    position: relative;
+}
+#dr-profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+}
+#dr-profile:hover{
+    transform: translateY(-6px);
+    box-shadow: 2 2 2 2 rgb(60, 53, 53);    
+}
+/*contact css*/
+#con-card:hover{
+    transform: translateY(-6px);
+    
+}
+.dr-btn{
+    background-color:white;
+    color:black;
+    border-radius: 20px;
+    border: 1px solid;
+    text-decoration: none;
+}
+.dr-btn:hover{
+    background-color: rgb(19, 159, 177);
+    color: white;
+}
+.btn-link:active{
+    background-color: rgb(19, 159, 177);
+    color: white;
+    border-radius: 20px;
+    border: 1px solid;
+}
+.btn-link:visited{
+    background-color: rgb(19, 159, 177);
+    color: white;
+    border-radius: 20px;
+    border: 1px solid;
+}
+
+#bio p{
+    margin-top: -10px;
+}
+#bio{
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+#bio i{
+    color: rgb(19, 159, 177);
+}
+.sch{
+    border: 1px solid rgb(19, 159, 177);
+    background-color: rgba(19, 159, 177, 0.33);
+    border-radius: 10px;
+    margin: 5px;
+}
+#Reviews i{
+    color: rgb(19, 159, 177);
+}
+#Reviews{
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 8px 5px;
 }
