@@ -638,3 +638,7 @@ body{
     border-radius: 10px;
     padding: 8px 5px;
 }
+.serv p{
+    font-size: 18px;
+    font-weight: 500;
+}
