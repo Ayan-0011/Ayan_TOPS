@@ -642,3 +642,17 @@ body{
     font-size: 18px;
     font-weight: 500;
 }
+/*contact css*/
+.icon0 i{
+    font-size: 40px;
+    margin: 2px 2px;
+    padding-left: 20px;
+    color: rgb(19, 159, 177);
+    transition: all 0.6s;
+}
+.icon0 i:hover{
+    transform: translateY(-6px);
+}
+*{
+    box-sizing: border-box;
+}

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="stylee.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+header{
+    width: 100vw;
+    height: 40px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+header p{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    margin: auto;
+    border: 1px solid;
+}
+.menu{
+    margin-left: 10px;
+}
+
+.links ul li{
+    list-style: none;
+    display: inline;
+    padding: 15px;
+    margin-top: 20px;
+    position: relative;
+}
+.links a{
+    text-decoration: none;
+    color: black;
+   
+}
+.links ul li::after{
+    content: '';
+    position: absolute;
+    top:54px;
+    left:10px;
+    width:0px;
+    height: 3px;
+    background-color: rgb(21, 96, 188);
+    transition: all 0.6s;
+}
+.links ul li:hover::after{
+    width: 90px;
+}
+
+.links i{
+    display: none;
+    font-size: 30px;
+    margin: 0px 10px;
+}
+
+.icon{
+    margin-right: 20px;
+}
+.icon i{
+    padding: 8px;
+    font-size: 20px;
+    transition: all 1s;
+    
+}
+.icon i:hover{
+    transform: scale(1.2);
+}
+
+.humburg{
+    display: none;
+}
+.humburg i{
+    font-size: 25px;
+    margin-left: 10px; 
+}
+
+
+
+@media(max-width:500px){
+    header{
+        width: 100vw;
+        font-size: 10px;
+    }
+    .menu{
+        margin-left: 50px;
+    }
+    .links{
+        position: absolute;
+        top: 40px;
+        left: 0;
+        height: 100vh;
+        width: 150px;
+        background-color:whitesmoke;
+        display: none; 
+    }
+    .links i{
+        display: block;
+    }
+    .links ul li{
+        display: inline-block;
+    }
+    .humburg{
+        display: block;
+    }
+    main img{
+        height: 60vh;
+        width: 100vw;
+        
+    } 
+}
+
+
+
+
+
+    </style>
+    
+    
+</head>
+<body>
+    <section>
+
+        <header>
+            <p>Get 15% Off on purchases above ₹2500 or Get 30% Off on purchases above ₹5000</p>
+        </header>
+    <nav>
+        <div class="humburg">
+            <i class="fa-solid fa-bars" onclick="showmenu()"></i>
+        </div>
+
+        <div class="menu">
+            <img src="img/Nivia-Logo-Black-SVG_2_1.svg" width="100px">
+        </div>
+
+        <div class="links" id="hidemenu"> 
+            <i class="fa-solid fa-xmark" onclick="hidemenu()"></i>           
+            <ul>
+                <li><a href="#">ALL SPORTS</a></li>
+                <li><a href="#">APPAREL</a></li>
+                <li><a href="#">FOOTWEAR</a></li>
+                <li><a href="#">FITNESS</a></li>
+                <li><a href="#">MUCLE SPORT</a></li>
+                <li><a href="#">ACCESORIES</a></li>
+                <li ><a href="#" style="color: red;">OFFERS</a></li>
+                <li><a href="#">CLUBS</a></li>
+         </ul> </div>
+
+          <div class="icon">
+                    
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-user"></i>
+                    <i class="fa-solid fa-bag-shopping"></i>
+         </div>
+    </nav>
+    <main>
+        <img src="img/Pickleball_Hompage_Banner_Web_1 (1).webp" width="100%" height="100%">
+
+
+        
+        
+    </main>
+
+</section>
+
+<script>
+
+   
+        var menu=document.getElementById('hidemenu');
+
+         function showmenu(){
+            menu.style.display="block";
+        }
+        function hidemenu(){
+            menu.style.display="none";
+        }
+
+
+
+</script>
+</body>
+</html>

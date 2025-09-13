@@ -4,7 +4,7 @@
         margin: 0;
 
     }
-   
+
     .row {
         display: flex;
         flex-wrap: wrap;
@@ -15,8 +15,6 @@
         width: 100%; /* Mobile default */
     }
  
-
-    
 
         .col-1{ width:8.33% }
         .col-2{ width:16.66% }
@@ -51,6 +49,9 @@ header p{
         width: 100vw;
         font-size: 10px;
     }
+    nav{
+        display: block;
+    }
 
 }
 
@@ -64,7 +65,6 @@ header p{
         border: 1px solid rgba(137, 135, 135, 0.4);
         position: relative;
         
-
     }
 
     .nav a {
@@ -566,7 +566,10 @@ header p{
 .main h1{
     padding: 50px 50px;
 }
-
+.main img{
+    width: 100vw;
+    height: 80vh;
+}
 .launch{
     width: 20%;
     height:350px;
