@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="msg()">msg box </button>
+    <br><br>
+    
+    <button onclick="prt()">prompt</button> <br><br>
+
+    <button onclick="cnfm()">confrim</button>
+
+
+    <script>
+        function msg(){
+            alert("most welcom");
+        }
+
+        function prt(){
+          var ans=prompt("Enter Yout code")
+          if(ans==4577){
+            alert("you are correct");
+            window.location="date.html"
+          }
+          else{
+            alert("sorry buddy u are wrong")
+          }
+        }
+
+        function cnfm(){
+          var anss= confirm("are u sure delete data??");
+          if(anss){
+            alert("delet succesfully");
+          }
+          else{
+            alert("falied buddy!!!")
+          }
+        }
+      
+    </script>
+</body>
+</html>
