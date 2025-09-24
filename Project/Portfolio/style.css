@@ -216,6 +216,8 @@ nav i {
     font-weight: 600;
     font-size: 16px;
     margin-right: 20px;
+    margin-top: 15px;
+    
 }
 
 .skill i {
@@ -223,7 +225,7 @@ nav i {
     display: block;
     margin-bottom: 5px;
     transition: transform 0.3s ease, color 0.3s ease;
-    color: black;
+    margin-left: 50px;
 }
 
 .skill span {
@@ -233,7 +235,6 @@ nav i {
 
 .skill:hover i {
     transform: scale(1.2);
-    color: #0d6efd;
 }
 
 @keyframes scroll {
@@ -285,7 +286,7 @@ nav i {
 /*footer page */
 footer {
     background-color: #0f172a;
-
+    width: 99vw;
 }
 
 footer span {
@@ -300,10 +301,50 @@ footer p:hover {
     color: #667eea;
 }
 
-@media(max-width:600px) {
-    nav img {
-        width: 25vw;
+
+@media(max-width:800px) {
+    .icon {
+        display: block;
     }
+
+    .link ul li:hover::after {
+        width: 80%;
+    }
+
+    .link i {
+        display: block;
+
+    }
+
+    .link ul span {
+        display: block;
+        font-size: 20px;
+        margin-left: -35px;
+        color: var(--color);
+    }
+
+    .link {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 180px;
+        height: 100vh;
+        background-color: rgba(21, 89, 173);
+        z-index: 2;
+        display: none;
+    }
+
+    .self p {
+        font-size: 35px;
+    }
+
+    .self h3 {
+        font-size: 30px;
+    }
+
+}
+
+@media(max-width:500px) {
 
     .icon {
         display: block;
@@ -352,8 +393,106 @@ footer p:hover {
     #btn2 {
         width: 30%;
     }
-    #vanta-bg{
-        width: 98vw;
-    }
 
+    #vanta-bg {
+        height: 80vh;
+        width: 90vw;
+    }
+}
+/* From Uiverse.io by wilsondesouza */ 
+ul {
+  list-style: none;
+}
+
+.example-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -25px;
+}
+.example-2 .icon-content {
+  margin: 0 10px;
+  position: relative;
+}
+.example-2 .icon-content .tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+.example-2 .icon-content:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: -50px;
+}
+.example-2 .icon-content a {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #4d4d4d;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.example-2 .icon-content a:hover {
+  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+.example-2 .icon-content a svg {
+  position: relative;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+}
+.example-2 .icon-content a:hover {
+  color: white;
+}
+.example-2 .icon-content a .filled {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+.example-2 .icon-content a:hover .filled {
+  height: 100%;
+}
+
+.example-2 .icon-content a[data-social="linkedin"] .filled,
+.example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
+  background-color: #0274b3;
+}
+
+.example-2 .icon-content a[data-social="github"] .filled,
+.example-2 .icon-content a[data-social="github"] ~ .tooltip {
+  background-color: #24262a;
+}
+.example-2 .icon-content a[data-social="instagram"] .filled,
+.example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5b51db,
+    #b33ab4,
+    #c135b4,
+    #e1306c,
+    #fd1f1f
+  );
+}
+.example-2 .icon-content a[data-social="youtube"] .filled,
+.example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
+  background-color: #ff0000;
 }
