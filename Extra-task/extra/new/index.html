@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hotel Guest Registration - Swan Solution</title>
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body { padding: 2rem; background:#f8f9fa; }
+    .required::after { content: "*"; color: #dc3545; margin-left:0.25rem; }
+    .small-muted { font-size: 0.85rem; color: #6c757d; }
+    .is-invalid + .invalid-feedback { display:block; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-12">
+        <h1 class="h3">Hotel Guest Registration</h1>
+        <p class="small-muted">Mobile-first, responsive registration form. All fields required.</p>
+      </div>
+    </div>
+
+    <div id="message-container"></div>
+
+    <form id="customer-form" class="row g-3 needs-validation" novalidate>
+      <div class="col-md-6">
+        <label class="form-label required" for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" class="form-control" required minlength="3" />
+        <div class="invalid-feedback">Name must be at least 3 characters.</div>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label required" for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" class="form-control" inputmode="numeric" pattern="\d{10}" required />
+        <div class="invalid-feedback">Enter a valid 10-digit phone number.</div>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label required" for="email">Email Address</label>
+        <input type="email" id="email" name="email" class="form-control" required />
+        <div class="invalid-feedback">Please enter a valid email.</div>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label required" for="aadhar">Aadhar Card Number</label>
+        <input type="text" id="aadhar" name="aadhar" class="form-control" inputmode="numeric" maxlength="12" required />
+        <div class="invalid-feedback">Aadhar must be exactly 12 digits.</div>
+      </div>
+
+      <div class="col-12">
+        <label class="form-label required" for="address">Address</label>
+        <textarea id="address" name="address" rows="2" class="form-control" required></textarea>
+        <div class="invalid-feedback">Address can't be empty.</div>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label required" for="checkIn">Check-in Date</label>
+        <input type="date" id="checkIn" name="checkIn" class="form-control" required />
+        <div class="invalid-feedback">Check-in must be a future date.</div>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label required" for="checkOut">Check-out Date</label>
+        <input type="date" id="checkOut" name="checkOut" class="form-control" required />
+        <div class="invalid-feedback">Check-out must be after check-in.</div>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label required" for="adults">No of Adult</label>
+        <input type="number" id="adults" name="adults" class="form-control" min="1" required />
+        <div class="invalid-feedback">Enter number of adults (>=1).</div>
+      </div>
+
+      <div class="col-12">
+        <label class="form-label required" for="purpose">Purpose of visit / Complaint</label>
+        <textarea id="purpose" name="purpose" rows="3" class="form-control" required minlength="10"></textarea>
+        <div class="invalid-feedback">Purpose must be at least 10 characters.</div>
+      </div>
+
+      <div class="col-12 d-flex gap-2">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="button" id="resetBtn" class="btn btn-outline-secondary">Reset</button>
+        <a href="view.html" class="btn btn-outline-success ms-auto">View Submissions</a>
+      </div>
+    </form>
+  </div>
+
+  <!-- App Modules -->
+  <script type="module" src="./formHandler.js"></script>
+</body>
+</html>
