@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Bookings</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-5">
+    <h2 class="mb-4">All Bookings</h2>
+
+    <!-- Search box -->
+    <div class="mb-3">
+      <input type="text" id="searchInput" class="form-control" placeholder="Search by Name...">
+    </div>
+
+    <table class="table table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Aadhar</th>
+          <th>Check-in</th>
+          <th>Check-out</th>
+          <th>Adults</th>
+          <th>Purpose</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="bookingTableBody">
+        <!-- Bookings will appear here -->
+      </tbody>
+    </table>
+    <a href="index.html" class="btn btn-primary">Back to Booking</a>
+  </div>
+
+  <script>
+    const bookingTableBody = document.getElementById('bookingTableBody');
+    const searchInput = document.getElementById('searchInput');
+
+    let bookings = JSON.parse(localStorage.getItem('bookings')) || [];
+
+    function displayBookings(filteredBookings) {
+      bookingTableBody.innerHTML = '';
+      filteredBookings.forEach((booking, index) => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${booking.name}</td>
+          <td>${booking.email}</td>
+          <td>${booking.phone}</td>
+          <td>${booking.adhar}</td>
+          <td>${booking.checkin}</td>
+          <td>${booking.checkout}</td>
+          <td>${booking.adults}</td>
+          <td>${booking.purpose}</td>
+          <td><button class="btn btn-danger btn-sm" onclick="deleteBooking(${index})">Delete</button></td>
+        `;
+        bookingTableBody.appendChild(row);
+      });
+    }
+
+    // Delete booking by index
+    function deleteBooking(index) {
+      if(confirm("Are you sure you want to delete this booking?")) {
+        bookings.splice(index, 1);
+        localStorage.setItem('bookings', JSON.stringify(bookings));
+        displayBookings(bookings);
+      }
+    }
+
+    // Initially display all bookings
+    displayBookings(bookings);
+
+    // Search filter by name
+    searchInput.addEventListener('input', function() {
+      const searchText = this.value.toLowerCase();
+      const filteredBookings = bookings.filter(booking =>
+        booking.name.toLowerCase().includes(searchText)
+      );
+      displayBookings(filteredBookings);
+    });
+  </script>
+</body>
+</html>

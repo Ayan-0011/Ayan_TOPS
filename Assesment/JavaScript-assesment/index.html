@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .error {
+            color: red;
+            font-size: 0.9em;
+            margin-top: 0.25rem;
+        }
+
+        .is-invalid {
+            border-color: red;
+        }
+        body {
+            min-height: 100vh;
+            background: #EEAECA;
+            background: radial-gradient(circle, rgb(182, 174, 238) 1%, rgba(148, 187, 233, 1) 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        div{
+            font-weight: 500;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4 text-center">Hotel Management System </h1>
+        <div class="card shadow p-4 mb-4">
+
+            <form id="bookingForm">
+                <div class="row g-2">
+                    
+                <div class="col-md-12">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="name">
+                    <div class="error" id="nameError"></div>
+                </div>
+                <div class="col-md-12">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email">
+                    <div class="error" id="emailError"></div>
+                </div>
+                <div class="col-md-6">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone">
+                    <div class="error" id="phoneError"></div>
+                </div>
+                <div class="col-md-6">
+                    <label for="adhar" class="form-label">Aadhar Number</label>
+                    <input type="text" class="form-control" id="adhar">
+                    <div class="error" id="adharError"></div>
+                </div>
+                <div class="col-md-6">
+                    <label for="checkin" class="form-label">Check-in Date</label>
+                    <input type="date" class="form-control" id="checkin">
+                    <div class="error" id="checkinError"></div>
+                </div>
+                <div class="col-md-6">
+                    <label for="checkout" class="form-label">Check-out Date</label>
+                    <input type="date" class="form-control" id="checkout">
+                    <div class="error" id="checkoutError"></div>
+                </div>
+                <div class="col-md-12">
+                    <label for="adults" class="form-label">Number of Adults</label>
+                    <input type="number" class="form-control" id="adults">
+                    <div class="error" id="adultsError"></div>
+                </div>
+                <div class="col-md-12">
+                    <label for="purpose" class="form-label">Purpose of Booking</label>
+                    <select class="form-select" id="purpose">
+                        <option value="">Select Purpose</option>
+                        <option value="Vacation">Vacation</option>
+                        <option value="Business">Business</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <div class="error" id="purposeError"></div>
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary mt-2 me-3">Submit Booking</button>
+                    <a href="view.html" class="btn btn-success mt-2">View Bookings</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
