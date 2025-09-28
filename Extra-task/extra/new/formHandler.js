@@ -1,182 +1,100 @@
-// formHandler.js
-import { getItem, setItem } from './storage.js';
-
 class CustomerFormHandler {
-  constructor(formSelector, messageContainer) {
-    this.form = document.querySelector(formSelector);
-    this.msgContainer = document.querySelector(messageContainer);
-    if (!this.form) throw new Error('Form not found');
-    this.setup();
+  constructor(formId, messageBoxId) {
+    this.form = document.getElementById(formId);
+    this.messageBox = document.getElementById(messageBoxId);
+
+    // Event delegation: input + blur validation
+    this.form.addEventListener("input", (e) => {
+      if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") {
+        this.validateField(e.target);
+      }
+    });
+
+    this.form.addEventListener("submit", (e) => this.handleSubmit(e));
   }
 
-  setup() {
-    // Event delegation: handle input validation and submit via the form element.
-    this.form.addEventListener('input', (e) => this.handleRealtime(e), true);
-    this.form.addEventListener('blur', (e) => this.handleRealtime(e), true);
-    this.form.addEventListener('submit', (e) => this.onSubmit(e));
-    document.getElementById('resetBtn').addEventListener('click', () => this.clearForm());
-  }
+  validateField(input) {
+    let errorMsg = "";
 
-  // Real-time validation on input/blur
-  handleRealtime(e) {
-    const target = e.target;
-    if (!target || !target.name) return;
-    this.validateField(target);
-  }
-
-  validateField(field) {
-    const name = field.name;
-    const val = (field.value || '').trim();
-    let valid = true;
-    let message = '';
-
-    // Helpers
-    const isFutureOrToday = (d) => {
-      if (!d) return false;
-      const today = new Date();
-      today.setHours(0,0,0,0);
-      const date = new Date(d);
-      date.setHours(0,0,0,0);
-      return date >= today;
-    };
-
-    switch(name) {
-      case 'fullName':
-        if (val.length < 3) { valid = false; message = 'Name must be at least 3 characters.'; }
+    switch (input.id) {
+      case "fullName":
+        if (input.value.trim().length < 3) errorMsg = "Name must be at least 3 characters";
         break;
-      case 'phone':
-        if (!/^\d{10}$/.test(val)) { valid = false; message = 'Phone must be 10 digits.'; }
+      case "phone":
+        if (!/^\d{10}$/.test(input.value)) errorMsg = "Phone must be 10 digits";
         break;
-      case 'email':
-        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) { valid = false; message = 'Invalid email.'; }
+      case "email":
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)) errorMsg = "Invalid email format";
         break;
-      case 'address':
-        if (val.length === 0) { valid = false; message = 'Address is required.'; }
+      case "aadhar":
+        if (!/^\d{12}$/.test(input.value)) errorMsg = "Aadhar must be 12 digits";
         break;
-      case 'aadhar':
-        if (!/^\d{12}$/.test(val)) { valid = false; message = 'Aadhar must be exactly 12 digits.'; }
+      case "address":
+        if (!input.value.trim()) errorMsg = "Address required";
         break;
-      case 'checkIn':
-        if (!isFutureOrToday(val)) { valid = false; message = 'Check-in must be today or future date.'; }
-        else {
-          // if checkOut filled, revalidate checkOut as well later
-          const co = this.form.checkOut.value;
-          if (co) this.validateField(this.form.checkOut);
-        }
+      case "checkIn":
+      case "checkOut":
+        if (!input.value || new Date(input.value) <= new Date()) errorMsg = "Date must be in future";
         break;
-      case 'checkOut':
-        if (!isFutureOrToday(val)) { valid = false; message = 'Check-out must be today or future date.'; }
-        else {
-          const ci = this.form.checkIn.value;
-          if (ci) {
-            const ciDate = new Date(ci); ciDate.setHours(0,0,0,0);
-            const coDate = new Date(val); coDate.setHours(0,0,0,0);
-            if (coDate <= ciDate) { valid = false; message = 'Check-out must be after check-in.'; }
-          }
-        }
+      case "adults":
+        if (parseInt(input.value) <= 0) errorMsg = "Must be at least 1 adult";
         break;
-      case 'adults':
-        if (!/^\d+$/.test(val) || Number(val) < 1) { valid = false; message = 'Enter valid adult count (>=1).' }
-        break;
-      case 'purpose':
-        if (val.length < 10) { valid = false; message = 'Purpose must be at least 10 characters.'; }
-        break;
-      default:
+      case "purpose":
+        if (!input.value.trim()) errorMsg = "Purpose required";
         break;
     }
 
-    if (!valid) {
-      field.classList.add('is-invalid');
-      field.classList.remove('is-valid');
-      // set aria for a11y
-      field.setAttribute('aria-invalid', 'true');
-    } else {
-      field.classList.remove('is-invalid');
-      field.classList.add('is-valid');
-      field.removeAttribute('aria-invalid');
-    }
-
-    return valid;
+    document.getElementById(input.id + "Error").innerText = errorMsg;
+    return errorMsg === "";
   }
 
   validateForm() {
-    const fields = Array.from(this.form.elements).filter(el => el.name);
-    let allValid = true;
-
-    for (const f of fields) {
-      const ok = this.validateField(f);
-      if (!ok) allValid = false;
-    }
-
-    return allValid;
-  }
-
-  showMessage(type='success', text='') {
-    // Reusable UI message box
-    const id = 'msg-' + Date.now();
-    const wrapper = document.createElement('div');
-    wrapper.id = id;
-    wrapper.className = `alert alert-${type} alert-dismissible fade show`;
-    wrapper.setAttribute('role', 'alert');
-    wrapper.innerHTML = `
-      ${text}
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    `;
-    this.msgContainer.innerHTML = '';
-    this.msgContainer.appendChild(wrapper);
-
-    // auto dismiss after 5s
-    setTimeout(() => {
-      try { const el = document.getElementById(id); if (el) el.remove(); } catch (e) {}
-    }, 5000);
+    let valid = true;
+    [...this.form.elements].forEach(el => {
+      if (el.id && !this.validateField(el)) valid = false;
+    });
+    return valid;
   }
 
   saveToLocalStorage(data) {
-    const storage = getItem();
-    storage.push(data);
-    setItem(storage);
+    let records = JSON.parse(localStorage.getItem("submissions")) || [];
+    records.push(data);
+    localStorage.setItem("submissions", JSON.stringify(records));
   }
 
   clearForm() {
     this.form.reset();
-    // remove validation classes
-    Array.from(this.form.elements).forEach(el => {
-      if (el.classList) {
-        el.classList.remove('is-valid', 'is-invalid');
-        el.removeAttribute('aria-invalid');
-      }
-    });
+    document.querySelectorAll(".error").forEach(e => e.innerText = "");
   }
 
-  onSubmit(e) {
+  showMessage(msg, type="success") {
+    this.messageBox.innerHTML = `<div class="alert alert-${type}">${msg}</div>`;
+    setTimeout(() => this.messageBox.innerHTML = "", 3000);
+  }
+
+  handleSubmit(e) {
     e.preventDefault();
     if (!this.validateForm()) {
-      this.showMessage('danger', 'Please fix the highlighted errors before submitting.');
+      this.showMessage("Please fix errors before submitting", "danger");
       return;
     }
 
-    // collect values
-    const payload = {
-      id: Date.now(),
-      fullName: this.form.fullName.value.trim(),
-      phone: this.form.phone.value.trim(),
-      email: this.form.email.value.trim(),
-      address: this.form.address.value.trim(),
-      aadhar: this.form.aadhar.value.trim(),
+    const data = {
+      name: this.form.fullName.value,
+      phone: this.form.phone.value,
+      email: this.form.email.value,
+      address: this.form.address.value,
+      aadhar: this.form.aadhar.value,
       checkIn: this.form.checkIn.value,
       checkOut: this.form.checkOut.value,
-      adults: Number(this.form.adults.value),
-      purpose: this.form.purpose.value.trim(),
-      createdAt: new Date().toISOString()
+      adults: this.form.adults.value,
+      purpose: this.form.purpose.value
     };
 
-    this.saveToLocalStorage(payload);
+    this.saveToLocalStorage(data);
+    this.showMessage("Form submitted successfully!");
     this.clearForm();
-    this.showMessage('success', 'Guest registered successfully!');
   }
 }
 
-// initialize when DOM ready
-document.addEventListener('DOMContentLoaded', () => {
-  new CustomerFormHandler('#customer-form', '#message-container');
-});
+new CustomerFormHandler("customerForm", "messageBox");

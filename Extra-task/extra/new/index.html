@@ -1,95 +1,87 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hotel Guest Registration - Swan Solution</title>
-
-  <!-- Bootstrap CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Guest Registration</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body { padding: 2rem; background:#f8f9fa; }
-    .required::after { content: "*"; color: #dc3545; margin-left:0.25rem; }
-    .small-muted { font-size: 0.85rem; color: #6c757d; }
-    .is-invalid + .invalid-feedback { display:block; }
+    .error {
+      color: red;
+      font-size: 0.9em;
+    }
+
+    .message-box {
+      margin-top: 15px;
+    }
   </style>
 </head>
-<body>
-  <div class="container">
-    <div class="row mb-4">
-      <div class="col-12">
-        <h1 class="h3">Hotel Guest Registration</h1>
-        <p class="small-muted">Mobile-first, responsive registration form. All fields required.</p>
-      </div>
-    </div>
 
-    <div id="message-container"></div>
-
-    <form id="customer-form" class="row g-3 needs-validation" novalidate>
-      <div class="col-md-6">
-        <label class="form-label required" for="fullName">Full Name</label>
-        <input type="text" id="fullName" name="fullName" class="form-control" required minlength="3" />
-        <div class="invalid-feedback">Name must be at least 3 characters.</div>
-      </div>
+<body class="bg-light">
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">Hotel Guest Registration</h2>
+    <form id="customerForm" class="row g-3 bg-white p-4 rounded shadow" no>
 
       <div class="col-md-6">
-        <label class="form-label required" for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="phone" class="form-control" inputmode="numeric" pattern="\d{10}" required />
-        <div class="invalid-feedback">Enter a valid 10-digit phone number.</div>
+        <label class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="fullName" name="fullName" required>
+        <div class="error" id="fullNameError"></div>
       </div>
-
       <div class="col-md-6">
-        <label class="form-label required" for="email">Email Address</label>
-        <input type="email" id="email" name="email" class="form-control" required />
-        <div class="invalid-feedback">Please enter a valid email.</div>
+        <label class="form-label">Phone Number</label>
+        <input type="number" class="form-control" id="phone" name="phone" required>
+        <div class="error" id="phoneError"></div>
       </div>
-
       <div class="col-md-6">
-        <label class="form-label required" for="aadhar">Aadhar Card Number</label>
-        <input type="text" id="aadhar" name="aadhar" class="form-control" inputmode="numeric" maxlength="12" required />
-        <div class="invalid-feedback">Aadhar must be exactly 12 digits.</div>
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+        <div class="error" id="emailError"></div>
       </div>
+      <div class="col-md-6">
+        <label class="form-label">Aadhar Number</label>
+        <input type="number" class="form-control" id="aadhar" name="aadhar" required>
+        <div class="error" id="aadharError"></div>
+      </div>
+      <!-- Do same for addressError, checkInError, checkOutError, adultsError, purposeError -->
 
       <div class="col-12">
-        <label class="form-label required" for="address">Address</label>
-        <textarea id="address" name="address" rows="2" class="form-control" required></textarea>
-        <div class="invalid-feedback">Address can't be empty.</div>
+        <label class="form-label">Address</label>
+        <textarea class="form-control" id="address" rows="2" required></textarea>
+        <div class="error" id="addressError"></div>
       </div>
-
       <div class="col-md-6">
-        <label class="form-label required" for="checkIn">Check-in Date</label>
-        <input type="date" id="checkIn" name="checkIn" class="form-control" required />
-        <div class="invalid-feedback">Check-in must be a future date.</div>
+        <label class="form-label">Check-In Date</label>
+        <input type="date" class="form-control" id="checkIn" required>
+        <div class="error" id="checkInError"></div>
       </div>
-
       <div class="col-md-6">
-        <label class="form-label required" for="checkOut">Check-out Date</label>
-        <input type="date" id="checkOut" name="checkOut" class="form-control" required />
-        <div class="invalid-feedback">Check-out must be after check-in.</div>
+        <label class="form-label">Check-Out Date</label>
+        <input type="date" class="form-control" id="checkOut" required>
+        <div class="error" id="checkOutError"></div>
       </div>
-
       <div class="col-md-6">
-        <label class="form-label required" for="adults">No of Adult</label>
-        <input type="number" id="adults" name="adults" class="form-control" min="1" required />
-        <div class="invalid-feedback">Enter number of adults (>=1).</div>
+        <label class="form-label">No of Adults</label>
+        <input type="number" class="form-control" id="adults" required>
+        <div class="error" id="adultsError"></div>
       </div>
-
       <div class="col-12">
-        <label class="form-label required" for="purpose">Purpose of visit / Complaint</label>
-        <textarea id="purpose" name="purpose" rows="3" class="form-control" required minlength="10"></textarea>
-        <div class="invalid-feedback">Purpose must be at least 10 characters.</div>
+        <label class="form-label">Purpose of Visit</label>
+        <textarea class="form-control" id="purpose" rows="2" required></textarea>
+        <div class="error" id="purposeError"></div>
       </div>
-
-      <div class="col-12 d-flex gap-2">
+      <div class="col-12 text-center">
         <button type="submit" class="btn btn-primary">Submit</button>
-        <button type="button" id="resetBtn" class="btn btn-outline-secondary">Reset</button>
-        <a href="view.html" class="btn btn-outline-success ms-auto">View Submissions</a>
+        <button type="reset" class="btn btn-secondary">Clear</button>
       </div>
     </form>
+    <div class="message-box" id="messageBox"></div>
+    <div class="text-center mt-3">
+      <a href="view.html" class="btn btn-link">View Submissions</a>
+    </div>
   </div>
 
-  <!-- App Modules -->
-  <script type="module" src="./formHandler.js"></script>
+  <script type="module" src="formHandler.js"></script>
 </body>
+
 </html>

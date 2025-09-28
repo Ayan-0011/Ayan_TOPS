@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let jsonData =`[
+            {
+                "id": 1,
+                "productName": "Apple",
+                "Qty": 100
+            },
+            {
+                "id": 2,
+                "productName": "Pineapple",
+                "Qty": 120
+            },
+            {
+                "id": 3,
+                "productName": "Mango",
+                "Qty": 10
+            }
+        ]`;
+
+        // now we convert our json data in Object
+
+
+
+        var myobj = JSON.parse(jsonData);
+        console.table(myobj);
+
+        var myjson = JSON.stringify(myobj);
+        console.log(myjson);
+
+
+    </script>
+</body>
+
+</html>

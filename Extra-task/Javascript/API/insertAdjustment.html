@@ -1,0 +1,78 @@
+
+
+<!--
+
+The insertAdjacentHTML() method of the Element interface 
+parses the specified text as HTML or XML and inserts the 
+resulting nodes into the DOM tree at a specified position.
+
+element.insertAdjacentHTML(position, content);
+
+Parameters
+
+"beforebegin"
+Before the element. Only valid if the element is in the DOM tree and has a parent element.
+
+"afterbegin"
+Just inside the element, before its first child.
+
+"beforeend":
+Just inside the element, after its last child.
+
+"afterend"
+After the element. Only valid if the element is in the DOM tree and has a parent element.
+
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+  
+<!--
+  Definition and Usage
+The insertAdjacentHTML(position,html) method inserts HTML code into a specified position.
+
+Legal positions:
+
+Value	Description
+
+afterbegin	After the beginning of the element (first child)
+afterend	After the element
+beforebegin	Before the element
+beforeend	Before the end of the element (last child)
+  
+  -->
+  
+  
+ 
+  <div style="border:2px solid" id="data">
+	<h1>Hi i am h1</h1>
+  </div>
+  
+  
+    <script>
+	
+		//document.getElementById('data').innerHTML="<p>Hello i am p tag</p>";
+		
+		var mydiv=document.getElementById('data');
+		mydiv.insertAdjacentHTML('afterbegin',"<p>Hi i am p tag</p>"); // div ke ander top pr
+		mydiv.insertAdjacentHTML('afterend',"<p>Hi i am p tag</p>"); // div ke bahar 
+		mydiv.insertAdjacentHTML('beforebegin',"<p>Hi i am p tag</p>"); // div ke bahar top pe 
+		mydiv.insertAdjacentHTML('beforeend',"<p>Hi i am p tag</p>"); // div ke bahar top pe 
+
+		
+	</script>
+	
+	
+	
+	
+  </body>
+</html>

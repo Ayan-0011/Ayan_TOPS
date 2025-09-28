@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+JavaScript Objects
+A javaScript object is an entity having state and behavior (properties and method). 
+For example: car, pen, bike, chair, glass, keyboard, monitor etc.
+
+JavaScript is an object-based language. Everything is an object in JavaScript.
+
+JavaScript is template based not class based. Here, we don't create class to 
+get the object. But, we direct create objects.
+
+Creating Objects in JavaScript
+There are 3 ways to create objects.
+
+
+1)By object literal
+
+2)By creating instance of Object directly (using new keyword)
+3)By using an object constructor (using new keyword)
+
+
+*/
+        //single object 
+        var single_obj = {
+            id: 102,
+            name: "Shyam Kumar",
+            salary: 40000
+        };
+
+        document.write(single_obj.id + " " + single_obj.name + " " + single_obj.salary + "<br>");
+
+        for (value in single_obj) {
+            document.write(single_obj[value] + "<br>")
+        }
+
+        // array object
+
+        var arrobj = [
+            {
+                id: 1,
+                name: "abc",
+                no: 12346
+            },
+            {
+                id: 2,
+                name: "xyz",
+                no: 56489
+            },
+            {
+                id: 3,
+                name: "pqr",
+                no: 89746
+            },
+            {
+                id: 4,
+                name: "wwe",
+                no:002356
+            }
+        ];
+
+        document.write(arrobj[0].id + " " + arrobj[1].name + " " + arrobj[2].no + "<br>");
+
+
+        for (irfan_chodu of arrobj) {
+            document.write(irfan_chodu.id + "" + irfan_chodu.name + "" + irfan_chodu.no + "<br>")
+        }
+
+
+    </script>
+</body>
+
+</html>
