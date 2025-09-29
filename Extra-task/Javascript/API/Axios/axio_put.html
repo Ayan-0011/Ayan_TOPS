@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>  
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <script>
+        // data update id data  put/patch 
+
+        var updobject = { id: 101, name: "shyamjiKumar", email: "shyamji@gmail.com", password: "abc" }
+        const onupdate = async () => {
+            const res = await axios.put(`https://jsonplaceholder.typicode.com/posts/5`, updobject);
+            console.log(res.data);
+        }
+    </script>
+</body>
+
+</html>

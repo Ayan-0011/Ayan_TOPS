@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    overflow-x: hidden;
+}
 
 :root {
     --bgcolor: #18d841d2;
@@ -397,6 +400,12 @@ footer p:hover {
     #vanta-bg {
         height: 80vh;
         width: 90vw;
+    }
+    #section1{
+        width: 99vw;
+    }
+    .service-card{
+        
     }
 }
 /* From Uiverse.io by wilsondesouza */ 

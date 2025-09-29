@@ -73,7 +73,8 @@
                     <!-- From Uiverse.io by wilsondesouza -->
                     <ul class="example-2">
                         <li class="icon-content">
-                            <a href="https://www.linkedin.com/in/ayan-ansari-882691270/" aria-label="LinkedIn" data-social="linkedin">
+                            <a href="https://www.linkedin.com/in/ayan-ansari-882691270/" aria-label="LinkedIn"
+                                data-social="linkedin">
                                 <div class="filled"></div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-linkedin" viewBox="0 0 16 16" xml:space="preserve">
@@ -148,7 +149,7 @@
     <!-- SERVICES SECTION -->
     <section id="section3" class="pb-5">
         <div class="container">
-            <div class="text-center mb-5 ser" data-aos="fade-down">
+            <div class="text-center mb-5 pt-4 ser" data-aos="fade-down">
                 <h2 class="fw-bold">My Services</h2>
                 <p class="text">What I can do as a Front-End Developer</p>
             </div>
@@ -469,6 +470,10 @@
             scale: 1.00,
             scaleMobile: 2.50
         })
+
+        window.addEventListener("resize", () => {
+            vantaEffect.resize(); // vantaEffect aapke init ka variable hoga
+        });
     </script>
 </body>
 
