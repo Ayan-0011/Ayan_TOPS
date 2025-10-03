@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #btn {
+            color: black;
+            border: 1px solid;
+        }
+
+        #btn:hover {
+            color: white
+        }
+
+        .one {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: contain;
+        }
+
+
+        .card-description {
+            font-size: 0.9rem;
+            color: #555;
+            margin: 5px 0;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+         <h1 class="mb-4 text-center">All Products</h1>
+
+        <div id="main">
+            <div class="mb-3 w-50 mx-auto">
+                <input type="text" class="form-control" id="ex" placeholder="serch product....">
+            </div>
+        </div>
+
+        <div class="row g-2 p-3" id="box">
+            <div class="one">
+                <div class="spinner-border text-danger" id="spin"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let spin = document.getElementById('spin');
+     
+
+        fetch('https://fakestoreapi.com/products')
+            .then((res) => {
+                 return res.json(); 
+            })
+            .then(obj => { 
+                show(obj);
+                spin.style.display = "none";
+             })
+            .catch(err => {
+                console.error(err);
+                spin.innerHTML = "<p class='text-danger'>Failed to load products.</p>";
+            });
+
+        var box = document.getElementById("box");
+
+        function show(data) {
+            for (const product of data) {
+                var html = `<div class="col-md-3 mb-4">
+            <div class="card h-100">
+              <img src="${product.image}" class="card-img-top" alt="${product.title}">
+              <div class="card-body d-flex flex-column justify-content-between">
+                <h5 class="card-title">${product.title}</h5>
+                <p class="card-description">${product.description}</p>
+                <p class="text-muted"><strong>Category:</strong> ${product.category}</p>
+                <h5 class="text-success">$${product.price}</h5>
+                <button class="btn btn-primary mt-auto">Add to Cart</button>
+              </div>
+            </div>
+          </div>`;
+
+                box.insertAdjacentHTML("afterbegin", html)
+            }
+        }
+       
+    </script>
+</body>
+
+</html>

@@ -404,8 +404,9 @@ footer p:hover {
     #section1{
         width: 99vw;
     }
-    .service-card{
-        
+    .project-card img {
+       object-fit:cover;
+       height: 200px;
     }
 }
 /* From Uiverse.io by wilsondesouza */ 

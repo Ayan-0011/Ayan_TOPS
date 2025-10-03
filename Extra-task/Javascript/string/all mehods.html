@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="tx" oninput="res()">
+
+    <script>
+        // var a ="1234-4567-8991";
+        // var b = a.slice(10)
+        // console.log(b);
+
+        // if(b==89591){
+        //     console.log("succes");
+
+        // }
+        // else{
+        //      console.log("wronge");
+        // }
+    
+
+function res() {
+    var name = document.getElementById('tx').value;
+    var bol = name.slice(-4); // last 4 digit
+
+    if (bol === "1234") {
+        console.log("first");
+    }
+    else if (bol === "2244") {
+        console.log("second");
+    }
+    else if (bol === "3366") {
+        console.log("third");
+    }
+    else {
+        console.log("wrong................");
+    }
+}
+</script>
+
+</body>
+
+</html>

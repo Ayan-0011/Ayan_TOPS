@@ -6,21 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
 </head>
 
 <body>
-    <script>
+   
 
-        // data insert
-        var object = { id: 103, name: "abc", email: "abc@gmail.com", password: "1234" }
-        
-        const insert = async () => {
-            const res = await axios.post(`https://jsonplaceholder.typicode.com/posts/`, object);
-            console.log(res.data);
+    <script>
+        var res = prompt("enter no you get table");
+        n = res;
+        for (i = 1; i <= 10; i++) {
+            document.write(`${n} * ${i} = ${i * n} <br><br>`);
         }
 
     </script>
-
 </body>
 
 </html>
