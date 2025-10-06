@@ -149,7 +149,39 @@ nav i {
     text-decoration: none;
     color: var(--color);
 }
+#fix{
+    position: fixed;
+    bottom: 35px;
+    right: 45px;
+    border-radius: 40%;
+    padding: 8px;
+    background-color: #405de6;
+    color: white;
+    width: 50px;
+    height: 50px;
+    
 
+}
+ #topBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #0d6efd;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 12px 16px;
+      font-size: 20px;
+      display: none;
+      z-index: 9;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+    #topBtn:hover {
+      background-color: #0b5ed7;
+      transform: scale(1.1);
+    }
 /*about page */
 #section2 {
     height: auto;
@@ -159,7 +191,7 @@ nav i {
 }
 
 .abt {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     font-family: 'Open Sans', sans-serif;
     margin-top: 25px;
     font-size: 20px;
 
@@ -403,10 +435,17 @@ footer p:hover {
     }
     #section1{
         width: 99vw;
+        
+    }
+    .self p{
+        font-size: 25px;
     }
     .project-card img {
        object-fit:cover;
        height: 200px;
+    }
+    .abt{
+        font-size: 18px;
     }
 }
 /* From Uiverse.io by wilsondesouza */ 

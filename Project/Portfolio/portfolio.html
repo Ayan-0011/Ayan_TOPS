@@ -57,6 +57,7 @@
                 </div>
             </div>
         </div>
+        <button class="btn" id="topBtn"><i class="bi bi-chevron-double-up"></i></button>
     </section>
 
     <!--about page -->
@@ -176,12 +177,12 @@
                     <div class="card service-card shadow-sm h-100 border-0">
                         <div class="card-body text-center">
                             <div class="mb-3">
-                                <i class="bi bi-phone fs-1 text-success"></i>
+                                <i class="bi bi-diagram-3 fs-1 text-succes"></i>
                             </div>
-                            <h5 class="card-title">Responsive Design</h5>
+                            <h5 class="card-title">Web Services</h5>
                             <p class="card-text text-muted">
-                                Ensuring websites look great and work seamlessly on all devices including mobile,
-                                tablet, and desktop.
+                                I have hands-on experience with web services and API integration for fetching and
+                                displaying data in web applications.
                             </p>
                         </div>
                     </div>
@@ -335,7 +336,7 @@
                 <!-- Project 1 -->
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="card project-card shadow-sm h-100 border-0">
-                        <img src="img/nivia-logo-white-svg.svg" class="card-img-top" alt="NiviaSport Clone" >
+                        <img src="img/nivia-logo-white-svg.svg" class="card-img-top" alt="NiviaSport Clone">
                         <div class="card-body text-center mt-3">
                             <h5 class="card-title">NiviaSport Clone</h5>
                             <p class="card-text text-muted">
@@ -452,6 +453,25 @@
             mirror: false,
         });
 
+
+        const topBtn = document.getElementById("topBtn");
+
+        // Show button when user scrolls 100px down
+        window.onscroll = function () {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 100) {
+                topBtn.style.display = "block";
+            } else {
+                topBtn.style.display = "none";
+            }
+        };
+
+        // When clicked, scroll to top smoothly
+        topBtn.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
     </script>
 
     <!-- Three.js (required) -->

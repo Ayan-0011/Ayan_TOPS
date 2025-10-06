@@ -6,19 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 700px;
+        flex-direction: column;
+    }
+    p{
+        
+    }
 
+</style>
 
 </head>
 
 <body>
-   
+        <h1>tables</h1>
+        <p id="demo"></p>
+  
 
     <script>
+        var demo = document.getElementById("demo");
+
         var res = prompt("enter no you get table");
         n = res;
         for (i = 1; i <= 10; i++) {
-            document.write(`${n} * ${i} = ${i * n} <br><br>`);
+            document.write(`${n}* ${i} = ${i * n} <br><br>`);
         }
+
+        demo.innerHTML.res;
 
     </script>
 </body>
