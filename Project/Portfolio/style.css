@@ -364,7 +364,7 @@ footer p:hover {
         right: 0px;
         width: 180px;
         height: 100vh;
-        background-color: rgba(21, 89, 173);
+        background-color: rgb(25, 75, 83);
         z-index: 2;
         display: none;
     }
@@ -407,7 +407,7 @@ footer p:hover {
         right: 0px;
         width: 180px;
         height: 100vh;
-        background-color: rgba(21, 89, 173);
+        background-color: rgb(25, 75, 83);
         z-index: 2;
         display: none;
     }

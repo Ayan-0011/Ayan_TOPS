@@ -31,11 +31,11 @@
         <div class="link" id="navlink">
             <ul>
                 <span onclick="hidemenu()"><i class="fa-solid fa-xmark"></i></span>
-                <li><a href="#section1">Home</a></li>
-                <li><a href="#section2">About</a></li>
-                <li><a href="#section3">Service</a></li>
-                <li><a href="#section4">Portfolio</a></li>
-                <li><a href="#section5">Contact</a></li>
+                <li><a href="#section1" onclick="hd()">Home</a></li>
+                <li><a href="#section2" onclick="hd()">About</a></li>
+                <li><a href="#section3" onclick="hd()">Service</a></li>
+                <li><a href="#section4" onclick="hd()">Portfolio</a></li>
+                <li><a href="#section5" onclick="hd()">Contact</a></li>
             </ul>
         </div>
         <div class="icon">
@@ -437,6 +437,19 @@
         function hidemenu() {
             navlink.style.display = "none";
         }
+
+
+        function hd() {
+            const bodyWidth = document.body.clientWidth;
+
+            if (bodyWidth < 800) {
+                 navlink.style.display = "none";
+              
+            } else {
+                navlink.style.display = "block";
+            }
+        }
+
         //<!-- Setup and start animation! -->
         var typed = new Typed('#element', {
             strings: ['Frontend Devloper', 'Web Design', 'Web Devloper'],
