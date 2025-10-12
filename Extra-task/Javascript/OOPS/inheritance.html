@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+    To create a class inheritance, use the extends keyword.
+    A class created with a class inheritance inherits all the methods from another class:
+    Type of inheritance
+
+    5 type of Inheritance
+
+    Single Inheritance.
+    Multi-Level Inheritance.
+
+    Hierarchical Inheritance.
+    Multiple Inheritance. // not possible by class keywords
+    Hybrid Inheritance. -->
+
+    <script>
+        //Single Inheritance
+        class vehical {
+
+            drive() {
+                document.write("the vehical is driving" + "<br>")
+            }
+            stop() {
+                document.write("the vehical is stop" + "<br>")
+            }
+        }
+
+        class cars extends vehical {
+            racing() {
+                document.write("the car is racing" + "<br>");
+            }
+            parking(){
+                document.write("the car on parking ")
+            }
+        }
+       
+
+        const c1=new cars;
+
+        setTimeout(c1.drive,1000);
+
+        setTimeout(c1.stop,3000);
+
+        setTimeout(()=>c1.racing(),5000);
+
+         setTimeout(() => {
+            c1.parking()
+        },7000);
+  
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

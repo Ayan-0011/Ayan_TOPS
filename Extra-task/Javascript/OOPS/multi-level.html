@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        class vehical {
+
+            cars() {
+                document.write("the cars is runniung" + "<br>");
+            }
+        }
+        class bike extends vehical {
+
+            bike() {
+                document.write("the bike is runniung" + "<br>");
+            }
+        }
+        class truck extends bike {
+
+            truck() {
+                document.write("the truck is runniung" + "<br>");
+                document.write("the truck is stop" + "<br>");
+            }
+        }
+
+        const auto=new truck;
+
+       setTimeout(auto.cars,1000);
+       setTimeout(auto.bike,2000);
+       setTimeout(auto.truck,5000);
+
+
+
+    </script>
+</body>
+
+</html>
