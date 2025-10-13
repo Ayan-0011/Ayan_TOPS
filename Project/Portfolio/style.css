@@ -14,7 +14,7 @@ body{
 }
 
 nav {
-    width: 99vw;
+    width: 100vw;
     height: 75px;
     display: flex;
     justify-content: space-between;
@@ -107,7 +107,7 @@ nav i {
 
 #section1 {
     height: 100vh;
-    width: 99vw;
+    width: 100vw;
 }
 
 .img {
@@ -164,8 +164,8 @@ nav i {
 }
  #topBtn {
       position: fixed;
-      bottom: 30px;
-      right: 30px;
+      bottom: 18px;
+      right: 15px;
       background-color: #0d6efd;
       color: white;
       border: none;
@@ -187,7 +187,7 @@ nav i {
     height: auto;
     background-color: var(--background);
     color: var(--color);
-    width: 99vw;
+    width: 100vw;
 }
 
 .abt {
@@ -206,7 +206,7 @@ nav i {
 #section3 {
     background: var(--background);
     color: var(--color);
-    width: 99vw;
+    width: 100vw;
 }
 
 .ser h2 {
@@ -286,7 +286,7 @@ nav i {
 #section4 {
     background-color: var(--background);
     color: var(--color);
-    width: 99vw;
+    width: 100vw;
 }
 
 #section4 h2 {
@@ -321,7 +321,7 @@ nav i {
 /*footer page */
 footer {
     background-color: #0f172a;
-    width: 99vw;
+    width: 100vw;
 }
 
 footer span {
@@ -342,6 +342,7 @@ html, body {
   margin:0;
   padding: 0;
   overflow-x: hidden;
+  
 }
 
 
