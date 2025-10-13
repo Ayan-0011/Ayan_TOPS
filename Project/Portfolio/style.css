@@ -335,6 +335,14 @@ footer span {
 footer p:hover {
     color: #667eea;
 }
+#vanta-bg {
+  overflow: hidden;
+}
+html, body {
+  margin:0;
+  padding: 0;
+  overflow-x: hidden;
+}
 
 
 @media(max-width:800px) {
@@ -415,7 +423,9 @@ footer p:hover {
     .self p {
         font-size: 30px;
     }
-
+    #element{
+        font-size: 25px;
+    }
     .self h3 {
         font-size: 30px;
     }
@@ -427,11 +437,6 @@ footer p:hover {
 
     #btn2 {
         width: 30%;
-    }
-
-    #vanta-bg {
-        height: 80vh;
-        width: 90vw;
     }
     #section1{
         width: 99vw;
@@ -447,6 +452,8 @@ footer p:hover {
     .abt{
         font-size: 18px;
     }
+   
+
 }
 /* From Uiverse.io by wilsondesouza */ 
 ul {
