@@ -453,6 +453,9 @@ html, body {
     .abt{
         font-size: 18px;
     }
+    .slide-track{
+        animation: scroll 10s linear infinite;
+    }
    
 
 }
