@@ -1,12 +1,14 @@
+html, body {
+  margin:0;
+  padding: 0;
+  overflow-x: hidden;
+  
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    overflow-x: hidden;
-}
-
 :root {
     --bgcolor: #18d841d2;
     --color: #ffffff;
@@ -322,6 +324,7 @@ nav i {
 footer {
     background-color: #0f172a;
     width: 100vw;
+
 }
 
 footer span {
@@ -337,12 +340,6 @@ footer p:hover {
 }
 #vanta-bg {
   overflow: hidden;
-}
-html, body {
-  margin:0;
-  padding: 0;
-  overflow-x: hidden;
-  
 }
 
 
@@ -389,7 +386,6 @@ html, body {
 }
 
 @media(max-width:500px) {
-
     .icon {
         display: block;
     }
