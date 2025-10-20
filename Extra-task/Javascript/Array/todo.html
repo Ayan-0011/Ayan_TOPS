@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        ul{
+            list-style: none;
+        }
+        li{
+            padding: 5px;
+        }
 
     </style>
 </head>
@@ -13,41 +19,67 @@
 <body>
     <div align="center">
         <input type="text" id="data">
-        <button id="add" onclick="todo()">add</button>
+        <button id="add" onclick="add()">add</button>
+        <ul id="list"></ul>
 
-        <h1 id="list"></h1>
     </div>
 
 
 
     <script>
-        var names = [];
+        // var names = [];
 
 
-        function remove() {
-            var element = document.getElementById('list');
+        // function remove() {
+        //     var element = document.getElementById('list');
 
-            names.pop(element);
+        //     names.pop(element);
 
-        }
+        // }
 
-        function todo() {
-            var item = document.getElementById('data').value;
-            names.push(item);
+        // function todo() {
+        //     var item = document.getElementById('data').value;
+        //     names.push(item);
 
-            var element = document.getElementById('list');
+        //     var element = document.getElementById('list');
 
-            for (var i = 0; i < names.length; i++) {
-                var html = ` ${names[i]} <button id="remove" onclick="remove()">remove</button><br>  `;
+        //     for (var i = 0; i < names.length; i++) {
+        //         var html = ` ${names[i]} <button id="remove" onclick="remove()">remove</button><br>  `;
+        //     }
+        //     element.insertAdjacentHTML('beforeend', html);
+
+        //     var item = document.getElementById('data').value = "";
+        // }
+
+
+
+        
+        function add() {
+            
+            var data = document.getElementById('data').value;
+            
+            if (data.trim() === "") {
+                alert("Please enter a task!");
+                return;
             }
-            element.insertAdjacentHTML('beforeend', html);
+            
+            
+            let newitem=document.createElement("li");
+            newitem.textContent= data;
+            let list = document.getElementById('list');
+            list.appendChild(newitem);
+            
+            let delbtn=document.createElement("button");
+            delbtn.textContent="x";
+            delbtn.style.margn = "10px";
+            newitem.appendChild(delbtn);
 
-            var item = document.getElementById('data').value = "";
+             delbtn.onclick = function() {
+                newitem.remove();
+            };
+
+            document.getElementById('data').value="";
         }
-
-    </script>
-
-
 
 
 
