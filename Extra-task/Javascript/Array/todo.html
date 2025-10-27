@@ -64,8 +64,10 @@
             }
             
             
+            
             let newitem=document.createElement("li");
             newitem.textContent= data;
+            
             let list = document.getElementById('list');
             list.appendChild(newitem);
             
@@ -74,7 +76,11 @@
             delbtn.style.margn = "10px";
             newitem.appendChild(delbtn);
 
-             delbtn.onclick = function() {
+            let ceck=document.createElement("button");
+            ceck.innerHTML=".";
+            newitem.appendChild(ceck);
+            
+            delbtn.onclick = function() {
                 newitem.remove();
             };
 
