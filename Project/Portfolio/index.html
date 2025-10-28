@@ -128,7 +128,8 @@
                         Developer, mastering both front-end and back-end technologies to deliver complete, high-quality
                         web solutions.</p>
 
-                    <button class="bot" id="btn1"><a href="files/RESUME.pdf" download="RESUME.pdf">Download CV</a></button>
+                    <button class="bot" id="btn1"><a href="files/RESUME.pdf" download="RESUME.pdf">Download
+                            CV</a></button>
                     <button class="bot" id="btn2"><a href="#section5">Contact</a></button>
                 </div>
             </div>
@@ -408,13 +409,78 @@
     </footer>
 
 
-    <script src="script.js"></script>
     <!-- Load library from the CDN -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-      <!-- Three.js (required) -->
+    <!-- Three.js (required) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <!-- Vanta.js (effect choose karo, e.g. waves) -->
     <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
-    <!--background animation-->
+
+    <script>
+        // <!--hide/show navbar -->
+        var navlink = document.getElementById("navlink");
+        function showmenu() {
+            navlink.style.display = "block";
+        }
+        function hidemenu() {
+            navlink.style.display = "none";
+        }
+
+        // <!--hide/show navbar in responsive  -->
+        function hd() {
+            const bodyWidth = document.body.clientWidth;
+
+            if (bodyWidth < 800) {
+                navlink.style.display = "none";
+
+            } else {
+                navlink.style.display = "block";
+            }
+        }
+        
+        AOS.init({
+            duration: 1000, // animation duration (ms)
+            once: false,      // animation runs only once
+            easing: 'ease-in-out',
+            mirror: false,
+        });
+
+        const topBtn = document.getElementById("topBtn");
+
+        // Show button when user scrolls 100px down
+        window.onscroll = function () {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 100) {
+                topBtn.style.display = "block";
+            } else {
+                topBtn.style.display = "none";
+            }
+        };
+
+        // When clicked, scroll to top smoothly
+        topBtn.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+        //<!--background animation-->
+        VANTA.RINGS({
+            el: "#vanta-bg",   // jaha apply karna hai
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            scale: 1.00,
+            scaleMobile: 2.00
+        })
+
+        //<!-- Setup and start animation! -->
+        var typed = new Typed('#element', {
+            strings: ['Frontend Devloper', 'Web Design', 'Web Devloper'],
+            typeSpeed: 50,
+            backSpeed: 30,
+            loop: true
+
+        });
+    </script>
 </body>
 </html>
