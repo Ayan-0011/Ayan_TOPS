@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:serif;
+
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: #fff;
+
+    
+}
+.header{
+    width: 10%;
+    margin: auto;
+    padding: 10px 0px;
+    background-color: brown;
+}
+.main{
+    border: 2px solid blue;
+    background-color: rgb(111, 0, 255);
+    color: rgb(4, 28, 29);
+    border-radius: 20px;
+    margin: 10px 10px;
+    padding: 15px;
+}
