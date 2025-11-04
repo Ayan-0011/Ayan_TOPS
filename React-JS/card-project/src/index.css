@@ -37,7 +37,3 @@ html,body{
   display: flex;
   flex-wrap: wrap;
 }
-#title{
-  text-align: center;
-  padding: 12px;
-}
