@@ -1,9 +1,16 @@
 
+import About from "./layouts/Pages/about";
+import Home from "./layouts/Pages/home";
+
+
 
 function App() {
   return (
     <div>
-     <h1>hello im react</h1>
+
+      <Home />
+      {/* <About/> */}
+     
     </div>
   );
 }
