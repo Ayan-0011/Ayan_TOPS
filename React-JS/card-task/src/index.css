@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+
+.parents{
+    display: flex;
+    gap: 20px;
+    margin:50px  50px;
+    flex-wrap: wrap;
+
+}
+.cards{
+    width: 22%;
+    height: 280px;
+    border: 2px solid;
+    border-radius: 15px;
+    padding: 15px;
+    
+}
+
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 0px 8px;
+}
+.top button{
+    background-color: #dadada;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.cards img{
+    width:42px;
+    height: 42px;
+    border-radius: 50%;
+    padding: 7px;
+    border: 1px solid ;
+    object-fit: cover;
+}
+
+.center{
+    padding: 8px;
+    margin-bottom: 12px;
+}
+.center h1{
+    font-size: 22px;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+.center span{
+    font-size: 12px;
+    font-weight: 300;
+}
+.tags{
+    display: flex;
+    gap: 10px;
+    padding: 10px 0px;
+}
+.tags button{
+    background-color: #dadada;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+.botom{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+    margin: 10px 0px;
+}
+.botom button{
+    background-color: #262525;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 8px;
+    font-size: 15px;
+    height: 35px;
+    margin-top: 15px;
+}
+.pay{
+    font-weight: 500;
+}
+.location{
+    font-weight: 300;
+}
