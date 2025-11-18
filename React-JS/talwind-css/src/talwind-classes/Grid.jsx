@@ -55,8 +55,16 @@ const Grid = () => {
                 </ul>
 
                 <button class="md:hidden text-2xl">☰</button>
-
             </nav>
+            <div className='flex justify-center p-5 flex-col'>
+
+                <div class="border-4 border-gray-300 border-t-blue-600 rounded-full w-10 h-10 animate-spin flex justify-center"></div>
+
+                <div class="p-6 m-3 bg-white shadow rounded 
+                    transition-all duration-300 hover:-translate-y-2 hover:shadow-lg border max-w-1/5">
+                    Product Card
+                </div>
+            </div>
 
 
         </>

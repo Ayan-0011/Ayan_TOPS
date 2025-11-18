@@ -38,7 +38,7 @@ const Text = () => {
             <hr />
             <div className='my-5'>
                 <p className='font-extralight text-3xl'>* Gradient Box</p>
-                <div class="bg-gradient-to-r from-blue-500 to-purple-500 text-white p-4">
+                <div class="bg-gradient-to-right from-blue-500 to-purple-500 text-white p-4">
                     Gradient Box
                 </div>
             </div>
