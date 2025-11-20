@@ -2,7 +2,7 @@ import React from 'react'
 
 const Contact = () => {
     return (
-        <div>
+        <div className='container col-6'>
             <form action="/action_page.php">
                 <div className="mb-3 mt-3">
                     <label htmlFor="email" className="form-label">Email:</label>

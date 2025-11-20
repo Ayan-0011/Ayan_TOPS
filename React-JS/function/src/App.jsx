@@ -9,12 +9,19 @@ const App = () => {
     console.log("scrolling...", e.deltaY);  
   }
 
+  const all = (e) =>{
+    console.log (e.target.value);
+  } 
+  
+
 
   return (
     <>
     <button onClick={alert}>click hear</button>
-    
+
     <div className='box' onWheel={scrollmaping}></div>
+
+    <input type="text" onChange={all} />
     </>
   )
 
