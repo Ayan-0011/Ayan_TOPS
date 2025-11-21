@@ -1,0 +1,658 @@
+.img {
+    border-radius: 30px;
+    transform: rotate(2deg);
+    transition: all 0.3 ease;
+    position: relative;
+}
+.img:hover {
+    transform: rotate(0deg);
+}
+
+@media (max-width:500px) {
+    .img {
+        width: 100%;
+    }
+}
+@media (max-width:760px) {
+    .main-img img{
+        width: 100%;
+    }
+}
+
+.img-card {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.img-card img {
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.img-card img:hover {
+    transform: scale(1.1);
+}
+
+.first {
+    width: 80%;
+    height: 170px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.first img {
+    width: 100%;
+    transition: all 0.5s;
+
+}
+
+.first img:hover {
+    transform: scale(1.2);
+}
+
+.two {
+    width: 80%;
+    height: 170px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.two img {
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.two img:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width:500px) {
+    .first {
+        width: 50%;
+        float: left;
+        padding: 12px;
+    }
+
+    .two {
+        width: 50%;
+        padding: 12px;
+    }
+
+}
+
+
+.box {
+    width: 100%;
+    height: auto;
+    border: 0px solid;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 5px 0px rgb(4, 217, 213) inset, 2px 5px 3px rgb(143, 140, 140);
+
+
+}
+
+.box i {
+    font-size: 32px;
+    border: 2px solid;
+    border-radius: 15px;
+    padding: 5px;
+    float: left;
+    height: 55px;
+    background-color: rgb(214, 224, 221);
+    color: rgb(91, 208, 208);
+    margin-left: 10px;
+}
+
+.title i {
+    color: rgb(4, 217, 213);
+
+}
+
+.batan button {
+    background-color: rgb(36, 204, 201);
+    height: 50px;
+    transition: all 0.5s;
+}
+
+.batan button:hover {
+    transform: translate(0px, -6px);
+    box-shadow: 5px 5px 2px rgb(14, 7, 20);
+}
+
+.batan2 button {
+    height: 50px;
+    transition: all 0.5s;
+}
+
+.batan2 button:hover {
+    transform: translate(0px, -6px);
+}
+
+.con i {
+    color: rgb(36, 204, 201);
+    ;
+}
+
+.con {
+    font-size: 18px;
+}
+
+.img-card2 {
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.img-card2 img {
+    height: 450px;
+    transition: all 0.5s;
+}
+
+.img-card2 img:hover {
+    transform: scale(1.1);
+}
+
+.card {
+    border: none;
+    transition: all 0.5s;
+    margin: 0 5px;
+}
+
+.card i {
+    font-size: 30px;
+}
+
+.icon {
+    width: 30%;
+    height: 80px;
+    margin-left: 10px;
+    margin-top: 10px;
+    color: rgb(16, 218, 215);
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgba(42, 154, 195, 0.186);
+}
+
+.dr span {
+    color: rgb(29, 173, 125);
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 18px;
+}
+
+.dr p {
+    font-size: 17px;
+}
+
+.card:hover {
+    box-shadow: 2px 2px 2px 2px rgb(35, 30, 30);
+
+}
+
+.batan3 {
+    background-color: rgba(19, 214, 221, 0.879);
+    color: azure;
+    height: 50px;
+}
+
+.batan3:hover {
+    border: 2px solid rgba(19, 214, 221, 0.879);
+    ;
+}
+
+.link a {
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+}
+
+.link a:hover {
+    color: rgb(16, 218, 215);
+}
+
+.link i {
+    font-size: 15px;
+}
+
+.icon2 {
+    width: 17%;
+    height: 60px;
+    margin-left: 10px;
+    margin-top: 10px;
+    color: rgb(255, 255, 255);
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgba(4, 173, 234, 0.91);
+    position: absolute;
+    top: 0px;
+    right: 10px;
+}
+
+.imageee img {
+    position: relative;
+}
+
+.cards {
+    border: 1px solid;
+}
+
+.info {
+    border: 1px solid;
+    border-radius: 20px;
+}
+
+.but {
+    width: 80%;
+    height: 85px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.but button {
+    width: 90px;
+    height: 50px;
+    background-color: aquamarine;
+}
+
+.but i {
+    color: black;
+}
+
+@media (max-width:500px) {
+    .but button {
+        width: 100%;
+    }
+
+    .but {
+        margin-left: 40px;
+    }
+}
+#card-1:hover{
+    transform: translateY(-5px)
+}
+#card-1{
+    transition: all 0.6s;
+}
+#card-2{
+    transition: all 0.6s;
+}
+#card-2:hover{
+    transform:translate(0px, -10px);
+}
+.profile{
+    width: 100%;
+    height: auto;
+    padding: 7px 5px;
+    
+}
+.profile img{
+    width: 20%;
+    display: inline;
+    float: left;
+    padding-right: 10px;
+}
+.profile span{
+    margin-left: 80px;
+    float: left;
+    margin-top: 3px;
+    margin-right: 5px;
+}
+.profile i{
+    font-size: 18px;
+    float: left;
+    padding-right:3px;
+    margin-top: 3px;
+    color: rgb(216, 223, 18);
+}
+#card-3{
+    border: 1px solid aqua;
+    border-radius: 15px;
+    box-shadow: 2px 2px 3px aqua;
+}
+#card-3-0{
+    border: 1px solid black;   
+}
+#card-3-0:hover{
+    box-shadow: 1px 1px 8px 1px black;   
+}
+.rate span{
+    font-size: 35px;
+    color: rgb(19, 159, 177);
+}
+.rate p{
+    font-weight: 300;
+}
+.icon3 i{
+    width: 22%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:azure;
+    color:rgb(19, 159, 177);
+    border-radius: 50%;
+}
+.icon3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+.icon3:hover i{
+    background-color: rgb(19, 159, 177);
+    color: azure;
+}
+#card-4{
+    border: 1px solid rgb(39, 34, 34);
+}
+.icn i{
+    width: 40%;
+    height: 60px;
+    background-color:rgb(41, 152, 180);
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.footer ul li{
+    list-style: none;
+    padding: 5px 5px;
+}
+.footer i{
+    font-size: 30px;
+    margin-top: 25px;
+    padding: 0 5px;
+}
+/*about page*/
+.joint a{
+    text-decoration: none;
+    color: rgb(25, 185, 132);
+}
+.one-img{
+    width: 50%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.one-img img {
+    width: 100%;
+    transition: all 0.8s;
+}
+
+.one-img img:hover {
+    transform: scale(1.1);
+}
+
+.two-img{
+    width: 50%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.two-img img {
+    width: 100%;
+    transition: all 0.8s;
+}
+
+.two-img img:hover {
+    transform: scale(1.1);
+}
+#about-card i{
+    width: 20%;
+    height: 80px;
+    background-color:rgb(19, 159, 177);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 10px 0;
+}
+#about-card{
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    transition: all 0.6s;
+}
+#about-card h3{
+    padding: 10px;
+}
+#about-card:hover i{
+    transform: translateY(-6px);
+   
+}
+#about-card:hover{
+     border: none;
+    box-shadow: 0 0 0 white;
+}
+.Areas{
+    height: 100px;
+    border-radius: 12px;
+    border: 1px solid;
+    margin: 5px;
+    transition: all 0.6s;
+}
+.Areas i{
+    display: flex;
+    justify-content: center;
+    padding: 12px; 
+    font-size: 22px;
+    margin-top: 10px;
+    color: rgb(19, 159, 177);
+}
+.Areas p{
+    display: flex;
+   justify-content: center;
+   font-size: 18px;
+}
+.Areas:hover{
+    transform: translateY(-8px);
+    border: 1px solid rgb(19, 159, 177);
+    box-shadow: 1px 1px 1px 1px rgb(19, 159, 177);
+}
+#Excellence{
+    width: 100px;
+    border: 2px solid;
+    margin: 10px;
+}
+#Excellence img{
+    padding: 10px;
+    filter: grayscale();
+}
+#Excellence img:hover{
+    filter: brightness();
+}
+body{
+    width: 99%;
+}
+/*department css*/
+
+.symbol i{
+    width: 50px;
+    height: 60px;
+    padding: 10px 8px;
+    margin: 10px;
+    float: left;
+    border: 2px solid;
+    border-radius: 12px;
+    background-color: white;
+    color: rgb(19, 159, 177);
+}
+.symbol h3{
+    margin-top: 5px;
+    padding-top: 6px;
+}
+.symbol p{
+    font-weight: 300;
+    margin-top: -5px;
+}
+.bgd{
+    margin-top: -15px;
+    padding: 10px;
+}
+#dep-card{
+    height: 420px;
+    overflow: hidden;
+    border: 1px solid;
+    transition: all 0.6s;
+}
+#dep-card:hover i{
+    color: white;
+    background-color: rgb(19, 159, 177);
+}
+#dep-card img{
+    transition: all 0.6s;
+}
+#dep-card:hover img{
+    transform: scale(1.1);
+}
+#dep-card:hover{
+    transform:translateY(-10px);
+}
+
+/*service css*/
+.symbol2 i{
+    width: 60px;
+    height: 60px;
+    padding: 8px 12px;
+    margin: 10px;
+    float: left;
+    border: 2px solid;
+    border-radius: 12px;
+    background-color: rgba(19, 159, 177, 0.544);
+    color: white;
+    transform: all 0.6s;
+}
+#service-card{
+    transition: all 0.6s;
+}
+#service-card:hover{
+    border: 2px solid rgb(19, 159, 177);
+    box-shadow: 2px 2px 2px rgb(19, 159, 177);
+    transform: translateY(-12px);
+}
+#service-card:hover i{
+    transform: rotate(10deg);
+}
+/* doctor css*/
+#serch{
+    background-color: rgba(197, 202, 202, 0.585);
+    border-radius: 12px;
+}
+#bd span{
+    font-size: 15px;
+}
+#bd :hover span{
+    border: 1px solid rgb(19, 159, 177);
+    color: rgb(19, 159, 177);
+}
+/*doctor css*/
+#dr-card:hover{
+    box-shadow: 0 0 0 0 white;
+    transform: translateY(-8px);
+}
+#dr-card{
+    border: 1px solid;
+}
+#dr-card img{
+    position: relative;
+}
+.dr-img{
+    position: relative;
+}
+#dr-profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+}
+#dr-profile:hover{
+    transform: translateY(-6px);
+    box-shadow: 2 2 2 2 rgb(60, 53, 53);    
+}
+/*contact css*/
+#con-card:hover{
+    transform: translateY(-6px);
+    
+}
+.dr-btn{
+    background-color:white;
+    color:black;
+    border-radius: 20px;
+    border: 1px solid;
+    text-decoration: none;
+}
+.dr-btn:hover{
+    background-color: rgb(19, 159, 177);
+    color: white;
+}
+.btn-link:active{
+    background-color: rgb(19, 159, 177);
+    color: white;
+    border-radius: 20px;
+    border: 1px solid;
+}
+.btn-link:visited{
+    background-color: rgb(19, 159, 177);
+    color: white;
+    border-radius: 20px;
+    border: 1px solid;
+}
+
+#bio p{
+    margin-top: -10px;
+}
+#bio{
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+#bio i{
+    color: rgb(19, 159, 177);
+}
+.sch{
+    border: 1px solid rgb(19, 159, 177);
+    background-color: rgba(19, 159, 177, 0.33);
+    border-radius: 10px;
+    margin: 5px;
+}
+#Reviews i{
+    color: rgb(19, 159, 177);
+}
+#Reviews{
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 8px 5px;
+}
+.serv p{
+    font-size: 18px;
+    font-weight: 500;
+}
+/*contact css*/
+.icon0 i{
+    font-size: 40px;
+    margin: 2px 2px;
+    padding-left: 20px;
+    color: rgb(19, 159, 177);
+    transition: all 0.6s;
+}
+.icon0 i:hover{
+    transform: translateY(-6px);
+}
+*{
+    box-sizing: border-box;
+}
