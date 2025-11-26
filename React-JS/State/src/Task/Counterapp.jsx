@@ -8,9 +8,10 @@ const Counterapp = () => {
     }
 
     function decrease() {
-        if(num>0)
+        if(num > 0)
         setnum(num - 1)
     }
+    
     return (
 
         <div className="card">

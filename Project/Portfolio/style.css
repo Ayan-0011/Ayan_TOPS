@@ -193,10 +193,12 @@ nav i {
 }
 
 .abt {
-     font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     margin-top: 25px;
     font-size: 20px;
-
+}
+.abt p{
+    font-weight: 100;
 }
 
 .img-profile img {
