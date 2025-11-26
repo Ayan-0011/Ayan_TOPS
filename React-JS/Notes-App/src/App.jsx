@@ -11,16 +11,32 @@ const App = () => {
   const submithandle = (e) => {
     e.preventDefault()
 
+    if (title.trim() === "") {
+      alert("Please Write a Notes!");
+      return;
+    }
+    if (detail.trim() === ""){
+      alert("Please Write a Details!");
+      return;
+    }
+
+
     const copyTask = [...task]
     copyTask.push({ title, detail })
     setTask(copyTask)
-    console.log(copyTask);
-
-
 
 
     setTitle('')
     setDetail('')
+  }
+
+  const deletnotes = (id) => {
+
+    const copyTask = [...task]
+    copyTask.splice(id, 1)
+    setTask(copyTask)
+
+
   }
   return (
     <><div className="main">
@@ -32,14 +48,14 @@ const App = () => {
 
           <h2>Add Notes</h2>
           <div className="mb-3">
-            <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Enter Notes Heading" value={title} onChange={(e) => {
+            <input type="text" className="form-control" placeholder="Enter Notes Heading" value={title} onChange={(e) => {
               setTitle(e.target.value)
             }} />
           </div>
 
 
           <div className="mb-3" >
-            <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="write deatil hear" value={detail} onChange={(e) => {
+            <input type="text" className="form-control" placeholder="write deatil hear" value={detail} onChange={(e) => {
               setDetail(e.target.value)
             }} />
           </div>
@@ -49,19 +65,20 @@ const App = () => {
 
       <div className="data">
         <h2>Review Notes</h2>
-         <div className="datas">
+        <div className="datas">
 
-            {task.map(function (el, id) {
-              return <div key={id} className="shownotes">
-                <h3>{el.title}</h3>
-                <p>{el.detail}</p>
-                <button className="delet btn bg-danger btn-outline">Delete Notes <i class="bi bi-x-circle-fill"></i></button>
-              </div>
-            })}
+          {task.map(function (el, id) {
+            return <div key={id} className="shownotes">
+              <h4>{el.title}</h4>
+              <p>{el.detail}</p>
+              <button onClick={() => {
+                deletnotes(id)
+              }} className="delet btn bg-danger btn-outline">Delete Notes <i className="bi bi-x-circle-fill"></i></button>
+            </div>
+          })}
 
         </div>
       </div>
-
     </div>
 
     </>
