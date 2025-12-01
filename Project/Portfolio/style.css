@@ -310,6 +310,8 @@ nav i {
 
 .project-card img {
     transition: transform 0.4s ease;
+    height: 220px;
+    object-fit: cover;
 }
 
 .project-card:hover img {
