@@ -21,6 +21,8 @@ const App = () => {
     }
 
 
+
+
     const copyTask = [...task]
     copyTask.push({ title, detail })
     setTask(copyTask)
