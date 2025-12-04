@@ -6,6 +6,8 @@ import Footer from './Componenets/Footer'
 import About from './Pages/About'
 import Contact from './Pages/Contact'
 import Shop from './Pages/Shop'
+import PageNotFound from './Pages/PageNotFound'
+
 
 const App = () => {
   return (
@@ -16,6 +18,7 @@ const App = () => {
           <Route path="/about" element={<><Header/><About/><Footer/></>}></Route>
           <Route path="/contact" element={<><Header/><Contact/><Footer/></>}></Route>
           <Route path="/shop" element={<><Header/><Shop/><Footer/></>}></Route>
+          <Route path="*" element={<><PageNotFound/></>}></Route>
         </Routes>
       </BrowserRouter>
     </div>

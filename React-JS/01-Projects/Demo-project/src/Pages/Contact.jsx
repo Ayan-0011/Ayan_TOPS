@@ -4,7 +4,8 @@ const Contact = () => {
     return (
         <div>
             <div>
-                div class="container-fluid bg-light py-5"&gt;
+                <div class="container-fluid bg-light py-5">
+                     
                 <div className="col-md-6 m-auto text-center">
                     <h1 className="h1">Contact Us</h1>
                     <p>
@@ -12,12 +13,10 @@ const Contact = () => {
                         Lorem ipsum dolor sit amet.
                     </p>
                 </div>
-                {/* Start Map */}
-                <div id="mapid" style={{ width: '100%', height: 300 }} />
-                {/* Ena Map */}
+                </div  >
                 {/* Start Contact */}
                 <div className="container py-5">
-                    <div className="row py-5">
+                    <div className="row py-1">
                         <form className="col-md-9 m-auto" method="post" role="form">
                             <div className="row">
                                 <div className="form-group col-md-6 mb-3">
@@ -38,7 +37,7 @@ const Contact = () => {
                                 <textarea className="form-control mt-1" id="message" name="message" placeholder="Message" rows={8} defaultValue={""} />
                             </div>
                             <div className="row">
-                                <div className="col text-end mt-2">
+                                <div className="col text-center mt-2">
                                     <button type="submit" className="btn btn-success btn-lg px-3">Let’s Talk</button>
                                 </div>
                             </div>

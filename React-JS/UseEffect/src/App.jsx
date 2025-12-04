@@ -5,6 +5,7 @@ const App = () => {
 
 
   const [num1, setNum1] = useState(0);
+  
   const [num2, setNum2] = useState(0);
 
   //component load jone pe chalega yani jab jab program run hoga ye useeffect chlega or [] na lagaye to koi bhi state update hoga to useeffect chalega 
