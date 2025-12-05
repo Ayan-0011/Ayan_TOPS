@@ -1,0 +1,37 @@
+.app {
+  min-height: 100vh;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.app.light {
+  background: #f7f7f7;
+  color: #111;
+}
+
+.app.dark {
+  background: #111;
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background: #444;
+  color: white;
+  border-radius: 8px;
+}
+
+button {
+  padding: 8px 15px;
+  border: none;
+  background: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.home {
+  margin-top: 40px;
+}
