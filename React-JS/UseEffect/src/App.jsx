@@ -25,7 +25,6 @@ const App = () => {
 
 
 
-
   return (
     <div>
       <h1>num1 is {num1}</h1>
