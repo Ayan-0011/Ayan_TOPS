@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 function AHeader() {
   return (
@@ -37,9 +37,9 @@ function AHeader() {
             <div className="flex-fill">
               <ul className="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/dashboard">Dashboard</NavLink>
+                  <NavLink className="nav-link" to="/dashbord">Dashboard</NavLink>
                 </li>
-              
+
                 <li className="nav-item dropdown">
                   <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Categoriest</a>
                   <ul className="dropdown-menu">
@@ -48,7 +48,7 @@ function AHeader() {
                   </ul>
                 </li>
 
-                 <li className="nav-item dropdown">
+                <li className="nav-item dropdown">
                   <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Product</a>
                   <ul className="dropdown-menu">
                     <li><NavLink className="dropdown-item" to="/add_product">Add Product</NavLink></li>
@@ -61,13 +61,13 @@ function AHeader() {
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/Manage_customer">Customer</NavLink>
                 </li>
-                <li className="nav-item">
-                  <NavLink className="nav-link" to="/login">Logout</NavLink>
-                </li>
 
               </ul>
             </div>
-     
+            <button className='btn btn-outline-success "text-secondary"'>
+              <Link className="nav-link" to="/login">Logout</Link>
+            </button>
+
           </div>
         </div>
       </nav>
