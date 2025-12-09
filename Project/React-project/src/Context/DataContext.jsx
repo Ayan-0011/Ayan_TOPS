@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { Children, createContext, useState } from 'react'
+import { Children, createContext, useContext, useState } from 'react'
 
 export const DataContext = createContext(null)
 
@@ -29,3 +29,6 @@ export const DataProvider = ({ children }) => {
         {children}
     </DataContext.Provider>
 }
+
+export const getData = ()=> useContext(DataContext)
+// usecontext ko getdata me store kar liya ab jaha bhi usecontext ko use karna hi to sidha getData ko call kar do
