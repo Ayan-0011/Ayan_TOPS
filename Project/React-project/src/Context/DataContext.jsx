@@ -14,7 +14,7 @@ export const DataProvider = ({ children }) => {
             const response = await axios.get('https://api.escuelajs.co/api/v1/products')
             const ProductData = response.data
             setData(ProductData)
-            console.log(data);
+            //console.log(data);
             
                
         }
@@ -23,6 +23,7 @@ export const DataProvider = ({ children }) => {
 
         }
     }
+    
 
     return <DataContext.Provider value={{ data, setData , FetchAllproducts}}>
         {children}

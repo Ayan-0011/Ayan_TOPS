@@ -42,7 +42,7 @@ const Navbar = ({ location, getlocation, opendropdown, setOpendropdown }) => {
           <NavLink to={'/'} className={({ isActive }) => `${isActive ? " border-b-3 transition border-red-500 " : "text-black"}cursor-pointer`} > <li>Home</li></NavLink>
           <NavLink to={'/about'} className={({ isActive }) => `${isActive ? " border-b-3 transition border-red-500 " : ""}cursor-pointer`}><li>About</li></NavLink>
           <NavLink to={'/product'} className={({ isActive }) => `${isActive ? " border-b-3 transition border-red-500 " : ""}cursor-pointer`}><li>Product</li></NavLink>
-          <NavLink to={'/contac'} className={({ isActive }) => `${isActive ? " border-b-3 transition border-red-500 " : ""}cursor-pointer`}><li>Contact us</li></NavLink>
+          <NavLink to={'/contact'} className={({ isActive }) => `${isActive ? " border-b-3 transition border-red-500 " : ""}cursor-pointer`}><li>Contact us</li></NavLink>
         </ul>
 
         <Link to={"/cart"} className='relative'>
