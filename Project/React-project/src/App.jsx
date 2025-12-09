@@ -6,23 +6,24 @@ import About from './pages/About'
 import Products from './pages/Products'
 import Contac from './pages/Contac'
 import axios from 'axios'
+import Footer from './Components/Footer'
 
 const App = () => {
-const [location, setLocation] = useState();
- const [opendropdown, setOpendropdown] = useState(false);
+  const [location, setLocation] = useState();
+  const [opendropdown, setOpendropdown] = useState(false);
 
   const getlocation = async () => {
-    navigator.geolocation.getCurrentPosition( async pos => {
+    navigator.geolocation.getCurrentPosition(async pos => {
       const { latitude, longitude } = pos.coords
-     // console.log(latitude, longitude);
+      // console.log(latitude, longitude);
 
-       const url = `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`
+      const url = `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`
       try {
         const location = await axios.get(url)
         const exactLocation = location.data.address
         setLocation(exactLocation)
         setOpendropdown(false)
-         //console.log(exactLocation);
+        //console.log(exactLocation);
 
       } catch (error) {
         console.log(error);
@@ -39,13 +40,14 @@ const [location, setLocation] = useState();
   return (
     <div>
       <BrowserRouter>
-        <Navbar location={location}  getlocation={getlocation} opendropdown={opendropdown} setOpendropdown={setOpendropdown}/>
+        <Navbar location={location} getlocation={getlocation} opendropdown={opendropdown} setOpendropdown={setOpendropdown} />
         <Routes>
           <Route path='/' element={<Home />}></Route>
           <Route path='/about' element={<About />}></Route>
           <Route path='/product' element={<Products />}></Route>
           <Route path='/contac' element={<Contac />}></Route>
         </Routes>
+        <Footer />
       </BrowserRouter>
 
     </div>
