@@ -12,3 +12,9 @@ html,body{
     height: 3rem;
 }
 
+input{
+    background-color: white;
+    accent-color: red;
+    border:1px solid #ccc;
+    color:#333;
+}

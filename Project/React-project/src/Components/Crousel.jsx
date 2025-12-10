@@ -8,7 +8,7 @@ import Category from './Category';
 const Crousel = () => {
 
   const { data, FetchAllproducts } = useContext(DataContext)
-  console.log(data);
+  //console.log(data);
 
   useEffect(() => {
     FetchAllproducts()
