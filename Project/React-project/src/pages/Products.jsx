@@ -7,7 +7,7 @@ import ProductsCard from '../Components/ProductsCard';
 
 const Products = () => {
 
-  const { data, FetchAllproducts } = getData()
+  const { data, FetchAllproducts, categoryData, fetchCategories} = getData()
   const [serch, setSerch] = useState("");
   const [Category, setCategory] = useState("All");
   const [priceRange, setPriceRange] = useState([0,100]);
@@ -15,6 +15,7 @@ const Products = () => {
 
   useEffect(() => {
     FetchAllproducts()
+    fetchCategories()
   }, []);
   //console.log(data);
 
@@ -24,9 +25,10 @@ const Products = () => {
       
   }
 
+
   const filteredData = data?.filter((item) =>
     item.title.toLowerCase().includes(serch.toLowerCase()) &&
-    (Category === Category || item.Category?.name === Category) &&
+    (Category === "All" ? true : item.category?.name === Category) &&
     item.price >= priceRange[0] && item.price <= priceRange[1]
 
   )
@@ -40,6 +42,7 @@ const Products = () => {
               <FilterSection serch={serch} setSerch={setSerch} Category={Category} setCategory={setCategory} setPrinceRange={setPriceRange}  priceRange={priceRange} 
               handlecategoryChange={handlecategoryChange} />
               <div className='grid grid-cols-4 gap-8 mt-5 '>
+
                 {
                   filteredData?.map((products, index) => {
                     return <ProductsCard key={index} products={products} />

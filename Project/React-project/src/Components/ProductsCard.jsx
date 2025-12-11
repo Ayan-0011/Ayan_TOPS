@@ -4,6 +4,7 @@ import {IoCartOutline } from 'react-icons/io5'
 
 const ProductsCard = ({ products }) => {
     return (
+            
         <div className='border relative border-gray-100 rounded-2xl cursor-pointer hover:scale-105 hover:shadow-2xl transition-all p-2 h-max'>
             <img src={products.images} alt="not found" className='bg-gray-100 aspect-square' />
             <h1 className='line-clamp-1 p-1 font-semibold'>{products.title}</h1>
