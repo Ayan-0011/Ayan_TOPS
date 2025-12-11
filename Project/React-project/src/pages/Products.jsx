@@ -3,14 +3,15 @@ import { getData } from '../Context/DataContext'
 import FilterSection from '../Components/FilterSection';
 import Loading from "../assets/Loading4.webm";
 import ProductsCard from '../Components/ProductsCard';
+import Pagination from '../Components/Pagination';
 
 
 const Products = () => {
 
-  const { data, FetchAllproducts, categoryData, fetchCategories} = getData()
+  const { data, FetchAllproducts, categoryData, fetchCategories } = getData()
   const [serch, setSerch] = useState("");
   const [Category, setCategory] = useState("All");
-  const [priceRange, setPriceRange] = useState([0,100]);
+  const [priceRange, setPriceRange] = useState([0, 100]);
   const [page, setPage] = useState(1);
 
 
@@ -20,13 +21,13 @@ const Products = () => {
   }, []);
   //console.log(data);
 
-  const handlecategoryChange = (e)=>{
-      setCategory(e.target.value)
-      console.log(Category);
-      
+  const handlecategoryChange = (e) => {
+    setCategory(e.target.value)
+    console.log(Category);
+
   }
 
-  const Pageselect = (seletedpage) =>{
+  const pageHandler = (seletedpage) => {
     setPage(seletedpage)
   }
 
@@ -36,24 +37,29 @@ const Products = () => {
     item.price >= priceRange[0] && item.price <= priceRange[1]
 
   )
+  const dynamicPage = Math.ceil(filteredData?.length / 8)
 
   return (
     <div>
       <div className='w-6xl mx-auto px-4 mb-10'>
         {
           data?.length > 0 ? (
-            <div className='flex gap-8'>
-              <FilterSection serch={serch} setSerch={setSerch} Category={Category} setCategory={setCategory} setPrinceRange={setPriceRange}  priceRange={priceRange} 
-              handlecategoryChange={handlecategoryChange} />
-              <div className='grid grid-cols-4 gap-8 mt-5 '>
+            <>
 
-                {
-                  filteredData?.slice(0,8).map((products, index) => {
-                    return <ProductsCard key={index} products={products} />
-                  })
-                }
+              <div className='flex gap-8'>
+                <FilterSection serch={serch} setSerch={setSerch} Category={Category} setCategory={setCategory} setPrinceRange={setPriceRange} priceRange={priceRange}
+                  handlecategoryChange={handlecategoryChange} />
+                <div className='grid grid-cols-4 gap-8 mt-5 '>
+
+                  {
+                    filteredData?.slice(page * 8 - 8, page * 8).map((products, index) => {
+                      return <ProductsCard key={index} products={products} />
+                    })
+                  }
+                </div>
               </div>
-            </div>
+              <Pagination pageHandler={pageHandler} page={page} dynamicPage={dynamicPage} />
+            </>
           ) : (
             <div className='flex justify-center items-center w-[400px] mx-auto'>
               <video muted autoPlay loop>
