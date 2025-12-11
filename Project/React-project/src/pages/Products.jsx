@@ -11,6 +11,7 @@ const Products = () => {
   const [serch, setSerch] = useState("");
   const [Category, setCategory] = useState("All");
   const [priceRange, setPriceRange] = useState([0,100]);
+  const [page, setPage] = useState(1);
 
 
   useEffect(() => {
@@ -25,6 +26,9 @@ const Products = () => {
       
   }
 
+  const Pageselect = (seletedpage) =>{
+    setPage(seletedpage)
+  }
 
   const filteredData = data?.filter((item) =>
     item.title.toLowerCase().includes(serch.toLowerCase()) &&
@@ -44,7 +48,7 @@ const Products = () => {
               <div className='grid grid-cols-4 gap-8 mt-5 '>
 
                 {
-                  filteredData?.map((products, index) => {
+                  filteredData?.slice(0,8).map((products, index) => {
                     return <ProductsCard key={index} products={products} />
                   })
                 }

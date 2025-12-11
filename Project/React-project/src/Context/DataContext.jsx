@@ -18,7 +18,6 @@ export const DataProvider = ({ children }) => {
             setData(ProductData)
             //console.log(data);
 
-
         }
         catch (error) {
             console.log(error);
@@ -29,11 +28,7 @@ export const DataProvider = ({ children }) => {
     //fetch all categorys data 
     const fetchCategories = async () => {
         try {
-            const response = await axios.get(
-                "https://api.escuelajs.co/api/v1/categories"
-            );
-
-
+            const response = await axios.get("https://api.escuelajs.co/api/v1/categories");
             setCategoryData(response.data);
         } catch (error) {
             console.log(error);

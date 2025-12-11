@@ -13,7 +13,7 @@ const FilterSection = ({ serch, setSerch, Category, setCategory, priceRange, set
 
 
   return (
-    <div className='bg-gray-300 mt-5 p-4 rounded-md h-[900px]'>
+    <div className='bg-gray-300 mt-5 p-4 rounded-md'>
       <input type="text" placeholder='Serch...' value={serch} onChange={(e) => setSerch(e.target.value)}
         className='p-2 bg-white border-2 border-gray-400 rounded-md' />
 
