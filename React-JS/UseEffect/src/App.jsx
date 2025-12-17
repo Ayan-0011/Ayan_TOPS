@@ -32,6 +32,7 @@ const App = () => {
 
         <button onClick={()=>{
           setNum1(num1 + 1)
+          
         }}>Add</button>
 
         <button onClick={()=>{
