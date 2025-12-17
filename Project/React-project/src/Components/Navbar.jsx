@@ -5,7 +5,6 @@ import { FaCaretDown } from 'react-icons/fa'
 import { CgClose } from 'react-icons/cg'
 import { IoCartOutline } from 'react-icons/io5'
 import { SignedIn, SignedOut, SignIn, SignInButton, UserButton } from '@clerk/clerk-react';
-import { useUser } from "@clerk/clerk-react";
 
 const Navbar = ({ location, getlocation, opendropdown, setOpendropdown }) => {
 
