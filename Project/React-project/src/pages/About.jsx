@@ -5,10 +5,10 @@ const About = () => {
   return (
     <div className="min-h-screen bg-gray-100 py-10 px-4 sm:px-6 lg:px-20">
       <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-lg p-8 space-y-8">
-        <h1 className="text-4xl font-bold  text-center">About Zaptro</h1>
+        <h1 className="text-4xl font-bold  text-center">About Zeptro</h1>
 
         <p className="text-gray-700 text-lg">
-          Welcome to <span className="font-semibold text-red-600">Zaptro</span>, your one-stop destination for the latest and greatest in electronics. From cutting-edge gadgets to must-have accessories, we’re here to power up your tech life with premium products and unbeatable service.
+          Welcome to <span className="font-semibold text-red-600">Zeptro</span>, your one-stop destination for the latest and greatest in electronics. From cutting-edge gadgets to must-have accessories, we’re here to power up your tech life with premium products and unbeatable service.
         </p>
 
         <div className="space-y-6">

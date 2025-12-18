@@ -1,0 +1,1402 @@
+[
+  {
+    "id": 1,
+    "brand": "Samsung",
+    "name": "mobile",
+    "title": "Samsung Premium Mobile Model 1",
+    "price": 32347,
+    "discount": 40,
+    "description": "This mobile from Samsung is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "mobile",
+    "images": [
+      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
+      "https://images.unsplash.com/photo-1580910051074-7c1c7b90a6f5"
+    ]
+  },
+  {
+    "id": 2,
+    "brand": "Zebronics",
+    "name": "accessories",
+    "title": "Zebronics Premium Accessories Model 2",
+    "price": 41144,
+    "discount": 40,
+    "description": "This accessories from Zebronics is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "accessories",
+    "images": [
+      "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46",
+      "https://images.unsplash.com/photo-1587829741301-dc798b83add3"
+    ]
+  },
+  {
+    "id": 3,
+    "brand": "Skullcandy",
+    "name": "bluetooth",
+    "title": "Skullcandy Premium Bluetooth Model 3",
+    "price": 21603,
+    "discount": 15,
+    "description": "This bluetooth from Skullcandy is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "bluetooth",
+    "images": [
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+      "https://images.unsplash.com/photo-1585386959984-a4155228a1ad"
+    ]
+  },
+  {
+    "id": 4,
+    "brand": "Xiaomi",
+    "name": "mobile",
+    "title": "Xiaomi Premium Mobile Model 4",
+    "price": 77624,
+    "discount": 31,
+    "description": "This mobile from Xiaomi is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "mobile",
+    "images": [
+      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
+      "https://images.unsplash.com/photo-1580910051074-7c1c7b90a6f5"
+    ]
+  },
+  {
+    "id": 5,
+    "brand": "Noise",
+    "name": "bluetooth",
+    "title": "Noise Premium Bluetooth Model 5",
+    "price": 77126,
+    "discount": 17,
+    "description": "This bluetooth from Noise is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "bluetooth",
+    "images": [
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+      "https://images.unsplash.com/photo-1585386959984-a4155228a1ad"
+    ]
+  },
+  {
+    "id": 6,
+    "brand": "Sony",
+    "name": "console",
+    "title": "Sony Premium Console Model 6",
+    "price": 25943,
+    "discount": 16,
+    "description": "This console from Sony is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "console",
+    "images": [
+      "https://images.unsplash.com/photo-1606813907291-d86efa9b94db",
+      "https://images.unsplash.com/photo-1621259182978-fbf93132d53d"
+    ]
+  },
+  {
+    "id": 7,
+    "brand": "Corsair",
+    "name": "accessories",
+    "title": "Corsair Premium Accessories Model 7",
+    "price": 29222,
+    "discount": 26,
+    "description": "This accessories from Corsair is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "accessories",
+    "images": [
+      "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46",
+      "https://images.unsplash.com/photo-1587829741301-dc798b83add3"
+    ]
+  },
+  {
+    "id": 8,
+    "brand": "Nintendo",
+    "name": "console",
+    "title": "Nintendo Premium Console Model 8",
+    "price": 80087,
+    "discount": 23,
+    "description": "This console from Nintendo is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "console",
+    "images": [
+      "https://images.unsplash.com/photo-1606813907291-d86efa9b94db",
+      "https://images.unsplash.com/photo-1621259182978-fbf93132d53d"
+    ]
+  },
+  {
+    "id": 9,
+    "brand": "Sony",
+    "name": "gamingpad",
+    "title": "Sony Premium Gamingpad Model 9",
+    "price": 54459,
+    "discount": 21,
+    "description": "This gamingpad from Sony is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "gamingpad",
+    "images": [
+      "https://images.unsplash.com/photo-1606813909355-c96f5b2f91e5",
+      "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf"
+    ]
+  },
+  {
+    "id": 10,
+    "brand": "Sony",
+    "name": "console",
+    "title": "Sony Premium Console Model 10",
+    "price": 5162,
+    "discount": 28,
+    "description": "This console from Sony is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "console",
+    "images": [
+      "https://images.unsplash.com/photo-1606813907291-d86efa9b94db",
+      "https://images.unsplash.com/photo-1621259182978-fbf93132d53d"
+    ]
+  },
+  {
+    "id": 11,
+    "brand": "Dell",
+    "name": "computer",
+    "title": "Dell Premium Computer Model 11",
+    "price": 75002,
+    "discount": 28,
+    "description": "This computer from Dell is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "computer",
+    "images": [
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+    ]
+  },
+  {
+    "id": 12,
+    "brand": "Dell",
+    "name": "computer",
+    "title": "Dell Premium Computer Model 12",
+    "price": 15769,
+    "discount": 28,
+    "description": "This computer from Dell is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "computer",
+    "images": [
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+    ]
+  },
+  {
+    "id": 13,
+    "brand": "Lenovo",
+    "name": "computer",
+    "title": "Lenovo Premium Computer Model 13",
+    "price": 55086,
+    "discount": 31,
+    "description": "This computer from Lenovo is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "computer",
+    "images": [
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+    ]
+  },
+  {
+    "id": 14,
+    "brand": "Zebronics",
+    "name": "accessories",
+    "title": "Zebronics Premium Accessories Model 14",
+    "price": 20765,
+    "discount": 23,
+    "description": "This accessories from Zebronics is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "accessories",
+    "images": [
+      "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46",
+      "https://images.unsplash.com/photo-1587829741301-dc798b83add3"
+    ]
+  },
+  {
+    "id": 15,
+    "brand": "Microsoft",
+    "name": "console",
+    "title": "Microsoft Premium Console Model 15",
+    "price": 29547,
+    "discount": 23,
+    "description": "This console from Microsoft is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "console",
+    "images": [
+      "https://images.unsplash.com/photo-1606813907291-d86efa9b94db",
+      "https://images.unsplash.com/photo-1621259182978-fbf93132d53d"
+    ]
+  },
+  {
+    "id": 16,
+    "brand": "Microsoft",
+    "name": "gamingpad",
+    "title": "Microsoft Premium Gamingpad Model 16",
+    "price": 21015,
+    "discount": 11,
+    "description": "This gamingpad from Microsoft is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "gamingpad",
+    "images": [
+      "https://images.unsplash.com/photo-1606813909355-c96f5b2f91e5",
+      "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf"
+    ]
+  },
+  {
+    "id": 17,
+    "brand": "JBL",
+    "name": "bluetooth",
+    "title": "JBL Premium Bluetooth Model 17",
+    "price": 15468,
+    "discount": 35,
+    "description": "This bluetooth from JBL is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "bluetooth",
+    "images": [
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+      "https://images.unsplash.com/photo-1585386959984-a4155228a1ad"
+    ]
+  },
+  {
+    "id": 18,
+    "brand": "Asus",
+    "name": "computer",
+    "title": "Asus Premium Computer Model 18",
+    "price": 46749,
+    "discount": 11,
+    "description": "This computer from Asus is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "computer",
+    "images": [
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+    ]
+  },
+  {
+    "id": 19,
+    "brand": "Noise",
+    "name": "bluetooth",
+    "title": "Noise Premium Bluetooth Model 19",
+    "price": 51951,
+    "discount": 20,
+    "description": "This bluetooth from Noise is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "bluetooth",
+    "images": [
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+      "https://images.unsplash.com/photo-1585386959984-a4155228a1ad"
+    ]
+  },
+  {
+    "id": 20,
+    "brand": "Apple",
+    "name": "mobile",
+    "title": "Apple Premium Mobile Model 20",
+    "price": 73474,
+    "discount": 28,
+    "description": "This mobile from Apple is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "mobile",
+    "images": [
+      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
+      "https://images.unsplash.com/photo-1580910051074-7c1c7b90a6f5"
+    ]
+  },
+  {
+    "id": 21,
+    "brand": "Apple",
+    "name": "mobile",
+    "title": "Apple Premium Mobile Model 21",
+    "price": 18941,
+    "discount": 19,
+    "description": "This mobile from Apple is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "mobile",
+    "images": [
+      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
+      "https://images.unsplash.com/photo-1580910051074-7c1c7b90a6f5"
+    ]
+  },
+  {
+    "id": 22,
+    "brand": "Acer",
+    "name": "computer",
+    "title": "Acer Premium Computer Model 22",
+    "price": 38883,
+    "discount": 14,
+    "description": "This computer from Acer is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "computer",
+    "images": [
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+    ]
+  },
+  {
+    "id": 23,
+    "brand": "Sony",
+    "name": "gamingpad",
+    "title": "Sony Premium Gamingpad Model 23",
+    "price": 36180,
+    "discount": 40,
+    "description": "This gamingpad from Sony is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "gamingpad",
+    "images": [
+      "https://images.unsplash.com/photo-1606813909355-c96f5b2f91e5",
+      "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf"
+    ]
+  },
+  {
+    "id": 24,
+    "brand": "Skullcandy",
+    "name": "bluetooth",
+    "title": "Skullcandy Premium Bluetooth Model 24",
+    "price": 52871,
+    "discount": 22,
+    "description": "This bluetooth from Skullcandy is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "bluetooth",
+    "images": [
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+      "https://images.unsplash.com/photo-1585386959984-a4155228a1ad"
+    ]
+  },
+  {
+    "id": 25,
+    "brand": "Zebronics",
+    "name": "accessories",
+    "title": "Zebronics Premium Accessories Model 25",
+    "price": 82336,
+    "discount": 31,
+    "description": "This accessories from Zebronics is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "accessories",
+    "images": [
+      "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46",
+      "https://images.unsplash.com/photo-1587829741301-dc798b83add3"
+    ]
+  },
+  {
+    "id": 26,
+    "brand": "Logitech",
+    "name": "gamingpad",
+    "title": "Logitech Premium Gamingpad Model 26",
+    "price": 89185,
+    "discount": 40,
+    "description": "This gamingpad from Logitech is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "gamingpad",
+    "images": [
+      "https://images.unsplash.com/photo-1606813909355-c96f5b2f91e5",
+      "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf"
+    ]
+  },
+  {
+    "id": 27,
+    "brand": "Apple",
+    "name": "computer",
+    "title": "Apple Premium Computer Model 27",
+    "price": 73367,
+    "discount": 27,
+    "description": "This computer from Apple is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "computer",
+    "images": [
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+    ]
+  },
+  {
+    "id": 28,
+    "brand": "Realme",
+    "name": "mobile",
+    "title": "Realme Premium Mobile Model 28",
+    "price": 79511,
+    "discount": 38,
+    "description": "This mobile from Realme is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "mobile",
+    "images": [
+      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
+      "https://images.unsplash.com/photo-1580910051074-7c1c7b90a6f5"
+    ]
+  },
+  {
+    "id": 29,
+    "brand": "Logitech",
+    "name": "gamingpad",
+    "title": "Logitech Premium Gamingpad Model 29",
+    "price": 7191,
+    "discount": 19,
+    "description": "This gamingpad from Logitech is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "gamingpad",
+    "images": [
+      "https://images.unsplash.com/photo-1606813909355-c96f5b2f91e5",
+      "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf"
+    ]
+  },
+  {
+    "id": 30,
+    "brand": "Logitech",
+    "name": "accessories",
+    "title": "Logitech Premium Accessories Model 30",
+    "price": 55628,
+    "discount": 34,
+    "description": "This accessories from Logitech is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "accessories",
+    "images": [
+      "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46",
+      "https://images.unsplash.com/photo-1587829741301-dc798b83add3"
+    ]
+  },
+  {
+    "id": 31,
+    "brand": "Logitech",
+    "name": "gamingpad",
+    "title": "Logitech Premium Gamingpad Model 31",
+    "price": 12245,
+    "discount": 21,
+    "description": "This gamingpad from Logitech is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "gamingpad",
+    "images": [
+      "https://images.unsplash.com/photo-1606813909355-c96f5b2f91e5",
+      "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf"
+    ]
+  },
+  {
+    "id": 32,
+    "brand": "Apple",
+    "name": "computer",
+    "title": "Apple Premium Computer Model 32",
+    "price": 22779,
+    "discount": 20,
+    "description": "This computer from Apple is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "computer",
+    "images": [
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+    ]
+  },
+  {
+    "id": 33,
+    "brand": "Nintendo",
+    "name": "console",
+    "title": "Nintendo Premium Console Model 33",
+    "price": 37780,
+    "discount": 21,
+    "description": "This console from Nintendo is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "console",
+    "images": [
+      "https://images.unsplash.com/photo-1606813907291-d86efa9b94db",
+      "https://images.unsplash.com/photo-1621259182978-fbf93132d53d"
+    ]
+  },
+  {
+    "id": 34,
+    "brand": "Redgear",
+    "name": "gamingpad",
+    "title": "Redgear Premium Gamingpad Model 34",
+    "price": 32810,
+    "discount": 31,
+    "description": "This gamingpad from Redgear is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "gamingpad",
+    "images": [
+      "https://images.unsplash.com/photo-1606813909355-c96f5b2f91e5",
+      "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf"
+    ]
+  },
+  {
+    "id": 35,
+    "brand": "Sony",
+    "name": "gamingpad",
+    "title": "Sony Premium Gamingpad Model 35",
+    "price": 89196,
+    "discount": 37,
+    "description": "This gamingpad from Sony is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "gamingpad",
+    "images": [
+      "https://images.unsplash.com/photo-1606813909355-c96f5b2f91e5",
+      "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf"
+    ]
+  },
+  {
+    "id": 36,
+    "brand": "Apple",
+    "name": "computer",
+    "title": "Apple Premium Computer Model 36",
+    "price": 8155,
+    "discount": 17,
+    "description": "This computer from Apple is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "computer",
+    "images": [
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+    ]
+  },
+  {
+    "id": 37,
+    "brand": "Oppo",
+    "name": "mobile",
+    "title": "Oppo Premium Mobile Model 37",
+    "price": 88351,
+    "discount": 16,
+    "description": "This mobile from Oppo is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "mobile",
+    "images": [
+      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
+      "https://images.unsplash.com/photo-1580910051074-7c1c7b90a6f5"
+    ]
+  },
+  {
+    "id": 38,
+    "brand": "Acer",
+    "name": "computer",
+    "title": "Acer Premium Computer Model 38",
+    "price": 86989,
+    "discount": 22,
+    "description": "This computer from Acer is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "computer",
+    "images": [
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+    ]
+  },
+  {
+    "id": 39,
+    "brand": "Sony",
+    "name": "bluetooth",
+    "title": "Sony Premium Bluetooth Model 39",
+    "price": 89337,
+    "discount": 37,
+    "description": "This bluetooth from Sony is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "bluetooth",
+    "images": [
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+      "https://images.unsplash.com/photo-1585386959984-a4155228a1ad"
+    ]
+  },
+  {
+    "id": 40,
+    "brand": "Corsair",
+    "name": "accessories",
+    "title": "Corsair Premium Accessories Model 40",
+    "price": 88128,
+    "discount": 32,
+    "description": "This accessories from Corsair is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "accessories",
+    "images": [
+      "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46",
+      "https://images.unsplash.com/photo-1587829741301-dc798b83add3"
+    ]
+  },
+  {
+    "id": 41,
+    "brand": "Apple",
+    "name": "mobile",
+    "title": "Apple Premium Mobile Model 41",
+    "price": 31808,
+    "discount": 18,
+    "description": "This mobile from Apple is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "mobile",
+    "images": [
+      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
+      "https://images.unsplash.com/photo-1580910051074-7c1c7b90a6f5"
+    ]
+  },
+  {
+    "id": 42,
+    "brand": "Lenovo",
+    "name": "computer",
+    "title": "Lenovo Premium Computer Model 42",
+    "price": 61772,
+    "discount": 22,
+    "description": "This computer from Lenovo is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "computer",
+    "images": [
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+    ]
+  },
+  {
+    "id": 43,
+    "brand": "Zebronics",
+    "name": "accessories",
+    "title": "Zebronics Premium Accessories Model 43",
+    "price": 34297,
+    "discount": 22,
+    "description": "This accessories from Zebronics is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "accessories",
+    "images": [
+      "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46",
+      "https://images.unsplash.com/photo-1587829741301-dc798b83add3"
+    ]
+  },
+  {
+    "id": 44,
+    "brand": "Realme",
+    "name": "mobile",
+    "title": "Realme Premium Mobile Model 44",
+    "price": 39512,
+    "discount": 36,
+    "description": "This mobile from Realme is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "mobile",
+    "images": [
+      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
+      "https://images.unsplash.com/photo-1580910051074-7c1c7b90a6f5"
+    ]
+  },
+  {
+    "id": 45,
+    "brand": "Oppo",
+    "name": "mobile",
+    "title": "Oppo Premium Mobile Model 45",
+    "price": 68196,
+    "discount": 30,
+    "description": "This mobile from Oppo is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "mobile",
+    "images": [
+      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
+      "https://images.unsplash.com/photo-1580910051074-7c1c7b90a6f5"
+    ]
+  },
+  {
+    "id": 46,
+    "brand": "Redgear",
+    "name": "gamingpad",
+    "title": "Redgear Premium Gamingpad Model 46",
+    "price": 60466,
+    "discount": 33,
+    "description": "This gamingpad from Redgear is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "gamingpad",
+    "images": [
+      "https://images.unsplash.com/photo-1606813909355-c96f5b2f91e5",
+      "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf"
+    ]
+  },
+  {
+    "id": 47,
+    "brand": "Oppo",
+    "name": "mobile",
+    "title": "Oppo Premium Mobile Model 47",
+    "price": 4605,
+    "discount": 14,
+    "description": "This mobile from Oppo is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "mobile",
+    "images": [
+      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
+      "https://images.unsplash.com/photo-1580910051074-7c1c7b90a6f5"
+    ]
+  },
+  {
+    "id": 48,
+    "brand": "Sony",
+    "name": "console",
+    "title": "Sony Premium Console Model 48",
+    "price": 45472,
+    "discount": 40,
+    "description": "This console from Sony is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "console",
+    "images": [
+      "https://images.unsplash.com/photo-1606813907291-d86efa9b94db",
+      "https://images.unsplash.com/photo-1621259182978-fbf93132d53d"
+    ]
+  },
+  {
+    "id": 49,
+    "brand": "JBL",
+    "name": "bluetooth",
+    "title": "JBL Premium Bluetooth Model 49",
+    "price": 56094,
+    "discount": 21,
+    "description": "This bluetooth from JBL is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "bluetooth",
+    "images": [
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+      "https://images.unsplash.com/photo-1585386959984-a4155228a1ad"
+    ]
+  },
+  {
+    "id": 50,
+    "brand": "Sony",
+    "name": "bluetooth",
+    "title": "Sony Premium Bluetooth Model 50",
+    "price": 84421,
+    "discount": 34,
+    "description": "This bluetooth from Sony is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "bluetooth",
+    "images": [
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+      "https://images.unsplash.com/photo-1585386959984-a4155228a1ad"
+    ]
+  },
+  {
+    "id": 51,
+    "brand": "Logitech",
+    "name": "accessories",
+    "title": "Logitech Premium Accessories Model 51",
+    "price": 86160,
+    "discount": 25,
+    "description": "This accessories from Logitech is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "accessories",
+    "images": [
+      "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46",
+      "https://images.unsplash.com/photo-1587829741301-dc798b83add3"
+    ]
+  },
+  {
+    "id": 52,
+    "brand": "Nintendo",
+    "name": "console",
+    "title": "Nintendo Premium Console Model 52",
+    "price": 3056,
+    "discount": 29,
+    "description": "This console from Nintendo is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "console",
+    "images": [
+      "https://images.unsplash.com/photo-1606813907291-d86efa9b94db",
+      "https://images.unsplash.com/photo-1621259182978-fbf93132d53d"
+    ]
+  },
+  {
+    "id": 53,
+    "brand": "Sony",
+    "name": "gamingpad",
+    "title": "Sony Premium Gamingpad Model 53",
+    "price": 48510,
+    "discount": 36,
+    "description": "This gamingpad from Sony is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "gamingpad",
+    "images": [
+      "https://images.unsplash.com/photo-1606813909355-c96f5b2f91e5",
+      "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf"
+    ]
+  },
+  {
+    "id": 54,
+    "brand": "Sony",
+    "name": "console",
+    "title": "Sony Premium Console Model 54",
+    "price": 23484,
+    "discount": 24,
+    "description": "This console from Sony is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "console",
+    "images": [
+      "https://images.unsplash.com/photo-1606813907291-d86efa9b94db",
+      "https://images.unsplash.com/photo-1621259182978-fbf93132d53d"
+    ]
+  },
+  {
+    "id": 55,
+    "brand": "Noise",
+    "name": "bluetooth",
+    "title": "Noise Premium Bluetooth Model 55",
+    "price": 78048,
+    "discount": 16,
+    "description": "This bluetooth from Noise is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "bluetooth",
+    "images": [
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+      "https://images.unsplash.com/photo-1585386959984-a4155228a1ad"
+    ]
+  },
+  {
+    "id": 56,
+    "brand": "Microsoft",
+    "name": "gamingpad",
+    "title": "Microsoft Premium Gamingpad Model 56",
+    "price": 80446,
+    "discount": 34,
+    "description": "This gamingpad from Microsoft is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "gamingpad",
+    "images": [
+      "https://images.unsplash.com/photo-1606813909355-c96f5b2f91e5",
+      "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf"
+    ]
+  },
+  {
+    "id": 57,
+    "brand": "Logitech",
+    "name": "gamingpad",
+    "title": "Logitech Premium Gamingpad Model 57",
+    "price": 5783,
+    "discount": 21,
+    "description": "This gamingpad from Logitech is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "gamingpad",
+    "images": [
+      "https://images.unsplash.com/photo-1606813909355-c96f5b2f91e5",
+      "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf"
+    ]
+  },
+  {
+    "id": 58,
+    "brand": "Sony",
+    "name": "gamingpad",
+    "title": "Sony Premium Gamingpad Model 58",
+    "price": 43896,
+    "discount": 28,
+    "description": "This gamingpad from Sony is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "gamingpad",
+    "images": [
+      "https://images.unsplash.com/photo-1606813909355-c96f5b2f91e5",
+      "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf"
+    ]
+  },
+  {
+    "id": 59,
+    "brand": "Microsoft",
+    "name": "console",
+    "title": "Microsoft Premium Console Model 59",
+    "price": 8034,
+    "discount": 15,
+    "description": "This console from Microsoft is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "console",
+    "images": [
+      "https://images.unsplash.com/photo-1606813907291-d86efa9b94db",
+      "https://images.unsplash.com/photo-1621259182978-fbf93132d53d"
+    ]
+  },
+  {
+    "id": 60,
+    "brand": "HP",
+    "name": "computer",
+    "title": "HP Premium Computer Model 60",
+    "price": 70032,
+    "discount": 40,
+    "description": "This computer from HP is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "computer",
+    "images": [
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+    ]
+  },
+  {
+    "id": 61,
+    "brand": "Logitech",
+    "name": "gamingpad",
+    "title": "Logitech Premium Gamingpad Model 61",
+    "price": 40099,
+    "discount": 35,
+    "description": "This gamingpad from Logitech is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "gamingpad",
+    "images": [
+      "https://images.unsplash.com/photo-1606813909355-c96f5b2f91e5",
+      "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf"
+    ]
+  },
+  {
+    "id": 62,
+    "brand": "Corsair",
+    "name": "accessories",
+    "title": "Corsair Premium Accessories Model 62",
+    "price": 77228,
+    "discount": 22,
+    "description": "This accessories from Corsair is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "accessories",
+    "images": [
+      "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46",
+      "https://images.unsplash.com/photo-1587829741301-dc798b83add3"
+    ]
+  },
+  {
+    "id": 63,
+    "brand": "Zebronics",
+    "name": "accessories",
+    "title": "Zebronics Premium Accessories Model 63",
+    "price": 9172,
+    "discount": 20,
+    "description": "This accessories from Zebronics is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "accessories",
+    "images": [
+      "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46",
+      "https://images.unsplash.com/photo-1587829741301-dc798b83add3"
+    ]
+  },
+  {
+    "id": 64,
+    "brand": "Apple",
+    "name": "mobile",
+    "title": "Apple Premium Mobile Model 64",
+    "price": 77105,
+    "discount": 19,
+    "description": "This mobile from Apple is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "mobile",
+    "images": [
+      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
+      "https://images.unsplash.com/photo-1580910051074-7c1c7b90a6f5"
+    ]
+  },
+  {
+    "id": 65,
+    "brand": "Microsoft",
+    "name": "console",
+    "title": "Microsoft Premium Console Model 65",
+    "price": 82237,
+    "discount": 20,
+    "description": "This console from Microsoft is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "console",
+    "images": [
+      "https://images.unsplash.com/photo-1606813907291-d86efa9b94db",
+      "https://images.unsplash.com/photo-1621259182978-fbf93132d53d"
+    ]
+  },
+  {
+    "id": 66,
+    "brand": "JBL",
+    "name": "bluetooth",
+    "title": "JBL Premium Bluetooth Model 66",
+    "price": 53138,
+    "discount": 37,
+    "description": "This bluetooth from JBL is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "bluetooth",
+    "images": [
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+      "https://images.unsplash.com/photo-1585386959984-a4155228a1ad"
+    ]
+  },
+  {
+    "id": 67,
+    "brand": "HP",
+    "name": "accessories",
+    "title": "HP Premium Accessories Model 67",
+    "price": 5197,
+    "discount": 17,
+    "description": "This accessories from HP is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "accessories",
+    "images": [
+      "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46",
+      "https://images.unsplash.com/photo-1587829741301-dc798b83add3"
+    ]
+  },
+  {
+    "id": 68,
+    "brand": "Microsoft",
+    "name": "console",
+    "title": "Microsoft Premium Console Model 68",
+    "price": 13692,
+    "discount": 29,
+    "description": "This console from Microsoft is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "console",
+    "images": [
+      "https://images.unsplash.com/photo-1606813907291-d86efa9b94db",
+      "https://images.unsplash.com/photo-1621259182978-fbf93132d53d"
+    ]
+  },
+  {
+    "id": 69,
+    "brand": "Skullcandy",
+    "name": "bluetooth",
+    "title": "Skullcandy Premium Bluetooth Model 69",
+    "price": 67168,
+    "discount": 32,
+    "description": "This bluetooth from Skullcandy is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "bluetooth",
+    "images": [
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+      "https://images.unsplash.com/photo-1585386959984-a4155228a1ad"
+    ]
+  },
+  {
+    "id": 70,
+    "brand": "Apple",
+    "name": "computer",
+    "title": "Apple Premium Computer Model 70",
+    "price": 25340,
+    "discount": 13,
+    "description": "This computer from Apple is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "computer",
+    "images": [
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+    ]
+  },
+  {
+    "id": 71,
+    "brand": "Corsair",
+    "name": "accessories",
+    "title": "Corsair Premium Accessories Model 71",
+    "price": 55128,
+    "discount": 16,
+    "description": "This accessories from Corsair is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "accessories",
+    "images": [
+      "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46",
+      "https://images.unsplash.com/photo-1587829741301-dc798b83add3"
+    ]
+  },
+  {
+    "id": 72,
+    "brand": "Sony",
+    "name": "console",
+    "title": "Sony Premium Console Model 72",
+    "price": 4089,
+    "discount": 30,
+    "description": "This console from Sony is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "console",
+    "images": [
+      "https://images.unsplash.com/photo-1606813907291-d86efa9b94db",
+      "https://images.unsplash.com/photo-1621259182978-fbf93132d53d"
+    ]
+  },
+  {
+    "id": 73,
+    "brand": "Logitech",
+    "name": "accessories",
+    "title": "Logitech Premium Accessories Model 73",
+    "price": 68351,
+    "discount": 32,
+    "description": "This accessories from Logitech is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "accessories",
+    "images": [
+      "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46",
+      "https://images.unsplash.com/photo-1587829741301-dc798b83add3"
+    ]
+  },
+  {
+    "id": 74,
+    "brand": "Apple",
+    "name": "computer",
+    "title": "Apple Premium Computer Model 74",
+    "price": 67945,
+    "discount": 34,
+    "description": "This computer from Apple is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "computer",
+    "images": [
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+    ]
+  },
+  {
+    "id": 75,
+    "brand": "Microsoft",
+    "name": "console",
+    "title": "Microsoft Premium Console Model 75",
+    "price": 38327,
+    "discount": 11,
+    "description": "This console from Microsoft is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "console",
+    "images": [
+      "https://images.unsplash.com/photo-1606813907291-d86efa9b94db",
+      "https://images.unsplash.com/photo-1621259182978-fbf93132d53d"
+    ]
+  },
+  {
+    "id": 76,
+    "brand": "Nintendo",
+    "name": "console",
+    "title": "Nintendo Premium Console Model 76",
+    "price": 45494,
+    "discount": 35,
+    "description": "This console from Nintendo is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "console",
+    "images": [
+      "https://images.unsplash.com/photo-1606813907291-d86efa9b94db",
+      "https://images.unsplash.com/photo-1621259182978-fbf93132d53d"
+    ]
+  },
+  {
+    "id": 77,
+    "brand": "Nintendo",
+    "name": "console",
+    "title": "Nintendo Premium Console Model 77",
+    "price": 78237,
+    "discount": 33,
+    "description": "This console from Nintendo is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "console",
+    "images": [
+      "https://images.unsplash.com/photo-1606813907291-d86efa9b94db",
+      "https://images.unsplash.com/photo-1621259182978-fbf93132d53d"
+    ]
+  },
+  {
+    "id": 78,
+    "brand": "Dell",
+    "name": "computer",
+    "title": "Dell Premium Computer Model 78",
+    "price": 61690,
+    "discount": 33,
+    "description": "This computer from Dell is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "computer",
+    "images": [
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+    ]
+  },
+  {
+    "id": 79,
+    "brand": "Logitech",
+    "name": "gamingpad",
+    "title": "Logitech Premium Gamingpad Model 79",
+    "price": 66073,
+    "discount": 36,
+    "description": "This gamingpad from Logitech is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "gamingpad",
+    "images": [
+      "https://images.unsplash.com/photo-1606813909355-c96f5b2f91e5",
+      "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf"
+    ]
+  },
+  {
+    "id": 80,
+    "brand": "Redgear",
+    "name": "gamingpad",
+    "title": "Redgear Premium Gamingpad Model 80",
+    "price": 30075,
+    "discount": 25,
+    "description": "This gamingpad from Redgear is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "gamingpad",
+    "images": [
+      "https://images.unsplash.com/photo-1606813909355-c96f5b2f91e5",
+      "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf"
+    ]
+  },
+  {
+    "id": 81,
+    "brand": "HP",
+    "name": "computer",
+    "title": "HP Premium Computer Model 81",
+    "price": 66015,
+    "discount": 26,
+    "description": "This computer from HP is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "computer",
+    "images": [
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+    ]
+  },
+  {
+    "id": 82,
+    "brand": "Skullcandy",
+    "name": "bluetooth",
+    "title": "Skullcandy Premium Bluetooth Model 82",
+    "price": 74594,
+    "discount": 27,
+    "description": "This bluetooth from Skullcandy is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "bluetooth",
+    "images": [
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+      "https://images.unsplash.com/photo-1585386959984-a4155228a1ad"
+    ]
+  },
+  {
+    "id": 83,
+    "brand": "HP",
+    "name": "accessories",
+    "title": "HP Premium Accessories Model 83",
+    "price": 14317,
+    "discount": 16,
+    "description": "This accessories from HP is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "accessories",
+    "images": [
+      "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46",
+      "https://images.unsplash.com/photo-1587829741301-dc798b83add3"
+    ]
+  },
+  {
+    "id": 84,
+    "brand": "Xiaomi",
+    "name": "mobile",
+    "title": "Xiaomi Premium Mobile Model 84",
+    "price": 68565,
+    "discount": 16,
+    "description": "This mobile from Xiaomi is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "mobile",
+    "images": [
+      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
+      "https://images.unsplash.com/photo-1580910051074-7c1c7b90a6f5"
+    ]
+  },
+  {
+    "id": 85,
+    "brand": "HP",
+    "name": "accessories",
+    "title": "HP Premium Accessories Model 85",
+    "price": 64353,
+    "discount": 15,
+    "description": "This accessories from HP is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "accessories",
+    "images": [
+      "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46",
+      "https://images.unsplash.com/photo-1587829741301-dc798b83add3"
+    ]
+  },
+  {
+    "id": 86,
+    "brand": "Dell",
+    "name": "computer",
+    "title": "Dell Premium Computer Model 86",
+    "price": 79291,
+    "discount": 33,
+    "description": "This computer from Dell is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "computer",
+    "images": [
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+    ]
+  },
+  {
+    "id": 87,
+    "brand": "Logitech",
+    "name": "gamingpad",
+    "title": "Logitech Premium Gamingpad Model 87",
+    "price": 46899,
+    "discount": 33,
+    "description": "This gamingpad from Logitech is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "gamingpad",
+    "images": [
+      "https://images.unsplash.com/photo-1606813909355-c96f5b2f91e5",
+      "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf"
+    ]
+  },
+  {
+    "id": 88,
+    "brand": "Xiaomi",
+    "name": "mobile",
+    "title": "Xiaomi Premium Mobile Model 88",
+    "price": 66596,
+    "discount": 12,
+    "description": "This mobile from Xiaomi is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "mobile",
+    "images": [
+      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
+      "https://images.unsplash.com/photo-1580910051074-7c1c7b90a6f5"
+    ]
+  },
+  {
+    "id": 89,
+    "brand": "Sony",
+    "name": "console",
+    "title": "Sony Premium Console Model 89",
+    "price": 22795,
+    "discount": 33,
+    "description": "This console from Sony is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "console",
+    "images": [
+      "https://images.unsplash.com/photo-1606813907291-d86efa9b94db",
+      "https://images.unsplash.com/photo-1621259182978-fbf93132d53d"
+    ]
+  },
+  {
+    "id": 90,
+    "brand": "HP",
+    "name": "accessories",
+    "title": "HP Premium Accessories Model 90",
+    "price": 18679,
+    "discount": 20,
+    "description": "This accessories from HP is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "accessories",
+    "images": [
+      "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46",
+      "https://images.unsplash.com/photo-1587829741301-dc798b83add3"
+    ]
+  },
+  {
+    "id": 91,
+    "brand": "Microsoft",
+    "name": "gamingpad",
+    "title": "Microsoft Premium Gamingpad Model 91",
+    "price": 54370,
+    "discount": 25,
+    "description": "This gamingpad from Microsoft is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "gamingpad",
+    "images": [
+      "https://images.unsplash.com/photo-1606813909355-c96f5b2f91e5",
+      "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf"
+    ]
+  },
+  {
+    "id": 92,
+    "brand": "Microsoft",
+    "name": "console",
+    "title": "Microsoft Premium Console Model 92",
+    "price": 63840,
+    "discount": 29,
+    "description": "This console from Microsoft is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "console",
+    "images": [
+      "https://images.unsplash.com/photo-1606813907291-d86efa9b94db",
+      "https://images.unsplash.com/photo-1621259182978-fbf93132d53d"
+    ]
+  },
+  {
+    "id": 93,
+    "brand": "Apple",
+    "name": "mobile",
+    "title": "Apple Premium Mobile Model 93",
+    "price": 52841,
+    "discount": 32,
+    "description": "This mobile from Apple is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "mobile",
+    "images": [
+      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
+      "https://images.unsplash.com/photo-1580910051074-7c1c7b90a6f5"
+    ]
+  },
+  {
+    "id": 94,
+    "brand": "Sony",
+    "name": "gamingpad",
+    "title": "Sony Premium Gamingpad Model 94",
+    "price": 66910,
+    "discount": 17,
+    "description": "This gamingpad from Sony is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "gamingpad",
+    "images": [
+      "https://images.unsplash.com/photo-1606813909355-c96f5b2f91e5",
+      "https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf"
+    ]
+  },
+  {
+    "id": 95,
+    "brand": "OnePlus",
+    "name": "mobile",
+    "title": "OnePlus Premium Mobile Model 95",
+    "price": 19757,
+    "discount": 22,
+    "description": "This mobile from OnePlus is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "mobile",
+    "images": [
+      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
+      "https://images.unsplash.com/photo-1580910051074-7c1c7b90a6f5"
+    ]
+  },
+  {
+    "id": 96,
+    "brand": "HP",
+    "name": "accessories",
+    "title": "HP Premium Accessories Model 96",
+    "price": 9222,
+    "discount": 28,
+    "description": "This accessories from HP is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "accessories",
+    "images": [
+      "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46",
+      "https://images.unsplash.com/photo-1587829741301-dc798b83add3"
+    ]
+  },
+  {
+    "id": 97,
+    "brand": "Lenovo",
+    "name": "computer",
+    "title": "Lenovo Premium Computer Model 97",
+    "price": 29397,
+    "discount": 13,
+    "description": "This computer from Lenovo is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "computer",
+    "images": [
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+    ]
+  },
+  {
+    "id": 98,
+    "brand": "boAt",
+    "name": "bluetooth",
+    "title": "boAt Premium Bluetooth Model 98",
+    "price": 80748,
+    "discount": 13,
+    "description": "This bluetooth from boAt is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "bluetooth",
+    "images": [
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+      "https://images.unsplash.com/photo-1585386959984-a4155228a1ad"
+    ]
+  },
+  {
+    "id": 99,
+    "brand": "Corsair",
+    "name": "accessories",
+    "title": "Corsair Premium Accessories Model 99",
+    "price": 13973,
+    "discount": 37,
+    "description": "This accessories from Corsair is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "accessories",
+    "images": [
+      "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46",
+      "https://images.unsplash.com/photo-1587829741301-dc798b83add3"
+    ]
+  },
+  {
+    "id": 100,
+    "brand": "Sony",
+    "name": "bluetooth",
+    "title": "Sony Premium Bluetooth Model 100",
+    "price": 18376,
+    "discount": 40,
+    "description": "This bluetooth from Sony is designed to deliver reliable performance and modern features.\nIt offers excellent build quality with optimized hardware for long-term usage.\nUsers can enjoy smooth performance, efficient power management, and durability.\nIdeal for daily use, entertainment, work, and enhanced digital experiences.",
+    "category": "bluetooth",
+    "images": [
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+      "https://images.unsplash.com/photo-1585386959984-a4155228a1ad"
+    ]
+  }
+]

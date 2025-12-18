@@ -16,10 +16,10 @@ const SingleProduct = () => {
     const getSingleProduct = async () => {
 
         try {
-            const res = await axios.get(`https://api.escuelajs.co/api/v1/products/${params.id}`)
+            const res = await axios.get(`data/product/${params.id}`)
             const product = res.data;
             setSingleProduct(product)
-            //            console.log(product);
+            // console.log(product);
 
         } catch (error) {
             console.log(error);
@@ -78,7 +78,7 @@ const SingleProduct = () => {
                             </div>
 
                             <div className='flex gap-4 mt-4'>
-                                <button onClick={()=> navigator('/cart')} className='px-6 flex gap-2 py-2 text-lg bg-red-500 text-white rounded-md'><IoCartOutline className='w-6 h-6' /> Add to Cart</button>
+                                <button onClick={()=> navigator('/cart')} className='px-6 flex gap-2 py-2 text-lg bg-red-500 text-white rounded-md cursor-pointer'><IoCartOutline className='w-6 h-6' /> Add to Cart</button>
                             </div>
                         </div>
                     </div>

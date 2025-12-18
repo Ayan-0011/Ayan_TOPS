@@ -13,11 +13,11 @@ export const DataProvider = ({ children }) => {
 
     const FetchAllproducts = async () => {
         try {
-            const response = await axios.get('https://api.escuelajs.co/api/v1/products')
+            const response = await axios.get("/data/Product.json")
             
             const ProductData = response.data
             setData(ProductData)
-            //console.log(data);
+            //console.log(ProductData);
 
         }
         catch (error) {
@@ -29,7 +29,7 @@ export const DataProvider = ({ children }) => {
     //fetch all categorys data 
     const fetchCategories = async () => {
         try {
-            const response = await axios.get("https://api.escuelajs.co/api/v1/categories");
+            const response = await axios.get("/data/Category.json");
             setCategoryData(response.data);
         } catch (error) {
             console.log(error);

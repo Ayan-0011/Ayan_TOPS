@@ -58,7 +58,7 @@ const Crousel = () => {
                   <button className='bg-gradient-to-r from-red-500 to-purple-500 text-white px-3 py-2 rounded-md cursor-pointer mt-2'>Shop Now</button>
                 </div>
                 <div>
-                  <img src={item.images} alt={item.title} className='object-cover rounded-full w-[500px] hover:scale-105 transition-all shadow-2xl shadow-red-400' />
+                  <img src={item.images[0]} alt={item.title} className='object-cover rounded-full w-[500px] hover:scale-105 transition-all shadow-2xl shadow-red-400' />
                 </div>
               </div>
             </div>

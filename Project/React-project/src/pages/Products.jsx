@@ -11,8 +11,10 @@ const Products = () => {
   const { data, FetchAllproducts, categoryData, fetchCategories } = getData()
   const [serch, setSerch] = useState("");
   const [Category, setCategory] = useState("All");
-  const [priceRange, setPriceRange] = useState([0, 100]);
+  const [priceRange, setPriceRange] = useState([0, 100000]);
   const [page, setPage] = useState(1);
+  const [brand, setBrand] = useState("All");
+
 
 
   useEffect(() => {
@@ -33,10 +35,14 @@ const Products = () => {
 
   const filteredData = data?.filter((item) =>
     item.title.toLowerCase().includes(serch.toLowerCase()) &&
-    (Category === "All" ? true : item.category?.name === Category) &&
+    (Category === "All" ? true : item.category === Category) &&
+    (brand === "All" ? true : item.brand === brand) &&
     item.price >= priceRange[0] && item.price <= priceRange[1]
 
   )
+
+  const brands = ["All", ...new Set(data?.map(item => item.brand))];
+
   const dynamicPage = Math.ceil(filteredData?.length / 8)
 
   return (
@@ -47,8 +53,8 @@ const Products = () => {
             <>
 
               <div className='flex gap-8'>
-                <FilterSection serch={serch} setSerch={setSerch} Category={Category} setCategory={setCategory} setPrinceRange={setPriceRange} priceRange={priceRange}
-                  handlecategoryChange={handlecategoryChange} />
+                <FilterSection serch={serch} setSerch={setSerch} Category={Category} setCategory={setCategory} setPriceRange={setPriceRange} priceRange={priceRange}
+                  handlecategoryChange={handlecategoryChange} brand={brand} setBrand={setBrand}  brands={brands} />
                 <div className='grid grid-cols-4 gap-8 mt-5 '>
 
                   {
