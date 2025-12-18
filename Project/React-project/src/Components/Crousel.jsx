@@ -48,7 +48,7 @@ const Crousel = () => {
     <div>
       <Slider {...settings}>
         {
-          data?.slice(5,8)?.map((item, index) => {
+          data?.slice(0,3)?.map((item, index) => {
             return <div key={index} className='bg-gradient-to-r from-[#0f0c29] via-[#302b63] to-[#24243e] -z-10'>
               <div className='flex flex-col md:flex-row gap-25 justify-center h-[570px] my-20 md:my-0 items-center px-4'>
                 <div className='md:space-y-6 space-y-3'>

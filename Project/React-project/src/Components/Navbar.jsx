@@ -4,9 +4,11 @@ import { MapPin } from 'lucide-react'
 import { FaCaretDown } from 'react-icons/fa'
 import { CgClose } from 'react-icons/cg'
 import { IoCartOutline } from 'react-icons/io5'
-import { SignedIn, SignedOut, SignIn, SignInButton, UserButton } from '@clerk/clerk-react';
+import { SignedIn, SignedOut, SignIn, SignInButton, UserButton, useUser } from '@clerk/clerk-react';
 
 const Navbar = ({ location, getlocation, opendropdown, setOpendropdown }) => {
+
+  const { user, isSignedIn } = useUser()
 
   const toggleDropdown = () => {
     setOpendropdown(!opendropdown)
@@ -45,19 +47,31 @@ const Navbar = ({ location, getlocation, opendropdown, setOpendropdown }) => {
           <NavLink to={'/contact'} className={({ isActive }) => `${isActive ? " border-b-3 transition border-red-500 " : ""}cursor-pointer`}><li>Contact us</li></NavLink>
         </ul>
 
-        <SignedIn>
-        <Link to={"/cart"}  className='relative'>
-          <IoCartOutline className='h-7 w-7' />
-          <span className='bg-red-500 px-2 rounded-full absolute -top-3 -right-3 text-white '>0</span>
-        </Link>
-        </SignedIn>
+
+          
+       
+
+        {/* 🟢 USER ROLE */}
+        {isSignedIn && user?.publicMetadata?.role === "user" && (
+          <Link to={"/cart"} className='relative'>
+            <IoCartOutline className='h-7 w-7' />
+            <span className='bg-red-500 px-2 rounded-full absolute -top-3 -right-3 text-white '>0</span>
+          </Link>
+        )}
+        
+
+        {/* 🔵 ADMIN ROLE */}
+        {SignedIn && user?.publicMetadata?.role === "admin" && (
+          <Link to="/admin/dashbord" className="font-semibold text-gray-900 text-lg" >  Dashboard </Link>
+        )}
+
 
         <div>
           <SignedOut>
             <SignInButton className="bg-red-500 text-white px-2 py-1 rounded-md cursor-pointer" />
           </SignedOut >
           <SignedIn>
-            <UserButton/>
+            <UserButton />
           </SignedIn>
         </div>
 

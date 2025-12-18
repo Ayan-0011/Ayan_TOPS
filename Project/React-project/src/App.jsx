@@ -9,6 +9,8 @@ import axios from 'axios'
 import Footer from './Components/Footer'
 import Cart from './pages/Cart'
 import SingleProduct from './pages/SingleProduct'
+import AdminRoute from './Admin/AdminRoute'
+import Dashbord from './Admin/Dashbord'
 
 const App = () => {
   const [location, setLocation] = useState();
@@ -42,14 +44,16 @@ const App = () => {
   return (
     <div>
       <BrowserRouter>
-           <Navbar location={location} getlocation={getlocation} opendropdown={opendropdown} setOpendropdown={setOpendropdown} />
+        <Navbar location={location} getlocation={getlocation} opendropdown={opendropdown} setOpendropdown={setOpendropdown} />
         <Routes>
           <Route path='/' element={<Home />}></Route>
           <Route path='/about' element={<About />}></Route>
           <Route path='/product' element={<Products />}></Route>
           <Route path='/products/:id' element={<SingleProduct />}></Route>
           <Route path='/contact' element={<Contac />}></Route>
-          <Route path='/contact' element={<Cart />}></Route>
+          <Route path='/cart' element={<Cart />}></Route>
+          <Route path="/admin/dashbord" element={ <AdminRoute><Dashbord /></AdminRoute> }/>
+
         </Routes>
         <Footer />
       </BrowserRouter>
