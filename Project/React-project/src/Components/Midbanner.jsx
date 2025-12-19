@@ -15,7 +15,6 @@ const Midbanner = () => {
           </div>
         </div>
       </div>
-      <Cardofcategory />
     </div>
 
   )

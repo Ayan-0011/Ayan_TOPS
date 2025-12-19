@@ -16,11 +16,11 @@ const SingleProduct = () => {
     const getSingleProduct = async () => {
 
         try {
-            const res = await axios.get(`data/product/${params.id}`)
-            const product = res.data;
-            setSingleProduct(product)
-            // console.log(product);
-
+           const responce = await axios.get("/data/Product.json");
+           const product = responce.data.find(item => item.id === Number(params.id));
+           setSingleProduct(product)
+           //console.log(product);
+           
         } catch (error) {
             console.log(error);
         }
@@ -66,7 +66,7 @@ const SingleProduct = () => {
                         <div className='flex flex-col gap-6'>
                             <h1 className='md:text-3xl text-xl font-bold text-gray-800'>{SingleProduct.title}</h1>
                             <div className='text-gray-700'>{SingleProduct.slug?.toUpperCase()} /{SingleProduct.name?.toUpperCase()}</div>
-                            <p className='text-red-500 text-xl font-bold'>${SingleProduct.price}
+                            <p className='text-red-500 text-xl font-bold'>₹{SingleProduct.price}
                                 <span className='line-through text-gray-700 mx-1'>{originalPrice}</span>
                                 <span className='text-white bg-red-500 px-4 py-1 rounded-2xl'>${discountPercent + "% OFF"}</span></p>
                             <p className='text-gray-600'>{SingleProduct.description}</p>

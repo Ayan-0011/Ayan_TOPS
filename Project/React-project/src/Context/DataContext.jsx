@@ -14,7 +14,6 @@ export const DataProvider = ({ children }) => {
     const FetchAllproducts = async () => {
         try {
             const response = await axios.get("/data/Product.json")
-            
             const ProductData = response.data
             setData(ProductData)
             //console.log(ProductData);
