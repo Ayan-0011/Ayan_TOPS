@@ -5,8 +5,11 @@ import { FaCaretDown } from 'react-icons/fa'
 import { CgClose } from 'react-icons/cg'
 import { IoCartOutline } from 'react-icons/io5'
 import { SignedIn, SignedOut, SignIn, SignInButton, UserButton, useUser } from '@clerk/clerk-react';
+import { useCart } from '../Context/CartContext'
 
 const Navbar = ({ location, getlocation, opendropdown, setOpendropdown }) => {
+
+  const { cartitem } = useCart()
 
   const { user, isSignedIn } = useUser()
 
@@ -55,7 +58,7 @@ const Navbar = ({ location, getlocation, opendropdown, setOpendropdown }) => {
         {isSignedIn && user?.publicMetadata?.role === "user" && (
           <Link to={"/cart"} className='relative'>
             <IoCartOutline className='h-7 w-7' />
-            <span className='bg-red-500 px-2 rounded-full absolute -top-3 -right-3 text-white '>0</span>
+            <span className='bg-red-500 px-2 rounded-full absolute -top-3 -right-3 text-white '>{cartitem.length}</span>
           </Link>
         )}
         

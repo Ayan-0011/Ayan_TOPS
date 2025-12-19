@@ -55,7 +55,7 @@ const SingleProduct = () => {
                             <div className="flex gap-4 mt-4 justify-center">
                                 {SingleProduct.images?.slice(0, 3).map((img, index) => (
                                     <img key={index} src={img} alt="product option" onClick={() => setActiveImg(index)}
-                                        className={`w-15 h-15  object-cover rounded-full cursor-pointer border-2
+                                        className={`w-15 h-15 object-cover p-2 rounded-full cursor-pointer border-2
                                     ${activeImg === index ? "border-red-500" : "border-gray-300"}`} />
                                 ))}
                             </div>
@@ -65,7 +65,7 @@ const SingleProduct = () => {
                         {/* product details */}
                         <div className='flex flex-col gap-6'>
                             <h1 className='md:text-3xl text-xl font-bold text-gray-800'>{SingleProduct.title}</h1>
-                            <div className='text-gray-700'>{SingleProduct.slug?.toUpperCase()} /{SingleProduct.name?.toUpperCase()}</div>
+                            <div className='text-gray-700'>{SingleProduct.title?.toUpperCase()} / {SingleProduct.name?.toUpperCase()}</div>
                             <p className='text-red-500 text-xl font-bold'>₹{SingleProduct.price}
                                 <span className='line-through text-gray-700 mx-1'>{originalPrice}</span>
                                 <span className='text-white bg-red-500 px-4 py-1 rounded-2xl'>${discountPercent + "% OFF"}</span></p>
