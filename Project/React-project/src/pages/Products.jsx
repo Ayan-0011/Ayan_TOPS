@@ -51,10 +51,9 @@ const Products = () => {
         {
           data?.length > 0 ? (
             <>
-
               <div className='flex gap-8'>
                 <FilterSection serch={serch} setSerch={setSerch} Category={Category} setCategory={setCategory} setPriceRange={setPriceRange} priceRange={priceRange}
-                  handlecategoryChange={handlecategoryChange} brand={brand} setBrand={setBrand}  brands={brands} />
+                  handlecategoryChange={handlecategoryChange} brand={brand} setBrand={setBrand} brands={brands} />
                 <div className='grid grid-cols-4 gap-8 mt-5 '>
 
                   {

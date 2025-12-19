@@ -18,7 +18,7 @@ createRoot(document.getElementById('root')).render(
     <DataProvider>
       <CartProvider>
         <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
-          <App />
+                    <App />
         </ClerkProvider>
       </CartProvider>
     </DataProvider>
