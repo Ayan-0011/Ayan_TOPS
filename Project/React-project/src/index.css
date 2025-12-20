@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 html,body{
     width: 100vw;
     height: 100vh;
@@ -23,4 +24,8 @@ input[type="range"]{
     accent-color: red;
     border:1px solid #ccc;
     color:#333;
+}
+input[type="text"]{
+    background-color: white;
+    
 }

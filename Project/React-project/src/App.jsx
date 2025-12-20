@@ -51,9 +51,8 @@ const App = () => {
           <Route path='/product' element={<Products />}></Route>
           <Route path='/products/:id' element={<SingleProduct />}></Route>
           <Route path='/contact' element={<Contac />}></Route>
-          <Route path='/cart' element={<Cart />}></Route>
+          <Route path='/cart' element={<Cart location={location} getlocation={getlocation} />}></Route>
           <Route path="/admin/dashbord" element={ <AdminRoute><Dashbord /></AdminRoute> }/>
-
         </Routes>
         <Footer />
       </BrowserRouter>
