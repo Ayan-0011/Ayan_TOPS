@@ -50,7 +50,7 @@ const SingleProduct = () => {
                         {/* product image */}
 
                         <div className="w-full">
-                            <img src={SingleProduct.images?.[activeImg]} alt={SingleProduct.title} className="w-full h-[500px] object-cover rounded-2xl" />
+                            <img src={SingleProduct.images?.[activeImg]} alt={SingleProduct.title} className="w-full h-[500px] p-10 object-cover  rounded-2xl" />
 
                             <div className="flex gap-4 mt-4 justify-center">
                                 {SingleProduct.images?.slice(0, 3).map((img, index) => (

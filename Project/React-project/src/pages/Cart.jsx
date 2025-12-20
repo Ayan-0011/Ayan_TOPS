@@ -3,25 +3,33 @@ import { useCart } from "../Context/CartContext";
 import { FaRegTrashAlt } from "react-icons/fa";
 import emptyCart from "../assets/empty-cart.png"
 import Loading from '../assets/Loading4.webm'
-import { useNavigate } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
+import signin from '../assets/signin.jpeg'
 
 const Cart = () => {
   const { cartitem } = useCart()
   const navigate = useNavigate()
 
   const { user, isLoaded, isSignedIn } = useUser();
-  if (!isLoaded) 
+  if (!isLoaded)
     return
-      <>
-        <div className='flex justify-center items-center w-[400px] mx-auto'>
-          <video muted autoPlay loop>
-            <source src={Loading} type='video/webm' />
-          </video>
-        </div>
-      </>;
+  <>
+    <div className='flex justify-center items-center w-[400px] mx-auto'>
+      <video muted autoPlay loop>
+        <source src={Loading} type='video/webm' />
+      </video>
+    </div>
+  </>;
 
-  if (!isSignedIn) return <p className="text-lg text-red-600 flex justify-center">Please login.....</p>;
+  if (!isSignedIn) return <>
+    <div className=' flex flex-col gap-3 justify-center items-center h-[590px] mt-10'>
+      <div>
+        <h1 className='text-red-500/80 font-bold text-5xl text-muted m-3 ms-10'>Plese Sign-up first</h1>
+       <img src={signin} alt="no" onClick={()=> navigate('https://winning-hawk-24.accounts.dev/sign-in?redirect_url=http%3A%2F%2Flocalhost%3A5173%2Fcart%2FSignInButton')}  className="cursor-pointer"/>
+      </div>
+    </div>
+
+  </>
 
   //console.log(user.publicMetadata);
 
@@ -65,7 +73,7 @@ const Cart = () => {
 
 
 
-            
+
           </div>
         </div>
 
