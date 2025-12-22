@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from 'react'
 import { DataContext } from '../Context/DataContext'
-
 import Slider from "react-slick";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 import Category from './Category';

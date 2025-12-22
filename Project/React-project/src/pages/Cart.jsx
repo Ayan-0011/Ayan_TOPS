@@ -81,30 +81,30 @@ const Cart = ({location, getlocation}) => {
                 <h1 className='text-gray-800 mb-5 font-bold text-xl'>Delivery Info</h1>
                 <div className='flex flex-col space-y-1'>
                   <label htmlFor="">Full Name</label>
-                  <input type="text" placeholder='Enter your name' className='p-2 rounded-md' value={user?.fullName} />
+                  <input type="text" placeholder='Enter your name' className='p-2 rounded-md bg-white' value={user?.fullName} />
                 </div>
                 <div className='flex flex-col space-y-1'>
                   <label htmlFor="">Address</label>
-                  <input type="text" placeholder='Enter your address' className='p-2 rounded-md' value={location?.county} />
+                  <input type="text" placeholder='Enter your address' className='p-2 rounded-md bg-white' value={location?.county} />
                 </div>
                 <div className='flex w-full gap-5'>
                   <div className='flex flex-col space-y-1 w-full'>
                     <label htmlFor="">State</label>
-                    <input type="text" placeholder='Enter your state' className='p-2 rounded-md w-full' value={location?.state} />
+                    <input type="text" placeholder='Enter your state' className='p-2 rounded-md bg-white w-full' value={location?.state} />
                   </div>
                   <div className='flex flex-col space-y-1 w-full'>
                     <label htmlFor="">PostCode</label>
-                    <input type="text" placeholder='Enter your postcode' className='p-2 rounded-md w-full' value={location?.postcode} />
+                    <input type="text" placeholder='Enter your postcode' className='p-2 rounded-md bg-white w-full' value={location?.postcode} />
                   </div>
                 </div>
                 <div className='flex w-full gap-5'>
                   <div className='flex flex-col space-y-1 w-full'>
                     <label htmlFor="">Country</label>
-                    <input type="text" placeholder='Enter your country' className='p-2 rounded-md w-full' value={location?.country} />
+                    <input type="text" placeholder='Enter your country' className='p-2 rounded-md bg-white w-full' value={location?.country} />
                   </div>
                   <div className='flex flex-col space-y-1 w-full'>
                     <label htmlFor="">Phone No</label>
-                    <input type="text" placeholder='Enter your Number' className='p-2 rounded-md w-full' />
+                    <input type="text" placeholder='Enter your Number' className='p-2 rounded-md bg-white w-full' />
                   </div>
                 </div>
                 <div className="flex justify-center">
@@ -123,20 +123,20 @@ const Cart = ({location, getlocation}) => {
                 <h1 className='text-gray-800 font-bold text-xl mb-8'>Bill details</h1>
                 <div className='flex justify-between items-center'>
                   <h1 className='flex gap-1 items-center text-gray-700'><span><LuNotebookText /></span>Items total</h1>
-                  <p>${totalPrice}</p>
+                  <p>₹{totalPrice}</p>
                 </div>
                 <div className='flex justify-between items-center'>
                   <h1 className='flex gap-1 items-center text-gray-700'><span><MdDeliveryDining /></span>Delivery Charge</h1>
-                  <p className='text-red-500 font-semibold'><span className='text-gray-600 line-through'>$25</span> FREE</p>
+                  <p className='text-red-500 font-semibold'><span className='text-gray-600 line-through'>₹25</span> FREE</p>
                 </div>
                 <div className='flex justify-between items-center'>
                   <h1 className='flex gap-1 items-center text-gray-700'><span><GiShoppingBag /></span>Handling Charge</h1>
-                  <p className='text-red-500 font-semibold'>$5</p>
+                  <p className='text-red-500 font-semibold'>₹7</p>
                 </div>
                 <hr className='text-gray-200 mt-2' />
                 <div className='flex justify-between items-center'>
                   <h1 className='font-semibold text-lg'>Grand total</h1>
-                  <p className='font-semibold text-lg'>${totalPrice + 5}</p>
+                  <p className='font-semibold text-lg'>₹{totalPrice + 7}</p>
                 </div>
                 <div>
                   <h1 className='font-semibold text-gray-700 mb-3 mt-7'>Apply Promo Code</h1>
@@ -148,8 +148,7 @@ const Cart = ({location, getlocation}) => {
                 <button className='bg-red-500 text-white px-3 py-2 rounded-md w-full cursor-pointer mt-3'>Proceed to Checkout</button>
               </div>
             </div>
-
-
+            
           </div>
         </div>
 

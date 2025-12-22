@@ -2,9 +2,9 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import Loading from '../assets/Loading4.webm'
-import Breadcrums from '../Components/Breadcrums ';
 import { IoCartOutline } from 'react-icons/io5';
 import { useCart } from '../Context/CartContext';
+import Breadcrums from '../Components/Breadcrums ';
 
 
 const SingleProduct = () => {

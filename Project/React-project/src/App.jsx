@@ -11,6 +11,7 @@ import Cart from './pages/Cart'
 import SingleProduct from './pages/SingleProduct'
 import AdminRoute from './Admin/AdminRoute'
 import Dashbord from './Admin/Dashbord'
+import Category_products from './pages/Category_products'
 
 const App = () => {
   const [location, setLocation] = useState();
@@ -50,6 +51,7 @@ const App = () => {
           <Route path='/about' element={<About />}></Route>
           <Route path='/product' element={<Products />}></Route>
           <Route path='/products/:id' element={<SingleProduct />}></Route>
+          <Route path='/category/:category' element={<Category_products />}></Route>
           <Route path='/contact' element={<Contac />}></Route>
           <Route path='/cart' element={<Cart location={location} getlocation={getlocation} />}></Route>
           <Route path="/admin/dashbord" element={ <AdminRoute><Dashbord /></AdminRoute> }/>
