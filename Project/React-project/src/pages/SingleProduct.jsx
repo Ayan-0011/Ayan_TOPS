@@ -79,7 +79,7 @@ const SingleProduct = () => {
                                 <input type="number" min={1} className='w-20 border border-gray-300 rounded-lg px-3 py-1 focus:outline-none focus:ring-2 foucs:ring-red-500' />
                             </div>
 
-                            <div className='flex gap-4 mt-4'>
+                            <div className='flex justify-center md:justify-start gap-4 mt-4'>
                                 <button onClick={()=> addToCart(SingleProduct)} className='px-6 flex gap-2 py-2 text-lg bg-red-500 text-white rounded-md cursor-pointer'><IoCartOutline className='w-6 h-6' /> Add to Cart</button>
                             </div>
                         </div>

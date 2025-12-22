@@ -35,5 +35,5 @@ createRoot(document.getElementById('root')).render(
         </ClerkProvider>
       </CartProvider>
     </DataProvider>)
- {/* </StrictMode>, */}
+//  {/* </StrictMode>, */}
 

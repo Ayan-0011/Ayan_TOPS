@@ -6,6 +6,8 @@ import ProductsCard from '../Components/ProductsCard';
 import Pagination from '../Components/Pagination';
 import Lottie from 'lottie-react';
 import notfound from '../assets/notfound.json'
+import MobileFilter from '../Components/MobileFilter';
+import { FaSlack } from 'react-icons/fa';
 
 
 
@@ -17,6 +19,7 @@ const Products = () => {
   const [priceRange, setPriceRange] = useState([0, 100000]);
   const [page, setPage] = useState(1);
   const [brand, setBrand] = useState("All");
+  const [OpenFilter, setOpenFilter] = useState(false);
 
 
 
@@ -28,12 +31,15 @@ const Products = () => {
 
   const handlecategoryChange = (e) => {
     setCategory(e.target.value)
-    console.log(Category);
+    setPage(1)
+    setOpenFilter(false)
+    //console.log(Category);
 
   }
 
   const pageHandler = (seletedpage) => {
     setPage(seletedpage)
+    setOpenFilter(false)
   }
 
   const filteredData = data?.filter((item) =>
@@ -50,14 +56,16 @@ const Products = () => {
 
   return (
     <div>
-      <div className='w-6xl mx-auto px-4 mb-10'>
+      <div className='w-6xl md:mx-auto px-4 mb-10'>
+        <MobileFilter OpenFilter={OpenFilter} setOpenFilter={setOpenFilter} serch={serch} setSerch={setSerch} Category={Category} setCategory={setCategory} setPriceRange={setPriceRange} priceRange={priceRange}
+          handlecategoryChange={handlecategoryChange} brand={brand} setBrand={setBrand} brands={brands} />
         {
-          data?.length > 0 ? (
+          data?.length > 0 ? 
             <>
               <div className='flex gap-8'>
                 <FilterSection serch={serch} setSerch={setSerch} Category={Category} setCategory={setCategory} setPriceRange={setPriceRange} priceRange={priceRange}
                   handlecategoryChange={handlecategoryChange} brand={brand} setBrand={setBrand} brands={brands} />
-                <div className='grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-7 mt-5 '>
+                <div className='grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-7 mt-5 h-full '>
 
                   {
                     filteredData?.slice(page * 8 - 8, page * 8).map((products, index) => {
@@ -66,18 +74,20 @@ const Products = () => {
                   }
                 </div>
               </div>
-              <Pagination pageHandler={pageHandler} page={page} dynamicPage={dynamicPage} />
+                <div className='flex justify-start md:justify-center ms-10 md:ms-0'>
+                  <Pagination pageHandler={pageHandler} page={page} dynamicPage={dynamicPage} />
+                </div>
             </>
-          ) : (
+           : 
             <div className='flex justify-center items-center w-[400px] mx-auto'>
               <video muted autoPlay loop>
                 <source src={Loading} type='video/webm' />
               </video>
             </div>
-          )
+          
         }
       </div>
-    </div> 
+    </div>
     // <div className='flex justify-center items-center md:h-[600px] md:w-[900px] mt-10'>
     //                        <Lottie animationData={notfound} classID='w-[500px]'/>
     //                 </div>
