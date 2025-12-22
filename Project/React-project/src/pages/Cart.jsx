@@ -41,7 +41,7 @@ const Cart = ({location, getlocation}) => {
   //console.log(user.publicMetadata);
 
   return (
-    <div className="mt-10 max-w-6xl mx-auto mb-10">
+    <div className="mt-10 max-w-6xl mx-auto px-4 md:px-0 mb-10">
       {
         cartitem.length > 0 ? <div>
           <h1 className="font-bold text-2xl">My cart ({cartitem.length})</h1>
@@ -54,7 +54,7 @@ const Cart = ({location, getlocation}) => {
                     <div className="flex gap-6">
                       <img src={item.images[0]} alt={item.name} className="w-20 h-20 rounded-md" />
                       <div>
-                        <h1 className="w-[300px] line-clamp-2">{item.title}</h1>
+                        <h1 className="md:w-[300px] line-clamp-2">{item.title}</h1>
                         <p className="text-red-500 font-semibold text-lg">₹{item.price}</p>
                       </div>
                     </div>
@@ -154,8 +154,8 @@ const Cart = ({location, getlocation}) => {
 
           : <>
             <div className=' flex flex-col gap-3 justify-center items-center h-[550px]'>
-              <h1 className='text-red-500/80 font-bold text-5xl text-muted'>Oh no! Your cart is empty</h1>
-              <img src={emptyCart} alt="" className='w-[400px]' />
+              <h1 className='text-red-500/80 font-bold text-4xl md:text-4xl text-center text-muted'>Oh no! Your cart is empty</h1>
+              <img src={emptyCart} alt="" className='w-[270px] md:w-[400px]' />
               <button onClick={() => navigate('/product')} className='bg-red-500 text-white px-3 py-2 rounded-md cursor-pointer '>Continue Shopping</button>
             </div>
           </>

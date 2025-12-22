@@ -4,6 +4,9 @@ import FilterSection from '../Components/FilterSection';
 import Loading from "../assets/Loading4.webm";
 import ProductsCard from '../Components/ProductsCard';
 import Pagination from '../Components/Pagination';
+import Lottie from 'lottie-react';
+import notfound from '../assets/notfound.json'
+
 
 
 const Products = () => {
@@ -54,7 +57,7 @@ const Products = () => {
               <div className='flex gap-8'>
                 <FilterSection serch={serch} setSerch={setSerch} Category={Category} setCategory={setCategory} setPriceRange={setPriceRange} priceRange={priceRange}
                   handlecategoryChange={handlecategoryChange} brand={brand} setBrand={setBrand} brands={brands} />
-                <div className='grid grid-cols-4 gap-8 mt-5 '>
+                <div className='grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-7 mt-5 '>
 
                   {
                     filteredData?.slice(page * 8 - 8, page * 8).map((products, index) => {
@@ -74,7 +77,10 @@ const Products = () => {
           )
         }
       </div>
-    </div>
+    </div> 
+    // <div className='flex justify-center items-center md:h-[600px] md:w-[900px] mt-10'>
+    //                        <Lottie animationData={notfound} classID='w-[500px]'/>
+    //                 </div>
   )
 }
 

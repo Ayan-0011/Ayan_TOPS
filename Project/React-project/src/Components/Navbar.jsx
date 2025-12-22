@@ -6,10 +6,13 @@ import { CgClose } from 'react-icons/cg'
 import { IoCartOutline } from 'react-icons/io5'
 import { SignedIn, SignedOut, SignIn, SignInButton, UserButton, useUser } from '@clerk/clerk-react';
 import { useCart } from '../Context/CartContext'
+import { HiMenuAlt1, HiMenuAlt2, HiMenuAlt3, HiMenuAlt4 } from 'react-icons/hi'
+import ResposiveMenu from './ResposiveMenu'
 
 const Navbar = ({ location, getlocation, opendropdown, setOpendropdown }) => {
 
   const { cartitem } = useCart()
+  const [openNav, setOpenNav] = useState(false);
 
   const { user, isSignedIn } = useUser()
 
@@ -19,11 +22,11 @@ const Navbar = ({ location, getlocation, opendropdown, setOpendropdown }) => {
 
   return (
 
-    <div className="max-w-7xl mx-auto nav flex justify-between px-10 py-5 items-center ">
+    <div className="max-w-7xl mx-auto nav flex justify-between md:px-5 ps-4 pe-3 py-5 items-center ">
 
       <div className='flex gap-7 item-center'>
         <h1 className='font-semibold text-3xl'><span className='text-red-500 font-serif'>Z</span>aptro</h1>
-        <div className='flex gap-1 cursor-pointer text-gray-700 items-center'>
+        <div className='md:flex gap-1 cursor-pointer text-gray-700 items-center hidden'>
           <MapPin className="text-red-500" />
 
           <span className='font-semibold'>{location ? <div className='-space-y-2'>
@@ -42,8 +45,8 @@ const Navbar = ({ location, getlocation, opendropdown, setOpendropdown }) => {
         </div>
       </div>
 
-      <nav className='flex  gap-7 items-center'>
-        <ul className='flex gap-7 font-semibold text-lg items-center'>
+      <nav className='flex md:gap-7 gap-1 items-center'>
+        <ul className='md:flex gap-7 font-semibold text-lg items-center hidden'>
           <NavLink to={'/'} className={({ isActive }) => `${isActive ? " border-b-3 transition border-red-500 " : "text-black"}cursor-pointer`} > <li>Home</li></NavLink>
           <NavLink to={'/about'} className={({ isActive }) => `${isActive ? " border-b-3 transition border-red-500 " : ""}cursor-pointer`}><li>About</li></NavLink>
           <NavLink to={'/product'} className={({ isActive }) => `${isActive ? " border-b-3 transition border-red-500 " : ""}cursor-pointer`}><li>Product</li></NavLink>
@@ -69,7 +72,7 @@ const Navbar = ({ location, getlocation, opendropdown, setOpendropdown }) => {
         )}
 
 
-        <div>
+        <div className='hidden md:block'>
           <SignedOut>
             <SignInButton className="bg-red-500 text-white px-2 py-1 rounded-md cursor-pointer" />
           </SignedOut >
@@ -77,6 +80,11 @@ const Navbar = ({ location, getlocation, opendropdown, setOpendropdown }) => {
             <UserButton />
           </SignedIn>
         </div>
+        {
+          openNav ? <HiMenuAlt3 onClick={()=>setOpenNav(false)} className='h-7 w-7 ms-4 md:hidden'/> : <HiMenuAlt1
+          onClick={()=>setOpenNav(true)} className='h-7 w-7 ms-4 md:hidden'/>
+        }
+        <ResposiveMenu openNav={openNav} setOpenNav={setOpenNav} />
 
       </nav>
     </div>

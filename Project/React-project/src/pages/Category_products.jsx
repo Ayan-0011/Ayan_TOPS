@@ -17,7 +17,7 @@ const Category_products = () => {
             const res = await axios.get("/data/Product.json");
             const filterproducts = res.data.filter(item => item.category === category)
             setCategory_products(filterproducts)
-            console.log(filterproducts);
+           // console.log(filterproducts);
         } catch (error) {
             console.log(error);
         }
@@ -25,15 +25,13 @@ const Category_products = () => {
 
     useEffect(() => {
         catedata()
+        window.scrollTo(0, 0);
     }, [category]);
 
     return (
         <>
             {
                 Category_products.length > 0 ? <div className='max-w-6xl mx-auto mt-10 mb-10 px-4'>
-                    <h2 className="text-xl font-bold mb-4 text-red-500">
-                        Category: {category}
-                    </h2>
                     <button onClick={() => navigate('/')} className='bg-gray-800 mb-5 text-white px-3 py-1 rounded-md cursor-pointer flex gap-1 items-center'><ChevronLeft /> Back</button>
                     {
                         Category_products.map((product, index) => {

@@ -10,7 +10,11 @@ const Home = () => {
       <Midbanner/>
       <Features/>
     </>
+
+    
   )
 }
 
 export default Home
+
+
