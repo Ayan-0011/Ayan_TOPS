@@ -1,7 +1,22 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 function Shop() {
+
+    const [data, setData] = useState([]);
+
+    const getData = async ()=>{
+        const res = await axios.get('http://localhost:5000/products');
+        const products = res.data
+        setData(products)
+        console.log(products);   
+        
+    }
+
+    useEffect(() => {
+        getData()
+    }, []);
     return (
         <div>
             {/* Start Content */}
@@ -70,42 +85,18 @@ function Shop() {
                         </div>
                         <div className="row">
                             
-                            <div className="col-md-4">
-                                <div className="card mb-4 product-wap rounded-0">
-                                    <div className="card rounded-0">
-                                        <img className="card-img rounded-0 img-fluid" src="assets/img/shop_02.jpg" />
-                                        <div className="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                            <ul className="list-unstyled">
-                                                <li><Link className="btn btn-success text-white" to="/shop_single"><i className="far fa-heart" /></Link></li>
-                                                <li><Link className="btn btn-success text-white mt-2" to="/shop_single"><i className="far fa-eye" /></Link></li>
-                                                <li><Link className="btn btn-success text-white mt-2" to="/shop_single"><i className="fas fa-cart-plus" /></Link></li>
-                                            </ul>
+                            <div className="d-flex flex-wrap ">
+                                {
+                                    data.map((item,idx)=>{
+                                        return <div key={idx} className='card p-5 col-4'>
+                                            <h5>{item.title}</h5>
+                                            <img src={item.image} alt={item.title} className='card-img-top' />
+                                            <p className='cart-title'>{item.category}</p>
+                                            <h3>{item.price}</h3>
+                                            <h4 className='card-text'>{item.description}</h4>
                                         </div>
-                                    </div>
-                                    <div className="card-body">
-                                        <Link href="/shop_single" className="h3 text-decoration-none">Oupidatat non</Link>
-                                        <ul className="w-100 list-unstyled d-flex justify-content-between mb-0">
-                                            <li>M/L/X/XL</li>
-                                            <li className="pt-2">
-                                                <span className="product-color-dot color-dot-red float-left rounded-circle ml-1" />
-                                                <span className="product-color-dot color-dot-blue float-left rounded-circle ml-1" />
-                                                <span className="product-color-dot color-dot-black float-left rounded-circle ml-1" />
-                                                <span className="product-color-dot color-dot-light float-left rounded-circle ml-1" />
-                                                <span className="product-color-dot color-dot-green float-left rounded-circle ml-1" />
-                                            </li>
-                                        </ul>
-                                        <ul className="list-unstyled d-flex justify-content-center mb-1">
-                                            <li>
-                                                <i className="text-warning fa fa-star" />
-                                                <i className="text-warning fa fa-star" />
-                                                <i className="text-warning fa fa-star" />
-                                                <i className="text-muted fa fa-star" />
-                                                <i className="text-muted fa fa-star" />
-                                            </li>
-                                        </ul>
-                                        <p className="text-center mb-0">$250.00</p>
-                                    </div>
-                                </div>
+                                    })
+                                }
                             </div>
                            
                         </div>

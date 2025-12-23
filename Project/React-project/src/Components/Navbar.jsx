@@ -54,8 +54,8 @@ const Navbar = ({ location, getlocation, opendropdown, setOpendropdown }) => {
         </ul>
 
 
-          
-       
+
+
 
         {/* 🟢 USER ROLE */}
         {isSignedIn && user?.publicMetadata?.role === "user" && (
@@ -64,7 +64,7 @@ const Navbar = ({ location, getlocation, opendropdown, setOpendropdown }) => {
             <span className='bg-red-500 px-2 rounded-full absolute -top-3 -right-3 text-white '>{cartitem.length}</span>
           </Link>
         )}
-        
+
 
         {/* 🔵 ADMIN ROLE */}
         {SignedIn && user?.publicMetadata?.role === "admin" && (
@@ -74,15 +74,22 @@ const Navbar = ({ location, getlocation, opendropdown, setOpendropdown }) => {
 
         <div className='hidden md:block'>
           <SignedOut>
-            <SignInButton className="bg-red-500 text-white px-2 py-1 rounded-md cursor-pointer" />
+            <SignInButton afterSignUp={(user) => {
+              user.update({
+                publicMetadata: {
+                  role: "user",
+                },
+              });
+            }} 
+             className="bg-red-500 text-white px-2 py-1 rounded-md cursor-pointer" />
           </SignedOut >
           <SignedIn>
             <UserButton />
           </SignedIn>
         </div>
         {
-          openNav ? <HiMenuAlt3 onClick={()=>setOpenNav(false)} className='h-7 w-7 ms-4 md:hidden'/> : <HiMenuAlt1
-          onClick={()=>setOpenNav(true)} className='h-7 w-7 ms-4 md:hidden'/>
+          openNav ? <HiMenuAlt3 onClick={() => setOpenNav(false)} className='h-7 w-7 ms-4 md:hidden' /> : <HiMenuAlt1
+            onClick={() => setOpenNav(true)} className='h-7 w-7 ms-4 md:hidden' />
         }
         <ResposiveMenu openNav={openNav} setOpenNav={setOpenNav} />
 
