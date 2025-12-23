@@ -7,7 +7,6 @@ import Pagination from '../Components/Pagination';
 import Lottie from 'lottie-react';
 import notfound from '../assets/notfound.json'
 import MobileFilter from '../Components/MobileFilter';
-import { FaSlack } from 'react-icons/fa';
 
 
 
@@ -54,44 +53,73 @@ const Products = () => {
 
   const dynamicPage = Math.ceil(filteredData?.length / 8)
 
+
   return (
     <div>
-      <div className='w-6xl md:mx-auto px-4 mb-10'>
-        <MobileFilter OpenFilter={OpenFilter} setOpenFilter={setOpenFilter} serch={serch} setSerch={setSerch} Category={Category} setCategory={setCategory} setPriceRange={setPriceRange} priceRange={priceRange}
-          handlecategoryChange={handlecategoryChange} brand={brand} setBrand={setBrand} brands={brands} />
-        {
-          data?.length > 0 ? 
-            <>
-              <div className='flex gap-8'>
-                <FilterSection serch={serch} setSerch={setSerch} Category={Category} setCategory={setCategory} setPriceRange={setPriceRange} priceRange={priceRange}
-                  handlecategoryChange={handlecategoryChange} brand={brand} setBrand={setBrand} brands={brands} />
-                <div className='grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-7 mt-5 h-full '>
+      <div className="max-w-6xl md:mx-auto px-4 mb-10">
 
-                  {
-                    filteredData?.slice(page * 8 - 8, page * 8).map((products, index) => {
-                      return <ProductsCard key={index} products={products} />
-                    })
-                  }
+        <MobileFilter
+          OpenFilter={OpenFilter}
+          setOpenFilter={setOpenFilter}
+          serch={serch}
+          setSerch={setSerch}
+          Category={Category}
+          setCategory={setCategory}
+          setPriceRange={setPriceRange}
+          priceRange={priceRange}
+          handlecategoryChange={handlecategoryChange}
+          brand={brand}
+          setBrand={setBrand}
+          brands={brands}
+        />
+
+        {data?.length > 0 ? (
+          <div className="flex gap-8">
+
+            <FilterSection
+              serch={serch}
+              setSerch={setSerch}
+              Category={Category}
+              setCategory={setCategory}
+              setPriceRange={setPriceRange}
+              priceRange={priceRange}
+              handlecategoryChange={handlecategoryChange}
+              brand={brand}
+              setBrand={setBrand}
+              brands={brands}
+            />
+
+            <div className="flex-1">
+              {filteredData.length > 0 ? (
+                <>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-7 mt-5">
+                    {filteredData.slice(page * 8 - 8, page * 8).map((products, index) => (
+                      <ProductsCard key={index} products={products} />
+                    ))}
+                  </div>
+
+                  <div className="flex justify-center mt-6">
+                    <Pagination pageHandler={pageHandler} page={page} dynamicPage={dynamicPage} />
+                  </div>
+                </>
+              ) : (
+                <div className="flex justify-center items-center h-[500px] w-[300px] md:h-[600px] md:w-[970px]">
+                  <Lottie animationData={notfound}  className="w-[500px]"
+                  />
                 </div>
-              </div>
-                <div className='flex justify-start md:justify-center ms-10 md:ms-0'>
-                  <Pagination pageHandler={pageHandler} page={page} dynamicPage={dynamicPage} />
-                </div>
-            </>
-           : 
-            <div className='flex justify-center items-center w-[400px] mx-auto'>
-              <video muted autoPlay loop>
-                <source src={Loading} type='video/webm' />
-              </video>
+              )}
             </div>
-          
-        }
+          </div>
+        ) : (
+          <div className="flex justify-center items-center w-[400px] mx-auto">
+            <video muted autoPlay loop>
+              <source src={Loading} type="video/webm" />
+            </video>
+          </div>
+        )}
       </div>
     </div>
-    // <div className='flex justify-center items-center md:h-[600px] md:w-[900px] mt-10'>
-    //                        <Lottie animationData={notfound} classID='w-[500px]'/>
-    //                 </div>
-  )
+  );
 }
 
 export default Products

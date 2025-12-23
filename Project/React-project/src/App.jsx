@@ -12,10 +12,13 @@ import SingleProduct from './pages/SingleProduct'
 import AdminRoute from './Admin/AdminRoute'
 import Dashbord from './Admin/Dashbord'
 import Category_products from './pages/Category_products'
+import { useCart } from './Context/CartContext'
 
 const App = () => {
   const [location, setLocation] = useState();
   const [opendropdown, setOpendropdown] = useState(false);
+  const { cartitem, setCartitem } = useCart();
+
 
   const getlocation = async () => {
     navigator.geolocation.getCurrentPosition(async pos => {
@@ -40,6 +43,20 @@ const App = () => {
   useEffect(() => {
     getlocation()
   }, []);
+
+
+   //Load cart from local storage on initial render
+  useEffect(() => {
+    const storedCart = localStorage.getItem('cartItem')
+    if(storedCart){
+      setCartitem(JSON.parse(storedCart))
+    }
+  }, []);
+
+  //save cart to local storage whenever it changes
+  useEffect(() => {
+    localStorage.setItem('cartItem', JSON.stringify(cartitem))
+  }, [cartitem])
 
 
   return (

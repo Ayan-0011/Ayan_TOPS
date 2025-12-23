@@ -41,7 +41,7 @@ const Cart = ({location, getlocation}) => {
   //console.log(user.publicMetadata);
 
   return (
-    <div className="mt-10 max-w-6xl mx-auto px-4 md:px-0 mb-10">
+    <div className="mt-10 max-w-6xl mx-auto px-1 md:px-0 mb-10">
       {
         cartitem.length > 0 ? <div>
           <h1 className="font-bold text-2xl">My cart ({cartitem.length})</h1>
@@ -59,7 +59,7 @@ const Cart = ({location, getlocation}) => {
                       </div>
                     </div>
                     {/* product quintity */}
-                    <div className="bg-red-500 text-white flex gap-2 p-2 rounded-md font-bold text-lg ">
+                    <div className="bg-red-500 text-white flex gap-1 p-2 me-1 rounded-md font-bold text-lg ">
                       <button onClick={()=> updateQuantity(cartitem, item.id, "dicrease")} className="cursor-pointer">-</button>
                       <span>{item.quantity}</span>
                       <button onClick={()=> updateQuantity(cartitem, item.id, "increase")} className="cursor-pointer">+</button>
@@ -154,8 +154,8 @@ const Cart = ({location, getlocation}) => {
 
           : <>
             <div className=' flex flex-col gap-3 justify-center items-center h-[550px]'>
-              <h1 className='text-red-500/80 font-bold text-4xl md:text-4xl text-center text-muted'>Oh no! Your cart is empty</h1>
-              <img src={emptyCart} alt="" className='w-[270px] md:w-[400px]' />
+              <h1 className='text-red-500/80 font-bold text-3xl md:text-4xl text-center text-muted'>Oh no! Your cart is empty</h1>
+              <img src={emptyCart} alt="" className='w-[230px] md:w-[400px]' />
               <button onClick={() => navigate('/product')} className='bg-red-500 text-white px-3 py-2 rounded-md cursor-pointer '>Continue Shopping</button>
             </div>
           </>

@@ -68,7 +68,7 @@ const Navbar = ({ location, getlocation, opendropdown, setOpendropdown }) => {
 
         {/* 🔵 ADMIN ROLE */}
         {SignedIn && user?.publicMetadata?.role === "admin" && (
-          <Link to="/admin/dashbord" className="font-semibold text-gray-900 text-lg" >  Dashboard </Link>
+          <Link to="/admin/dashbord" className="font-semibold text-gray-900 text-lg" > Dashboard </Link>
         )}
 
 

@@ -1,10 +1,10 @@
-import { UserButton, useUser } from '@clerk/clerk-react'
+import { SignedIn, SignedOut, SignInButton, UserButton, useUser } from '@clerk/clerk-react'
 import { FaUserCircle } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
 const ResposiveMenu = ({ openNav, setOpenNav }) => {
     const { user } = useUser()
-    
+
 
 
     return (
@@ -12,12 +12,14 @@ const ResposiveMenu = ({ openNav, setOpenNav }) => {
             <div>
                 <div className='flex  justify-start gap-3'>
                     {
-                        user ? <UserButton size={50} /> : <FaUserCircle size={50} />
+                        user ? <>
+                            <UserButton size={50} /> <div>
+                                <h1>Hello,{user?.firstName}</h1>
+                                <h1 className='text-sm text-slate-500'>Premium User</h1>
+                            </div>
+                        </>
+                            : <div></div>
                     }
-                    <div>
-                        <h1>Hello,</h1>
-                        <h1 className='text-sm text-slate-500'>Premium User</h1>
-                    </div>
                 </div>
                 <nav className='mt-12'>
                     <ul className='flex flex-col gap-7 text-2xl font-semibold'>
@@ -25,6 +27,19 @@ const ResposiveMenu = ({ openNav, setOpenNav }) => {
                         <Link to={"/product"} onClick={() => setOpenNav(false)} className="cursor-pointer"><li>Products</li></Link>
                         <Link to={"/about"} onClick={() => setOpenNav(false)} className="cursor-pointer"><li>About</li></Link>
                         <Link to={"/contact"} onClick={() => setOpenNav(false)} className="cursor-pointer"><li>Contact</li></Link>
+
+                        <div>
+                            {
+                            user ? <div></div> :  <>
+                                                        <SignedOut>
+                                                            <SignInButton className="bg-red-500 text-white px-2 py-1 rounded-md cursor-pointer" />
+                                                        </SignedOut >
+                                                        <SignedIn>
+                                                            <UserButton />
+                                                        </SignedIn>
+                                                    </> 
+                            }
+                        </div>
                     </ul>
                 </nav>
             </div>

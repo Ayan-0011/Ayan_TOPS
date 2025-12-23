@@ -16,12 +16,12 @@ const MobileFilter = ({ OpenFilter, setOpenFilter, serch, setSerch, Category, se
 
     return (
         <>
-            <div className='bg-gray-100 flex justify-between w-[350px] items-center md:hidden px-4 p-2 my-5'>
+            <div className='bg-gray-100 flex justify-between w-[300px] items-center md:hidden px-4 p-2 my-5'>
                 <h1 className='font-semibold font-xl'>Filters</h1>
                 <FaFilter onClick={() =>togglefilter()} className='text-gray-800' />
             </div>
             {
-                OpenFilter ? <div className='bg-gray-100 p-2 md:hidden w-[350px]'>
+                OpenFilter ? <div className='bg-gray-100 p-2 md:hidden w-[300px]'>
                     <input type="text"
                         placeholder='Search..'
                         value={serch}

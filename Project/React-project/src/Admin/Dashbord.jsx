@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import { UserButton, useUser } from '@clerk/clerk-react';
+import React, { createContext, useState } from 'react';
 
 const Dashbord = () => {
   const [activeTab, setActiveTab] = useState('dashboard');
   const [sidebarOpen, setSidebarOpen] = useState(true);
+
+  const { user } =useUser();
 
   // Sample data
   const orders = [
@@ -389,7 +392,7 @@ const Dashbord = () => {
           <h2 className="text-2xl font-bold mb-8 text-white">Admin Panel</h2>
           <nav className="space-y-2">
             <button
-              onClick={() => setActiveTab('dashboard')}
+              onClick={() => {setActiveTab('dashboard'); setSidebarOpen(false);}}
               className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-all ${
                 activeTab === 'dashboard' ? 'bg-blue-600 shadow-lg' : 'hover:bg-gray-800'
               }`}
@@ -398,7 +401,7 @@ const Dashbord = () => {
               <span className="font-medium">Dashboard</span>
             </button>
             <button
-              onClick={() => setActiveTab('orders')}
+              onClick={() => {setActiveTab('orders'); setSidebarOpen(false);}}
               className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-all ${
                 activeTab === 'orders' ? 'bg-blue-600 shadow-lg' : 'hover:bg-gray-800'
               }`}
@@ -407,7 +410,7 @@ const Dashbord = () => {
               <span className="font-medium">Orders</span>
             </button>
             <button
-              onClick={() => setActiveTab('products')}
+              onClick={() => {setActiveTab('products'); setSidebarOpen(false);}}
               className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-all ${
                 activeTab === 'products' ? 'bg-blue-600 shadow-lg' : 'hover:bg-gray-800'
               }`}
@@ -416,7 +419,7 @@ const Dashbord = () => {
               <span className="font-medium">Products</span>
             </button>
             <button
-              onClick={() => setActiveTab('users')}
+              onClick={() => {setActiveTab('users'); setSidebarOpen(false);}}
               className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-all ${
                 activeTab === 'users' ? 'bg-blue-600 shadow-lg' : 'hover:bg-gray-800'
               }`}
@@ -440,8 +443,8 @@ const Dashbord = () => {
           </button>
           <div className="flex items-center space-x-4">
             <span className="text-gray-700 font-medium">Admin User</span>
-            <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">
-              A
+            <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold">
+              {<UserButton size={50} />}
             </div>
           </div>
         </div>

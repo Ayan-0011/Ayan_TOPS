@@ -47,7 +47,7 @@ import { toast } from "react-toastify";
 
         const deleteItem = (productId)=>{
             setCartitem(cartitem.filter(item =>item.id !== productId))
-            toast.warning("Product is Deleted!")
+            toast.error("Product is Deleted!")
         }
 
 
