@@ -1,0 +1,233 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Admin",
+      "email": "admin@zeptro.com",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "name": "Ayan",
+      "email": "ayan@gmail.com",
+      "password": "user123",
+      "role": "user"
+    },
+    {
+      "id": 3,
+      "name": "Rahul",
+      "email": "rahul@gmail.com",
+      "password": "user123",
+      "role": "user"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "mobile",
+      "images":"https://darlingretail.com/cdn/shop/products/8_7d9fabc4-e981-4b1b-a3f3-66d4c0fbe5c6_1024x.jpg?v=1665037821"
+    },
+    {
+      "id": 2,
+      "name": "laptop",
+      "images":"https://darlingretail.com/cdn/shop/products/8_7d9fabc4-e981-4b1b-a3f3-66d4c0fbe5c6_1024x.jpg?v=1665037821"
+    },
+    {
+      "id": 3,
+      "name": "audio",
+      "images":"https://darlingretail.com/cdn/shop/products/8_7d9fabc4-e981-4b1b-a3f3-66d4c0fbe5c6_1024x.jpg?v=1665037821"
+    },
+    {
+      "id": 4,
+      "name": "tv",
+      "images":"https://darlingretail.com/cdn/shop/products/8_7d9fabc4-e981-4b1b-a3f3-66d4c0fbe5c6_1024x.jpg?v=1665037821"
+    },
+    {
+      "id": 5,
+      "name": "accessories",
+      "images":"https://darlingretail.com/cdn/shop/products/8_7d9fabc4-e981-4b1b-a3f3-66d4c0fbe5c6_1024x.jpg?v=1665037821"
+    }
+  ],
+  "products": [
+    {
+      "id": 101,
+      "title": "Apple iPhone 14",
+      "category": "mobile",
+      "brand": "Apple",
+      "price": 69999,
+      "discount": 15,
+      "stock": 10,
+      "images": [
+        "https://m.media-amazon.com/images/I/61bK6PMOC3L._SL1500_.jpg",
+        "https://m.media-amazon.com/images/I/71d7rfSl0wL._SL1500_.jpg",
+        "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Communication/Mobiles/Images/310716_0_ciaoza.png"
+      ],
+      "min_desc": "Apple iPhone 14 with A15 Bionic chip",
+      "long_desc": "Apple iPhone 14 features the powerful A15 Bionic processor, advanced dual-camera system with Photonic Engine, excellent low-light performance, long battery life, and a stunning Super Retina XDR display."
+    },
+    {
+      "id": 102,
+      "title": "Samsung Galaxy S23",
+      "category": "mobile",
+      "brand": "Samsung",
+      "price": 74999,
+      "discount": 20,
+      "stock": 8,
+      "images": [
+        "https://m.media-amazon.com/images/I/61VfL-aiToL._SL1500_.jpg",
+        "https://initiative.co.in/wp-content/uploads/2024/02/Untitled-design-2024-02-05T153831.654.png",
+        "https://www.triveniworld.com/cdn/shop/products/samsung-galaxy-s23-ultra-5g-12256-refurbsihed-triveni-world-8.png?v=1736255597"
+      ],
+      "min_desc": "Samsung Galaxy S23 flagship smartphone",
+      "long_desc": "Samsung Galaxy S23 comes with Snapdragon 8 Gen 2 processor, 50MP pro-grade camera, Nightography, 120Hz AMOLED display, and premium glass-metal design."
+    },
+    {
+      "id": 103,
+      "title": "OnePlus 11 5G",
+      "category": "mobile",
+      "brand": "OnePlus",
+      "price": 56999,
+      "discount": 18,
+      "stock": 12,
+      "images": [
+        "https://m.media-amazon.com/images/I/61amb0CfMGL._SL1500_.jpg",
+        "https://oasis.opstatics.com/content/dam/oasis/page/2023/na/oneplus-11/specs/black-img.png",
+        "https://i.ytimg.com/vi/KjPqjEXTwzw/maxresdefault.jpg"
+      ],
+      "min_desc": "OnePlus flagship with Snapdragon processor",
+      "long_desc": "OnePlus 11 5G delivers ultra-fast performance with Snapdragon 8 Gen 2, Hasselblad camera tuning, 120Hz AMOLED display, and super-fast charging."
+    },
+    {
+      "id": 104,
+      "title": "Apple MacBook Air M1",
+      "category": "laptop",
+      "brand": "Apple",
+      "price": 89999,
+      "discount": 15,
+      "stock": 4,
+      "images": [
+        "https://m.media-amazon.com/images/I/71vFKBpKakL._SL1500_.jpg",
+        "https://assets.techrepublic.com/uploads/2020/11/macbook-air-with-m1-features.jpg",
+        "https://static.toiimg.com/thumb/msid-113603820,width-1280,height-720,imgsize-14974,resizemode-6,overlay-toi_sw,pt-32,y_pad-40/photo.jpg"
+      ],
+      "min_desc": "MacBook Air with Apple M1 chip",
+      "long_desc": "MacBook Air M1 offers blazing-fast performance, silent fanless design, Retina display, and up to 18 hours of battery life."
+    },
+    {
+      "id": 105,
+      "title": "HP Pavilion 15",
+      "category": "laptop",
+      "brand": "HP",
+      "price": 58999,
+      "discount": 25,
+      "stock": 5,
+      "images": [
+        "https://m.media-amazon.com/images/I/71RUyskVR+L.jpg",
+        "https://rukminim2.flixcart.com/image/480/480/computer/p/m/6/hp-pavilion-notebook-original-imadn4dmhsydyfpe.jpeg?q=90",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR2f2pvxpDhdFjrYMUq38rprxVjRf_GEwVBA&s"
+      ],
+      "min_desc": "HP Pavilion laptop for work & study",
+      "long_desc": "HP Pavilion features Intel i5 processor, 16GB RAM, fast SSD storage, Full HD display, and a sleek lightweight design."
+    },
+    {
+      "id": 106,
+      "title": "Sony WH-1000XM5",
+      "category": "audio",
+      "brand": "Sony",
+      "price": 29999,
+      "discount": 12,
+      "stock": 10,
+      "images": [
+        "https://darlingretail.com/cdn/shop/products/8_7d9fabc4-e981-4b1b-a3f3-66d4c0fbe5c6_1024x.jpg?v=1665037821",
+        "https://www.moon-audio.com/cdn/shop/files/sony-wh-1000xm5-smoky-pink-01.jpg?v=1738336452&width=1200",
+        "https://www.sony.co.in/image/f83a8f36a0b29fa48eeaa6471f636390?fmt=png-alpha&wid=1000"
+      ],
+      "min_desc": "Sony premium noise cancelling headphones",
+      "long_desc": "Sony WH-1000XM5 offers industry-leading noise cancellation, crystal-clear calls, premium comfort, and long battery life."
+    },
+    {
+      "id": 107,
+      "title": "boAt Airdopes 141",
+      "category": "audio",
+      "brand": "boAt",
+      "price": 1499,
+      "discount": 25,
+      "stock": 40,
+      "images": [
+        "https://m.media-amazon.com/images/I/61f1YfTkTDL._SL1500_.jpg",
+        "https://m.media-amazon.com/images/I/61j3wF2k7EL._SL1500_.jpg",
+        "https://m.media-amazon.com/images/I/61zH1pJ8dWL._SL1500_.jpg"
+      ],
+      "min_desc": "boAt wireless earbuds with long battery",
+      "long_desc": "boAt Airdopes 141 offers 42 hours playback, low latency gaming mode, ENx tech for calls, and fast charging."
+    },
+    {
+      "id": 108,
+      "title": "Samsung 55 inch 4K Smart TV",
+      "category": "tv",
+      "brand": "Samsung",
+      "price": 54999,
+      "discount": 20,
+      "stock": 4,
+      "images": [
+        "https://5.imimg.com/data5/SELLER/Default/2023/10/353175195/HN/EP/LY/32671122/samsung-55-inches-crystal-ismart-4k-ultra-hd-smart-led-tv.jpg",
+        "https://mahajanelectronics.com/cdn/shop/files/81OARotaN2L._SL1500.jpg?v=1761478520&width=1500",
+        "https://dynamicdistributors.in/wp-content/uploads/2025/06/IN-QLE1.jpg"
+      ],
+      "min_desc": "Samsung Crystal UHD Smart TV",
+      "long_desc": "Samsung 4K Smart TV delivers crystal-clear visuals, HDR support, smart apps, and immersive sound experience."
+    },
+    {
+      "id": 109,
+      "title": "Logitech MX Master 3",
+      "category": "accessories",
+      "brand": "Logitech",
+      "price": 9999,
+      "discount": 10,
+      "stock": 18,
+      "images": [
+        "https://m.media-amazon.com/images/I/61ni3t1ryQL._SL1500_.jpg",
+        "https://m.media-amazon.com/images/I/61mpMH5TzkL._SL1500_.jpg",
+        "https://cdn.jiostore.online/v2/jmd-asp/jdprod/wrkr/products/pictures/item/free/resize-w:460/logitech/491838023/4/x13x7SDGQ4-fWsH9NUmHN-Logitech-MX-MASTER-3-Mouse-and-Mouse-Pads-491838023-i-5-1200Wx1200H.jpeg"
+      ],
+      "min_desc": "Professional wireless mouse",
+      "long_desc": "Logitech MX Master 3 features ergonomic design, MagSpeed scroll, multi-device support, and precision tracking."
+    }
+  ],
+  "orders": [
+    {
+      "id": 5001,
+      "userId": 2,
+      "items": [
+        {
+          "productId": 101,
+          "quantity": 1,
+          "images":"https://m.media-amazon.com/images/I/61bK6PMOC3L._SL1500_.jpg"
+        },
+        {
+          "productId": 106,
+          "quantity": 2,
+          "images":"https://darlingretail.com/cdn/shop/products/8_7d9fabc4-e981-4b1b-a3f3-66d4c0fbe5c6_1024x.jpg?v=1665037821"
+        }
+      ],
+      "totalAmount": 62497,
+      "status": "confirmed",
+      "orderDate": "2025-12-23"
+    },
+    {
+      "id": 5002,
+      "userId": 3,
+      "items": [
+        {
+          "productId": 103,
+          "quantity": 1,
+          "images":"https://m.media-amazon.com/images/I/61amb0CfMGL._SL1500_.jpg"
+        }
+      ],
+      "totalAmount": 44249,
+      "status": "pending",
+      "orderDate": "2025-12-24"
+    }
+  ]
+}

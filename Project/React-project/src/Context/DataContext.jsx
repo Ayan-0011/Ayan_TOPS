@@ -13,7 +13,7 @@ export const DataProvider = ({ children }) => {
 
     const FetchAllproducts = async () => {
         try {
-            const response = await axios.get("/data/Product.json")
+            const response = await axios.get("http://localhost:5000/products")
             const ProductData = response.data
             setData(ProductData)
             //console.log(ProductData);
@@ -28,7 +28,7 @@ export const DataProvider = ({ children }) => {
     //fetch all categorys data 
     const fetchCategories = async () => {
         try {
-            const response = await axios.get("/data/Category.json");
+            const response = await axios.get("http://localhost:5000/categories");
             setCategoryData(response.data);
         } catch (error) {
             console.log(error);

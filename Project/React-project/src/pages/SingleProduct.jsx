@@ -18,8 +18,8 @@ const SingleProduct = () => {
     const getSingleProduct = async () => {
 
         try {
-           const responce = await axios.get("/data/Product.json");
-           const product = responce.data.find(item => item.id === Number(params.id));
+           const responce = await axios.get(`http://localhost:5000/products/${params.id}`);
+           const product = responce.data;
            setSingleProduct(product)
            //console.log(product);
            
@@ -71,7 +71,7 @@ const SingleProduct = () => {
                             <p className='text-red-500 text-xl font-bold'>₹{SingleProduct.price}
                                 <span className='line-through text-gray-700 mx-1'>{originalPrice}</span>
                                 <span className='text-white bg-red-500 px-4 py-1 rounded-2xl'>${discountPercent + "% OFF"}</span></p>
-                            <p className='text-gray-600'>{SingleProduct.description}</p>
+                            <p className='text-gray-600'>{SingleProduct.long_desc}</p>
 
                             {/* qunatity selector */}
                             <div className='flex items-center gap-4'>

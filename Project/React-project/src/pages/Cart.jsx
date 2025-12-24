@@ -8,6 +8,7 @@ import signin from '../assets/signin.jpeg'
 import { LuNotebookText } from "react-icons/lu";
 import { MdDeliveryDining } from "react-icons/md";
 import { GiShoppingBag } from "react-icons/gi";
+import { ChevronDownIcon, ChevronRight } from "lucide-react";
 
 const Cart = ({location, getlocation}) => {
   const { cartitem, updateQuantity, deleteItem } = useCart()
@@ -44,7 +45,10 @@ const Cart = ({location, getlocation}) => {
     <div className="mt-10 max-w-6xl mx-auto px-1 md:px-0 mb-10">
       {
         cartitem.length > 0 ? <div>
+          <div className="flex justify-between">
           <h1 className="font-bold text-2xl">My cart ({cartitem.length})</h1>
+          <button onClick={() => navigate('/myorder')} className='bg-gray-800 mb-5 text-white px-3 py-1 rounded-md cursor-pointer flex gap-1 items-center'><ChevronDownIcon /> My Order</button>
+          </div>
           <div>
             <div className="mt-10">
               {

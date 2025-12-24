@@ -53,7 +53,7 @@ const Crousel = () => {
                 <div className='md:space-y-6 space-y-3'>
                   <h3 className='text-red-500 font-semibold font-sans text-sm'>Powering Your World with the Best in Electonic</h3>
                   <h1 className='md:text-4xl text-xl font-bold uppercase line-clamp-2 md:line-clamp-3 md:w-[500px] text-white'>{item.title}</h1>
-                  <p className='md:w-[500px] line-clamp-3 text-gray-400 pr-7'>{item.description}</p>
+                  <p className='md:w-[500px] line-clamp-3 text-gray-400 pr-7'>{item.long_desc}</p>
                   <button className='bg-gradient-to-r from-red-500 to-purple-500 text-white px-3 py-2 rounded-md cursor-pointer mt-2'>Shop Now</button>
                 </div>
                 <div>

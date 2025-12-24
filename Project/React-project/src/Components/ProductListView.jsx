@@ -9,7 +9,7 @@ const ProductListView = ({product}) => {
   return (
     <div className='space-y-4 mt-2 rounded-md'>
       <div className='bg-gray-100 flex gap-7 items-center p-2 rounded-md'>
-        <img src={product.images[0]} alt={product.title} className='md:h-60 md:w-60 h-25 w-25 object-cover rounded-md cursor-pointer' onClick={()=>navigate(`/products/${product.id}`)}/>
+        <img src={product.images} alt={product.title} className='md:h-60 md:w-60 h-25 w-25 object-cover rounded-md cursor-pointer' onClick={()=>navigate(`/products/${product.id}`)}/>
         <div className='space-y-4'>
           <h1 className='font-bold md:text-xl text-lg line-clamp-3 hover:text-red-400 md:w-full w-[220px]'>{product.title}</h1>
           <p className='font-semibold flex items-center md:text-lg text-md'>$<span className='md:text-2xl text-2xl'>{product.price}</span>({product.discount}% off)</p>
