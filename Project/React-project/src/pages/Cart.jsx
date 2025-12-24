@@ -85,7 +85,7 @@ const Cart = ({location, getlocation}) => {
                 </div>
                 <div className='flex flex-col space-y-1'>
                   <label htmlFor="">Address</label>
-                  <input type="text" placeholder='Enter your address' className='p-2 rounded-md bg-white' value={location?.county} />
+                  <input type="text" placeholder='Enter your address' className='p-2 rounded-md bg-white' value={location?.state_district} />
                 </div>
                 <div className='flex w-full gap-5'>
                   <div className='flex flex-col space-y-1 w-full'>
@@ -136,7 +136,7 @@ const Cart = ({location, getlocation}) => {
                 <hr className='text-gray-200 mt-2' />
                 <div className='flex justify-between items-center'>
                   <h1 className='font-semibold text-lg'>Grand total</h1>
-                  <p className='font-semibold text-lg'>₹{totalPrice + 7}</p>
+                  <p className='font-semibold text-lg'>₹{totalPrice}</p>
                 </div>
                 <div>
                   <h1 className='font-semibold text-gray-700 mb-3 mt-7'>Apply Promo Code</h1>

@@ -91,7 +91,7 @@ const Navbar = ({ location, getlocation, opendropdown, setOpendropdown }) => {
           openNav ? <HiMenuAlt3 onClick={() => setOpenNav(false)} className='h-7 w-7 ms-4 md:hidden' /> : <HiMenuAlt1
             onClick={() => setOpenNav(true)} className='h-7 w-7 ms-4 md:hidden' />
         }
-        <ResposiveMenu openNav={openNav} setOpenNav={setOpenNav} />
+        <ResposiveMenu openNav={openNav} setOpenNav={setOpenNav} location={location} getlocation={getlocation} />
 
       </nav>
     </div>
