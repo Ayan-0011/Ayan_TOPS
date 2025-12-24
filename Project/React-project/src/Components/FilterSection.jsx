@@ -49,7 +49,7 @@ const FilterSection = ({ serch, setSerch, Category, setCategory, priceRange, set
 
       <h1 className='mt-10 font-semibold text-xl'>Range</h1>
       <div className='flex flex-col gap-2 mt-3'>
-        <label>Price Range: {priceRange[0]} - ${priceRange[1]}</label>
+        <label>Price Range: {priceRange[0]} - ₹{priceRange[1].toLocaleString("en-IN")}</label>
         <input type="range" name="" id="" min={0} max={100000} value={priceRange[1]} onChange={(e) => setPriceRange([priceRange[0], Number(e.target.value)])} className='transition-all' />
       </div>
       <button

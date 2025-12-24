@@ -18,7 +18,7 @@ const ProductsCard = ({ products }) => {
         <div className='border relative border-gray-100 rounded-2xl my-3 my-2 cursor-pointer hover:scale-105 hover:shadow-2xl transition-all p-2 md:h-max h-[300px] w-[150px] md:w-[200px]'>
             <img src={products.images[0]} alt="not found" className='bg-gray-100 md:aspect-square object-container md:h-[150px] md:w-full h-[100px] w-[130px]' onClick={() => navigate(`/products/${products.id}`)} />
             <h1 className='line-clamp-2 p-1 font-semibold'>{products.title}</h1>
-            <p className='my-1 text-lg text-gray-800 font-bold p-1'>{products.price}</p>
+            <p className='my-1 text-lg text-gray-800 font-bold p-1'>₹{products.price.toLocaleString("en-IN")}</p>
             <button onClick={ !isSignedIn ? () => navigate('/cart')  : () => addToCart(products)}
              className='bg-red-500 px-1 w-full py-2 text-md rounded-md text-white cursor-pointer flex gap-2 items-center justify-center font-semibold'><IoCartOutline className="w-6 h-6" /> Add to cart</button>
         </div  >

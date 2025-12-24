@@ -10,14 +10,15 @@ const Category_products = () => {
     const navigate = useNavigate()
 
     const { category } = useParams()
-
+    //console.log(category);
+    
     const catedata = async () => {
 
         try {
-            const res = await axios.get("/data/Product.json");
+            const res = await axios.get("http://localhost:5000/products");
             const filterproducts = res.data.filter(item => item.category === category)
             setCategory_products(filterproducts)
-           // console.log(filterproducts);
+           //console.log(filterproducts);
         } catch (error) {
             console.log(error);
         }

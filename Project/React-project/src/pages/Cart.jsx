@@ -8,10 +8,10 @@ import signin from '../assets/signin.jpeg'
 import { LuNotebookText } from "react-icons/lu";
 import { MdDeliveryDining } from "react-icons/md";
 import { GiShoppingBag } from "react-icons/gi";
-import { ChevronDownIcon, ChevronRight } from "lucide-react";
+import { ChevronDownCircle, ChevronDownIcon, ChevronFirstIcon, ChevronRight } from "lucide-react";
 
 const Cart = ({location, getlocation}) => {
-  const { cartitem, updateQuantity, deleteItem } = useCart()
+  const { cartitem, updateQuantity, deleteItem, placeOrder } = useCart()
   const navigate = useNavigate()
 
 
@@ -45,12 +45,12 @@ const Cart = ({location, getlocation}) => {
     <div className="mt-10 max-w-6xl mx-auto px-1 md:px-0 mb-10">
       {
         cartitem.length > 0 ? <div>
-          <div className="flex justify-between">
+          <div className="flex justify-between mx-5">
           <h1 className="font-bold text-2xl">My cart ({cartitem.length})</h1>
-          <button onClick={() => navigate('/myorder')} className='bg-gray-800 mb-5 text-white px-3 py-1 rounded-md cursor-pointer flex gap-1 items-center'><ChevronDownIcon /> My Order</button>
+             <button onClick={() => navigate('/myorder')} className='bg-gray-800 mb-5 text-white px-3 py-2 rounded-full cursor-pointer flex gap-1 items-center'><ChevronDownCircle />Show Previous Order</button>
           </div>
           <div>
-            <div className="mt-10">
+            <div className="mt-5">
               {
                 cartitem.map((item, idx) => {
                   return <div key={idx} className="bg-gray-100 p-5 rounded-md flex justify-between mt-3 w-full items-center">
@@ -59,7 +59,7 @@ const Cart = ({location, getlocation}) => {
                       <img src={item.images[0]} alt={item.name} className="w-20 h-20 rounded-md" />
                       <div>
                         <h1 className="md:w-[300px] line-clamp-2">{item.title}</h1>
-                        <p className="text-red-500 font-semibold text-lg">₹{item.price}</p>
+                        <p className="text-red-500 font-semibold text-lg">₹{item.price.toLocaleString("en-IN")}</p>
                       </div>
                     </div>
                     {/* product quintity */}
@@ -127,7 +127,7 @@ const Cart = ({location, getlocation}) => {
                 <h1 className='text-gray-800 font-bold text-xl mb-8'>Bill details</h1>
                 <div className='flex justify-between items-center'>
                   <h1 className='flex gap-1 items-center text-gray-700'><span><LuNotebookText /></span>Items total</h1>
-                  <p>₹{totalPrice}</p>
+                  <p>₹{totalPrice.toLocaleString("en-IN")}</p>
                 </div>
                 <div className='flex justify-between items-center'>
                   <h1 className='flex gap-1 items-center text-gray-700'><span><MdDeliveryDining /></span>Delivery Charge</h1>
@@ -140,7 +140,7 @@ const Cart = ({location, getlocation}) => {
                 <hr className='text-gray-200 mt-2' />
                 <div className='flex justify-between items-center'>
                   <h1 className='font-semibold text-lg'>Grand total</h1>
-                  <p className='font-semibold text-lg'>₹{totalPrice}</p>
+                  <p className='font-semibold text-lg'>₹{totalPrice.toLocaleString("en-IN") + 7}</p>
                 </div>
                 <div>
                   <h1 className='font-semibold text-gray-700 mb-3 mt-7'>Apply Promo Code</h1>
@@ -149,7 +149,7 @@ const Cart = ({location, getlocation}) => {
                     <button className='bg-white text-black border border-gray-200 px-4 cursor-pointer py-1 rounded-md'>Apply</button>
                   </div>
                 </div>
-                <button className='bg-red-500 text-white px-3 py-2 rounded-md w-full cursor-pointer mt-3'>Proceed to Checkout</button>
+                <button onClick={()=>placeOrder("user_1")} className='bg-red-500 text-white px-3 py-2 rounded-md w-full cursor-pointer mt-3'>Proceed to Checkout</button>
               </div>
             </div>
             
@@ -157,6 +157,9 @@ const Cart = ({location, getlocation}) => {
         </div>
 
           : <>
+          <div className="flex justify-center">
+             <button onClick={() => navigate('/myorder')} className='bg-gray-800 mb-5 text-white px-3 py-2 rounded-full cursor-pointer flex gap-1 items-center'><ChevronDownCircle />Show My Order</button>
+          </div>
             <div className=' flex flex-col gap-3 justify-center items-center h-[550px]'>
               <h1 className='text-red-500/80 font-bold text-3xl md:text-4xl text-center text-muted'>Oh no! Your cart is empty</h1>
               <img src={emptyCart} alt="" className='w-[230px] md:w-[400px]' />

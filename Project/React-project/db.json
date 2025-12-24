@@ -1,21 +1,21 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Admin",
       "email": "admin@zeptro.com",
       "password": "admin123",
       "role": "admin"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Ayan",
       "email": "ayan@gmail.com",
       "password": "user123",
       "role": "user"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Rahul",
       "email": "rahul@gmail.com",
       "password": "user123",
@@ -24,34 +24,34 @@
   ],
   "categories": [
     {
-      "id": 1,
+      "id": "1",
       "name": "mobile",
-      "images":"https://darlingretail.com/cdn/shop/products/8_7d9fabc4-e981-4b1b-a3f3-66d4c0fbe5c6_1024x.jpg?v=1665037821"
+      "images": "https://darlingretail.com/cdn/shop/products/8_7d9fabc4-e981-4b1b-a3f3-66d4c0fbe5c6_1024x.jpg?v=1665037821"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "laptop",
-      "images":"https://darlingretail.com/cdn/shop/products/8_7d9fabc4-e981-4b1b-a3f3-66d4c0fbe5c6_1024x.jpg?v=1665037821"
+      "images": "https://darlingretail.com/cdn/shop/products/8_7d9fabc4-e981-4b1b-a3f3-66d4c0fbe5c6_1024x.jpg?v=1665037821"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "audio",
-      "images":"https://darlingretail.com/cdn/shop/products/8_7d9fabc4-e981-4b1b-a3f3-66d4c0fbe5c6_1024x.jpg?v=1665037821"
+      "images": "https://darlingretail.com/cdn/shop/products/8_7d9fabc4-e981-4b1b-a3f3-66d4c0fbe5c6_1024x.jpg?v=1665037821"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "tv",
-      "images":"https://darlingretail.com/cdn/shop/products/8_7d9fabc4-e981-4b1b-a3f3-66d4c0fbe5c6_1024x.jpg?v=1665037821"
+      "images": "https://darlingretail.com/cdn/shop/products/8_7d9fabc4-e981-4b1b-a3f3-66d4c0fbe5c6_1024x.jpg?v=1665037821"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "accessories",
-      "images":"https://darlingretail.com/cdn/shop/products/8_7d9fabc4-e981-4b1b-a3f3-66d4c0fbe5c6_1024x.jpg?v=1665037821"
+      "images": "https://darlingretail.com/cdn/shop/products/8_7d9fabc4-e981-4b1b-a3f3-66d4c0fbe5c6_1024x.jpg?v=1665037821"
     }
   ],
   "products": [
     {
-      "id": 101,
+      "id": "101",
       "title": "Apple iPhone 14",
       "category": "mobile",
       "brand": "Apple",
@@ -67,7 +67,7 @@
       "long_desc": "Apple iPhone 14 features the powerful A15 Bionic processor, advanced dual-camera system with Photonic Engine, excellent low-light performance, long battery life, and a stunning Super Retina XDR display."
     },
     {
-      "id": 102,
+      "id": "102",
       "title": "Samsung Galaxy S23",
       "category": "mobile",
       "brand": "Samsung",
@@ -83,7 +83,7 @@
       "long_desc": "Samsung Galaxy S23 comes with Snapdragon 8 Gen 2 processor, 50MP pro-grade camera, Nightography, 120Hz AMOLED display, and premium glass-metal design."
     },
     {
-      "id": 103,
+      "id": "103",
       "title": "OnePlus 11 5G",
       "category": "mobile",
       "brand": "OnePlus",
@@ -99,7 +99,7 @@
       "long_desc": "OnePlus 11 5G delivers ultra-fast performance with Snapdragon 8 Gen 2, Hasselblad camera tuning, 120Hz AMOLED display, and super-fast charging."
     },
     {
-      "id": 104,
+      "id": "104",
       "title": "Apple MacBook Air M1",
       "category": "laptop",
       "brand": "Apple",
@@ -115,7 +115,7 @@
       "long_desc": "MacBook Air M1 offers blazing-fast performance, silent fanless design, Retina display, and up to 18 hours of battery life."
     },
     {
-      "id": 105,
+      "id": "105",
       "title": "HP Pavilion 15",
       "category": "laptop",
       "brand": "HP",
@@ -131,7 +131,7 @@
       "long_desc": "HP Pavilion features Intel i5 processor, 16GB RAM, fast SSD storage, Full HD display, and a sleek lightweight design."
     },
     {
-      "id": 106,
+      "id": "106",
       "title": "Sony WH-1000XM5",
       "category": "audio",
       "brand": "Sony",
@@ -147,7 +147,7 @@
       "long_desc": "Sony WH-1000XM5 offers industry-leading noise cancellation, crystal-clear calls, premium comfort, and long battery life."
     },
     {
-      "id": 107,
+      "id": "107",
       "title": "boAt Airdopes 141",
       "category": "audio",
       "brand": "boAt",
@@ -163,7 +163,7 @@
       "long_desc": "boAt Airdopes 141 offers 42 hours playback, low latency gaming mode, ENx tech for calls, and fast charging."
     },
     {
-      "id": 108,
+      "id": "108",
       "title": "Samsung 55 inch 4K Smart TV",
       "category": "tv",
       "brand": "Samsung",
@@ -179,7 +179,7 @@
       "long_desc": "Samsung 4K Smart TV delivers crystal-clear visuals, HDR support, smart apps, and immersive sound experience."
     },
     {
-      "id": 109,
+      "id": "109",
       "title": "Logitech MX Master 3",
       "category": "accessories",
       "brand": "Logitech",
@@ -197,37 +197,30 @@
   ],
   "orders": [
     {
-      "id": 5001,
-      "userId": 2,
+      "id": "573f",
+      "userId": "user_1",
       "items": [
         {
-          "productId": 101,
-          "quantity": 1,
-          "images":"https://m.media-amazon.com/images/I/61bK6PMOC3L._SL1500_.jpg"
-        },
-        {
-          "productId": 106,
-          "quantity": 2,
-          "images":"https://darlingretail.com/cdn/shop/products/8_7d9fabc4-e981-4b1b-a3f3-66d4c0fbe5c6_1024x.jpg?v=1665037821"
+          "id": "101",
+          "title": "Apple iPhone 14",
+          "category": "mobile",
+          "brand": "Apple",
+          "price": 69999,
+          "discount": 15,
+          "stock": 10,
+          "images": [
+            "https://m.media-amazon.com/images/I/61bK6PMOC3L._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71d7rfSl0wL._SL1500_.jpg",
+            "https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Communication/Mobiles/Images/310716_0_ciaoza.png"
+          ],
+          "min_desc": "Apple iPhone 14 with A15 Bionic chip",
+          "long_desc": "Apple iPhone 14 features the powerful A15 Bionic processor, advanced dual-camera system with Photonic Engine, excellent low-light performance, long battery life, and a stunning Super Retina XDR display.",
+          "quantity": 1
         }
       ],
-      "totalAmount": 62497,
-      "status": "confirmed",
-      "orderDate": "2025-12-23"
-    },
-    {
-      "id": 5002,
-      "userId": 3,
-      "items": [
-        {
-          "productId": 103,
-          "quantity": 1,
-          "images":"https://m.media-amazon.com/images/I/61amb0CfMGL._SL1500_.jpg"
-        }
-      ],
-      "totalAmount": 44249,
-      "status": "pending",
-      "orderDate": "2025-12-24"
+      "totalAmount": 69999,
+      "status": "Placed",
+      "createdAt": "2025-12-24T14:16:11.807Z"
     }
   ]
 }
