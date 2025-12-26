@@ -67,7 +67,7 @@ const SingleProduct = () => {
                         {/* product details */}
                         <div className='flex flex-col gap-6'>
                             <h1 className='md:text-3xl text-xl font-bold text-gray-800'>{SingleProduct.title}</h1>
-                            <div className='text-gray-700'>{SingleProduct.title?.toUpperCase()} / {SingleProduct.name?.toUpperCase()}</div>
+                            <div className='text-gray-700'>/ {SingleProduct.min_desc?.toUpperCase()}</div>
                             <p className='text-red-500 text-xl font-bold'>₹{SingleProduct.price}
                                 <span className='line-through text-gray-700 mx-1'>{originalPrice}</span>
                                 <span className='text-white bg-red-500 px-4 py-1 rounded-2xl'>${discountPercent + "% OFF"}</span></p>

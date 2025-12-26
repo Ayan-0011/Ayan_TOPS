@@ -46,8 +46,8 @@ const Cart = ({location, getlocation}) => {
       {
         cartitem.length > 0 ? <div>
           <div className="flex justify-between mx-5">
-          <h1 className="font-bold text-2xl">My cart ({cartitem.length})</h1>
-             <button onClick={() => navigate('/myorder')} className='bg-gray-800 mb-5 text-white px-3 py-2 rounded-full cursor-pointer flex gap-1 items-center'><ChevronDownCircle />Show Previous Order</button>
+          <h1 className="font-bold text-md md:text-2xl mt-2">My cart ({cartitem.length})</h1>
+             <button onClick={() => navigate('/myorder')} className='bg-gray-800 mb-5 text-white px-2 py-2 rounded-full text- cursor-pointer flex gap-1 items-center'><ChevronDownCircle />Show Previous Order</button>
           </div>
           <div>
             <div className="mt-5">
@@ -58,7 +58,7 @@ const Cart = ({location, getlocation}) => {
                     <div className="flex gap-6">
                       <img src={item.images[0]} alt={item.name} className="w-20 h-20 rounded-md" />
                       <div>
-                        <h1 className="md:w-[300px] line-clamp-2">{item.title}</h1>
+                        <h1 className="md:w-[300px] mt-1 line-clamp-2 text-md">{item.title}</h1>
                         <p className="text-red-500 font-semibold text-lg">₹{item.price.toLocaleString("en-IN")}</p>
                       </div>
                     </div>

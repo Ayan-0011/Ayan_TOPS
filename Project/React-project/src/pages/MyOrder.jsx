@@ -45,14 +45,14 @@ const MyOrder = () => {
                 <div className="space-y-1">
                   {order.items.map((prod, index) => (
                     <div key={index} className="flex justify-between items-start text-sm border-b pb-2 last:border-none"  >
-                      <div className='flex items-start'>
-                        <img src={prod.images[0]} alt={prod.title} className='w-[100px]' />
-                        <div className='pt-5'>
+                      <div className='flex items-center'>
+                        <img src={prod.images[0]} alt={prod.title} className='w-[70px] md:w-[100px]' />
+                        <div className='pt-5 p-2'>
                           <span className='pt-0'>Product ID: {prod.id}</span>
-                          <h1 className='pt-0 text-lg'>Product Name: {prod.min_desc}</h1>
+                          <h1 className='pt-0 md:text-lg'>Product Name: {prod.min_desc}</h1>
                         </div>
                       </div>
-                      <span className='rounded-full bg-red-500 text-white px-3 py-1'>Qty: {prod.quantity}</span>
+                      <span className='rounded-lg mt-5 bg-red-500 text-white text-md px-3 py-1'>Qty: {prod.quantity}</span>
                     </div>
 
                   ))}
@@ -60,8 +60,8 @@ const MyOrder = () => {
 
                 {/* Footer */}
                 <div className="flex justify-between items-center mt-2 mx-1">
-                  <p className="font-semibold text-lg text-gray-800">
-                    ₹ Total amount : <span className='font-semibold text-lg text-red-500'>{order.totalAmount.toLocaleString("en-IN")}</span>
+                  <p className="font-semibold md:text-lg text-md text-gray-800">
+                    ₹ Total amount : <span className='font-semibold md:text-lg text-red-500'>{order.totalAmount.toLocaleString("en-IN")}</span>
                   </p>
                   <span className={`px-3 py-1 text-xs rounded-full
                   ${order.status === "confirmed"

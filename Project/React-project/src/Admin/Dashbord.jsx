@@ -392,7 +392,7 @@ const Dashbord = () => {
           <h2 className="text-2xl font-bold mb-8 text-white">Admin Panel</h2>
           <nav className="space-y-2">
             <button
-              onClick={() => {setActiveTab('dashboard'); setSidebarOpen(false);}}
+              onClick={() => {setActiveTab('dashboard');}}
               className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-all ${
                 activeTab === 'dashboard' ? 'bg-blue-600 shadow-lg' : 'hover:bg-gray-800'
               }`}
@@ -401,7 +401,7 @@ const Dashbord = () => {
               <span className="font-medium">Dashboard</span>
             </button>
             <button
-              onClick={() => {setActiveTab('orders'); setSidebarOpen(false);}}
+              onClick={() => {setActiveTab('orders');}}
               className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-all ${
                 activeTab === 'orders' ? 'bg-blue-600 shadow-lg' : 'hover:bg-gray-800'
               }`}
@@ -410,7 +410,7 @@ const Dashbord = () => {
               <span className="font-medium">Orders</span>
             </button>
             <button
-              onClick={() => {setActiveTab('products'); setSidebarOpen(false);}}
+              onClick={() => {setActiveTab('products');}}
               className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-all ${
                 activeTab === 'products' ? 'bg-blue-600 shadow-lg' : 'hover:bg-gray-800'
               }`}
@@ -419,7 +419,7 @@ const Dashbord = () => {
               <span className="font-medium">Products</span>
             </button>
             <button
-              onClick={() => {setActiveTab('users'); setSidebarOpen(false);}}
+              onClick={() => {setActiveTab('users');}}
               className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-all ${
                 activeTab === 'users' ? 'bg-blue-600 shadow-lg' : 'hover:bg-gray-800'
               }`}

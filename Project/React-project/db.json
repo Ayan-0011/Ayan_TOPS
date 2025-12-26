@@ -221,6 +221,32 @@
       "totalAmount": 69999,
       "status": "Placed",
       "createdAt": "2025-12-24T14:16:11.807Z"
+    },
+    {
+      "id": "87a6",
+      "userId": "user_1",
+      "items": [
+        {
+          "id": "107",
+          "title": "boAt Airdopes 141",
+          "category": "audio",
+          "brand": "boAt",
+          "price": 1499,
+          "discount": 25,
+          "stock": 40,
+          "images": [
+            "https://m.media-amazon.com/images/I/61f1YfTkTDL._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/61j3wF2k7EL._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/61zH1pJ8dWL._SL1500_.jpg"
+          ],
+          "min_desc": "boAt wireless earbuds with long battery",
+          "long_desc": "boAt Airdopes 141 offers 42 hours playback, low latency gaming mode, ENx tech for calls, and fast charging.",
+          "quantity": 2
+        }
+      ],
+      "totalAmount": 2998,
+      "status": "Placed",
+      "createdAt": "2025-12-26T10:22:59.892Z"
     }
   ]
 }
