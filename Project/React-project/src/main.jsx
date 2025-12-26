@@ -19,25 +19,25 @@ if (!PUBLISHABLE_KEY) {
 
 createRoot(document.getElementById('root')).render(
   // <StrictMode>
+  <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
     <DataProvider>
       <CartProvider>
-        <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
-          <App />
-          <ScrollToTop color='white' smooth style={{backgroundColor:'#fa2d37', display:'flex', alignItems:'center', justifyContent:'center', zIndex:999,borderRadius:50,padding:10}}/>
-          <ToastContainer
-            position="bottom-right"
-            autoClose={4000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick={false}
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-            theme="light"
-          />
-        </ClerkProvider>
+        <App />
+        <ScrollToTop color='white' smooth style={{ backgroundColor: '#fa2d37', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 999, borderRadius: 50, padding: 10 }} />
+        <ToastContainer
+          position="bottom-right"
+          autoClose={4000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick={false}
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        />
       </CartProvider>
-    </DataProvider>)
+    </DataProvider>
+  </ClerkProvider>)
 //  {/* </StrictMode>, */}
 

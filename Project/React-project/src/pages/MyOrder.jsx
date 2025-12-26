@@ -2,14 +2,24 @@ import axios from 'axios'
 import Lottie from 'lottie-react';
 import React, { useEffect, useState } from 'react'
 import notfound from '../assets/notfound.json'
+import { useUser } from '@clerk/clerk-react';
+import { useNavigate } from 'react-router-dom';
 
 const MyOrder = () => {
+const navigate =useNavigate()
+
 
   const [FinalOrder, setFinalOrder] = useState([]);
+  const { user, isSignedIn, isLoaded } = useUser();
+
+  
 
   const order = async () => {
+
+  if (!isLoaded || !isSignedIn) return;
+
     try {
-      const res = await axios.get("http://localhost:5000/orders")
+      const res = await axios.get(`http://localhost:5000/orders`,{param:{userId:user.id}});
       const myorder = res.data;
       setFinalOrder(myorder)
     } catch (error) {
@@ -19,7 +29,7 @@ const MyOrder = () => {
 
   useEffect(() => {
     order()
-  }, []);
+  }, [isLoaded, isSignedIn]);
 
   //console.log(FinalOrder);
 
@@ -50,6 +60,7 @@ const MyOrder = () => {
                         <div className='pt-5 p-2'>
                           <span className='pt-0'>Product ID: {prod.id}</span>
                           <h1 className='pt-0 md:text-lg'>Product Name: {prod.min_desc}</h1>
+                          <p className='font-semibold py-1'>paymentMethod : {order.paymentMethod}</p>
                           <p className="text-sm text-gray-600">
                             Ordered on:{" "}
                             {new Date(order.createdAt).toLocaleString("en-IN", {
@@ -90,9 +101,11 @@ const MyOrder = () => {
       ) : (
         <>
           <h1 className='font-semibold text-3xl text-center text-gray-600'>No Order you Placed  </h1>
-          <div className="flex justify-center items-center h-[500px] w-full">
+          <div className="flex justify-center flex-col items-center h-[500px] w-full">
             <Lottie animationData={notfound} className="w-[400px]" />
+          <button onClick={() => navigate('/product')} className='bg-red-500 text-white px-3 py-2 rounded-md cursor-pointer '>Make Shopping</button>
           </div>
+
         </>
       )}
     </>

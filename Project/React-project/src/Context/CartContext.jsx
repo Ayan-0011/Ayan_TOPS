@@ -1,3 +1,4 @@
+import { useUser } from "@clerk/clerk-react";
 import axios, { Axios } from "axios";
 import { createContext, useContext, useState } from "react";
 import { toast } from "react-toastify";
@@ -6,8 +7,11 @@ export const CartContext = createContext(null)
 
 export const CartProvider = ({ children }) => {
 
+    const { user } = useUser();
+
     const [cartitem, setCartitem] = useState([]);
     //console.log(cartitem);
+
 
 
     const addToCart = (product) => {
@@ -67,9 +71,10 @@ export const CartProvider = ({ children }) => {
         );
 
         const orderData = {
-            userId: userId || "guest",
+            userId: user.id,
             items: cartitem,
             totalAmount:totalAmount + 7,
+            paymentMethod: "COD",
             status: "Placed",
             createdAt: new Date().toISOString()
         };

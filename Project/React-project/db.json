@@ -197,8 +197,8 @@
   ],
   "orders": [
     {
-      "id": "f7b4",
-      "userId": "user_1",
+      "id": "5033",
+      "userId": "user_370OM8qydV6qEyRUAhHPAIHSX6p",
       "items": [
         {
           "id": "101",
@@ -219,8 +219,53 @@
         }
       ],
       "totalAmount": 70006,
+      "paymentMethod": "COD",
       "status": "Placed",
-      "createdAt": "2025-12-26T12:21:44.322Z"
+      "createdAt": "2025-12-26T14:12:26.380Z"
+    },
+    {
+      "id": "b3c0",
+      "userId": "user_370OM8qydV6qEyRUAhHPAIHSX6p",
+      "items": [
+        {
+          "id": "104",
+          "title": "Apple MacBook Air M1",
+          "category": "laptop",
+          "brand": "Apple",
+          "price": 89999,
+          "discount": 15,
+          "stock": 4,
+          "images": [
+            "https://m.media-amazon.com/images/I/71vFKBpKakL._SL1500_.jpg",
+            "https://assets.techrepublic.com/uploads/2020/11/macbook-air-with-m1-features.jpg",
+            "https://static.toiimg.com/thumb/msid-113603820,width-1280,height-720,imgsize-14974,resizemode-6,overlay-toi_sw,pt-32,y_pad-40/photo.jpg"
+          ],
+          "min_desc": "MacBook Air with Apple M1 chip",
+          "long_desc": "MacBook Air M1 offers blazing-fast performance, silent fanless design, Retina display, and up to 18 hours of battery life.",
+          "quantity": 1
+        },
+        {
+          "id": "107",
+          "title": "boAt Airdopes 141",
+          "category": "audio",
+          "brand": "boAt",
+          "price": 1499,
+          "discount": 25,
+          "stock": 40,
+          "images": [
+            "https://m.media-amazon.com/images/I/61f1YfTkTDL._SL1500_.jpg",
+            "https://www.boat-lifestyle.com/cdn/shop/files/Artboard_1_36622c57-8e47-476e-be1e-64efeb73e84a_800x.jpg?v=1745907531",
+            "https://www.boat-lifestyle.com/cdn/shop/files/Artboard_6_507158d1-d104-483e-8bf4-70a94581ebcf_1500x.jpg?v=1745907531"
+          ],
+          "min_desc": "boAt wireless earbuds with long battery",
+          "long_desc": "boAt Airdopes 141 offers 42 hours playback, low latency gaming mode, ENx tech for calls, and fast charging.",
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 91505,
+      "paymentMethod": "COD",
+      "status": "Placed",
+      "createdAt": "2025-12-26T14:36:13.172Z"
     }
   ]
 }

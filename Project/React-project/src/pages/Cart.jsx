@@ -8,14 +8,25 @@ import signin from '../assets/signin.jpeg'
 import { LuNotebookText } from "react-icons/lu";
 import { MdDeliveryDining } from "react-icons/md";
 import { GiShoppingBag } from "react-icons/gi";
-import { ChevronDownCircle, ChevronDownIcon, ChevronFirstIcon, ChevronRight } from "lucide-react";
+import { ChevronDownCircle } from "lucide-react";
 import { useState } from "react";
+
 
 const Cart = ({ location, getlocation }) => {
   const { cartitem, updateQuantity, deleteItem, placeOrder } = useCart()
   const [paymentMethod, setPaymentMethod] = useState();
-  
-  
+
+
+  const handlePlaceOrder = () => {
+    if (!paymentMethod) {
+      alert("Please select a payment method");
+      return;
+    }
+
+    placeOrder("userId", paymentMethod);
+  };
+
+
 
   const navigate = useNavigate()
 
@@ -129,7 +140,6 @@ const Cart = ({ location, getlocation }) => {
 
               {/* bill detail */}
               <div className="bg-white border border-gray-100 shadow-2xl rounded-xl p-6 mt-4 space-y-4 h-max">
-
                 <h1 className="text-gray-800 font-bold text-xl border-b pb-3">
                   Bill Details
                 </h1>
@@ -170,90 +180,43 @@ const Cart = ({ location, getlocation }) => {
                   </p>
                 </div>
 
-                {/* Promo Code */}
+                
                 {/* Payment Method */}
                 <div className="mt-6">
                   <h2 className="font-semibold text-gray-800 mb-3">
                     Payment Method
                   </h2>
-
                   <div className="space-y-3">
-
-                    {/* COD */}
-                    <label
-                      className={`flex items-center justify-between p-3 border rounded-lg cursor-pointer transition 
-      ${paymentMethod === "COD" ? "border-red-500 bg-red-50" : "border-gray-200"}`}
-                    >
-                      <div className="flex items-center gap-3">
-                        <input
-                          type="radio"
-                          name="payment"
-                          value="COD"
-                          checked={paymentMethod === "COD"}
-                          onChange={() => setPaymentMethod("COD")}
-                        />
-                        <span className="font-medium text-gray-700">
-                          Cash on Delivery
-                        </span>
-                      </div>
-                      <span className="text-sm text-gray-500">Pay when item arrives</span>
+                    <label className={`flex items-center gap-3 p-3 border rounded-lg cursor-pointer
+                        ${paymentMethod === "COD" ? "border-red-500 bg-red-50" : "border-gray-200"}`}>
+                        <input type="radio"  name="payment" checked={paymentMethod === "COD"}
+                          onChange={() => setPaymentMethod("COD")} />
+                        <span className="font-medium">Cash on Delivery</span>
                     </label>
 
-                    {/* CARD */}
-                    <label
-                      className={`flex items-center justify-between p-3 border rounded-lg cursor-pointer transition 
-      ${paymentMethod === "CARD" ? "border-red-500 bg-red-50" : "border-gray-200"}`}
-                    >
-                      <div className="flex items-center gap-3">
-                        <input
-                          type="radio"
-                          name="payment"
-                          value="CARD"
-                          checked={paymentMethod === "CARD"}
-                          onChange={() => setPaymentMethod("CARD")}
-                        />
-                        <span className="font-medium text-gray-700">
-                          Card / UPI / Wallet
-                        </span>
-                      </div>
-                      <span className="text-sm text-gray-500">Secure online payment</span>
+                    <label className={`flex items-center gap-3 p-3 border rounded-lg cursor-pointer
+                       ${paymentMethod === "ONLINE" ? "border-red-500 bg-red-50" : "border-gray-200"}`}>
+                      <input type="radio" name="payment" checked={paymentMethod === "ONLINE"}
+                        onChange={() => setPaymentMethod("ONLINE")}/>
+                      <span className="font-medium">Online Payment (Card / UPI)</span>
                     </label>
-                <div className="mt-5">
-                  <h2 className="font-semibold text-gray-700 mb-2">
-                    Apply Promo Code
-                  </h2>
 
-                  <div className="flex gap-2">
-                    <input
-                      type="text"
-                      placeholder="Enter promo code"
-                      className="border border-gray-300 p-2 rounded-md w-full focus:outline-none focus:ring-1 focus:ring-red-400"
-                    />
-                    <button className="bg-gray-100 hover:bg-gray-200 px-4 rounded-md font-medium">
-                      Apply
-                    </button>
                   </div>
-
-                  {/* Optional feedback */}
-                  {/* <p className="text-green-600 text-sm mt-1">Promo applied successfully!</p> */}
                 </div>
-
-                {/* Checkout Button */}
+              {/* checked */}
                 <button
-                  onClick={() => placeOrder("user_1")}
-                  className="bg-red-500 hover:bg-red-600 transition-all text-white font-semibold px-4 py-3 rounded-lg w-full mt-4"
-                >
-                  Proceed to Checkout
+                  onClick={handlePlaceOrder}
+                  disabled={!paymentMethod}
+                  className={`w-full mt-5 py-3 rounded-lg font-semibold transition
+                   ${paymentMethod
+                      ? "bg-red-500 hover:bg-red-600 text-white"
+                      : "bg-gray-300 cursor-not-allowed text-gray-600"
+                    }`} >
+                  {paymentMethod ? "Proceed to Checkout" : "Select Payment Method"}
                 </button>
 
-                  </div>
-                </div>
-
-
               </div>
-
             </div>
-
           </div>
         </div>
 
