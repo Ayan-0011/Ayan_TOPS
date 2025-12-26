@@ -156,8 +156,8 @@
       "stock": 40,
       "images": [
         "https://m.media-amazon.com/images/I/61f1YfTkTDL._SL1500_.jpg",
-        "https://m.media-amazon.com/images/I/61j3wF2k7EL._SL1500_.jpg",
-        "https://m.media-amazon.com/images/I/61zH1pJ8dWL._SL1500_.jpg"
+        "https://www.boat-lifestyle.com/cdn/shop/files/Artboard_1_36622c57-8e47-476e-be1e-64efeb73e84a_800x.jpg?v=1745907531",
+        "https://www.boat-lifestyle.com/cdn/shop/files/Artboard_6_507158d1-d104-483e-8bf4-70a94581ebcf_1500x.jpg?v=1745907531"
       ],
       "min_desc": "boAt wireless earbuds with long battery",
       "long_desc": "boAt Airdopes 141 offers 42 hours playback, low latency gaming mode, ENx tech for calls, and fast charging."
@@ -197,7 +197,7 @@
   ],
   "orders": [
     {
-      "id": "573f",
+      "id": "f7b4",
       "userId": "user_1",
       "items": [
         {
@@ -218,35 +218,9 @@
           "quantity": 1
         }
       ],
-      "totalAmount": 69999,
+      "totalAmount": 70006,
       "status": "Placed",
-      "createdAt": "2025-12-24T14:16:11.807Z"
-    },
-    {
-      "id": "87a6",
-      "userId": "user_1",
-      "items": [
-        {
-          "id": "107",
-          "title": "boAt Airdopes 141",
-          "category": "audio",
-          "brand": "boAt",
-          "price": 1499,
-          "discount": 25,
-          "stock": 40,
-          "images": [
-            "https://m.media-amazon.com/images/I/61f1YfTkTDL._SL1500_.jpg",
-            "https://m.media-amazon.com/images/I/61j3wF2k7EL._SL1500_.jpg",
-            "https://m.media-amazon.com/images/I/61zH1pJ8dWL._SL1500_.jpg"
-          ],
-          "min_desc": "boAt wireless earbuds with long battery",
-          "long_desc": "boAt Airdopes 141 offers 42 hours playback, low latency gaming mode, ENx tech for calls, and fast charging.",
-          "quantity": 2
-        }
-      ],
-      "totalAmount": 2998,
-      "status": "Placed",
-      "createdAt": "2025-12-26T10:22:59.892Z"
+      "createdAt": "2025-12-26T12:21:44.322Z"
     }
   ]
 }

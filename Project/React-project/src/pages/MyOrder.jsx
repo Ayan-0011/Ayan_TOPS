@@ -50,6 +50,16 @@ const MyOrder = () => {
                         <div className='pt-5 p-2'>
                           <span className='pt-0'>Product ID: {prod.id}</span>
                           <h1 className='pt-0 md:text-lg'>Product Name: {prod.min_desc}</h1>
+                          <p className="text-sm text-gray-600">
+                            Ordered on:{" "}
+                            {new Date(order.createdAt).toLocaleString("en-IN", {
+                              day: "2-digit",
+                              month: "short",
+                              year: "numeric",
+                              hour: "2-digit",
+                              minute: "2-digit"
+                            })}
+                          </p>
                         </div>
                       </div>
                       <span className='rounded-lg mt-5 bg-red-500 text-white text-md px-3 py-1'>Qty: {prod.quantity}</span>

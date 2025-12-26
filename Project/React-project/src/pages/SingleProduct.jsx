@@ -46,15 +46,15 @@ const SingleProduct = () => {
     return (
         <>
             {
-                SingleProduct ? <div className='px-4 pb-4 md:px-0'>
+                SingleProduct ? <div className='px-4 pb-10 md:px-0 '>
                     < Breadcrums title={SingleProduct.title} />
-                    <div className='max-w-6xl mx-auto md:p-6 grid grid-cols-1 md:grid-cols-2 gap-10'>
+                    <div className='max-w-6xl mx-auto md:p-1 grid grid-cols-1 md:grid-cols-2 gap-10'>
                         {/* product image */}
 
                         <div className="w-full">
                             <img src={SingleProduct.images?.[activeImg]} alt={SingleProduct.title} className="w-full h-[500px] p-10 object-cover  rounded-2xl" />
 
-                            <div className="flex gap-4 mt-4 justify-center">
+                            <div className="flex gap-4 justify-center">
                                 {SingleProduct.images?.slice(0, 3).map((img, index) => (
                                     <img key={index} src={img} alt="product option" onClick={() => setActiveImg(index)}
                                         className={`w-15 h-15 object-cover p-2 rounded-full cursor-pointer border-2
@@ -65,7 +65,7 @@ const SingleProduct = () => {
 
 
                         {/* product details */}
-                        <div className='flex flex-col gap-6'>
+                        <div className='flex flex-col mt-8 gap-6'>
                             <h1 className='md:text-3xl text-xl font-bold text-gray-800'>{SingleProduct.title}</h1>
                             <div className='text-gray-700'>/ {SingleProduct.min_desc?.toUpperCase()}</div>
                             <p className='text-red-500 text-xl font-bold'>₹{SingleProduct.price}

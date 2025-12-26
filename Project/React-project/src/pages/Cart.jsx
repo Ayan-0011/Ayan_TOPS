@@ -9,9 +9,14 @@ import { LuNotebookText } from "react-icons/lu";
 import { MdDeliveryDining } from "react-icons/md";
 import { GiShoppingBag } from "react-icons/gi";
 import { ChevronDownCircle, ChevronDownIcon, ChevronFirstIcon, ChevronRight } from "lucide-react";
+import { useState } from "react";
 
-const Cart = ({location, getlocation}) => {
+const Cart = ({ location, getlocation }) => {
   const { cartitem, updateQuantity, deleteItem, placeOrder } = useCart()
+  const [paymentMethod, setPaymentMethod] = useState();
+  
+  
+
   const navigate = useNavigate()
 
 
@@ -46,8 +51,8 @@ const Cart = ({location, getlocation}) => {
       {
         cartitem.length > 0 ? <div>
           <div className="flex justify-between mx-5">
-          <h1 className="font-bold text-md md:text-2xl mt-2">My cart ({cartitem.length})</h1>
-             <button onClick={() => navigate('/myorder')} className='bg-gray-800 mb-5 text-white px-2 py-2 rounded-full text- cursor-pointer flex gap-1 items-center'><ChevronDownCircle />Show Previous Order</button>
+            <h1 className="font-bold text-md md:text-2xl mt-2">My cart ({cartitem.length})</h1>
+            <button onClick={() => navigate('/myorder')} className='bg-gray-800 mb-5 text-white px-2 py-2 rounded-full text- cursor-pointer flex gap-1 items-center'><ChevronDownCircle />Show Previous Order</button>
           </div>
           <div>
             <div className="mt-5">
@@ -64,13 +69,13 @@ const Cart = ({location, getlocation}) => {
                     </div>
                     {/* product quintity */}
                     <div className="bg-red-500 text-white flex gap-1 p-2 me-1 rounded-md font-bold text-lg ">
-                      <button onClick={()=> updateQuantity(cartitem, item.id, "dicrease")} className="cursor-pointer">-</button>
+                      <button onClick={() => updateQuantity(cartitem, item.id, "dicrease")} className="cursor-pointer">-</button>
                       <span>{item.quantity}</span>
-                      <button onClick={()=> updateQuantity(cartitem, item.id, "increase")} className="cursor-pointer">+</button>
+                      <button onClick={() => updateQuantity(cartitem, item.id, "increase")} className="cursor-pointer">+</button>
                     </div>
                     {/* product delete */}
                     <div>
-                      <span onClick={()=> deleteItem(item.id)} className='hover:bg-white/60 text-2xl'>
+                      <span onClick={() => deleteItem(item.id)} className='hover:bg-white/60 text-2xl'>
                         <FaRegTrashAlt className='text-red-500 text-4xl cursor-pointer p-1.5 hover:bg-white/80 rounded-full shadow-2xl transition-all' />
                       </span>
                     </div>
@@ -78,7 +83,7 @@ const Cart = ({location, getlocation}) => {
                 })
               }
             </div>
-              
+
             <div className='grid grid-cols-1 md:grid-cols-2 md:gap-20'>
               {/* delivery infro */}
               <div className='bg-gray-100 rounded-md p-7 mt-4 space-y-2'>
@@ -123,43 +128,139 @@ const Cart = ({location, getlocation}) => {
               </div>
 
               {/* bill detail */}
-              <div className="bg-white border border-gray-100 shadow-xl rounded-md p-7 mt-4 space-y-2 h-max'">
-                <h1 className='text-gray-800 font-bold text-xl mb-8'>Bill details</h1>
-                <div className='flex justify-between items-center'>
-                  <h1 className='flex gap-1 items-center text-gray-700'><span><LuNotebookText /></span>Items total</h1>
-                  <p>₹{totalPrice.toLocaleString("en-IN")}</p>
+              <div className="bg-white border border-gray-100 shadow-2xl rounded-xl p-6 mt-4 space-y-4 h-max">
+
+                <h1 className="text-gray-800 font-bold text-xl border-b pb-3">
+                  Bill Details
+                </h1>
+
+                {/* Items Total */}
+                <div className="flex justify-between items-center text-gray-700">
+                  <p className="flex gap-2 items-center">
+                    <LuNotebookText /> Items Total
+                  </p>
+                  <p className="font-medium">₹{totalPrice.toLocaleString("en-IN")}</p>
                 </div>
-                <div className='flex justify-between items-center'>
-                  <h1 className='flex gap-1 items-center text-gray-700'><span><MdDeliveryDining /></span>Delivery Charge</h1>
-                  <p className='text-red-500 font-semibold'><span className='text-gray-600 line-through'>₹25</span> FREE</p>
+
+                {/* Delivery */}
+                <div className="flex justify-between items-center">
+                  <p className="flex gap-2 items-center text-gray-700">
+                    <MdDeliveryDining /> Delivery Charges
+                  </p>
+                  <p className="text-green-600 font-semibold">
+                    <span className="line-through text-gray-400 mr-1">₹25</span> FREE
+                  </p>
                 </div>
-                <div className='flex justify-between items-center'>
-                  <h1 className='flex gap-1 items-center text-gray-700'><span><GiShoppingBag /></span>Handling Charge</h1>
-                  <p className='text-red-500 font-semibold'>₹7</p>
+
+                {/* Handling */}
+                <div className="flex justify-between items-center text-gray-700">
+                  <p className="flex gap-2 items-center">
+                    <GiShoppingBag /> Handling Charges
+                  </p>
+                  <p className="font-medium">₹7</p>
                 </div>
-                <hr className='text-gray-200 mt-2' />
-                <div className='flex justify-between items-center'>
-                  <h1 className='font-semibold text-lg'>Grand total</h1>
-                  <p className='font-semibold text-lg'>₹{totalPrice.toLocaleString("en-IN") + 7}</p>
+
+                <hr className="border-gray-200" />
+
+                {/* Grand Total */}
+                <div className="flex justify-between items-center bg-gray-50 p-3 rounded-lg">
+                  <h1 className="font-bold text-lg text-gray-800">Grand Total</h1>
+                  <p className="font-bold text-lg text-red-500">
+                    ₹{(totalPrice + 7).toLocaleString("en-IN")}
+                  </p>
                 </div>
-                <div>
-                  <h1 className='font-semibold text-gray-700 mb-3 mt-7'>Apply Promo Code</h1>
-                  <div className='flex gap-3'>
-                    <input type="text" placeholder='Enter code' className='p-2 rounded-md w-full' />
-                    <button className='bg-white text-black border border-gray-200 px-4 cursor-pointer py-1 rounded-md'>Apply</button>
+
+                {/* Promo Code */}
+                {/* Payment Method */}
+                <div className="mt-6">
+                  <h2 className="font-semibold text-gray-800 mb-3">
+                    Payment Method
+                  </h2>
+
+                  <div className="space-y-3">
+
+                    {/* COD */}
+                    <label
+                      className={`flex items-center justify-between p-3 border rounded-lg cursor-pointer transition 
+      ${paymentMethod === "COD" ? "border-red-500 bg-red-50" : "border-gray-200"}`}
+                    >
+                      <div className="flex items-center gap-3">
+                        <input
+                          type="radio"
+                          name="payment"
+                          value="COD"
+                          checked={paymentMethod === "COD"}
+                          onChange={() => setPaymentMethod("COD")}
+                        />
+                        <span className="font-medium text-gray-700">
+                          Cash on Delivery
+                        </span>
+                      </div>
+                      <span className="text-sm text-gray-500">Pay when item arrives</span>
+                    </label>
+
+                    {/* CARD */}
+                    <label
+                      className={`flex items-center justify-between p-3 border rounded-lg cursor-pointer transition 
+      ${paymentMethod === "CARD" ? "border-red-500 bg-red-50" : "border-gray-200"}`}
+                    >
+                      <div className="flex items-center gap-3">
+                        <input
+                          type="radio"
+                          name="payment"
+                          value="CARD"
+                          checked={paymentMethod === "CARD"}
+                          onChange={() => setPaymentMethod("CARD")}
+                        />
+                        <span className="font-medium text-gray-700">
+                          Card / UPI / Wallet
+                        </span>
+                      </div>
+                      <span className="text-sm text-gray-500">Secure online payment</span>
+                    </label>
+                <div className="mt-5">
+                  <h2 className="font-semibold text-gray-700 mb-2">
+                    Apply Promo Code
+                  </h2>
+
+                  <div className="flex gap-2">
+                    <input
+                      type="text"
+                      placeholder="Enter promo code"
+                      className="border border-gray-300 p-2 rounded-md w-full focus:outline-none focus:ring-1 focus:ring-red-400"
+                    />
+                    <button className="bg-gray-100 hover:bg-gray-200 px-4 rounded-md font-medium">
+                      Apply
+                    </button>
+                  </div>
+
+                  {/* Optional feedback */}
+                  {/* <p className="text-green-600 text-sm mt-1">Promo applied successfully!</p> */}
+                </div>
+
+                {/* Checkout Button */}
+                <button
+                  onClick={() => placeOrder("user_1")}
+                  className="bg-red-500 hover:bg-red-600 transition-all text-white font-semibold px-4 py-3 rounded-lg w-full mt-4"
+                >
+                  Proceed to Checkout
+                </button>
+
                   </div>
                 </div>
-                <button onClick={()=>placeOrder("user_1")} className='bg-red-500 text-white px-3 py-2 rounded-md w-full cursor-pointer mt-3'>Proceed to Checkout</button>
+
+
               </div>
+
             </div>
-            
+
           </div>
         </div>
 
           : <>
-          <div className="flex justify-center">
-             <button onClick={() => navigate('/myorder')} className='bg-gray-800 mb-5 text-white px-3 py-2 rounded-full cursor-pointer flex gap-1 items-center'><ChevronDownCircle />Show My Order</button>
-          </div>
+            <div className="flex justify-center">
+              <button onClick={() => navigate('/myorder')} className='bg-gray-800 mb-5 text-white px-3 py-2 rounded-full cursor-pointer flex gap-1 items-center'><ChevronDownCircle />Show My Order</button>
+            </div>
             <div className=' flex flex-col gap-3 justify-center items-center h-[550px]'>
               <h1 className='text-red-500/80 font-bold text-3xl md:text-4xl text-center text-muted'>Oh no! Your cart is empty</h1>
               <img src={emptyCart} alt="" className='w-[230px] md:w-[400px]' />

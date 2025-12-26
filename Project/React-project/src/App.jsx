@@ -64,6 +64,7 @@ const App = () => {
     <div>
       <BrowserRouter>
         <Navbar location={location} getlocation={getlocation} opendropdown={opendropdown} setOpendropdown={setOpendropdown} />
+        
         <Routes>
           <Route path='/' element={<Home />}></Route>
           <Route path='/about' element={<About />}></Route>
@@ -73,7 +74,7 @@ const App = () => {
           <Route path='/contact' element={<Contac />}></Route>
           <Route path='/myorder' element={<MyOrder />}></Route>
           <Route path='/cart' element={<Cart location={location} getlocation={getlocation} />}></Route>
-          <Route path="/admin/dashbord" element={ <AdminRoute><Dashbord /></AdminRoute> }/>
+          <Route path="/admin/dashbord" element={ <AdminRoute> <Dashbord />  </AdminRoute> }/>
         </Routes>
         <Footer />
       </BrowserRouter>

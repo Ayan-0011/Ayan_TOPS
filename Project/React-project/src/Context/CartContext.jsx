@@ -69,7 +69,7 @@ export const CartProvider = ({ children }) => {
         const orderData = {
             userId: userId || "guest",
             items: cartitem,
-            totalAmount,
+            totalAmount:totalAmount + 7,
             status: "Placed",
             createdAt: new Date().toISOString()
         };
