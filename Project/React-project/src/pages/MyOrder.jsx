@@ -12,6 +12,7 @@ const navigate =useNavigate()
   const [FinalOrder, setFinalOrder] = useState([]);
   const { user, isSignedIn, isLoaded } = useUser();
 
+  //console.log(user);
   
 
   const order = async () => {
@@ -19,7 +20,7 @@ const navigate =useNavigate()
   if (!isLoaded || !isSignedIn) return;
 
     try {
-      const res = await axios.get(`http://localhost:5000/orders`,{param:{userId:user.id}});
+      const res = await axios.get(`http://localhost:5000/orders`,{ params :{userId:user.id} });
       const myorder = res.data;
       setFinalOrder(myorder)
     } catch (error) {
@@ -29,7 +30,7 @@ const navigate =useNavigate()
 
   useEffect(() => {
     order()
-  }, [isLoaded, isSignedIn]);
+  }, [isLoaded, isSignedIn, user?.id]);
 
   //console.log(FinalOrder);
 

@@ -59,7 +59,7 @@ export const CartProvider = ({ children }) => {
     }
 
     // ✅ PLACE ORDER
-    const placeOrder = async (userId) => {
+    const placeOrder = async (userId,paymentMethod) => {
         if (cartitem.length === 0) {
             toast.error("Cart is empty!");
             return;
@@ -74,7 +74,7 @@ export const CartProvider = ({ children }) => {
             userId: user.id,
             items: cartitem,
             totalAmount:totalAmount + 7,
-            paymentMethod: "COD",
+            paymentMethod: paymentMethod,
             status: "Placed",
             createdAt: new Date().toISOString()
         };
@@ -83,6 +83,7 @@ export const CartProvider = ({ children }) => {
             await axios.post("http://localhost:5000/orders", orderData);
             toast.success("Order Placed Successfully!");
             setCartitem([]);
+            localStorage.removeItem("cart")
         } catch (error) {
             toast.error("Order Failed!");
             console.log(error);
