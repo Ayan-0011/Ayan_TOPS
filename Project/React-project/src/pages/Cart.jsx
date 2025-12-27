@@ -10,6 +10,8 @@ import { MdDeliveryDining } from "react-icons/md";
 import { GiShoppingBag } from "react-icons/gi";
 import { ChevronDownCircle } from "lucide-react";
 import { useState } from "react";
+import Lottie from "lottie-react";
+import orderSuccess from '../assets/success.json'
 
 
 const Cart = ({ location, getlocation }) => {
@@ -17,14 +19,27 @@ const Cart = ({ location, getlocation }) => {
   const [paymentMethod, setPaymentMethod] = useState();
   const navigate = useNavigate()
 
+  const [showAnimation, setShowAnimation] = useState(false);
 
-  const handlePlaceOrder = () => {
+
+
+  const handlePlaceOrder = async () => {
     if (!paymentMethod) {
       alert("Please select a payment method");
       return;
     }
 
-    placeOrder("userId", paymentMethod);
+    // order place
+    await placeOrder(user.id, paymentMethod);
+
+    // animation show
+    setShowAnimation(true);
+
+    // 3.5 sec baad redirect
+    setTimeout(() => {
+      setShowAnimation(false);
+      navigate("/myorder");
+    }, 3500);
   };
 
 
@@ -59,6 +74,17 @@ const Cart = ({ location, getlocation }) => {
 
   return (
     <div className="mt-10 max-w-6xl mx-auto px-1 md:px-0 mb-10">
+      
+      {showAnimation && (
+        <div className="fixed inset-0 bg-white z-50 flex flex-col items-center justify-center">
+          <Lottie animationData={orderSuccess} loop={false} className="w-72 h-72" />
+          <h2 className="text-2xl font-bold text-green-600 mt-4">
+            Order Placed Successfully 🎉
+          </h2>
+          <p className="text-gray-500 mt-1">Processing your order...</p>
+        </div>
+      )}
+
       {
         cartitem.length > 0 ? <div>
           <div className="flex justify-between mx-5">
@@ -180,7 +206,7 @@ const Cart = ({ location, getlocation }) => {
                   </p>
                 </div>
 
-                
+
                 {/* Payment Method */}
                 <div className="mt-6">
                   <h2 className="font-semibold text-gray-800 mb-3">
@@ -189,21 +215,21 @@ const Cart = ({ location, getlocation }) => {
                   <div className="space-y-3">
                     <label className={`flex items-center gap-3 p-3 border rounded-lg cursor-pointer
                         ${paymentMethod === "COD" ? "border-red-500 bg-red-50" : "border-gray-200"}`}>
-                        <input type="radio"  name="payment" checked={paymentMethod === "COD"}
-                          onChange={() => setPaymentMethod("COD")} />
-                        <span className="font-medium">Cash on Delivery</span>
+                      <input type="radio" name="payment" checked={paymentMethod === "COD"}
+                        onChange={() => setPaymentMethod("COD")} />
+                      <span className="font-medium">Cash on Delivery</span>
                     </label>
 
                     <label className={`flex items-center gap-3 p-3 border rounded-lg cursor-pointer
                        ${paymentMethod === "ONLINE" ? "border-red-500 bg-red-50" : "border-gray-200"}`}>
                       <input type="radio" name="payment" checked={paymentMethod === "ONLINE"}
-                        onChange={() => setPaymentMethod("ONLINE")}/>
+                        onChange={() => setPaymentMethod("ONLINE")} />
                       <span className="font-medium">Online Payment (Card / UPI)</span>
                     </label>
 
                   </div>
                 </div>
-              {/* checked */}
+                {/* checked */}
                 <button
                   onClick={handlePlaceOrder}
                   disabled={!paymentMethod}

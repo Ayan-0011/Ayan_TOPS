@@ -52,10 +52,10 @@ const Dashbord = () => {
   const getStatusColor = (status) => {
     const colors = {
       'Delivered': 'bg-green-100 text-green-800',
-      'Pending': 'bg-yellow-100 text-yellow-800',
+      'Placed': 'bg-yellow-100 text-yellow-800',
       'Shipped': 'bg-blue-100 text-blue-800',
       'Processing': 'bg-purple-100 text-purple-800',
-      'In Stock': 'bg-green-100 text-green-800',
+      'confirmed': 'bg-green-100 text-green-800',
       'Low Stock': 'bg-yellow-100 text-yellow-800',
       'Out of Stock': 'bg-red-100 text-red-800',
     };
@@ -166,28 +166,28 @@ const Dashbord = () => {
           <h3 className="text-lg font-bold text-gray-800 mb-4">Top Categories</h3>
           <div className="space-y-3">
             <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-600">Electronics</span>
+              <span className="text-sm text-gray-600">Mobiles</span>
               <span className="text-sm font-bold text-gray-800">40%</span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2">
               <div className="bg-blue-500 h-2 rounded-full" style={{ width: '40%' }}></div>
             </div>
             <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-600">Clothing</span>
+              <span className="text-sm text-gray-600">laptops</span>
               <span className="text-sm font-bold text-gray-800">30%</span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2">
               <div className="bg-green-500 h-2 rounded-full" style={{ width: '30%' }}></div>
             </div>
             <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-600">Books</span>
+              <span className="text-sm text-gray-600">Eyerbuts</span>
               <span className="text-sm font-bold text-gray-800">20%</span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2">
               <div className="bg-yellow-500 h-2 rounded-full" style={{ width: '20%' }}></div>
             </div>
             <div className="flex justify-between items-center">
-              <span className="text-sm text-gray-600">Home</span>
+              <span className="text-sm text-gray-600">accessories</span>
               <span className="text-sm font-bold text-gray-800">10%</span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2">

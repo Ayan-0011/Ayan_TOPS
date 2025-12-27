@@ -268,6 +268,79 @@
       "paymentMethod": "ONLINE",
       "status": "confirmed",
       "createdAt": "2025-12-27T13:22:13.519Z"
+    },
+    {
+      "id": "ac62",
+      "userId": "user_370OM8qydV6qEyRUAhHPAIHSX6p",
+      "username": "Farman Ansari",
+      "items": [
+        {
+          "id": "103",
+          "title": "OnePlus 11 5G",
+          "category": "mobile",
+          "brand": "OnePlus",
+          "price": 56999,
+          "discount": 18,
+          "stock": 12,
+          "images": [
+            "https://m.media-amazon.com/images/I/61amb0CfMGL._SL1500_.jpg",
+            "https://oasis.opstatics.com/content/dam/oasis/page/2023/na/oneplus-11/specs/black-img.png",
+            "https://i.ytimg.com/vi/KjPqjEXTwzw/maxresdefault.jpg"
+          ],
+          "min_desc": "OnePlus flagship with Snapdragon processor",
+          "long_desc": "OnePlus 11 5G delivers ultra-fast performance with Snapdragon 8 Gen 2, Hasselblad camera tuning, 120Hz AMOLED display, and super-fast charging.",
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 57006,
+      "paymentMethod": "COD",
+      "status": "confirmed",
+      "createdAt": "2025-12-27T13:43:52.342Z"
+    },
+    {
+      "id": "a914",
+      "userId": "user_370OM8qydV6qEyRUAhHPAIHSX6p",
+      "username": "Farman Ansari",
+      "items": [
+        {
+          "id": "104",
+          "title": "Apple MacBook Air M1",
+          "category": "laptop",
+          "brand": "Apple",
+          "price": 89999,
+          "discount": 15,
+          "stock": 4,
+          "images": [
+            "https://m.media-amazon.com/images/I/71vFKBpKakL._SL1500_.jpg",
+            "https://assets.techrepublic.com/uploads/2020/11/macbook-air-with-m1-features.jpg",
+            "https://static.toiimg.com/thumb/msid-113603820,width-1280,height-720,imgsize-14974,resizemode-6,overlay-toi_sw,pt-32,y_pad-40/photo.jpg"
+          ],
+          "min_desc": "MacBook Air with Apple M1 chip",
+          "long_desc": "MacBook Air M1 offers blazing-fast performance, silent fanless design, Retina display, and up to 18 hours of battery life.",
+          "quantity": 1
+        },
+        {
+          "id": "107",
+          "title": "boAt Airdopes 141",
+          "category": "audio",
+          "brand": "boAt",
+          "price": 1499,
+          "discount": 25,
+          "stock": 40,
+          "images": [
+            "https://m.media-amazon.com/images/I/61f1YfTkTDL._SL1500_.jpg",
+            "https://www.boat-lifestyle.com/cdn/shop/files/Artboard_1_36622c57-8e47-476e-be1e-64efeb73e84a_800x.jpg?v=1745907531",
+            "https://www.boat-lifestyle.com/cdn/shop/files/Artboard_6_507158d1-d104-483e-8bf4-70a94581ebcf_1500x.jpg?v=1745907531"
+          ],
+          "min_desc": "boAt wireless earbuds with long battery",
+          "long_desc": "boAt Airdopes 141 offers 42 hours playback, low latency gaming mode, ENx tech for calls, and fast charging.",
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 91505,
+      "paymentMethod": "ONLINE",
+      "status": "Placed",
+      "createdAt": "2025-12-27T13:44:49.413Z"
     }
   ]
 }
