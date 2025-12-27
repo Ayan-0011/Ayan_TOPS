@@ -197,8 +197,9 @@
   ],
   "orders": [
     {
-      "id": "5033",
-      "userId": "user_370OM8qydV6qEyRUAhHPAIHSX6p",
+      "id": "b346",
+      "userId": "user_37PnoKzOdnLez0pjlxIeqKbko1s",
+      "username": "Sujan Ansari",
       "items": [
         {
           "id": "101",
@@ -215,33 +216,6 @@
           ],
           "min_desc": "Apple iPhone 14 with A15 Bionic chip",
           "long_desc": "Apple iPhone 14 features the powerful A15 Bionic processor, advanced dual-camera system with Photonic Engine, excellent low-light performance, long battery life, and a stunning Super Retina XDR display.",
-          "quantity": 1
-        }
-      ],
-      "totalAmount": 70006,
-      "paymentMethod": "COD",
-      "status": "Placed",
-      "createdAt": "2025-12-26T14:12:26.380Z"
-    },
-    {
-      "id": "b3c0",
-      "userId": "user_370OM8qydV6qEyRUAhHPAIHSX6p",
-      "items": [
-        {
-          "id": "104",
-          "title": "Apple MacBook Air M1",
-          "category": "laptop",
-          "brand": "Apple",
-          "price": 89999,
-          "discount": 15,
-          "stock": 4,
-          "images": [
-            "https://m.media-amazon.com/images/I/71vFKBpKakL._SL1500_.jpg",
-            "https://assets.techrepublic.com/uploads/2020/11/macbook-air-with-m1-features.jpg",
-            "https://static.toiimg.com/thumb/msid-113603820,width-1280,height-720,imgsize-14974,resizemode-6,overlay-toi_sw,pt-32,y_pad-40/photo.jpg"
-          ],
-          "min_desc": "MacBook Air with Apple M1 chip",
-          "long_desc": "MacBook Air M1 offers blazing-fast performance, silent fanless design, Retina display, and up to 18 hours of battery life.",
           "quantity": 1
         },
         {
@@ -262,14 +236,15 @@
           "quantity": 1
         }
       ],
-      "totalAmount": 91505,
-      "paymentMethod": "COD",
+      "totalAmount": 71505,
+      "paymentMethod": "ONLINE",
       "status": "Placed",
-      "createdAt": "2025-12-26T14:36:13.172Z"
+      "createdAt": "2025-12-27T06:35:18.096Z"
     },
     {
-      "id": "23cf",
-      "userId": "user_37PjsQrVh5Mo7TP5VHxxeg18HYm",
+      "id": "1523",
+      "userId": "user_370OM8qydV6qEyRUAhHPAIHSX6p",
+      "username": "Farman Ansari",
       "items": [
         {
           "id": "104",
@@ -290,9 +265,9 @@
         }
       ],
       "totalAmount": 90006,
-      "paymentMethod": "ONLINE",
+      "paymentMethod": "COD",
       "status": "Placed",
-      "createdAt": "2025-12-27T05:19:13.989Z"
+      "createdAt": "2025-12-27T06:36:08.693Z"
     }
   ]
 }

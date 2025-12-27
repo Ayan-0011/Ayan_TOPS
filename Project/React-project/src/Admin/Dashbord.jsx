@@ -1,28 +1,36 @@
 import { UserButton, useUser } from '@clerk/clerk-react';
-import React, { createContext, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
+import { getData } from '../Context/DataContext';
+import axios from 'axios';
 
 const Dashbord = () => {
   const [activeTab, setActiveTab] = useState('dashboard');
   const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [Myorders, setMyOrders] = useState([]);
 
-  const { user } =useUser();
+  // all data from fetch data in datacontext
+  const { data, FetchAllproducts, } = getData()
+  //console.log(data);
+
+
+
+  const { user } = useUser();
+  //console.log(user);
+
 
   // Sample data
-  const orders = [
-    { id: '#ORD001', customer: 'John Doe', product: 'Laptop', amount: '$1200', status: 'Delivered', date: '2024-12-15' },
-    { id: '#ORD002', customer: 'Jane Smith', product: 'Phone', amount: '$800', status: 'Pending', date: '2024-12-16' },
-    { id: '#ORD003', customer: 'Bob Johnson', product: 'Headphones', amount: '$150', status: 'Shipped', date: '2024-12-17' },
-    { id: '#ORD004', customer: 'Alice Brown', product: 'Tablet', amount: '$600', status: 'Processing', date: '2024-12-18' },
-    { id: '#ORD005', customer: 'Charlie Wilson', product: 'Monitor', amount: '$450', status: 'Delivered', date: '2024-12-18' },
-  ];
+  const orders = async () => {
+    const orders = await axios.get("http://localhost:5000/orders")
+    setMyOrders(orders.data)
+    //console.log(Myorders);
 
-  const products = [
-    { id: 1, name: 'Laptop Pro', category: 'Electronics', price: '$1200', stock: 45, status: 'In Stock' },
-    { id: 2, name: 'Wireless Mouse', category: 'Electronics', price: '$25', stock: 120, status: 'In Stock' },
-    { id: 3, name: 'T-Shirt', category: 'Clothing', price: '$20', stock: 5, status: 'Low Stock' },
-    { id: 4, name: 'Novel Book', category: 'Books', price: '$15', stock: 0, status: 'Out of Stock' },
-    { id: 5, name: 'Desk Lamp', category: 'Home', price: '$35', stock: 30, status: 'In Stock' },
-  ];
+  }
+  useEffect(() => {
+    orders();
+    FetchAllproducts()
+  }, []);
+
+
 
   const users = [
     { id: 1, name: 'John Doe', email: 'john@example.com', role: 'Customer', joined: '2024-01-15', orders: 12 },
@@ -78,7 +86,7 @@ const Dashbord = () => {
         {monthlyData.map((data, index) => (
           <div key={index} className="flex-1 flex flex-col items-center gap-2">
             <div className="w-full flex flex-col items-center justify-end h-full gap-2">
-              <div 
+              <div
                 className="w-full bg-blue-500 rounded-t hover:bg-blue-600 transition-colors relative group"
                 style={{ height: `${data.sales * 3}%` }}
               >
@@ -104,19 +112,25 @@ const Dashbord = () => {
     <div className="bg-white rounded-lg shadow-md p-6">
       <h2 className="text-xl font-bold text-gray-800 mb-4">Recent Activity</h2>
       <div className="space-y-4">
-        {orders.slice(0, 4).map((order, index) => (
+        {Myorders.slice(0, 4).map((order, index) => (
           <div key={index} className="flex items-center justify-between py-3 border-b border-gray-100 last:border-0">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
                 <span className="text-blue-600 font-bold">📦</span>
               </div>
               <div>
-                <p className="text-sm font-semibold text-gray-800">{order.customer}</p>
-                <p className="text-xs text-gray-500">{order.product}</p>
+                <p className="text-sm font-semibold text-gray-800">{order.username}</p>
+                <p className="text-xs text-gray-500">{
+                  order.items.map((item,idx)=>{
+                    return <>
+                    {idx + 1} - {item.title} <br/>
+                    </>
+                  })
+                  }</p>
               </div>
             </div>
             <div className="text-right">
-              <p className="text-sm font-bold text-gray-800">{order.amount}</p>
+              <p className="text-sm font-bold text-gray-800">{order.totalAmount.toLocaleString("en-IN")}</p>
               <span className={`text-xs px-2 py-1 rounded-full ${getStatusColor(order.status)}`}>
                 {order.status}
               </span>
@@ -130,7 +144,7 @@ const Dashbord = () => {
   const renderDashboard = () => (
     <div className="space-y-6">
       <h1 className="text-3xl font-bold text-gray-800">Dashboard Overview</h1>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <StatCard icon="💰" title="Total Revenue" value="$45,231" change={12} bgColor="bg-blue-500" />
         <StatCard icon="🛒" title="Total Orders" value="1,234" change={8} bgColor="bg-green-500" />
@@ -261,18 +275,30 @@ const Dashbord = () => {
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
-              {orders.map((order) => (
+              {Myorders.map((order) => (
                 <tr key={order.id} className="hover:bg-gray-50 transition-colors">
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{order.id}</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{order.customer}</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{order.product}</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-900">{order.amount}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{order.username}</td>
+                  <td className="px-6 py-4 text-sm text-gray-900">
+                    {order.items.map((item,idx) => (
+                      <div key={item.id}>{idx + 1} - {item.title}</div>
+                    ))}
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-900">{order.totalAmount.toLocaleString("en-IN")}</td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <span className={`px-3 py-1 text-xs font-medium rounded-full ${getStatusColor(order.status)}`}>
                       {order.status}
                     </span>
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{order.date}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{
+                    new Date(order.createdAt).toLocaleString("en-IN", {
+                      day: "2-digit",
+                      month: "short",
+                      year: "numeric",
+                      hour: "2-digit",
+                      minute: "2-digit"
+                    })
+                  }</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm">
                     <button className="text-blue-600 hover:text-blue-800 font-medium mr-3">View</button>
                     <button className="text-green-600 hover:text-green-800 font-medium">Update</button>
@@ -310,12 +336,12 @@ const Dashbord = () => {
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
-              {products.map((product) => (
+              {data.map((product) => (
                 <tr key={product.id} className="hover:bg-gray-50 transition-colors">
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{product.id}</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{product.name}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{product.title}</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{product.category}</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-900">{product.price}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-900">{product.price.toLocaleString("en-IN")}</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{product.stock}</td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <span className={`px-3 py-1 text-xs font-medium rounded-full ${getStatusColor(product.status)}`}>
@@ -385,44 +411,40 @@ const Dashbord = () => {
   );
 
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex h-full bg-gray-100">
       {/* Sidebar */}
       <div className={`${sidebarOpen ? 'w-64' : 'w-0'} bg-gray-900 text-white transition-all duration-300 overflow-hidden flex-shrink-0`}>
         <div className="p-6">
           <h2 className="text-2xl font-bold mb-8 text-white">Admin Panel</h2>
           <nav className="space-y-2">
             <button
-              onClick={() => {setActiveTab('dashboard');}}
-              className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-all ${
-                activeTab === 'dashboard' ? 'bg-blue-600 shadow-lg' : 'hover:bg-gray-800'
-              }`}
+              onClick={() => { setActiveTab('dashboard'); }}
+              className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-all ${activeTab === 'dashboard' ? 'bg-blue-600 shadow-lg' : 'hover:bg-gray-800'
+                }`}
             >
               <span className="text-xl">📊</span>
               <span className="font-medium">Dashboard</span>
             </button>
             <button
-              onClick={() => {setActiveTab('orders');}}
-              className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-all ${
-                activeTab === 'orders' ? 'bg-blue-600 shadow-lg' : 'hover:bg-gray-800'
-              }`}
+              onClick={() => { setActiveTab('orders'); }}
+              className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-all ${activeTab === 'orders' ? 'bg-blue-600 shadow-lg' : 'hover:bg-gray-800'
+                }`}
             >
               <span className="text-xl">🛒</span>
               <span className="font-medium">Orders</span>
             </button>
             <button
-              onClick={() => {setActiveTab('products');}}
-              className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-all ${
-                activeTab === 'products' ? 'bg-blue-600 shadow-lg' : 'hover:bg-gray-800'
-              }`}
+              onClick={() => { setActiveTab('products'); }}
+              className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-all ${activeTab === 'products' ? 'bg-blue-600 shadow-lg' : 'hover:bg-gray-800'
+                }`}
             >
               <span className="text-xl">📦</span>
               <span className="font-medium">Products</span>
             </button>
             <button
-              onClick={() => {setActiveTab('users');}}
-              className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-all ${
-                activeTab === 'users' ? 'bg-blue-600 shadow-lg' : 'hover:bg-gray-800'
-              }`}
+              onClick={() => { setActiveTab('users'); }}
+              className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-all ${activeTab === 'users' ? 'bg-blue-600 shadow-lg' : 'hover:bg-gray-800'
+                }`}
             >
               <span className="text-xl">👥</span>
               <span className="font-medium">Users</span>
@@ -432,7 +454,7 @@ const Dashbord = () => {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 overflow-auto">
+      <div className="flex-1 overflow-x-auto ">
         {/* Header */}
         <div className="bg-white shadow-sm p-4 flex items-center justify-between sticky top-0 z-10">
           <button

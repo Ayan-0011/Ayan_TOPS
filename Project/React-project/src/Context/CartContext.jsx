@@ -72,6 +72,7 @@ export const CartProvider = ({ children }) => {
 
         const orderData = {
             userId: user.id,
+            username:user.fullName,
             items: cartitem,
             totalAmount:totalAmount + 7,
             paymentMethod: paymentMethod,
