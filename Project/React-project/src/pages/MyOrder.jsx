@@ -104,7 +104,7 @@ const navigate =useNavigate()
           <h1 className='font-semibold text-3xl text-center text-gray-600'>No Order you Placed  </h1>
           <div className="flex justify-center flex-col items-center h-[500px] w-full">
             <Lottie animationData={notfound} className="w-[400px]" />
-          <button onClick={() => navigate('/product')} className='bg-red-500 text-white px-3 py-2 rounded-md cursor-pointer '>Make Shopping</button>
+          <button onClick={() => navigate('/product')} className='bg-red-500 text-white px-3 py-2 rounded-md cursor-pointer'>Make Shopping</button>
           </div>
 
         </>

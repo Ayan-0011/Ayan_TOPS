@@ -197,7 +197,7 @@
   ],
   "orders": [
     {
-      "id": "b346",
+      "id": "07c4",
       "userId": "user_37PnoKzOdnLez0pjlxIeqKbko1s",
       "username": "Sujan Ansari",
       "items": [
@@ -217,7 +217,18 @@
           "min_desc": "Apple iPhone 14 with A15 Bionic chip",
           "long_desc": "Apple iPhone 14 features the powerful A15 Bionic processor, advanced dual-camera system with Photonic Engine, excellent low-light performance, long battery life, and a stunning Super Retina XDR display.",
           "quantity": 1
-        },
+        }
+      ],
+      "totalAmount": 70006,
+      "paymentMethod": "COD",
+      "status": "confirmed",
+      "createdAt": "2025-12-27T13:21:50.107Z"
+    },
+    {
+      "id": "cb67",
+      "userId": "user_37PnoKzOdnLez0pjlxIeqKbko1s",
+      "username": "Sujan Ansari",
+      "items": [
         {
           "id": "107",
           "title": "boAt Airdopes 141",
@@ -234,40 +245,29 @@
           "min_desc": "boAt wireless earbuds with long battery",
           "long_desc": "boAt Airdopes 141 offers 42 hours playback, low latency gaming mode, ENx tech for calls, and fast charging.",
           "quantity": 1
-        }
-      ],
-      "totalAmount": 71505,
-      "paymentMethod": "ONLINE",
-      "status": "Placed",
-      "createdAt": "2025-12-27T06:35:18.096Z"
-    },
-    {
-      "id": "1523",
-      "userId": "user_370OM8qydV6qEyRUAhHPAIHSX6p",
-      "username": "Farman Ansari",
-      "items": [
+        },
         {
-          "id": "104",
-          "title": "Apple MacBook Air M1",
-          "category": "laptop",
-          "brand": "Apple",
-          "price": 89999,
-          "discount": 15,
-          "stock": 4,
+          "id": "106",
+          "title": "Sony WH-1000XM5",
+          "category": "audio",
+          "brand": "Sony",
+          "price": 29999,
+          "discount": 12,
+          "stock": 10,
           "images": [
-            "https://m.media-amazon.com/images/I/71vFKBpKakL._SL1500_.jpg",
-            "https://assets.techrepublic.com/uploads/2020/11/macbook-air-with-m1-features.jpg",
-            "https://static.toiimg.com/thumb/msid-113603820,width-1280,height-720,imgsize-14974,resizemode-6,overlay-toi_sw,pt-32,y_pad-40/photo.jpg"
+            "https://darlingretail.com/cdn/shop/products/8_7d9fabc4-e981-4b1b-a3f3-66d4c0fbe5c6_1024x.jpg?v=1665037821",
+            "https://www.moon-audio.com/cdn/shop/files/sony-wh-1000xm5-smoky-pink-01.jpg?v=1738336452&width=1200",
+            "https://www.sony.co.in/image/f83a8f36a0b29fa48eeaa6471f636390?fmt=png-alpha&wid=1000"
           ],
-          "min_desc": "MacBook Air with Apple M1 chip",
-          "long_desc": "MacBook Air M1 offers blazing-fast performance, silent fanless design, Retina display, and up to 18 hours of battery life.",
+          "min_desc": "Sony premium noise cancelling headphones",
+          "long_desc": "Sony WH-1000XM5 offers industry-leading noise cancellation, crystal-clear calls, premium comfort, and long battery life.",
           "quantity": 1
         }
       ],
-      "totalAmount": 90006,
-      "paymentMethod": "COD",
-      "status": "Placed",
-      "createdAt": "2025-12-27T06:36:08.693Z"
+      "totalAmount": 31505,
+      "paymentMethod": "ONLINE",
+      "status": "confirmed",
+      "createdAt": "2025-12-27T13:22:13.519Z"
     }
   ]
 }

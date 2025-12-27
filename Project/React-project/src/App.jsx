@@ -14,11 +14,26 @@ import Dashbord from './Admin/Dashbord'
 import Category_products from './pages/Category_products'
 import { useCart } from './Context/CartContext'
 import MyOrder from './pages/MyOrder'
+import { useUser } from '@clerk/clerk-react'
 
 const App = () => {
   const [location, setLocation] = useState();
   const [opendropdown, setOpendropdown] = useState(false);
   const { cartitem, setCartitem } = useCart();
+
+ 
+    const { user, isLoaded } = useUser();
+
+    useEffect(() => {
+      if (isLoaded && user && !user.publicMetadata?.role) {
+        user.update({
+          publicMetadata: {
+            role: "user",
+          },
+        });
+      }
+    }, [isLoaded, user]);
+
 
 
   const getlocation = async () => {
@@ -46,10 +61,10 @@ const App = () => {
   }, []);
 
 
-   //Load cart from local storage on initial render
+  //Load cart from local storage on initial render
   useEffect(() => {
     const storedCart = localStorage.getItem('cartItem')
-    if(storedCart){
+    if (storedCart) {
       setCartitem(JSON.parse(storedCart))
     }
   }, []);
@@ -64,7 +79,7 @@ const App = () => {
     <div>
       <BrowserRouter>
         <Navbar location={location} getlocation={getlocation} opendropdown={opendropdown} setOpendropdown={setOpendropdown} />
-        
+
         <Routes>
           <Route path='/' element={<Home />}></Route>
           <Route path='/about' element={<About />}></Route>
@@ -74,7 +89,7 @@ const App = () => {
           <Route path='/contact' element={<Contac />}></Route>
           <Route path='/myorder' element={<MyOrder />}></Route>
           <Route path='/cart' element={<Cart location={location} getlocation={getlocation} />}></Route>
-          <Route path="/admin/dashbord" element={ <AdminRoute> <Dashbord />  </AdminRoute> }/>
+          <Route path="/admin/dashbord" element={<AdminRoute> <Dashbord />  </AdminRoute>} />
         </Routes>
         <Footer />
       </BrowserRouter>

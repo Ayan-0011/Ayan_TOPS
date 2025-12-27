@@ -15,6 +15,7 @@ import { useState } from "react";
 const Cart = ({ location, getlocation }) => {
   const { cartitem, updateQuantity, deleteItem, placeOrder } = useCart()
   const [paymentMethod, setPaymentMethod] = useState();
+  const navigate = useNavigate()
 
 
   const handlePlaceOrder = () => {
@@ -28,13 +29,12 @@ const Cart = ({ location, getlocation }) => {
 
 
 
-  const navigate = useNavigate()
 
 
   const totalPrice = cartitem.reduce((total, item) => total + item.price, 0)
 
-
   const { user, isLoaded, isSignedIn } = useUser();
+
   if (!isLoaded)
     return
   <>
@@ -48,8 +48,8 @@ const Cart = ({ location, getlocation }) => {
   if (!isSignedIn) return <>
     <div className=' flex flex-col gap-3 justify-center items-center h-[590px] mt-10'>
       <div>
-        <h1 className='text-red-500/80 font-bold text-5xl text-muted m-3 ms-10'>Plese Sign-up first</h1>
-        <img src={signin} alt="no" onClick={() => navigate('https://winning-hawk-24.accounts.dev/sign-in?redirect_url=http%3A%2F%2Flocalhost%3A5173%2Fcart%2FSignInButton')} className="cursor-pointer" />
+        <h1 className='text-red-500/80 font-bold text-3xl md:text-5xl text-muted m-3 '>Plese Sign-up first</h1>
+        <img src={signin} alt="no" onClick={() => navigate('https://winning-hawk-24.accounts.dev/sign-in?redirect_url=http%3A%2F%2Flocalhost%3A5173%2Fcart%2FSignInButton')} className="cursor-pointer w-[300px] md:w-[400px]" />
       </div>
     </div>
 

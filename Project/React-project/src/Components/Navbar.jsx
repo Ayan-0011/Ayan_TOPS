@@ -74,13 +74,7 @@ const Navbar = ({ location, getlocation, opendropdown, setOpendropdown }) => {
 
         <div className='hidden md:block'>
           <SignedOut>
-            <SignInButton afterSignUp={(user) => {
-              user.update({
-                publicMetadata: {
-                  role: "user",
-                },
-              });
-            }} 
+            <SignInButton 
              className="bg-red-500 text-white px-2 py-1 rounded-md cursor-pointer" />
           </SignedOut >
           <SignedIn>

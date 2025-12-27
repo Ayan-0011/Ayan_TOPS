@@ -76,7 +76,7 @@ export const CartProvider = ({ children }) => {
             items: cartitem,
             totalAmount:totalAmount + 7,
             paymentMethod: paymentMethod,
-            status: "Placed",
+            status: totalAmount < 70000 ? "confirmed" : "Placed" ,
             createdAt: new Date().toISOString()
         };
 
