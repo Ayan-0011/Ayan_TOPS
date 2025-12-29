@@ -1,5 +1,4 @@
 import { useUser } from "@clerk/clerk-react";
-import toast from "react-hot-toast";
 import { Navigate } from "react-router-dom";
 
 function AdminRoute({ children }) {

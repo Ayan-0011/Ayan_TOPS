@@ -342,8 +342,11 @@ const Dashbord = () => {
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{product.category}</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-900">{product.price.toLocaleString("en-IN")}</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{product.stock}</td>
-               
-            
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className={`px-3 py-1 text-xs font-medium rounded-full ${getStatusColor(product.status)}`}>
+                      {product.status}
+                    </span>
+                  </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm">
                     <button className="text-blue-600 hover:text-blue-800 font-medium mr-3">Edit</button>
                     <button className="text-red-600 hover:text-red-800 font-medium">Delete</button>
