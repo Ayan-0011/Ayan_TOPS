@@ -5,7 +5,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Products from './pages/Products'
 import Contac from './pages/Contact'
-import axios from 'axios'
+import axios, { Axios } from 'axios'
 import Footer from './Components/Footer'
 import Cart from './pages/Cart'
 import SingleProduct from './pages/SingleProduct'
@@ -15,24 +15,56 @@ import Category_products from './pages/Category_products'
 import { useCart } from './Context/CartContext'
 import MyOrder from './pages/MyOrder'
 import { useUser } from '@clerk/clerk-react'
+import { toast } from 'react-toastify'
 
 const App = () => {
   const [location, setLocation] = useState();
   const [opendropdown, setOpendropdown] = useState(false);
   const { cartitem, setCartitem } = useCart();
 
- 
-    const { user, isLoaded } = useUser();
 
-    useEffect(() => {
-      if (isLoaded && user && !user.publicMetadata?.role) {
-        user.update({
-          publicMetadata: {
-            role: "user",
-          },
-        });
+
+  const { user, isLoaded } = useUser();
+
+  useEffect(() => {
+
+    if (isLoaded && user && !user.publicMetadata?.role) {
+      user.update({
+        publicMetadata: {
+          role: "user",
+        },
+      });
+    }
+
+    createUserIfNotExists(user);
+
+  }, [isLoaded, user]);
+
+  const mapClerkUser = (user) => ({
+    user_id: user.id,
+    name: user.fullName,
+    email: user.primaryEmailAddress?.emailAddress,
+    image: user.imageUrl,
+    role: user.publicMetadata?.role || "user",
+    createdAt: user.createdAt,
+  });
+
+
+  const createUserIfNotExists = async (user) => {
+    if (!user) return;
+
+    try {
+      const res = await axios.get(  `http://localhost:5000/users?user_id=${user.id}`);
+
+      if (res.data.length > 10 ) {
+        const USER_DATA = mapClerkUser(user);
+        await axios.post("http://localhost:5000/users", USER_DATA);
+        toast.success("Welcome User")
       }
-    }, [isLoaded, user]);
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
 
 

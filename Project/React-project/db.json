@@ -9,8 +9,8 @@
     },
     {
       "id": "2",
-      "name": "Ayan",
-      "email": "ayan@gmail.com",
+      "name": "aman",
+      "email": "aman@gmail.com",
       "password": "user123",
       "role": "user"
     },
@@ -20,6 +20,33 @@
       "email": "rahul@gmail.com",
       "password": "user123",
       "role": "user"
+    },
+    {
+      "id": "12a0",
+      "user_id": "user_36YsVVy4uhgXesQuuju31AHcIxv",
+      "name": "Ayan Ansari",
+      "email": "ayanansari9235@gmail.com",
+      "image": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvdXBsb2FkZWQvaW1nXzM2WXNjSWRhNWpGRkF5Q2U5RFhWekhBVEdldyJ9",
+      "role": "admin",
+      "createdAt": "2025-12-08T11:54:22.237Z"
+    },
+    {
+      "id": "4fa8",
+      "user_id": "user_370OM8qydV6qEyRUAhHPAIHSX6p",
+      "name": "Farman Ansari",
+      "email": "farman1203007@gmail.com",
+      "image": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvdXBsb2FkZWQvaW1nXzM3MFVjUGVZaE9YbXAxWU1qanJBMVJiTzllbiJ9",
+      "role": "user",
+      "createdAt": "2025-12-18T05:41:10.067Z"
+    },
+    {
+      "id": "a6d1",
+      "user_id": "user_37PnoKzOdnLez0pjlxIeqKbko1s",
+      "name": "Sujan Ansari",
+      "email": "sujan.ansari1010@gmail.com",
+      "image": "https://img.clerk.com/eyJ0eXBlIjoiZGVmYXVsdCIsImlpZCI6Imluc18zNllnYU9ERExPNDJlUFNkSHJSZDlJbGtuUVYiLCJyaWQiOiJ1c2VyXzM3UG5vS3pPZG5MZXowcGpseEllcUtia28xcyIsImluaXRpYWxzIjoiU0EifQ",
+      "role": "user",
+      "createdAt": "2025-12-27T05:35:47.083Z"
     }
   ],
   "categories": [
