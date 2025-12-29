@@ -137,7 +137,7 @@ const Dashbord = () => {
               </div>
             </div>
             <div className="text-right">
-              <p className="text-sm font-bold text-gray-800">{order.totalAmount.toLocaleString("en-IN")}</p>
+              <p className="text-sm font-bold text-gray-800">₹ {order.totalAmount.toLocaleString("en-IN")}</p>
               <span className={`text-xs px-2 py-1 rounded-full ${getStatusColor(order.status)}`}>
                 {order.status}
               </span>
@@ -295,7 +295,7 @@ const Dashbord = () => {
                       <div key={item.id}>{idx + 1} - {item.title}</div>
                     ))}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-900">{order.totalAmount.toLocaleString("en-IN")}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-900">₹ {order.totalAmount.toLocaleString("en-IN")}</td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <span className={`px-3 py-1 text-xs font-medium rounded-full ${getStatusColor(order.status)}`}>
                       {order.status}
@@ -350,7 +350,7 @@ const Dashbord = () => {
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{product.id}</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{product.title}</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{product.category}</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-900">{product.price.toLocaleString("en-IN")}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-900">₹ {product.price.toLocaleString("en-IN")}</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{product.stock}</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm">
                     <button className="text-blue-600 hover:text-blue-800 font-medium mr-3">Edit</button>
@@ -424,9 +424,9 @@ const Dashbord = () => {
   return (
     <div className="flex h-full bg-gray-100">
       {/* Sidebar */}
-      <div className={`${sidebarOpen ? 'w-64' : 'w-0'} bg-gray-900 text-white transition-all duration-300 overflow-hidden flex-shrink-0`}>
-        <div className="p-6">
-          <h2 className="text-2xl font-bold mb-8 text-white">Admin Panel</h2>
+      <div className={`${sidebarOpen ? 'w-64' : 'w-0'} bg-gray-900  text-white transition-all duration-300 overflow-hidden flex-shrink-0`}>
+        <div className="p-6 sticky top-0 z-10">
+          <h2 className="text-2xl font-bold mb-8 text-white ">Admin Panel</h2>
           <nav className="space-y-2">
             <button
               onClick={() => { setActiveTab('dashboard'); }}
