@@ -7,6 +7,7 @@ const Dashbord = () => {
   const [activeTab, setActiveTab] = useState('dashboard');
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [Myorders, setMyOrders] = useState([]);
+  const [allusers, setAllUsers] = useState([]);
 
   // all data from fetch data in datacontext
   const { data, FetchAllproducts, } = getData()
@@ -18,28 +19,34 @@ const Dashbord = () => {
   //console.log(user);
 
 
-  // Sample data
+  // orders data 
   const orders = async () => {
     const orders = await axios.get("http://localhost:5000/orders")
     setMyOrders(orders.data)
     //console.log(Myorders);
-
   }
+
+  //users data 
+  const User = async () => {
+    const my_user = await axios.get("http://localhost:5000/users") 
+    setAllUsers(my_user.data)
+    //console.log(allusers);
+    
+  }
+
+  
+  
+  
   useEffect(() => {
     orders();
-    FetchAllproducts()
+    FetchAllproducts();
+    User();
   }, []);
 
-
-
-  const users = [
-    { id: 1, name: 'John Doe', email: 'john@example.com', role: 'Customer', joined: '2024-01-15', orders: 12 },
-    { id: 2, name: 'Jane Smith', email: 'jane@example.com', role: 'Customer', joined: '2024-02-20', orders: 8 },
-    { id: 3, name: 'Bob Johnson', email: 'bob@example.com', role: 'Admin', joined: '2023-12-10', orders: 25 },
-    { id: 4, name: 'Alice Brown', email: 'alice@example.com', role: 'Customer', joined: '2024-03-05', orders: 5 },
-    { id: 5, name: 'Charlie Wilson', email: 'charlie@example.com', role: 'Customer', joined: '2024-03-12', orders: 15 },
-  ];
-
+  
+  
+  
+  
   const monthlyData = [
     { month: 'Jan', sales: 40, revenue: 24 },
     { month: 'Feb', sales: 30, revenue: 14 },
@@ -61,7 +68,7 @@ const Dashbord = () => {
     };
     return colors[status] || 'bg-gray-100 text-gray-800';
   };
-
+  
   const StatCard = ({ icon, title, value, change, bgColor }) => (
     <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
       <div className="flex items-center justify-between">
@@ -78,7 +85,7 @@ const Dashbord = () => {
       </div>
     </div>
   );
-
+  
   const SimpleBarChart = () => (
     <div className="bg-white rounded-lg shadow-md p-6">
       <h2 className="text-xl font-bold text-gray-800 mb-6">Monthly Sales Overview</h2>
@@ -88,7 +95,7 @@ const Dashbord = () => {
             <div className="w-full flex flex-col items-center justify-end h-full gap-2">
               <div
                 className="w-full bg-blue-500 rounded-t hover:bg-blue-600 transition-colors relative group"
-                style={{ height: `${data.sales * 3}%` }}
+                style={{ height: `${data.sales * 2}%` }}
               >
                 <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 text-xs font-semibold text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity">
                   {data.sales}
@@ -126,7 +133,7 @@ const Dashbord = () => {
                     {idx + 1} - {item.title} <br/>
                     </>
                   })
-                  }</p>
+                }</p>
               </div>
             </div>
             <div className="text-right">
@@ -140,16 +147,19 @@ const Dashbord = () => {
       </div>
     </div>
   );
-
+  
+  //overall Amount 
+  const finalAmount = Myorders.reduce((acc, amt ) => acc + amt.totalAmount, 0)
+  
   const renderDashboard = () => (
     <div className="space-y-6">
       <h1 className="text-3xl font-bold text-gray-800">Dashboard Overview</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <StatCard icon="💰" title="Total Revenue" value="$45,231" change={12} bgColor="bg-blue-500" />
-        <StatCard icon="🛒" title="Total Orders" value="1,234" change={8} bgColor="bg-green-500" />
-        <StatCard icon="📦" title="Total Products" value="567" change={-3} bgColor="bg-purple-500" />
-        <StatCard icon="👥" title="Total Users" value="8,234" change={15} bgColor="bg-orange-500" />
+        <StatCard icon="💰" title="Total Revenue" value={<span>₹ {finalAmount.toLocaleString("en-IN")}</span>} change={12} bgColor="bg-blue-500" />
+        <StatCard icon="🛒" title="Total Orders" value={Myorders?.length} change={8} bgColor="bg-green-500" />
+        <StatCard icon="📦" title="Total Products" value={data?.length} change={-3} bgColor="bg-purple-500" />
+        <StatCard icon="👥" title="Total Users" value={allusers?.length} change={15} bgColor="bg-orange-500" />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -248,6 +258,7 @@ const Dashbord = () => {
           </div>
         </div>
       </div>
+      
     </div>
   );
 
@@ -331,7 +342,6 @@ const Dashbord = () => {
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Category</th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Price</th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Stock</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
@@ -342,11 +352,6 @@ const Dashbord = () => {
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{product.category}</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-900">{product.price.toLocaleString("en-IN")}</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{product.stock}</td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <span className={`px-3 py-1 text-xs font-medium rounded-full ${getStatusColor(product.status)}`}>
-                      {product.status}
-                    </span>
-                  </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm">
                     <button className="text-blue-600 hover:text-blue-800 font-medium mr-3">Edit</button>
                     <button className="text-red-600 hover:text-red-800 font-medium">Delete</button>
@@ -384,18 +389,25 @@ const Dashbord = () => {
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
-              {users.map((user) => (
-                <tr key={user.id} className="hover:bg-gray-50 transition-colors">
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{user.id}</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{user.name}</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{user.email}</td>
+              {allusers.map((item,idx) => (
+                <tr key={item.id} className="hover:bg-gray-50 transition-colors">
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{item.id}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{item.name}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{item.email}</td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <span className={`px-3 py-1 text-xs font-medium rounded-full ${user.role === 'Admin' ? 'bg-purple-100 text-purple-800' : 'bg-blue-100 text-blue-800'}`}>
-                      {user.role}
+                    <span className={`px-3 py-1 text-xs font-medium rounded-full ${item.role === 'admin' ? 'bg-purple-100 text-purple-800' : 'bg-blue-100 text-blue-800'}`}>
+                      {item.role}
                     </span>
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{user.joined}</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{user.orders}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{new Date(item.createdAt).toLocaleString("en-IN", {
+                      day: "2-digit",
+                      month: "short",
+                      year: "numeric",
+                      hour: "2-digit",
+                      minute: "2-digit"
+                    })
+                  }</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{item.orders}</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm">
                     <button className="text-blue-600 hover:text-blue-800 font-medium mr-3">Edit</button>
                     <button className="text-red-600 hover:text-red-800 font-medium">Delete</button>
