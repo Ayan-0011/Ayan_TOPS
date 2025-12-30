@@ -10,12 +10,17 @@ import Footer from './Components/Footer'
 import Cart from './pages/Cart'
 import SingleProduct from './pages/SingleProduct'
 import AdminRoute from './Admin/Routes/AdminRoute'
-import Dashbord from './Admin/Dashbord'
 import Category_products from './pages/Category_products'
 import { useCart } from './Context/CartContext'
 import MyOrder from './pages/MyOrder'
 import { useUser } from '@clerk/clerk-react'
 import { toast } from 'react-toastify'
+import Sidebar from './Admin/Components/Sidebar'
+import Orders from './Admin/Pages/Orders'
+import ProductsCard from './Components/ProductsCard'
+import Users from './Admin/Pages/Users'
+import Dashboard from './Admin/Pages/Dashboard'
+import Productss from './Admin/Pages/Productss'
 
 const App = () => {
   const [location, setLocation] = useState();
@@ -54,9 +59,9 @@ const App = () => {
     if (!user) return;
 
     try {
-      const res = await axios.get(  `http://localhost:5000/users?user_id=${user.id}`);
+      const res = await axios.get(`http://localhost:5000/users?user_id=${user.id}`);
 
-      if (res.data.length > 10 ) {
+      if (res.data.length > 10) {
         const USER_DATA = mapClerkUser(user);
         await axios.post("http://localhost:5000/users", USER_DATA);
         toast.success("Welcome User")
@@ -121,7 +126,16 @@ const App = () => {
           <Route path='/contact' element={<Contac />}></Route>
           <Route path='/myorder' element={<MyOrder />}></Route>
           <Route path='/cart' element={<Cart location={location} getlocation={getlocation} />}></Route>
-          <Route path="/admin/dashbord" element={<AdminRoute> <Dashbord />  </AdminRoute>} />
+
+
+          <Route path="/admin" element={ <AdminRoute> <Sidebar /> </AdminRoute> }>
+            <Route index element={<Dashboard />} />
+            <Route path="dashbord" element={<Dashboard />} />
+            <Route path="orders" element={<Orders />} />
+            <Route path="productss" element={<Productss />} />
+            <Route path="users" element={<Users />} />
+          </Route>
+
         </Routes>
         <Footer />
       </BrowserRouter>
