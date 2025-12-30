@@ -10,15 +10,8 @@
     {
       "id": "2",
       "name": "aman",
-      "email": "aman@gmail.com",
-      "password": "user123",
-      "role": "user"
-    },
-    {
-      "id": "3",
-      "name": "Rahul",
-      "email": "rahul@gmail.com",
-      "password": "user123",
+      "email": "aman@zeptro.com",
+      "password": "admin123",
       "role": "user"
     },
     {

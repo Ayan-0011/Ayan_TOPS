@@ -127,7 +127,7 @@ const App = () => {
           <Route path='/myorder' element={<MyOrder />}></Route>
           <Route path='/cart' element={<Cart location={location} getlocation={getlocation} />}></Route>
 
-
+          {/* Routing for admin side  */}
           <Route path="/admin" element={ <AdminRoute> <Sidebar /> </AdminRoute> }>
             <Route index element={<Dashboard />} />
             <Route path="dashbord" element={<Dashboard />} />

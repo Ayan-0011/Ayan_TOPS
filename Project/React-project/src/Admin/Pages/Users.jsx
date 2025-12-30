@@ -1,20 +1,34 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { toast } from 'react-toastify';
 
 const Users = () => {
   const [allusers, setAllUsers] = useState([]);
-  
+
 
   const User = async () => {
-    const my_user = await axios.get("http://localhost:5000/users") 
+    const my_user = await axios.get("http://localhost:5000/users")
     setAllUsers(my_user.data)
     //console.log(allusers);
-    
+
   }
 
-   useEffect(() => {
+  const deleteHandler = async (id) => {
+    const check = confirm("Do You want delete")
+    if(check){
+      const del_user = await axios.delete(`http://localhost:5000/users/${id}`)
+      toast.error("User deleted successfully");
+    }
+    User();
+    return false;
+  }
+
+
+  useEffect(() => {
     User();
   }, []);
+
+
   return (
     <>
       <div className="space-y-6">
@@ -59,8 +73,8 @@ const Users = () => {
                     }</td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{item.orders}</td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm">
-                      <button className="text-blue-600 hover:text-blue-800 font-medium mr-3">Edit</button>
-                      <button className="text-red-600 hover:text-red-800 font-medium">Delete</button>
+                      <button className="text-blue-600 hover:text-blue-800 font-medium mr-3 cursor-pointer">Edit</button>
+                      <button onClick={() => deleteHandler(item.id)} className="text-red-600 hover:text-red-800 font-medium cursor-pointer">Delete</button>
                     </td>
                   </tr>
                 ))}
