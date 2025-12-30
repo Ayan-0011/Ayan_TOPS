@@ -21,6 +21,7 @@ import ProductsCard from './Components/ProductsCard'
 import Users from './Admin/Pages/Users'
 import Dashboard from './Admin/Pages/Dashboard'
 import Productss from './Admin/Pages/Productss'
+import Categories from './Admin/Pages/Categories'
 
 const App = () => {
   const [location, setLocation] = useState();
@@ -64,7 +65,7 @@ const App = () => {
       if (res.data.length > 10) {
         const USER_DATA = mapClerkUser(user);
         await axios.post("http://localhost:5000/users", USER_DATA);
-        toast.success("Welcome User")
+        toast.success(`😊 Welcome ${user.firstName}`)
       }
     } catch (err) {
       console.error(err);
@@ -129,10 +130,10 @@ const App = () => {
 
           {/* Routing for admin side  */}
           <Route path="/admin" element={ <AdminRoute> <Sidebar /> </AdminRoute> }>
-            <Route index element={<Dashboard />} />
             <Route path="dashbord" element={<Dashboard />} />
             <Route path="orders" element={<Orders />} />
             <Route path="productss" element={<Productss />} />
+            <Route path="category" element={<Categories />} />
             <Route path="users" element={<Users />} />
           </Route>
 

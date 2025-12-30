@@ -13,8 +13,8 @@ const Productss = () => {
     <>
       <div className="space-y-6">
       <div className="flex justify-between items-center">
-        <h1 className="text-3xl font-bold text-gray-800">Manage Products</h1>
-        <button className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors font-medium">
+        <h1 className="md:text-3xl text-md font-bold text-gray-800">Manage Products</h1>
+        <button className="bg-blue-500 text-white cursor-pointer px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors font-medium">
           Add New Product
         </button>
       </div>
@@ -32,7 +32,7 @@ const Productss = () => {
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
               {data?.map((product) => (
-                <tr key={product.id} className="hover:bg-gray-50 transition-colors">
+                <tr key={product.id} className="hover:bg-gray-100 transition-colors">
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{product.id}</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{product.title}</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{product.category}</td>

@@ -2,6 +2,7 @@ import { UserButton } from '@clerk/clerk-react';
 import React, { useState } from 'react';
 import Dashboard from '../Pages/Dashboard';
 import { NavLink, Outlet } from 'react-router-dom';
+import { Layers, Layers2Icon } from 'lucide-react';
 
 
 const Sidebar = () => {
@@ -31,6 +32,9 @@ const Sidebar = () => {
 
                         <NavLink to="/admin/productss" className={linkClass}>
                             <span className='text-xl'>📦</span><span className='font-medium'>Products</span>
+                        </NavLink>
+                        <NavLink to="/admin/category" className={linkClass}>
+                            <span className='text-xl'><Layers size={20} className='text-blue-500'/></span><span className='font-medium'>Ctaegorys</span>
                         </NavLink>
 
                         <NavLink to="/admin/users" className={linkClass}>

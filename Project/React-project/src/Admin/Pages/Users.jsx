@@ -17,7 +17,7 @@ const Users = () => {
     const check = confirm("Do You want delete")
     if(check){
       const del_user = await axios.delete(`http://localhost:5000/users/${id}`)
-      toast.error("User deleted successfully");
+      toast.success("User deleted successfully");
     }
     User();
     return false;
@@ -33,8 +33,8 @@ const Users = () => {
     <>
       <div className="space-y-6">
         <div className="flex justify-between items-center">
-          <h1 className="text-3xl font-bold text-gray-800">Manage Users</h1>
-          <button className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors font-medium">
+          <h1 className="md:text-3xl text-md font-bold text-gray-800">Manage Users</h1>
+          <button className="bg-blue-500 text-white px-6 py-2 cursor-pointer rounded-lg hover:bg-blue-600 transition-colors font-medium">
             Add New User
           </button>
         </div>
@@ -54,7 +54,7 @@ const Users = () => {
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
                 {allusers.map((item, idx) => (
-                  <tr key={item.id} className="hover:bg-gray-50 transition-colors">
+                  <tr key={item.id} className="hover:bg-gray-100 transition-colors">
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{item.id}</td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{item.name}</td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{item.email}</td>
