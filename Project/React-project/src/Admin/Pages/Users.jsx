@@ -1,5 +1,6 @@
 import { useUser } from '@clerk/clerk-react';
 import axios from 'axios'
+import { Edit, Trash2 } from 'lucide-react';
 import React, { useEffect, useState } from 'react'
 import { toast } from 'react-toastify';
 
@@ -89,8 +90,8 @@ const Users = () => {
                     }</td>
                     <td className={`px-6 py-4 whitespace-nowrap text-sm text-gray-90 ${item.role === 'admin' ? 'opacity-0 pointer-events-none' :''  }`}>{getUserOrderCount(item.user_id)}</td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm ">
-                      <button className="text-blue-600 hover:text-blue-800 font-medium mr-3 cursor-pointer">Edit</button>
-                      <button onClick={() => deleteHandler(item.id)} className="text-red-600 hover:text-red-800 font-medium cursor-pointer">Delete</button>
+                      <button className="text-blue-600 hover:text-blue-800 font-medium mr-3 cursor-pointer"><Edit size={20}/></button>
+                      <button onClick={() => deleteHandler(item.id)} className="text-red-600 hover:text-red-800 font-medium cursor-pointer"><Trash2 size={20}/></button>
                     </td>
                   </tr>
                 ))}

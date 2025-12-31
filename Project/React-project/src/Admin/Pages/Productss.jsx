@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { getData } from '../../Context/DataContext';
+import { Delete, DeleteIcon, Edit, Edit2, LucideDelete, Trash2 } from 'lucide-react';
+import { FaDeleteLeft } from 'react-icons/fa6';
 
 const Productss = () => {
 
@@ -35,13 +37,13 @@ const Productss = () => {
               {data?.map((product) => (
                 <tr key={product.id} className="hover:bg-gray-100 transition-colors">
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{product.id}</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{product.title}</td>
+                  <td className="px-6 py-4 whitespace-nowrap  text-sm text-gray-900">{product.title}</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{product.category}</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-900">₹ {product.price.toLocaleString("en-IN")}</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{product.stock}</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm">
-                    <button className="text-blue-600 hover:text-blue-800 font-medium mr-3">Edit</button>
-                    <button className="text-red-600 hover:text-red-800 font-medium">Delete</button>
+                    <button className="text-blue-600 hover:text-blue-800 font-medium mr-3 cursor-pointer"><Edit size={20}/></button>
+                    <button className="text-red-600 hover:text-red-800 font-medium cursor-pointer"><Trash2 size={20} /></button>
                   </td>
                 </tr>
               ))}

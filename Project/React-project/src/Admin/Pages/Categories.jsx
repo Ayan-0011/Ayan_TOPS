@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { Edit, Trash, Trash2 } from 'lucide-react';
 import React, { useEffect, useState } from 'react'
 
 const Categories = () => {
@@ -41,14 +42,14 @@ const Categories = () => {
                             </thead>
                             <tbody className="bg-white divide-y divide-gray-200 ">
                                 {categoryData?.map((product) => (
-                                    <tr key={product.id} className="hover:bg-gray-100 transition-colors">
+                                    <tr key={product.id} className="hover:bg-gray-100 transition-colors uppercase">
                                         <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{product.id}</td>
                                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                                             <img src={product.images} alt={product.name} className='w-[60px]'/></td>
                                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{product.name}</td>
                                         <td className="px-6 py-4 whitespace-nowrap text-sm">
-                                            <button className="text-blue-600 hover:text-blue-800 font-medium mr-3">Edit</button>
-                                            <button className="text-red-600 hover:text-red-800 font-medium">Delete</button>
+                                            <button className="text-blue-600 hover:text-blue-800 font-medium mr-3 cursor-pointer"><Edit size={20}/></button>
+                                            <button className="text-red-600 hover:text-red-800 font-medium cursor-pointer"><Trash2 size={20}/></button>
                                         </td>
                                     </tr>
                                 ))}

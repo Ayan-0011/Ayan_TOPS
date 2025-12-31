@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { Edit, Edit3, Eye } from 'lucide-react';
 import React, { useEffect, useState } from 'react'
 
 const Orders = () => {
@@ -80,8 +81,8 @@ const Orders = () => {
                       })
                     }</td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm">
-                      <button className="text-blue-600 hover:text-blue-800 font-medium mr-3">View</button>
-                      <button className="text-green-600 hover:text-green-800 font-medium">Update</button>
+                      <button className="text-blue-600 hover:text-blue-800 font-medium mr-3 cursor-pointer"><Eye  size={20}/></button>
+                      <button className="text-green-600 hover:text-green-800 font-medium cursor-pointer"><Edit size={20}/></button>
                     </td>
                   </tr>
                 ))}
