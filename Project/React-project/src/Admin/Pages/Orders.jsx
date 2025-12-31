@@ -3,9 +3,9 @@ import React, { useEffect, useState } from 'react'
 
 const Orders = () => {
 
-     const [Myorders, setMyOrders] = useState([]);
+  const [Myorders, setMyOrders] = useState([]);
 
-    // orders data 
+  // orders data 
   const orders = async () => {
     const orders = await axios.get("http://localhost:5000/orders")
     setMyOrders(orders.data)
@@ -13,11 +13,11 @@ const Orders = () => {
   }
 
 
-useEffect(() => {
-  orders()
-}, []);
+  useEffect(() => {
+    orders()
+  }, []);
 
- const getStatusColor = (status) => {
+  const getStatusColor = (status) => {
     const colors = {
       'Delivered': 'bg-green-100 text-green-800',
       'Placed': 'bg-yellow-100 text-yellow-800',

@@ -1,31 +1,47 @@
+import { useUser } from '@clerk/clerk-react';
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { toast } from 'react-toastify';
 
 const Users = () => {
   const [allusers, setAllUsers] = useState([]);
+  const [orders, setOrders] = useState([]);
+
 
 
   const User = async () => {
     const my_user = await axios.get("http://localhost:5000/users")
     setAllUsers(my_user.data)
     //console.log(allusers);
+  }
+
+  const myOrders = async () => {
+    const res = await axios.get("http://localhost:5000/orders")
+    setOrders(res.data)
+    console.log(res.data);
 
   }
 
   const deleteHandler = async (id) => {
     const check = confirm("Do You want delete")
-    if(check){
+    if (check) {
       const del_user = await axios.delete(`http://localhost:5000/users/${id}`)
       toast.success("User deleted successfully");
     }
     User();
     return false;
   }
+  
+  const getUserOrderCount = (userId) => {
+    return orders.filter(order => order.userId === userId).length;
+  };
+
+
 
 
   useEffect(() => {
     User();
+    myOrders();
   }, []);
 
 
@@ -71,8 +87,8 @@ const Users = () => {
                       minute: "2-digit"
                     })
                     }</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{item.orders}</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm">
+                    <td className={`px-6 py-4 whitespace-nowrap text-sm text-gray-90 ${item.role === 'admin' ? 'opacity-0 pointer-events-none' :''  }`}>{getUserOrderCount(item.user_id)}</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm ">
                       <button className="text-blue-600 hover:text-blue-800 font-medium mr-3 cursor-pointer">Edit</button>
                       <button onClick={() => deleteHandler(item.id)} className="text-red-600 hover:text-red-800 font-medium cursor-pointer">Delete</button>
                     </td>

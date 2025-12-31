@@ -42,8 +42,8 @@ const Dashboard = () => {
 
     return (
         <div>
-            <div className="space-y-6 p-7">
-                <h1 className="text-3xl font-bold text-gray-800">Dashboard Overview</h1>
+            <div className="space-y-6">
+                <h1 className="md:text-3xl text-2xl text-center md:text-start font-bold text-gray-800">Dashboard Overview</h1>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <StatCard icon="💰" title="Total Revenue" value={<span>₹ {finalAmount.toLocaleString("en-IN")}</span>} change={12} bgColor="bg-blue-500" />

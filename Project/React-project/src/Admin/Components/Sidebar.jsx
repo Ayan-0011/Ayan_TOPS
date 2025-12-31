@@ -63,7 +63,7 @@ const Sidebar = () => {
                 </div>
                 {/* Content */}
                 {/* <Dashboard /> */}
-                <div className="p-6">
+                <div className='p-7'>
                     <Outlet />
                 </div>
 
