@@ -14,7 +14,7 @@ const SimpleBarChart = () => {
   
     return (
         <div>
-            <div className="bg-white rounded-lg shadow-md p-6">
+            <div className="bg-white rounded-lg shadow-md p-6 w-full">
                 <h2 className="text-xl font-bold text-gray-800 mb-6">Monthly Sales Overview</h2>
                 <div className="flex items-end justify-between h-64 gap-4">
                     {monthlyData.map((data, index) => (

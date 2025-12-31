@@ -19,7 +19,7 @@ const Users = () => {
   const myOrders = async () => {
     const res = await axios.get("http://localhost:5000/orders")
     setOrders(res.data)
-    console.log(res.data);
+    //console.log(res.data);
 
   }
 
