@@ -1,10 +1,15 @@
 import axios from 'axios';
 import { Edit, Edit3, Eye } from 'lucide-react';
 import React, { useEffect, useState } from 'react'
+import OrderModal from '../Components/OrderModal';
 
 const Orders = () => {
 
   const [Myorders, setMyOrders] = useState([]);
+
+  const [openModal, setOpenModal] = useState(false);
+
+  const [selectedOrderId, setSelectedOrderId] = useState(null);
 
   // orders data 
   const orders = async () => {
@@ -52,7 +57,7 @@ const Orders = () => {
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Amount</th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Show Orders</th>
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
@@ -80,14 +85,22 @@ const Orders = () => {
                         minute: "2-digit"
                       })
                     }</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm">
-                      <button className="text-blue-600 hover:text-blue-800 font-medium mr-3 cursor-pointer"><Eye  size={20}/></button>
-                      <button className="text-green-600 hover:text-green-800 font-medium cursor-pointer"><Edit size={20}/></button>
-                    </td>
+                    <td className="px-6 text-center py-4 whitespace-nowrap text-sm">
+                      <button onClick={() => { setSelectedOrderId(order.id); setOpenModal(true); }} className="text-blue-600 hover:text-blue-800 font-medium mr-3 cursor-pointer"><Eye size={25} /></button>
+                    </td> 
                   </tr>
                 ))}
               </tbody>
             </table>
+            {openModal && selectedOrderId && (
+              <OrderModal
+                order_id={selectedOrderId}
+                closeModal={() => {
+                  setOpenModal(false);
+                  setSelectedOrderId(null);
+                }}
+              />
+            )}
           </div>
         </div>
       </div>

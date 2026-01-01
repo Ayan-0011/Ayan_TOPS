@@ -50,6 +50,7 @@ const Products = () => {
   )
 
   const brands = ["All", ...new Set(data?.map(item => item.brand))];
+  
 
   const dynamicPage = Math.ceil(filteredData?.length / 8)
 
