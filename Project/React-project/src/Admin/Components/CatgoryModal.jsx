@@ -40,15 +40,35 @@ const CategotryModal = ({ closeModal, fetchCategories }) => {
                         Add Product Details
                     </h2>
 
-                    <form onSubmit={submitHandler} className='space-y-7'>
-                        <input type="text" name="name" value={obj_cate.name} onChange={changeHandel} placeholder='Enter Cetegory Name' required className='w-full rounded-2 p-2 border-2' />
+                    <form onSubmit={submitHandler}
+                        className="space-y-6 bg-white p-6 rounded-xl shadow-lg max-w-md mx-auto">
+                        <h2 className="text-xl font-semibold text-center text-gray-800">
+                            Add New Category
+                        </h2>
 
-                        <input type="url" name="images" value={obj_cate.images} onChange={changeHandel} placeholder='Enter image URL' required className='w-full rounded-2 p-2 border-2' />
+                        {/* Category Name */}
+                        <div>
+                            <label className="block text-sm font-medium text-gray-600 mb-1">
+                                Category Name
+                            </label>
+                            <input type="text" name="name" value={obj_cate.name} onChange={changeHandel} placeholder="Enter category name" required
+                                className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition" />
+                        </div>
 
-                        <button className='w-full rounded-2 p-2 border-2 bg-blue-500 text-white'>Submit</button>
+                        {/* Category Image */}
+                        <div>
+                            <label className="block text-sm font-medium text-gray-600 mb-1">
+                                Category Image URL
+                            </label>
+                            <input type="url" name="images" value={obj_cate.images} onChange={changeHandel} placeholder="https://example.com/image.jpg" required
+                                className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition" />
+                        </div>
+
+                        {/* Submit Button */}
+                        <button type="submit" className="w-full bg-blue-500 text-white py-3 rounded-lg font-medium hover:bg-blue-600 active:scale-95 transition-all" >
+                            Save Category
+                        </button>
                     </form>
-
-
                 </div>
             </div>
 

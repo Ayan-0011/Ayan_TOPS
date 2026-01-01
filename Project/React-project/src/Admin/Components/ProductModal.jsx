@@ -35,6 +35,8 @@ const ProductModal = ({ closeModal, FetchAllproducts }) => {
         console.log(obj_cate);
     }
 
+    
+
     const handleImageChange = (e, index) => {
         const newImages = [...obj_cate.images];
         console.log(obj_cate.images);
@@ -46,6 +48,8 @@ const ProductModal = ({ closeModal, FetchAllproducts }) => {
             images: newImages
         }));
     };
+
+    
 
 
     const submitHandel = async (e) => {

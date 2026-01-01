@@ -220,12 +220,44 @@
       "discount": "12",
       "stock": "3",
       "images": [
-        "https://m.media-amazon.com/images/I/61l1LF0C0CL._SX679_.jpg",
+        "https://m.media-amazon.com/images/I/613kTZdzxEL._SX679_.jpg",
         "https://m.media-amazon.com/images/I/61l1LF0C0CL._SX679_.jpg"
       ],
       "min_desc": "Samsung Galaxy S25 Plus 5G (12GB RAM + 256GB Storage) Silver Shadow",
       "long_desc": "Meet Galaxy S25+, your true AI companion. Powered by the next chapter of Galaxy AI with multi-modality, and the most advanced Galaxy fundamentals, Galaxy S25+ naturally adapts to you: learning your patterns, anticipating your needs, and connecting your world seamlessly. With Now Brief, it also offers you personalized insights to get you through your day.",
       "category": "mobile"
+    },
+    {
+      "id": "1767251121742",
+      "title": "Sony PlayStation®5",
+      "brand": "Sony ",
+      "price": "49990",
+      "discount": 5,
+      "stock": 1,
+      "images": [
+        "https://m.media-amazon.com/images/I/51afJC92cgL._SX522_.jpg",
+        "https://m.media-amazon.com/images/I/41c+1Roq2aL._SX522_.jpg",
+        "https://m.media-amazon.com/images/I/61C2SciguhL._SX522_.jpg"
+      ],
+      "min_desc": "Sony PlayStation®5 Digital Edition (slim) Console Video Game",
+      "long_desc": "Slim Design: With PS5, players get powerful gaming technology packed inside a sleek and compact console design. 1TB of Storage: Keep your favorite games ready and waiting for you to jump in and play with 1TB of SSD storage built in. Ultra-High Speed SSD: Maximize your play sessions with near instant load times for installed PS5 games.",
+      "category": "gaming "
+    },
+    {
+      "id": "1767251338740",
+      "title": "TKL Semi-Mechanical Gaming Keyboard",
+      "brand": "EvoFox ",
+      "price": "889",
+      "discount": "12",
+      "stock": "3",
+      "images": [
+        "https://m.media-amazon.com/images/I/617q9MVCT9L._SX679_.jpg",
+        "https://m.media-amazon.com/images/I/61bJ6Cyi6-L._SX679_.jpg",
+        "https://m.media-amazon.com/images/I/61bJ6Cyi6-L._SX679_.jpg"
+      ],
+      "min_desc": "EvoFox Fireblade TKL Semi-Mechanical Gaming Keyboard with Rainbow Backlit& Breathing Effect, Floating Keycaps, 19 Anti-Ghosting & 12 Multimedia Keys, Windows Lock Key, Braided Cable (Black)",
+      "long_desc": "The Fox knows - Special Tenkeyless Space Saving Backlit Keyboard design, with all the essential features you need to dominate your opponents.\nThis Gaming Keyboard for PCs and Macs comes with Elevated Keys and 19-Key Anti Ghosting allowing you to go on a Rampage with full confidence in your tools.",
+      "category": "accessories"
     }
   ],
   "orders": [
