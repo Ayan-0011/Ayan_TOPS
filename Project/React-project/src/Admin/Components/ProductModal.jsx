@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { toast } from 'react-toastify';
 
-const ProductModal = ({ closeModal }) => {
+const ProductModal = ({ closeModal, FetchAllproducts }) => {
 
     const [cate, setCate] = useState([]);
 
@@ -22,10 +22,10 @@ const ProductModal = ({ closeModal }) => {
         id: "",
         title: "",
         brand: "",
-        price: "",
+        price: '',
         discount: "",
         stock: "",
-        images: "",
+        images: [],
         min_desc: "",
         long_desc: ""
     });
@@ -35,11 +35,26 @@ const ProductModal = ({ closeModal }) => {
         console.log(obj_cate);
     }
 
+    const handleImageChange = (e, index) => {
+        const newImages = [...obj_cate.images];
+        console.log(obj_cate.images);
+
+        newImages[index] = e.target.value;
+
+        setData((prev) => ({
+            ...prev,
+            images: newImages
+        }));
+    };
+
+
     const submitHandel = async (e) => {
         e.preventDefault();
         const obj = await axios.post("http://localhost:5000/products", obj_cate);
-        setData({  ...obj_cate,  title: "", brand: "", price: "", discount: "", images: "", stock: "", min_desc: "", long_desc: "" });
+        setData({ ...obj_cate, title: "", brand: "", price: "", discount: "", images: "", stock: "", min_desc: "", long_desc: "" });
         toast.success('Products add success');
+        FetchAllproducts();
+        closeModal()
         return false;
     }
 
@@ -51,7 +66,7 @@ const ProductModal = ({ closeModal }) => {
         <>
             <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
                 {/* Modal Box */}
-                <div className="bg-white w-[500px]  rounded-lg p-6 relative">
+                <div className="bg-white w-[900px] h-[700px] rounded-lg p-6 relative overflow-auto">
                     {/* Close Button */}
                     <button onClick={closeModal} className="absolute top-2 right-2 text-xl" >
                         ✖
@@ -60,36 +75,181 @@ const ProductModal = ({ closeModal }) => {
                         Add Product Details
                     </h2>
                     {/* Product Form */}
-                    <form onSubmit={submitHandel} className="space-y-3">
+                    <form
+                        onSubmit={submitHandel}
+                        className="space-y-6 bg-gray-50 p-6 rounded-xl shadow-inner"
+                    >
+                        {/* Category */}
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">
+                                Category
+                            </label>
+                            <select
+                                name="category"
+                                value={obj_cate.category || ""}
+                                onChange={changeHandel}
+                                className="w-full p-2.5 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                            >
+                                <option value="">Select Category</option>
+                                {cate.map((value) => (
+                                    <option key={value.id} value={value.name}>
+                                        {value.name}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
 
-                        <select type="text" className="w-full p-2 border-2" onClick={changeHandel} name="cate_id">
-                            <option value="" >Select Categories</option>
-                            {
-                                cate.map((value) => {
-                                    return (
-                                        <option value={value.id}>
-                                            {value.name}
-                                        </option>
-                                    )
-                                })
-                            }
-                        </select>
+                        {/* Product Name */}
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">
+                                Product Name
+                            </label>
+                            <input
+                                type="text"
+                                name="title"
+                                value={obj_cate.title}
+                                onChange={changeHandel}
+                                placeholder="Enter product name"
+                                className="w-full p-2.5 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                                required
+                            />
+                        </div>
 
-                        <input type="text" placeholder="Enter Product Name" value={obj_cate.title} name='title' onClick={changeHandel} className="w-full border p-2 rounded" />
-                        <input type="text" placeholder="Enter Product Brand" value={obj_cate.brand} name='brand' onClick={changeHandel} className="w-full border p-2 rounded" />
-                        <input type="number" placeholder="Enter Product Price" value={obj_cate.price} name='price' onClick={changeHandel} className="w-full border p-2 rounded" />
-                        <input type="number" placeholder="Enter Product discount" value={obj_cate.discount} name='discount' onClick={changeHandel} className="w-full border p-2 rounded" />
-                        <input type="number" placeholder="Enter Product Stock" value={obj_cate.stock} name='stock' onClick={changeHandel} className="w-full border p-2 rounded" />
-                        <input type="url" placeholder="Enter Product img URL" value={obj_cate.images} name='images' onClick={changeHandel} className="w-full border p-2 rounded" />
+                        {/* Brand + Price */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">
+                                    Brand
+                                </label>
+                                <input
+                                    type="text"
+                                    name="brand"
+                                    value={obj_cate.brand}
+                                    onChange={changeHandel}
+                                    placeholder="Brand name"
+                                    className="w-full p-2.5 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                                    required
+                                />
+                            </div>
 
-                        <textarea name="min_desc" placeholder='Enter Product Short Description' value={obj_cate.min_desc} onClick={changeHandel} name="min_desc" className='w-full p-2 border-2'></textarea>
-                        <textarea name="long_desc" placeholder='Enter Product Short Description' value={obj_cate.long_desc} onClick={changeHandel} name="long_desc" className='w-full p-2 border-2'></textarea>
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">
+                                    Price (₹)
+                                </label>
+                                <input
+                                    type="number"
+                                    name="price"
+                                    value={obj_cate.price.toLocaleString("en-IN")}
+                                    onChange={changeHandel}
+                                    placeholder="Price"
+                                    className="w-full p-2.5 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                                    required
+                                />
+                            </div>
+                        </div>
 
+                        {/* Discount + Stock */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">
+                                    Discount (%)
+                                </label>
+                                <input
+                                    type="number"
+                                    name="discount"
+                                    value={obj_cate.discount}
+                                    onChange={changeHandel}
+                                    placeholder="Discount"
+                                    className="w-full p-2.5 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                                />
+                            </div>
 
-                        <button type="submit" className="w-full bg-blue-500 text-white py-2 rounded" >
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">
+                                    Stock
+                                </label>
+                                <input
+                                    type="number"
+                                    name="stock"
+                                    value={obj_cate.stock}
+                                    onChange={changeHandel}
+                                    placeholder="Available stock"
+                                    className="w-full p-2.5 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                                    required
+                                />
+                            </div>
+                        </div>
+
+                        {/* Images */}
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-2">
+                                Product Images (3 URLs)
+                            </label>
+
+                            <div className="space-y-2">
+                                <input
+                                    type="url"
+                                    placeholder="Image URL 1"
+                                    onChange={(e) => handleImageChange(e, 0)}
+                                    className="w-full p-2.5 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                                />
+                                <input
+                                    type="url"
+                                    placeholder="Image URL 2"
+                                    onChange={(e) => handleImageChange(e, 1)}
+                                    className="w-full p-2.5 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                                    
+                                />
+                                <input
+                                    type="url"
+                                    placeholder="Image URL 3"
+                                    onChange={(e) => handleImageChange(e, 2)}
+                                    className="w-full p-2.5 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                                    
+                                />
+                            </div>
+                        </div>
+
+                        {/* Descriptions */}
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">
+                                Short Description
+                            </label>
+                            <textarea
+                                name="min_desc"
+                                value={obj_cate.min_desc}
+                                onChange={changeHandel}
+                                placeholder="Short product description"
+                                rows="2"
+                                className="w-full p-2.5 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                                required
+                            />
+                        </div>
+
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">
+                                Long Description
+                            </label>
+                            <textarea
+                                name="long_desc"
+                                value={obj_cate.long_desc}
+                                onChange={changeHandel}
+                                placeholder="Detailed product description"
+                                rows="4"
+                                className="w-full p-2.5 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                                required
+                            />
+                        </div>
+
+                        {/* Submit Button */}
+                        <button
+                            type="submit"
+                            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 rounded-lg transition-all"
+                        >
                             Save Product
                         </button>
                     </form>
+
 
 
                 </div>

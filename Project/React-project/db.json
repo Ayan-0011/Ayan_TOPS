@@ -8,13 +8,6 @@
       "role": "admin"
     },
     {
-      "id": "2",
-      "name": "aman",
-      "email": "aman@gmail.com",
-      "password": "admin123",
-      "role": "user"
-    },
-    {
       "id": "12a0",
       "user_id": "user_36YsVVy4uhgXesQuuju31AHcIxv",
       "name": "Ayan Ansari",
@@ -67,6 +60,11 @@
       "id": "5",
       "name": "accessories",
       "images": "https://m.media-amazon.com/images/I/61mpMH5TzkL._SL1500_.jpg"
+    },
+    {
+      "id": "1767247406891",
+      "name": "gaming ",
+      "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0IAiX0eJRgIkDY3gVh5L5e3QUt3n838eNPg&s"
     }
   ],
   "products": [
@@ -213,6 +211,21 @@
       ],
       "min_desc": "Professional wireless mouse",
       "long_desc": "Logitech MX Master 3 features ergonomic design, MagSpeed scroll, multi-device support, and precision tracking."
+    },
+    {
+      "id": "1767250074029",
+      "title": "Samsung Galaxy S25 Plus 5G",
+      "brand": "Samsung ",
+      "price": "68999",
+      "discount": "12",
+      "stock": "3",
+      "images": [
+        "https://m.media-amazon.com/images/I/61l1LF0C0CL._SX679_.jpg",
+        "https://m.media-amazon.com/images/I/61l1LF0C0CL._SX679_.jpg"
+      ],
+      "min_desc": "Samsung Galaxy S25 Plus 5G (12GB RAM + 256GB Storage) Silver Shadow",
+      "long_desc": "Meet Galaxy S25+, your true AI companion. Powered by the next chapter of Galaxy AI with multi-modality, and the most advanced Galaxy fundamentals, Galaxy S25+ naturally adapts to you: learning your patterns, anticipating your needs, and connecting your world seamlessly. With Now Brief, it also offers you personalized insights to get you through your day.",
+      "category": "mobile"
     }
   ],
   "orders": [

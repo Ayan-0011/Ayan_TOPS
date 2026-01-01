@@ -3,6 +3,8 @@ import { getData } from '../../Context/DataContext';
 import { Delete, DeleteIcon, Edit, Edit2, LucideDelete, Trash2 } from 'lucide-react';
 import { FaDeleteLeft } from 'react-icons/fa6';
 import ProductModal from '../Components/ProductModal';
+import { toast } from 'react-toastify';
+import axios from 'axios';
 
 const Productss = () => {
 
@@ -12,6 +14,17 @@ const Productss = () => {
   useEffect(() => {
     FetchAllproducts();
   }, []);
+
+  const deleteHandler = async (id) => {
+    const check = confirm("Do You want delete")
+    if (check) {
+      const del_user = await axios.delete(`http://localhost:5000/products/${id}`)
+      toast.success("Product deleted successfully");
+    }
+    FetchAllproducts();
+    return false;
+  }
+
 
 
 
@@ -25,7 +38,7 @@ const Productss = () => {
             Add New Product
           </button>
           {
-          openModal && ( <ProductModal closeModal={() => setOpenModal(false)} /> )
+            openModal && (<ProductModal closeModal={() => setOpenModal(false)} FetchAllproducts={FetchAllproducts} />)
           }
         </div>
         <div className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -51,7 +64,7 @@ const Productss = () => {
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{product.stock}</td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm">
                       <button className="text-blue-600 hover:text-blue-800 font-medium mr-3 cursor-pointer"><Edit size={20} /></button>
-                      <button className="text-red-600 hover:text-red-800 font-medium cursor-pointer"><Trash2 size={20} /></button>
+                      <button onClick={()=>deleteHandler(product.id)} className="text-red-600 hover:text-red-800 font-medium cursor-pointer"><Trash2 size={20} /></button>
                     </td>
                   </tr>
                 ))}
