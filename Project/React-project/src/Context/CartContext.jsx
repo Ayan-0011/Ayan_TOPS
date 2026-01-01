@@ -59,7 +59,7 @@ export const CartProvider = ({ children }) => {
     }
 
     // ✅ PLACE ORDER
-    const placeOrder = async (userId,paymentMethod) => {
+    const placeOrder = async (userId, paymentMethod) => {
         if (cartitem.length === 0) {
             toast.error("Cart is empty!");
             return;
@@ -72,11 +72,11 @@ export const CartProvider = ({ children }) => {
 
         const orderData = {
             userId: user.id,
-            username:user.fullName,
+            username: user.fullName,
             items: cartitem,
-            totalAmount:totalAmount + 7,
+            totalAmount: totalAmount + 7,
             paymentMethod: paymentMethod,
-            status: totalAmount < 70000 ? "confirmed" : "Placed" ,
+            status: totalAmount < 70000 ? "confirmed" : "Placed",
             createdAt: new Date().toISOString()
         };
 
@@ -91,7 +91,8 @@ export const CartProvider = ({ children }) => {
         }
     };
 
-    return <CartContext.Provider value={{ cartitem, setCartitem, addToCart, updateQuantity, deleteItem, placeOrder}}>
+
+    return <CartContext.Provider value={{ cartitem, setCartitem, addToCart, updateQuantity, deleteItem, placeOrder }}>
         {children}
     </CartContext.Provider>
 }

@@ -221,9 +221,9 @@
       "id": "1767250074029",
       "title": "Samsung Galaxy S25 Plus 5G",
       "brand": "Samsung ",
-      "price": "68999",
-      "discount": "12",
-      "stock": "3",
+      "price": 68999,
+      "discount": 12,
+      "stock": 3,
       "images": [
         "https://m.media-amazon.com/images/I/613kTZdzxEL._SX679_.jpg",
         "https://m.media-amazon.com/images/I/61l1LF0C0CL._SX679_.jpg"
@@ -236,7 +236,7 @@
       "id": "1767251121742",
       "title": "Sony PlayStation®5",
       "brand": "Sony ",
-      "price": "49990",
+      "price": 49990,
       "discount": 5,
       "stock": 1,
       "images": [
@@ -252,9 +252,9 @@
       "id": "1767251338740",
       "title": "TKL Semi-Mechanical Gaming Keyboard",
       "brand": "EvoFox ",
-      "price": "889",
-      "discount": "12",
-      "stock": "3",
+      "price": 889,
+      "discount": 12,
+      "stock": 3,
       "images": [
         "https://m.media-amazon.com/images/I/617q9MVCT9L._SX679_.jpg",
         "https://m.media-amazon.com/images/I/61bJ6Cyi6-L._SX679_.jpg",
@@ -268,9 +268,9 @@
       "id": "1767253032284",
       "title": "Boat Wave Call 3 Smartwatch",
       "brand": "boAt ",
-      "price": "1399",
-      "discount": "12",
-      "stock": "2",
+      "price": 1399,
+      "discount": 12,
+      "stock": 2,
       "images": [
         "https://m.media-amazon.com/images/I/71dd68N70FL._SX679_.jpg",
         "https://m.media-amazon.com/images/I/71gam4BCvHL._SX679_.jpg",
