@@ -52,6 +52,11 @@
       "images": "https://darlingretail.com/cdn/shop/products/8_7d9fabc4-e981-4b1b-a3f3-66d4c0fbe5c6_1024x.jpg?v=1665037821"
     },
     {
+      "id": "1767252795046",
+      "name": "Smartwatches",
+      "images": "https://m.media-amazon.com/images/G/31/IMG24/Smart_Watches/ELP_revamp/Smartwatches._SS400_QL85_.jpg"
+    },
+    {
       "id": "4",
       "name": "tv",
       "images": "https://dynamicdistributors.in/wp-content/uploads/2025/06/IN-QLE1.jpg"
@@ -258,6 +263,22 @@
       "min_desc": "EvoFox Fireblade TKL Semi-Mechanical Gaming Keyboard with Rainbow Backlit& Breathing Effect, Floating Keycaps, 19 Anti-Ghosting & 12 Multimedia Keys, Windows Lock Key, Braided Cable (Black)",
       "long_desc": "The Fox knows - Special Tenkeyless Space Saving Backlit Keyboard design, with all the essential features you need to dominate your opponents.\nThis Gaming Keyboard for PCs and Macs comes with Elevated Keys and 19-Key Anti Ghosting allowing you to go on a Rampage with full confidence in your tools.",
       "category": "accessories"
+    },
+    {
+      "id": "1767253032284",
+      "title": "Boat Wave Call 3 Smartwatch",
+      "brand": "boAt ",
+      "price": "1399",
+      "discount": "12",
+      "stock": "2",
+      "images": [
+        "https://m.media-amazon.com/images/I/71dd68N70FL._SX679_.jpg",
+        "https://m.media-amazon.com/images/I/71gam4BCvHL._SX679_.jpg",
+        "https://m.media-amazon.com/images/I/71kCa-5eMuL._SX679_.jpg"
+      ],
+      "min_desc": "Boat Wave Call 3 Smartwatch 1.83” HD Display with Animated Watch Faces; BT Calling, Functional Crown, Multiple Sports Modes, IP68, HR, SpO2 Monitor, Smart Watches for Men & Women (Aqua Blue)",
+      "long_desc": "1.83” (4.64 cm) HD Display: Enjoy a 4.64 cm big HD touchscreen that makes every glance feel premium. From checking time in bright sunlight to tracking health stats, the large display delivers crisp visibility. Moreover, the Raise to Wake gesture instantly when you lift your wrist, combining convenience with style.",
+      "category": "Smartwatches"
     }
   ],
   "orders": [
