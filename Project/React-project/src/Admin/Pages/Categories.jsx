@@ -13,8 +13,8 @@ const Categories = () => {
         try {
             const response = await axios.get("http://localhost:5000/categories");
             setCategoryData(response.data);
-            console.log(response.data);
-            
+            //console.log(response.data);
+
         } catch (error) {
             console.log(error);
         }
@@ -28,7 +28,7 @@ const Categories = () => {
         const check = confirm("Do You want delete")
         if (check) {
             const del_user = await axios.delete(`http://localhost:5000/categories/${id}`)
-            toast.success("User deleted successfully");
+            toast.success("category deleted successfully");
         }
         fetchCategories();
         return false;
@@ -47,35 +47,45 @@ const Categories = () => {
                         openModal && (<CategotryModal closeModal={() => setOpenModal(false)} fetchCategories={fetchCategories} />)
                     }
                 </div>
-                <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div className="overflow-x-auto">
-                        <table className="min-w-full divide-y  divide-gray-200">
-                            <thead className="bg-gray-50 ">
-                                <tr>
-                                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID</th>
-                                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Category image</th>
-                                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Category Name</th>
-                                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody className="bg-white divide-y divide-gray-200 ">
-                                {categoryData?.map((product) => (
-                                    <tr key={product.id} className="hover:bg-gray-100 transition-colors uppercase">
-                                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{product.id}</td>
-                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                            <img src={product.images} alt={product.name} className='w-[60px]' /></td>
-                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{product.name}</td>
-                                        <td className="px-6 py-4 whitespace-nowrap text-sm">
-                                            <button className="text-blue-600 hover:text-blue-800 font-medium mr-3 cursor-pointer"><Edit size={20} /></button>
-                                            <button onClick={()=> deleteHandler(product.id)} className="text-red-600 hover:text-red-800 font-medium cursor-pointer"><Trash2 size={20} /></button>
-                                        </td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    {categoryData?.map((product) => (
+
+                        <div key={product.id}
+                            className="group bg-white rounded-2xl shadow-md  hover:shadow-2xl hover:-translate-y-2  transition-all duration-300 p-4  flex flex-col items-center text-center" >
+                            {/* Image */}
+                            <div className="w-32 h-32 mb-4 overflow-hidden rounded-xl">
+
+                                <img src={product.images} alt={product.name}
+                                    className="w-full h-full object-contain transition-transform duration-300  group-hover:scale-110" />
+                            </div>
+
+
+                            {/* Category Name */}
+                            <h3 className="text-lg font-semibold text-start uppercase text-gray-800 mb-3">
+                                {product.name}
+                            </h3>
+
+                            {/* Action Buttons */}
+                            <div className="flex gap-4 mt-auto opacity-80 group-hover:opacity-100 transition">
+
+                                <button className="flex items-center gap-1 px-4 py-2 text-sm font-medium   text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition"  >
+                                    <Edit size={18} />Edit
+                                </button>
+
+                                <button onClick={() => deleteHandler(product.id)}
+                                    className="flex items-center gap-1 px-4 py-2 text-sm font-medium  text-red-600 border border-red-600 rounded-lg hover:bg-red-600 hover:text-white transition" >
+                                    <Trash2 size={18} /> Delete
+                                </button>
+                            </div>
+                        </div>
+                    ))}
                 </div>
+
+
+
             </div>
+
 
         </>
     )

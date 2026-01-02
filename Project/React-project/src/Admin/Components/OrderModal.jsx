@@ -9,7 +9,7 @@ const OrderModal = ({ closeModal, order_id, }) => {
         const res = await axios.get(`http://localhost:5000/orders`)
         const data = res.data.find(item => item.id === id)
         setMyorders(data)
-        console.log(data);
+        //console.log(data);
 
     }
 
