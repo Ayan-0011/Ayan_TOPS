@@ -73,7 +73,6 @@ const FeatureProdcuts = () => {
           ))}
         </div>
       </section>
-      <CategoryBanners />
     </div>
 
   )

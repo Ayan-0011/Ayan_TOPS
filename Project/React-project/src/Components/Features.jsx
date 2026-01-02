@@ -10,9 +10,9 @@ const features = [
 const Features = () => {
 
   return (
-    <div className='bg-gray-100 py-10 px-4 sm:px-6 lg:px-8'>
+    <div className='bg-gray-200 py-10 px-4 sm:px-6 lg:px-8'>
       <div className='max-w-7xl mx-auto'>
-        <div className='grid grid-cols-1 gap-y-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-8'>
+        <div className='grid grid-cols-1 gap-y-0 sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-8'>
             {features.map((feature, index)=> {
                return <div key={index} className='flex items-center justify-center text-center sm:text-left'>
                     <feature.icon className='flex-shrink-0 h-10 w-10 text-gray-600' aria-hidden="true" />
