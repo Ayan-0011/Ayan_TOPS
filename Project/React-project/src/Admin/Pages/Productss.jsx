@@ -16,7 +16,7 @@ const Productss = () => {
   }, []);
 
   const deleteHandler = async (id) => {
-    const check = confirm("Do You want delete")
+    const check = confirm("Do You want delete this Product ")
     if (check) {
       const del_user = await axios.delete(`http://localhost:5000/products/${id}`)
       toast.success("Product deleted successfully");

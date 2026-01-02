@@ -1,13 +1,6 @@
 {
   "users": [
     {
-      "id": "1",
-      "name": "Admin",
-      "email": "admin@zeptro.com",
-      "password": "admin123",
-      "role": "admin"
-    },
-    {
       "id": "12a0",
       "user_id": "user_36YsVVy4uhgXesQuuju31AHcIxv",
       "name": "Ayan Ansari",
@@ -33,6 +26,13 @@
       "image": "https://img.clerk.com/eyJ0eXBlIjoiZGVmYXVsdCIsImlpZCI6Imluc18zNllnYU9ERExPNDJlUFNkSHJSZDlJbGtuUVYiLCJyaWQiOiJ1c2VyXzM3UG5vS3pPZG5MZXowcGpseEllcUtia28xcyIsImluaXRpYWxzIjoiU0EifQ",
       "role": "user",
       "createdAt": "2025-12-27T05:35:47.083Z"
+    },
+    {
+      "id": "1",
+      "name": "Admin",
+      "email": "admin@zeptro.com",
+      "password": "admin123",
+      "role": "admin"
     }
   ],
   "categories": [

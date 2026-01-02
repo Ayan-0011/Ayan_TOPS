@@ -25,7 +25,7 @@ const Categories = () => {
     }, []);
 
     const deleteHandler = async (id) => {
-        const check = confirm("Do You want delete")
+        const check = confirm("Do You want delete this Catgeory")
         if (check) {
             const del_user = await axios.delete(`http://localhost:5000/categories/${id}`)
             toast.success("category deleted successfully");
