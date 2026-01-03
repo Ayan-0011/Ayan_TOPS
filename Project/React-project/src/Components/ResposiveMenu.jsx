@@ -33,12 +33,12 @@ const ResposiveMenu = ({ openNav, setOpenNav, getlocation, location, }) => {
 
                 </div>
             <div>
-                <div className='flex items-center gap-4 border border-gray-200 rounded-full p-4 bg-white shadow-sm hover:shadow-md transition'>
+                <div className='flex items-center gap-4 border border-gray-200 rounded-full px-3 py-2 bg-white shadow-sm hover:shadow-md transition'>
                     {
                         user ? <>
                             <UserButton size={50} /> <div>
-                                <h1>Hello,{user?.firstName}</h1>
-                                <h1 className='text-sm text-slate-500'>Premium User</h1>
+                                <h1>Hye, {user?.firstName}</h1>
+                                <p className="text-xs text-gray-700">Welcome {user?.publicMetadata.role === "admin" ? "Admin" : "user" }</p>
                             </div>
                         </>
                             : <div></div>
