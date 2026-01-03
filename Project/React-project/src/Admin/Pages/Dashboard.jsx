@@ -13,7 +13,7 @@ const Dashboard = () => {
     // all data from fetch data in datacontext
     const { data, FetchAllproducts } = getData()
 
-    
+
 
     // orders data 
     const orders = async () => {
@@ -37,6 +37,35 @@ const Dashboard = () => {
         User();
     }, []);
 
+    const AnimatedCounter = ({ target, prefix = "", duration = 2000 }) => {
+        const [count, setCount] = useState(0);
+
+        useEffect(() => {
+            let start = 0;
+            const increment = target / (duration / 50);
+
+            const timer = setInterval(() => {
+                start += increment;
+
+                if (start >= target) {
+                    setCount(target);
+                    clearInterval(timer);
+                } else {
+                    setCount(Math.floor(start));
+                }
+            }, 30);
+
+            return () => clearInterval(timer);
+        }, [target, duration]);
+
+        return (
+            <span>
+                {prefix}
+                {count.toLocaleString("en-IN")}
+            </span>
+        );
+    };
+
     //overall Amount 
     const finalAmount = Myorders.reduce((acc, amt) => acc + amt.totalAmount, 0)
 
@@ -46,10 +75,10 @@ const Dashboard = () => {
                 <h1 className="md:text-3xl text-2xl text-center md:text-start font-bold text-gray-800">Dashboard Overview</h1>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <StatCard icon="💰" title="Total Revenue" value={<span>₹ {finalAmount.toLocaleString("en-IN")}</span>} change={12} bgColor="bg-blue-500" />
-                    <StatCard icon="🛒" title="Total Orders" value={Myorders?.length} change={8} bgColor="bg-green-500" />
-                    <StatCard icon="📦" title="Total Products" value={data?.length} change={-3} bgColor="bg-purple-500" />
-                    <StatCard icon="👥" title="Total Users" value={allusers?.length} change={15} bgColor="bg-orange-500" />
+                    <StatCard icon="💰" title="Total Revenue" value={<AnimatedCounter target={finalAmount} prefix="₹ " />} change={12} bgColor="bg-blue-500" />
+                    <StatCard icon="🛒" title="Total Orders" value={<AnimatedCounter target={Myorders.length} />} change={8} bgColor="bg-green-500" />
+                    <StatCard icon="📦" title="Total Products" value={<AnimatedCounter target={data?.length || 0} />} change={-3} bgColor="bg-purple-500" />
+                    <StatCard icon="👥" title="Total Users" value={<AnimatedCounter target={allusers.length} />} change={15} bgColor="bg-orange-500" />
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">

@@ -33,7 +33,7 @@ const ResposiveMenu = ({ openNav, setOpenNav, getlocation, location, }) => {
 
                 </div>
             <div>
-                <div className='flex  justify-start gap-3'>
+                <div className='flex items-center gap-4 border border-gray-200 rounded-full p-4 bg-white shadow-sm hover:shadow-md transition'>
                     {
                         user ? <>
                             <UserButton size={50} /> <div>

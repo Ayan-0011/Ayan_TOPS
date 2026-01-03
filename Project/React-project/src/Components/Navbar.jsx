@@ -68,17 +68,28 @@ const Navbar = ({ location, getlocation, opendropdown, setOpendropdown }) => {
 
         {/* 🔵 ADMIN ROLE */}
         {SignedIn && user?.publicMetadata?.role === "admin" && (
-          <Link to="/admin/dashbord" className="font-semibold text-gray-900 text-lg" > Dashboard </Link>
+          <NavLink to="/admin/dashbord" className={({ isActive }) => `${isActive ? " border-b-3 transition border-red-500 " : ""} font-semibold text-lg cursor-pointer`} > Dashboard </NavLink>
         )}
 
 
-        <div className='hidden md:block'>
+        <div className='hidden md:block item-center'>
           <SignedOut>
-            <SignInButton 
-             className="bg-red-500 text-white px-2 py-1 rounded-md cursor-pointer" />
+            <SignInButton
+              className="bg-red-500 text-white px-2 py-1 rounded-md cursor-pointer" />
           </SignedOut >
+
           <SignedIn>
-            <UserButton />
+            <div className="flex items-center gap-4 border border-gray-200 rounded-full px-4 py-2 bg-white shadow-sm hover:shadow-md transition">
+              <div className="flex items-center gap-3">
+                <UserButton />
+                <div className="leading-snug">
+                  <p className="text-xs text-gray-700">Welcome {user?.publicMetadata.role === "admin" ? "Admin" : "user" }</p>
+                  <p className="font-semibold text-gray-800">
+                    Hye, {user?.firstName} 
+                  </p>
+                </div>
+              </div>
+            </div>
           </SignedIn>
         </div>
         {
@@ -87,8 +98,8 @@ const Navbar = ({ location, getlocation, opendropdown, setOpendropdown }) => {
         }
         <ResposiveMenu openNav={openNav} setOpenNav={setOpenNav} location={location} getlocation={getlocation} />
 
-      </nav>
-    </div>
+      </nav >
+    </div >
 
 
 

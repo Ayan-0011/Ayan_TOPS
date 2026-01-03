@@ -64,7 +64,8 @@ const Cart = ({ location, getlocation }) => {
     <div className=' flex flex-col gap-3 justify-center items-center h-[590px] mt-10'>
       <div>
         <h1 className='text-red-500/80 font-bold text-3xl md:text-5xl text-muted m-3 '>Plese Sign-up first</h1>
-        <img src={signin} alt="no" onClick={() => navigate('https://winning-hawk-24.accounts.dev/sign-in?redirect_url=http%3A%2F%2Flocalhost%3A5173%2Fcart%2FSignInButton')} className="cursor-pointer w-[300px] md:w-[400px]" />
+        <img src={signin} alt="no" onClick={() => navigate("https://winning-hawk-24.accounts.dev/sign-up?redirect_url=http%3A%2F%2Flocalhost%3A5173%2Fcart%2FSignInButton")} className="cursor-pointer w-[300px] md:w-[400px]" />
+        { navigate("/cart")}
       </div>
     </div>
 
