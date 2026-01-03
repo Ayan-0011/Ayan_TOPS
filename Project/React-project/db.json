@@ -279,6 +279,22 @@
       "min_desc": "Boat Wave Call 3 Smartwatch 1.83” HD Display with Animated Watch Faces; BT Calling, Functional Crown, Multiple Sports Modes, IP68, HR, SpO2 Monitor, Smart Watches for Men & Women (Aqua Blue)",
       "long_desc": "1.83” (4.64 cm) HD Display: Enjoy a 4.64 cm big HD touchscreen that makes every glance feel premium. From checking time in bright sunlight to tracking health stats, the large display delivers crisp visibility. Moreover, the Raise to Wake gesture instantly when you lift your wrist, combining convenience with style.",
       "category": "Smartwatches"
+    },
+    {
+      "id": "1767362701181",
+      "title": "Xiaomi 80 cm (32 inch) ",
+      "brand": "Xiomi",
+      "price": "11999",
+      "discount": "52",
+      "stock": "8",
+      "images": [
+        "https://m.media-amazon.com/images/I/71kjAokz-yL._SX522_.jpg",
+        "https://m.media-amazon.com/images/I/81r5wKCeMvL._SX522_.jpg",
+        "https://m.media-amazon.com/images/I/71h7iHL19YL._SX522_.jpg"
+      ],
+      "min_desc": "Xiaomi 80 cm (32 inch) F Series HD Ready Smart LED Fire TV L32MB-FIN",
+      "long_desc": "Smart TV Features : Fire TV Built-In | Supported Apps: Prime Video | Netflix | Disney+ Hotstar | YouTube | 12000+ apps from App Store | Voice Remote with Alexa | DTH Set-Top Box Integration to switch between DTH TV Channels and OTT apps from home screen",
+      "category": "tv"
     }
   ],
   "orders": [

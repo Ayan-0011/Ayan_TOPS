@@ -32,7 +32,7 @@ const ProductModal = ({ closeModal, FetchAllproducts }) => {
 
     const changeHandel = (e) => {
         setData({ ...obj_cate, id: new Date().getTime().toString(), [e.target.name]: e.target.value });
-        console.log(obj_cate);
+        //console.log(obj_cate);
     }
 
     

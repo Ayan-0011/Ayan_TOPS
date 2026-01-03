@@ -26,7 +26,7 @@ const FeatureProdcuts = () => {
 
         {/* Products Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {data?.slice(9, 14)?.map((item) => (
+          {data?.slice(9, 13)?.map((item) => (
             <div
               key={item.id}
               className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 group overflow-hidden"
