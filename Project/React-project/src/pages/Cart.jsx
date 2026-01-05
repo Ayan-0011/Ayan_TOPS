@@ -16,6 +16,8 @@ import orderSuccess from '../assets/success.json'
 
 const Cart = ({ location, getlocation }) => {
   const { cartitem, updateQuantity, deleteItem, placeOrder } = useCart()
+ 
+  
   const [paymentMethod, setPaymentMethod] = useState();
   const navigate = useNavigate()
 
@@ -201,7 +203,7 @@ const Cart = ({ location, getlocation }) => {
 
                 {/* Grand Total */}
                 <div className="flex justify-between items-center bg-gray-50 p-3 rounded-lg">
-                  <h1 className="font-bold text-lg text-gray-800">Grand Total</h1>
+                  <h1 className="font-bold text-lg text-gray-800">Total Amount</h1>
                   <p className="font-bold text-lg text-red-500">
                     ₹{(totalPrice + 7).toLocaleString("en-IN")}
                   </p>

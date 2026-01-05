@@ -37,7 +37,7 @@ const ResposiveMenu = ({ openNav, setOpenNav, getlocation, location, }) => {
                     {
                         user ? <>
                             <UserButton size={50} /> <div>
-                                <h1>Hye, {user?.firstName}</h1>
+                                <h1>Hey, {user?.firstName}</h1>
                                 <p className="text-xs text-gray-700">Welcome {user?.publicMetadata.role === "admin" ? "Admin" : "user" }</p>
                             </div>
                         </>

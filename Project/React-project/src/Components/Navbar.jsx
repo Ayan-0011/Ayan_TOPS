@@ -85,7 +85,7 @@ const Navbar = ({ location, getlocation, opendropdown, setOpendropdown }) => {
                 <div className="leading-snug">
                   <p className="text-xs text-gray-700">Welcome {user?.publicMetadata.role === "admin" ? "Admin" : "user" }</p>
                   <p className="font-semibold text-gray-800">
-                    Hye, {user?.firstName} 
+                    Hey, {user?.firstName} 
                   </p>
                 </div>
               </div>

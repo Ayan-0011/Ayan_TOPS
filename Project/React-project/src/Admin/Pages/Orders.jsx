@@ -47,13 +47,13 @@ const Orders = () => {
 
   const getStatusColor = (status) => {
     const colors = {
-      'Delivered': 'bg-green-100 text-green-800',
-      'Placed': 'bg-yellow-100 text-yellow-800',
-      'Shipped': 'bg-blue-100 text-blue-800',
-      'Processing': 'bg-purple-100 text-purple-800',
-      'confirmed': 'bg-green-100 text-green-800',
-      'Cancelled': 'bg-yellow-100 text-yellow-800',
-      'Returned': 'bg-red-100 text-red-800',
+      'Delivered': 'bg-green-100 text-green-900',
+      'Placed': 'bg-yellow-100 text-yellow-900',
+      'Shipped': 'bg-blue-100 text-blue-900',
+      'Processing': 'bg-purple-100 text-purple-900',
+      'confirmed': 'bg-green-100 text-green-900',
+      'Cancelled': 'bg-yellow-100 text-yellow-900',
+      'Returned': 'bg-red-100 text-red-900',
     };
     
     return colors[status] || 'bg-gray-100 text-gray-800';
