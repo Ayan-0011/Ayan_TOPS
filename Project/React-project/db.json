@@ -334,7 +334,7 @@
       ],
       "totalAmount": 70006,
       "paymentMethod": "COD",
-      "status": "confirmed",
+      "status": "Placed",
       "createdAt": "2025-12-27T13:21:50.107Z"
     },
     {
@@ -407,7 +407,7 @@
       ],
       "totalAmount": 91505,
       "paymentMethod": "ONLINE",
-      "status": "Placed",
+      "status": "Shipped",
       "createdAt": "2025-12-29T13:16:32.036Z"
     },
     {
@@ -480,7 +480,7 @@
       ],
       "totalAmount": 1406,
       "paymentMethod": "COD",
-      "status": "confirmed",
+      "status": "Processing",
       "createdAt": "2026-01-03T13:52:58.797Z"
     },
     {
@@ -553,7 +553,7 @@
       ],
       "totalAmount": 90006,
       "paymentMethod": "ONLINE",
-      "status": "Placed",
+      "status": "Returned",
       "createdAt": "2026-01-05T05:39:19.131Z"
     }
   ]

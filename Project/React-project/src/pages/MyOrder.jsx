@@ -6,21 +6,21 @@ import { useUser } from '@clerk/clerk-react';
 import { useNavigate } from 'react-router-dom';
 
 const MyOrder = () => {
-const navigate =useNavigate()
+  const navigate = useNavigate()
 
 
   const [FinalOrder, setFinalOrder] = useState([]);
   const { user, isSignedIn, isLoaded } = useUser();
 
   //console.log(user);
-  
+
 
   const order = async () => {
 
-  if (!isLoaded || !isSignedIn) return;
+    if (!isLoaded || !isSignedIn) return;
 
     try {
-      const res = await axios.get(`http://localhost:5000/orders`,{ params :{userId:user.id} });
+      const res = await axios.get(`http://localhost:5000/orders`, { params: { userId: user.id } });
       const myorder = res.data;
       setFinalOrder(myorder)
     } catch (error) {
@@ -33,6 +33,19 @@ const navigate =useNavigate()
   }, [isLoaded, isSignedIn, user?.id]);
 
   //console.log(FinalOrder);
+
+  const getStatusColor = (status) => {
+    const colors = {
+      'Delivered': 'bg-green-100 text-green-800',
+      'Placed': 'bg-yellow-100 text-yellow-800',
+      'Shipped': 'bg-blue-100 text-blue-800',
+      'Processing': 'bg-purple-100 text-purple-800',
+      'confirmed': 'bg-green-100 text-green-800',
+      'Cancelled': 'bg-yellow-100 text-yellow-800',
+      'Returned': 'bg-red-100 text-red-800',
+    };
+    return colors[status] || 'bg-gray-100 text-gray-800';
+  };
 
   return (
     <>
@@ -85,12 +98,7 @@ const navigate =useNavigate()
                   <p className="font-semibold md:text-lg text-md text-gray-800">
                     ₹ Total amount : <span className='font-semibold md:text-lg text-red-500'>{order.totalAmount.toLocaleString("en-IN")}</span>
                   </p>
-                  <span className={`px-3 py-1 text-xs rounded-full
-                  ${order.status === "confirmed"
-                      ? "bg-green-100 text-green-700"
-                      : "bg-yellow-100 text-yellow-700"
-                    }`}
-                  >
+                  <span className={`px-3 py-1 text-xs rounded-full ${getStatusColor(order.status)} `}>
                     {order.status}
                   </span>
                 </div>
@@ -104,7 +112,7 @@ const navigate =useNavigate()
           <h1 className='font-semibold text-3xl text-center text-gray-600'>No Order you Placed  </h1>
           <div className="flex justify-center flex-col items-center h-[500px] w-full">
             <Lottie animationData={notfound} className="w-[400px]" />
-          <button onClick={() => navigate('/product')} className='bg-red-500 text-white px-3 py-2 rounded-md cursor-pointer'>Make Shopping</button>
+            <button onClick={() => navigate('/product')} className='bg-red-500 text-white px-3 py-2 rounded-md cursor-pointer'>Make Shopping</button>
           </div>
 
         </>

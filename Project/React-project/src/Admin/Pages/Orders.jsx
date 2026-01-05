@@ -23,6 +23,28 @@ const Orders = () => {
     orders()
   }, []);
 
+  const updateOrderStatus = async (order, newStatus) => {
+    try {
+      await axios.put(
+        `http://localhost:5000/orders/${order.id}`,
+        {
+          ...order,
+          status: newStatus
+        }
+      );
+
+      // UI update without refetch
+      setMyOrders(prev =>
+        prev.map(o =>
+          o.id === order.id ? { ...o, status: newStatus } : o
+        )
+      );
+    } catch (error) {
+      console.error("Status update failed", error);
+    }
+  };
+
+
   const getStatusColor = (status) => {
     const colors = {
       'Delivered': 'bg-green-100 text-green-800',
@@ -30,8 +52,8 @@ const Orders = () => {
       'Shipped': 'bg-blue-100 text-blue-800',
       'Processing': 'bg-purple-100 text-purple-800',
       'confirmed': 'bg-green-100 text-green-800',
-      'Low Stock': 'bg-yellow-100 text-yellow-800',
-      'Out of Stock': 'bg-red-100 text-red-800',
+      'Cancelled': 'bg-yellow-100 text-yellow-800',
+      'Returned': 'bg-red-100 text-red-800',
     };
     return colors[status] || 'bg-gray-100 text-gray-800';
   };
@@ -72,9 +94,17 @@ const Orders = () => {
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-900">₹ {order.totalAmount.toLocaleString("en-IN")}</td>
                     <td className="px-6 py-4 whitespace-nowrap">
-                      <span className={`px-3 py-1 text-xs font-medium rounded-full ${getStatusColor(order.status)}`}>
-                        {order.status}
-                      </span>
+                      <select
+                        value={order.status}
+                        onChange={(e) => updateOrderStatus(order, e.target.value)}
+                        className={`px-3 py-1 text-xs font-medium rounded-full cursor-pointer ${getStatusColor(order.status)}`}>
+                        <option value="Placed">Placed</option>
+                        <option value="Processing">Processing</option>
+                        <option value="Shipped">Shipped</option>
+                        <option value="Delivered">Delivered</option>
+                        <option value="Cancelled">Cancelled</option>
+                        <option value="Returned">Returned</option>
+                      </select>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{
                       new Date(order.createdAt).toLocaleString("en-IN", {
@@ -87,7 +117,7 @@ const Orders = () => {
                     }</td>
                     <td className="px-6 text-center py-4 whitespace-nowrap text-sm">
                       <button onClick={() => { setSelectedOrderId(order.id); setOpenModal(true); }} className="text-blue-600 hover:text-blue-800 font-medium mr-3 cursor-pointer"><Eye size={25} /></button>
-                    </td> 
+                    </td>
                   </tr>
                 ))}
               </tbody>
