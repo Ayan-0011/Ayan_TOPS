@@ -31,6 +31,8 @@ const App = () => {
 
 
   const { user, isLoaded } = useUser();
+  // console.log(user);
+
 
   useEffect(() => {
 
@@ -62,10 +64,14 @@ const App = () => {
     try {
       const res = await axios.get(`http://localhost:5000/users?user_id=${user.id}`);
 
-      if (res.data.length > 10) {
+      if (res.data.length === 0) {
         const USER_DATA = mapClerkUser(user);
+        //console.log(res.data.length);
+
         await axios.post("http://localhost:5000/users", USER_DATA);
         toast.success(`😊 Welcome ${user.firstName}`)
+      } else {
+        //console.log("User already exists");
       }
     } catch (err) {
       console.error(err);
@@ -129,7 +135,7 @@ const App = () => {
           <Route path='/cart' element={<Cart location={location} getlocation={getlocation} />}></Route>
 
           {/* Routing for admin side  */}
-          <Route path="/admin" element={ <AdminRoute> <Sidebar /> </AdminRoute> }>
+          <Route path="/admin" element={<AdminRoute> <Sidebar /> </AdminRoute>}>
             <Route path="dashbord" element={<Dashboard />} />
             <Route path="orders" element={<Orders />} />
             <Route path="productss" element={<Productss />} />

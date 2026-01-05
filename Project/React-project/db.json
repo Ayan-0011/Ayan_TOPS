@@ -28,11 +28,22 @@
       "createdAt": "2025-12-27T05:35:47.083Z"
     },
     {
-      "id": "1",
-      "name": "Admin",
-      "email": "admin@zeptro.com",
-      "password": "admin123",
-      "role": "admin"
+      "id": "6ccf",
+      "user_id": "user_37pAbsGURG8Krl2xnbeEbHXDgcc",
+      "name": "Tabrez Ansari",
+      "email": "atabrez733@gmail.com",
+      "image": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvdXBsb2FkZWQvaW1nXzM3cEIzUWdKaDlncnk5VFJBeW9wOHZ4N080UCJ9",
+      "role": "user",
+      "createdAt": "2026-01-05T05:08:33.544Z"
+    },
+    {
+      "id": "a0e2",
+      "user_id": "user_37pE8kgVDY0d8YPIuVOswJ4GTyZ",
+      "name": "irfan Ansari",
+      "email": "raessgamer02@gmail.com",
+      "image": "https://img.clerk.com/eyJ0eXBlIjoiZGVmYXVsdCIsImlpZCI6Imluc18zNllnYU9ERExPNDJlUFNkSHJSZDlJbGtuUVYiLCJyaWQiOiJ1c2VyXzM3cEU4a2dWRFkwZDhZUEl1Vk9zd0o0R1R5WiIsImluaXRpYWxzIjoiSUEifQ",
+      "role": "user",
+      "createdAt": "2026-01-05T05:37:34.445Z"
     }
   ],
   "categories": [
@@ -471,6 +482,79 @@
       "paymentMethod": "COD",
       "status": "confirmed",
       "createdAt": "2026-01-03T13:52:58.797Z"
+    },
+    {
+      "id": "a09e",
+      "userId": "user_37pAbsGURG8Krl2xnbeEbHXDgcc",
+      "username": "Tabrez Ansari",
+      "items": [
+        {
+          "id": "1767253032284",
+          "title": "Boat Wave Call 3 Smartwatch",
+          "brand": "boAt ",
+          "price": 1399,
+          "discount": 12,
+          "stock": 2,
+          "images": [
+            "https://m.media-amazon.com/images/I/71dd68N70FL._SX679_.jpg",
+            "https://m.media-amazon.com/images/I/71gam4BCvHL._SX679_.jpg",
+            "https://m.media-amazon.com/images/I/71kCa-5eMuL._SX679_.jpg"
+          ],
+          "min_desc": "Boat Wave Call 3 Smart Watches for Men & Women (Aqua Blue)",
+          "long_desc": "1.83” (4.64 cm) HD Display: Enjoy a 4.64 cm big HD touchscreen that makes every glance feel premium. From checking time in bright sunlight to tracking health stats, the large display delivers crisp visibility. Moreover, the Raise to Wake gesture instantly when you lift your wrist, combining convenience with style.",
+          "category": "Smartwatches",
+          "quantity": 1
+        },
+        {
+          "id": "106",
+          "title": "Sony WH-1000XM5",
+          "category": "audio",
+          "brand": "Sony",
+          "price": 29999,
+          "discount": 12,
+          "stock": 10,
+          "images": [
+            "https://darlingretail.com/cdn/shop/products/8_7d9fabc4-e981-4b1b-a3f3-66d4c0fbe5c6_1024x.jpg?v=1665037821",
+            "https://www.moon-audio.com/cdn/shop/files/sony-wh-1000xm5-smoky-pink-01.jpg?v=1738336452&width=1200",
+            "https://www.sony.co.in/image/f83a8f36a0b29fa48eeaa6471f636390?fmt=png-alpha&wid=1000"
+          ],
+          "min_desc": "Sony premium noise cancelling headphones",
+          "long_desc": "Sony WH-1000XM5 offers industry-leading noise cancellation, crystal-clear calls, premium comfort, and long battery life.",
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 31405,
+      "paymentMethod": "COD",
+      "status": "confirmed",
+      "createdAt": "2026-01-05T05:18:39.204Z"
+    },
+    {
+      "id": "1cf9",
+      "userId": "user_37pE8kgVDY0d8YPIuVOswJ4GTyZ",
+      "username": "irfan Ansari",
+      "items": [
+        {
+          "id": "104",
+          "title": "Apple MacBook Air M1",
+          "category": "laptop",
+          "brand": "Apple",
+          "price": 89999,
+          "discount": 15,
+          "stock": 4,
+          "images": [
+            "https://m.media-amazon.com/images/I/71vFKBpKakL._SL1500_.jpg",
+            "https://assets.techrepublic.com/uploads/2020/11/macbook-air-with-m1-features.jpg",
+            "https://static.toiimg.com/thumb/msid-113603820,width-1280,height-720,imgsize-14974,resizemode-6,overlay-toi_sw,pt-32,y_pad-40/photo.jpg"
+          ],
+          "min_desc": "MacBook Air with Apple M1 chip",
+          "long_desc": "MacBook Air M1 offers blazing-fast performance, silent fanless design, Retina display, and up to 18 hours of battery life.",
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 90006,
+      "paymentMethod": "ONLINE",
+      "status": "Placed",
+      "createdAt": "2026-01-05T05:39:19.131Z"
     }
   ]
 }
