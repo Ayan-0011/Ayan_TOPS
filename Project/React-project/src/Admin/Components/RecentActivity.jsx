@@ -8,7 +8,7 @@ const RecentActivity = () => {
       // orders data 
   const orders = async () => {
     const orders = await axios.get("http://localhost:5000/orders")
-    setMyOrders(orders.data)
+    setMyOrders([...orders.data].reverse());
     //console.log(Myorders);
   }
 

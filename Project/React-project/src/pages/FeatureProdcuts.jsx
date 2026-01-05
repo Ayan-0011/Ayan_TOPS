@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react'
 import { getData } from '../Context/DataContext'
 import { useCart } from '../Context/CartContext';
 import CategoryBanners from './CategoryBanners';
+import { useNavigate } from 'react-router-dom';
 
 const FeatureProdcuts = () => {
 
   const { data, FetchAllproducts } = getData();
 
   const { addToCart } = useCart();
+  const navigate = useNavigate()
 
 
   useEffect(() => {
@@ -27,7 +29,7 @@ const FeatureProdcuts = () => {
         {/* Products Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {data?.slice(9, 13)?.map((item) => (
-            <div
+            <div onClick={() => navigate(`/products/${item.id}`)}
               key={item.id}
               className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 group overflow-hidden"
             >

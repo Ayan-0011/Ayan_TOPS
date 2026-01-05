@@ -55,6 +55,7 @@ const Orders = () => {
       'Cancelled': 'bg-yellow-100 text-yellow-800',
       'Returned': 'bg-red-100 text-red-800',
     };
+    
     return colors[status] || 'bg-gray-100 text-gray-800';
   };
 
@@ -99,9 +100,10 @@ const Orders = () => {
                         onChange={(e) => updateOrderStatus(order, e.target.value)}
                         className={`px-3 py-1 text-xs font-medium rounded-full cursor-pointer ${getStatusColor(order.status)}`}>
                         <option value="Placed">Placed</option>
+                        <option value="Delivered">Delivered</option>
                         <option value="Processing">Processing</option>
                         <option value="Shipped">Shipped</option>
-                        <option value="Delivered">Delivered</option>
+                        <option value="confirmed ">confirmed</option>
                         <option value="Cancelled">Cancelled</option>
                         <option value="Returned">Returned</option>
                       </select>
