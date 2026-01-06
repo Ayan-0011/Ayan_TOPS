@@ -42,26 +42,26 @@ const Sidebar = () => {
                         <NavLink to="/admin/users" className={linkClass}>
                             <span className='text-xl'>👥</span><span className='font-medium'>Users</span>
                         </NavLink>
-                        <button onClick={() => navigate('/')} className='bg-gray-800 mb-5 text-white px-3 py-1 rounded-md cursor-pointer flex gap-1 items-center'><ChevronLeft /> Back to Home </button>
                     </nav>
+                    <button onClick={() => navigate('/')} className='bg-gray-800 mb-5 text-white px-3 py-1 rounded-md cursor-pointer flex gap-1 items-center'><ChevronLeft /> Back to Home </button>
                 </div>
             </div>
 
             {/* Main Content */}
             <div className="flex-1 overflow-x-auto ">
                 {/* Header */}
-                <div className="bg-white shadow-sm p-4 flex items-center justify-between sticky top-0 z-10">
+                <div className="bg-gray-100 shadow-sm p-4 flex items-center justify-between sticky top-0 z-10">
                     <button
                         onClick={() => setSidebarOpen(!sidebarOpen)}
-                        className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
-                    >
+                        className="p-2 rounded-lg hover:bg-gray-100 transition-colors" >
                         <span className="text-2xl">{sidebarOpen ? '✕' : '☰'}</span>
                     </button>
-                    <div className="flex items-center space-x-4">
-                        <span className="text-gray-700 font-medium">Admin User</span>
-                        <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold">
+
+                    <div className="flex items-center space-x-4  gap-1 border border-gray-200 rounded-full p-3 bg-white shadow-sm hover:shadow-lg transition">
+                        <div className=" rounded-full flex text-white font-bold">
                             {<UserButton size={50} />}
                         </div>
+                        <span className="text-gray-700 font-semibold pe-2">Admin User</span>
                     </div>
                 </div>
                 {/* Content */}
