@@ -1,21 +1,23 @@
 import { UserButton } from '@clerk/clerk-react';
 import React, { useState } from 'react';
 import Dashboard from '../Pages/Dashboard';
-import { NavLink, Outlet } from 'react-router-dom';
-import { Layers, Layers2Icon } from 'lucide-react';
+import { NavLink, Outlet, useNavigate } from 'react-router-dom';
+import { ChevronLeft, Layers, Layers2Icon } from 'lucide-react';
 
 
 const Sidebar = () => {
+
+    const navigate = useNavigate()
 
     const linkClass = ({ isActive }) =>
         `w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-all
      ${isActive ? "bg-blue-600 shadow-lg" : "hover:bg-gray-800"}`;
 
-     
+
     const [sidebarOpen, setSidebarOpen] = useState(true);
 
     return (
-        <div className="flex h-full bg-gray-100">
+        <div className="flex h-screen">
             {/* Sidebar */}
             <div className={`${sidebarOpen ? 'w-64' : 'w-0'} bg-gray-900  text-white transition-all duration-300 overflow-hidden flex-shrink-0`}>
                 <div className="p-6 sticky top-0 z-10">
@@ -34,12 +36,13 @@ const Sidebar = () => {
                             <span className='text-xl'>📦</span><span className='font-medium'>Products</span>
                         </NavLink>
                         <NavLink to="/admin/category" className={linkClass}>
-                            <span className='text-xl'><Layers size={20} className='text-blue-500'/></span><span className='font-medium'>Ctaegorys</span>
+                            <span className='text-xl'><Layers size={20} className='text-blue-500' /></span><span className='font-medium'>Ctaegorys</span>
                         </NavLink>
 
                         <NavLink to="/admin/users" className={linkClass}>
                             <span className='text-xl'>👥</span><span className='font-medium'>Users</span>
                         </NavLink>
+                        <button onClick={() => navigate('/')} className='bg-gray-800 mb-5 text-white px-3 py-1 rounded-md cursor-pointer flex gap-1 items-center'><ChevronLeft /> Back to Home </button>
                     </nav>
                 </div>
             </div>

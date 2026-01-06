@@ -22,6 +22,9 @@ import Users from './Admin/Pages/Users'
 import Dashboard from './Admin/Pages/Dashboard'
 import Productss from './Admin/Pages/Productss'
 import Categories from './Admin/Pages/Categories'
+import CartNotOpen from './pages/CartNotOpen'
+import PageNotFound from '../../../React-JS/01-Projects/Demo-project/src/Website/Pages/PageNotFound'
+import MainLayout from './pages/MainLayout'
 
 const App = () => {
   const [location, setLocation] = useState();
@@ -122,32 +125,40 @@ const App = () => {
   return (
     <div>
       <BrowserRouter>
-        <Navbar location={location} getlocation={getlocation} opendropdown={opendropdown} setOpendropdown={setOpendropdown} />
-
         <Routes>
-          <Route path='/' element={<Home />}></Route>
-          <Route path='/about' element={<About />}></Route>
-          <Route path='/product' element={<Products />}></Route>
-          <Route path='/products/:id' element={<SingleProduct />}></Route>
-          <Route path='/category/:category' element={<Category_products />}></Route>
-          <Route path='/contact' element={<Contac />}></Route>
 
-
-          
-          <Route path='/myorder' element={<MyOrder />}></Route>
-          <Route path='/cart' element={<Cart location={location} getlocation={getlocation} />}></Route>
-
-          {/* Routing for admin side  */}
-          <Route path="/admin" element={<AdminRoute> <Sidebar /> </AdminRoute>}>
-            <Route path="dashbord" element={<Dashboard />} />
-            <Route path="orders" element={<Orders />} />
-            <Route path="productss" element={<Productss />} />
-            <Route path="category" element={<Categories />} />
-            <Route path="users" element={<Users />} />
+          {/* navbar and footer routing */}
+          <Route path="/" element={<MainLayout location={location} getlocation={getlocation} opendropdown={opendropdown} setOpendropdown={setOpendropdown} />}>
+            
+            <Route path='/' element={<Home />}></Route>
+            <Route path='/about' element={<About />}></Route>
+            <Route path='/product' element={<Products />}></Route>
+            <Route path='/products/:id' element={<SingleProduct />}></Route>
+            <Route path='/category/:category' element={<Category_products />}></Route>
+            <Route path='/contact' element={<Contac />}></Route>
           </Route>
 
+            {/* not going this route when admin login  */}
+            <Route element={<CartNotOpen />}>
+              <Route path='/myorder' element={<MyOrder />}></Route>
+              <Route path='/cart' element={<Cart location={location} getlocation={getlocation} />}></Route>
+            </Route>
+
+            {/* Routing for admin side  */}
+            <Route path="/admin" element={<AdminRoute> <Sidebar /> </AdminRoute>}>
+              <Route path="dashbord" element={<Dashboard />} />
+              <Route path="orders" element={<Orders />} />
+              <Route path="productss" element={<Productss />} />
+              <Route path="category" element={<Categories />} />
+              <Route path="users" element={<Users />} />
+            </Route>
+
+
+          {/* Page not Found */}
+          <Route path="*" element={<PageNotFound />} />
+
+
         </Routes>
-        <Footer />
       </BrowserRouter>
 
 
