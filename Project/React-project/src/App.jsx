@@ -131,6 +131,9 @@ const App = () => {
           <Route path='/products/:id' element={<SingleProduct />}></Route>
           <Route path='/category/:category' element={<Category_products />}></Route>
           <Route path='/contact' element={<Contac />}></Route>
+
+
+          
           <Route path='/myorder' element={<MyOrder />}></Route>
           <Route path='/cart' element={<Cart location={location} getlocation={getlocation} />}></Route>
 
