@@ -23,8 +23,8 @@ import Dashboard from './Admin/Pages/Dashboard'
 import Productss from './Admin/Pages/Productss'
 import Categories from './Admin/Pages/Categories'
 import CartNotOpen from './pages/CartNotOpen'
-import PageNotFound from '../../../React-JS/01-Projects/Demo-project/src/Website/Pages/PageNotFound'
 import MainLayout from './pages/MainLayout'
+import PageNotFound from './pages/PageNotFound'
 
 const App = () => {
   const [location, setLocation] = useState();
