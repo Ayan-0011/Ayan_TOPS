@@ -4,8 +4,10 @@ import { Navigate, Outlet } from 'react-router-dom'
 
 const CartNotOpen = () => {
 
-    const user = useUser()
+
+    const { user } = useUser();
     //console.log(user.publicMetadata);
+
 
 
     const role = user?.publicMetadata?.role
@@ -13,7 +15,7 @@ const CartNotOpen = () => {
 
     return (
         <div>
-            {role === "admin" ? <Outlet /> : <Navigate to="/" />}
+            {role === "admin" ? <Navigate to="/admin/dashbord" /> : <Outlet />}
         </div>
     )
 }

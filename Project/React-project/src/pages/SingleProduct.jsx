@@ -5,24 +5,27 @@ import Loading from '../assets/Loading4.webm'
 import { IoCartOutline } from 'react-icons/io5';
 import { useCart } from '../Context/CartContext';
 import Breadcrums from '../Components/Breadcrums ';
+import { useUser } from '@clerk/clerk-react';
 
 
 const SingleProduct = () => {
+
+    const {user, isSignedIn } = useUser()
     const [activeImg, setActiveImg] = useState(0);
     const [SingleProduct, setSingleProduct] = useState("");
     const params = useParams()
-    const { addToCart } =useCart()
+    const { addToCart } = useCart()
     const navigator = useNavigate()
     //console.log(params);
 
     const getSingleProduct = async () => {
 
         try {
-           const responce = await axios.get(`http://localhost:5000/products/${params.id}`);
-           const product = responce.data;
-           setSingleProduct(product)
-           //console.log(product);
-           
+            const responce = await axios.get(`http://localhost:5000/products/${params.id}`);
+            const product = responce.data;
+            setSingleProduct(product)
+            //console.log(product);
+
         } catch (error) {
             console.log(error);
         }
@@ -37,7 +40,7 @@ const SingleProduct = () => {
     const price = SingleProduct.price
     //orignal price 
 
-    const discountPercent = Math.floor((30 - 20 + 1)) 
+    const discountPercent = Math.floor((30 - 20 + 1))
     //discountpercenterg mila 
 
     const originalPrice = Math.round(price / (1 - discountPercent / 100))
@@ -80,8 +83,9 @@ const SingleProduct = () => {
                             </div>
 
                             <div className='flex justify-center md:justify-start gap-4 mt-4'>
-                                <button onClick={()=> addToCart(SingleProduct)} className='px-6 flex gap-2 py-2 text-lg bg-red-500 text-white rounded-md cursor-pointer'><IoCartOutline className='w-6 h-6' /> Add to Cart</button>
+                                <button onClick={() => {(isSignedIn) ?  addToCart(SingleProduct) : navigator("/cart") }} className='px-6 flex gap-2 py-2 text-lg bg-red-500 text-white rounded-md cursor-pointer'><IoCartOutline className='w-6 h-6' /> Add to Cart</button>
                             </div>
+    
                         </div>
                     </div>
                 </div > :

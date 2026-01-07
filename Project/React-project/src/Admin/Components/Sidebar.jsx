@@ -1,8 +1,8 @@
 import { UserButton } from '@clerk/clerk-react';
 import React, { useState } from 'react';
-import Dashboard from '../Pages/Dashboard';
 import { NavLink, Outlet, useNavigate } from 'react-router-dom';
-import { ChevronLeft, Layers, Layers2Icon } from 'lucide-react';
+import { ChevronLeft, Layers } from 'lucide-react';
+import { FcFeedback } from 'react-icons/fc';
 
 
 const Sidebar = () => {
@@ -42,6 +42,10 @@ const Sidebar = () => {
 
                         <NavLink to="/admin/users" className={linkClass}>
                             <span className='text-xl'>👥</span><span className='font-medium'>Users</span>
+                        </NavLink>
+
+                        <NavLink to="/admin/fb" className={linkClass}>
+                            <span className='text-xl'><FcFeedback/></span><span className='font-medium'>Feedback's</span>
                         </NavLink>
                     </nav>
                 </div>
