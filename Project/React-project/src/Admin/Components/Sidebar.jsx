@@ -21,6 +21,7 @@ const Sidebar = () => {
             {/* Sidebar */}
             <div className={`${sidebarOpen ? 'w-64' : 'w-0'} bg-gray-900  text-white transition-all duration-300 overflow-hidden flex-shrink-0`}>
                 <div className="p-6 sticky top-0 z-10">
+                    <button onClick={() => navigate('/')} className='bg-white mb-5 text-black px-3 py-1 rounded-md cursor-pointer flex gap-1 items-center'><ChevronLeft /> Back to Home </button>
                     <h2 className="text-2xl font-bold mb-8 text-white ">Admin Panel</h2>
                     <nav className="space-y-2 ">
 
@@ -43,7 +44,6 @@ const Sidebar = () => {
                             <span className='text-xl'>👥</span><span className='font-medium'>Users</span>
                         </NavLink>
                     </nav>
-                    <button onClick={() => navigate('/')} className='bg-gray-800 mb-5 text-white px-3 py-1 rounded-md cursor-pointer flex gap-1 items-center'><ChevronLeft /> Back to Home </button>
                 </div>
             </div>
 
@@ -63,7 +63,7 @@ const Sidebar = () => {
                         </div>
                         <span className="text-gray-700 font-semibold pe-2">Admin User</span>
                     </div>
-                </div>
+                </div>  
                 {/* Content */}
                 {/* <Dashboard /> */}
                 <div className='p-7'>
