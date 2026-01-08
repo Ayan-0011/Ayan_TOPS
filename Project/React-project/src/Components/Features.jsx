@@ -16,7 +16,7 @@ const Features = () => {
             {features.map((feature, index)=> {
                return <div key={index} className='flex items-center justify-center text-center sm:text-left'>
                     <feature.icon className='flex-shrink-0 h-10 w-10 text-gray-600' aria-hidden="true" />
-                    <div className='ml-4'>
+                    <div className='m-4'>
                         <p className='text-base font-medium text-gray-900'>{feature.text}</p>
                         <p className='mt-1 text-sm text-gray-500'>{feature.subtext}</p>
                     </div>

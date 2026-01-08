@@ -38,7 +38,7 @@ const FeatureProdcuts = () => {
                 <img
                   src={item.images[0]}
                   alt={item.title}
-                  className="h-full w-full object-cover group-hover:scale-110 transition duration-300"
+                  className=" px-10 object-cover group-hover:scale-110 transition duration-300"
                 />
 
                 {/* Discount Badge */}

@@ -36,7 +36,7 @@ export default function CategoryBanners() {
 
                         {/* Text */}
                         <div className="absolute bottom-6 left-6 text-white">
-                            <h3 className="text-2xl font-bold uppercase">{cat.name}</h3>
+                            <h3 className="md:text-2xl font-bold uppercase">{cat.name}</h3>
                             <p className="text-sm opacity-90 mt-1">
                                 Explore latest {cat.name}
                             </p>
