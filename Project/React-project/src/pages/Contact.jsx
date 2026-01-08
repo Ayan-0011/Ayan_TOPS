@@ -24,7 +24,7 @@ const Contact = () => {
         name: user.fullName || "",
         email: user.primaryEmailAddress?.emailAddress || "",
         img: user.imageUrl || "",
-        date: new Date().toISOString(), // 👈 DATE ADDED
+        date: new Date().toLocaleString("en-IN"),
       }));
     }
   }, [isLoaded, isSignedIn, user]);
@@ -37,8 +37,8 @@ const Contact = () => {
       toast.success("Thanks for feedback ❤️");
 
       setMessage((prev) => ({
-        ...prev, msg: "",
-        date: new Date().toISOString(),
+        ...prev, msg: "",name:"",email:"",
+        date: new Date().toLocaleString("en-IN"),
       }));
     } catch (error) {
       toast.error("Something went wrong ");
@@ -73,11 +73,11 @@ const Contact = () => {
           {/* Form */}
           <form onSubmit={submitHandler} className="space-y-6">
 
-            <input type="text" name="name" value={message.name} onChange={dataHandler} className="w-full p-2 rounded-xl bg-white/20 text-white" />
+            <input type="text" placeholder="Name" name="name" value={message.name} onChange={dataHandler} className="w-full p-2 rounded-xl bg-white/20 text-white" />
 
-            <input type="email" name="email" value={message.email} onChange={dataHandler} className="w-full p-2 rounded-xl bg-white/20 text-white" />
+            <input type="email" placeholder="Email" name="email" value={message.email} onChange={dataHandler} className="w-full p-2 rounded-xl bg-white/20 text-white" />
 
-            <textarea name="msg" rows="4" value={message.msg} onChange={dataHandler} className="w-full p-2 rounded-xl bg-white/20 text-white" />
+            <textarea name="msg" placeholder="Messges" rows="4" value={message.msg} onChange={dataHandler} className="w-full p-2 rounded-xl bg-white/20 text-white" />
 
             <button type="submit" className="w-full bg-gradient-to-r from-red-500 to-purple-500 py-2 rounded-xl">Send Message 🚀</button>
           </form>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { MapPin } from 'lucide-react'
 import { FaCaretDown } from 'react-icons/fa'
 import { CgClose } from 'react-icons/cg'
@@ -10,6 +10,8 @@ import { HiMenuAlt1, HiMenuAlt2, HiMenuAlt3, HiMenuAlt4 } from 'react-icons/hi'
 import ResposiveMenu from './ResposiveMenu'
 
 const Navbar = ({ location, getlocation, opendropdown, setOpendropdown }) => {
+
+  const navigate =useNavigate()
 
   const { cartitem } = useCart()
   const [openNav, setOpenNav] = useState(false);
