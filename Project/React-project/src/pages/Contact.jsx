@@ -25,7 +25,7 @@ const Contact = () => {
     if (isLoaded && isSignedIn && user) {
       setMessage((prev) => ({
         ...prev,
-        id: isSignedIn ? user.id : generateId(), 
+        id: user.id,
         name: user.fullName || "",
         email: user.primaryEmailAddress?.emailAddress || "",
         img: user.imageUrl || "",
@@ -42,8 +42,14 @@ const Contact = () => {
       return;
     }
 
+    const finalMessage = {
+      ...message,
+      id: isSignedIn ? user.id : generateId(),
+      date: new Date().toLocaleString("en-IN"),
+    };
+
     try {
-      await axios.post("http://localhost:5000/Feedback", message);
+      await axios.post("http://localhost:5000/Feedback", finalMessage);
       toast.success("Thanks for feedback ❤️");
 
       setMessage((prev) => ({

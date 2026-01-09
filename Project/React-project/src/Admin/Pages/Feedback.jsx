@@ -67,7 +67,7 @@ const Feedback = () => {
                             </p>
 
                             {/* Date */}
-                            <p className="mt-4 text-xs text-gray-400 text-right">
+                            <p className="mt-4 mb-5 text-xs text-gray-400 text-right">
                                 {item.date
                                     ? new Date(item.date).toLocaleString()
                                     : new Date(item.createdAt).toLocaleString()}
