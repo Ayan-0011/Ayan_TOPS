@@ -7,6 +7,10 @@ import { toast } from "react-toastify";
 const Contact = () => {
   const { user, isLoaded, isSignedIn } = useUser();
 
+  const generateId = () => {
+    return "fb_" + Date.now() + "_" + Math.floor(Math.random() * 1000);
+  };
+
   const [message, setMessage] = useState({
     id: "",
     name: "",
@@ -16,11 +20,12 @@ const Contact = () => {
     date: "",
   });
 
+
   useEffect(() => {
     if (isLoaded && isSignedIn && user) {
       setMessage((prev) => ({
         ...prev,
-        id: user.id,
+        id: isSignedIn ? user.id : generateId(), 
         name: user.fullName || "",
         email: user.primaryEmailAddress?.emailAddress || "",
         img: user.imageUrl || "",
@@ -32,12 +37,17 @@ const Contact = () => {
   const submitHandler = async (e) => {
     e.preventDefault();
 
+    if (!message.name || !message.email || !message.msg) {
+      toast.error("All fields are required ❌");
+      return;
+    }
+
     try {
       await axios.post("http://localhost:5000/Feedback", message);
       toast.success("Thanks for feedback ❤️");
 
       setMessage((prev) => ({
-        ...prev, msg: "",name:"",email:"",
+        ...prev, msg: "", name: "", email: "",
         date: new Date().toLocaleString("en-IN"),
       }));
     } catch (error) {
@@ -79,7 +89,7 @@ const Contact = () => {
 
             <textarea name="msg" placeholder="Messges" rows="4" value={message.msg} onChange={dataHandler} className="w-full p-2 rounded-xl bg-white/20 text-white" />
 
-            <button type="submit" className="w-full bg-gradient-to-r from-red-500 to-purple-500 py-2 rounded-xl">Send Message 🚀</button>
+            <button type="submit" className="w-full cursor-pointer bg-gradient-to-r from-red-500 to-purple-500 py-2 rounded-xl">Send Message 🚀</button>
           </form>
 
         </div>
