@@ -10,6 +10,7 @@ const Productss = () => {
 
   const { data, FetchAllproducts, } = getData()
   const [openModal, setOpenModal] = useState(false);
+  const [editProduct, setEditProduct] = useState(null);
 
   useEffect(() => {
     FetchAllproducts();
@@ -25,6 +26,11 @@ const Productss = () => {
     return false;
   }
 
+  const editHandler = (product) => {
+    setEditProduct(product);
+    setOpenModal(true);
+  };
+
 
 
 
@@ -38,7 +44,7 @@ const Productss = () => {
             Add New Product
           </button>
           {
-            openModal && (<ProductModal closeModal={() => setOpenModal(false)} FetchAllproducts={FetchAllproducts} />)
+            openModal && (<ProductModal closeModal={() => setOpenModal(false);setEditProduct(null);}} FetchAllproducts={FetchAllproducts} editPoduct={editProduct} />)
           }
         </div>
         <div className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -63,8 +69,8 @@ const Productss = () => {
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-900">₹ {product.price.toLocaleString("en-IN")}</td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{product.stock}</td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm">
-                      <button className="text-blue-600 hover:text-blue-800 font-medium mr-3 cursor-pointer"><Edit size={20} /></button>
-                      <button onClick={()=>deleteHandler(product.id)} className="text-red-600 hover:text-red-800 font-medium cursor-pointer"><Trash2 size={20} /></button>
+                      <button onClick={()=> editHandler(product)} className="text-blue-600 hover:text-blue-800 font-medium mr-3 cursor-pointer"><Edit size={20} /></button>
+                      <button onClick={() => deleteHandler(product.id)} className="text-red-600 hover:text-red-800 font-medium cursor-pointer"><Trash2 size={20} /></button>
                     </td>
                   </tr>
                 ))}

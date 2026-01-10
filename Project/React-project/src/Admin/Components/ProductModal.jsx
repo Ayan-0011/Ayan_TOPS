@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { toast } from 'react-toastify';
 
-const ProductModal = ({ closeModal, FetchAllproducts }) => {
+const ProductModal = ({ closeModal, FetchAllproducts, editProduct }) => {
 
     const [cate, setCate] = useState([]);
 
@@ -35,7 +35,7 @@ const ProductModal = ({ closeModal, FetchAllproducts }) => {
         //console.log(obj_cate);
     }
 
-    
+
 
     const handleImageChange = (e, index) => {
         const newImages = [...obj_cate.images];
@@ -49,17 +49,26 @@ const ProductModal = ({ closeModal, FetchAllproducts }) => {
         }));
     };
 
-    
+
 
 
     const submitHandel = async (e) => {
         e.preventDefault();
-        const obj = await axios.post("http://localhost:5000/products", obj_cate);
-        setData({ ...obj_cate, title: "", brand: "", price: "", discount: "", images: "", stock: "", min_desc: "", long_desc: "" });
-        toast.success('Products add success');
-        FetchAllproducts();
-        closeModal()
-        return false;
+
+        if (editProduct) {
+            await axios.patch(`http://localhost:5000/products/${editProduct.id}`,obj_cate);
+            toast.success("Product updated successfully");
+            return false
+        }
+        else {
+
+            const obj = await axios.post("http://localhost:5000/products", obj_cate);
+            setData({ ...obj_cate, title: "", brand: "", price: "", discount: "", images: "", stock: "", min_desc: "", long_desc: "" });
+            toast.success('Products add success');
+            FetchAllproducts();
+            closeModal()
+            return false;
+        }
     }
 
 
@@ -202,14 +211,14 @@ const ProductModal = ({ closeModal, FetchAllproducts }) => {
                                     placeholder="Image URL 2"
                                     onChange={(e) => handleImageChange(e, 1)}
                                     className="w-full p-2.5 border rounded-lg focus:ring-2 focus:ring-blue-500"
-                                    
+
                                 />
                                 <input
                                     type="url"
                                     placeholder="Image URL 3"
                                     onChange={(e) => handleImageChange(e, 2)}
                                     className="w-full p-2.5 border rounded-lg focus:ring-2 focus:ring-blue-500"
-                                    
+
                                 />
                             </div>
                         </div>
