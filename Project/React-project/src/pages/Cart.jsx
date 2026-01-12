@@ -32,7 +32,7 @@ const Cart = ({ location, getlocation }) => {
       alert("Please select a payment method");
       return;
     }
-    
+
     if (
       !user?.fullName ||
       !location?.state ||
@@ -59,10 +59,7 @@ const Cart = ({ location, getlocation }) => {
 
 
 
-  const totalPrice = cartitem.reduce(
-    (total, item) => total + item.price * item.quantity,
-    0
-  );
+  const totalPrice = cartitem.reduce( (total, item) => total + item.price * item.quantity, 0 );
 
 
   const { user, isLoaded, isSignedIn } = useUser();
@@ -106,8 +103,8 @@ const Cart = ({ location, getlocation }) => {
       {
         cartitem.length > 0 ? <div>
           <div className="flex justify-between mx-5">
-            <h1 className="font-bold md:border border-gray-300 md:p-3 md:rounded-lg md:bg-rose-600 md:text-white text-md md:text-lg mt-2">My Cart ({cartitem.length})</h1>
-            <button onClick={() => navigate('/myorder')} className='bg-gray-800 mb-5 text-white px-2 py-2 rounded-full text- cursor-pointer flex gap-1 items-center'><ChevronDownCircle />Show Previous Order</button>
+            <h1 className="font-bold md:border border-gray-300 md:p-3 md:rounded-lg md:bg-rose-600 md:text-white text-md md:textmd mt-2">My Cart ({cartitem.length})</h1>
+            <button onClick={() => navigate('/myorder')} className='bg-gray-800 mb-5 text-white px-2 py-2 rounded-full text-sm cursor-pointer flex gap-1 items-center'><ChevronDownCircle />Show Previous Order</button>
           </div>
           <div>
             <div className="mt-5">
