@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 import notfound from '../assets/notfound.json'
 import { useUser } from '@clerk/clerk-react';
 import { useNavigate } from 'react-router-dom';
+import { ChevronLeft } from 'lucide-react';
 
 const MyOrder = () => {
   const navigate = useNavigate()
@@ -52,6 +53,7 @@ const MyOrder = () => {
       {FinalOrder.length > 0 ? (
         <div className="min-h-screen w-full bg-gray-100 p-4">
           <div className="max-w-5xl mx-auto space-y-6">
+            <button onClick={() => navigate('/cart')} className='bg-gray-300 mb-5 text-black px-3 py-1 rounded-md cursor-pointer flex gap-1 items-center'><ChevronLeft /> Back to Cart </button>
 
             {FinalOrder.map((order, idx) => (
               <div key={idx} className="bg-white rounded-xl shadow-md p-5"  >

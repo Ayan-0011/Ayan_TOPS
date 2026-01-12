@@ -66,8 +66,8 @@ const Cart = ({ location, getlocation }) => {
     <div className=' flex flex-col gap-3 justify-center items-center h-[590px] mt-10'>
       <div>
         <h1 className='text-red-500/80 font-bold text-3xl md:text-5xl text-muted m-3 '>Plese Sign-up first</h1>
-        <img src={signin} alt="no" onClick={() => navigate("https://winning-hawk-24.accounts.dev/sign-up?redirect_url=http%3A%2F%2Flocalhost%3A5173%2Fcart%2FSignInButton")} className="cursor-pointer w-[300px] md:w-[400px]" />
-        { navigate("/cart")}
+        <img src={signin} alt="no" onClick={() => navigate("https://winning-hawk-24.accounts.dev/sign-up?redirect_url=http%3A%2F%2Flocalhost%3A5173%2Fcart")} className="cursor-pointer w-[300px] md:w-[400px]" />
+
       </div>
     </div>
 
@@ -91,7 +91,7 @@ const Cart = ({ location, getlocation }) => {
       {
         cartitem.length > 0 ? <div>
           <div className="flex justify-between mx-5">
-            <h1 className="font-bold text-md md:text-2xl mt-2">My cart ({cartitem.length})</h1>
+            <h1 className="font-bold md:border border-gray-300 md:p-3 md:rounded-e-full md:bg-rose-600 md:text-white text-md md:text-lg mt-2">My Cart ({cartitem.length})</h1>
             <button onClick={() => navigate('/myorder')} className='bg-gray-800 mb-5 text-white px-2 py-2 rounded-full text- cursor-pointer flex gap-1 items-center'><ChevronDownCircle />Show Previous Order</button>
           </div>
           <div>

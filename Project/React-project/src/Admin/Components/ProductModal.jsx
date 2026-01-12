@@ -66,20 +66,12 @@ const ProductModal = ({ closeModal, FetchAllproducts, editProduct }) => {
     try {
       if (editProduct) {
         // UPDATE
-        await axios.patch(
-          `http://localhost:5000/products/${editProduct.id}`,
-          obj_cate
-        );
+        await axios.put(`http://localhost:5000/products/${editProduct.id}`,obj_cate);
         toast.success("Product updated successfully");
       } else {
-        // ADD
-        await axios.post("http://localhost:5000/products", {
-          ...obj_cate,
-          id: new Date().getTime().toString()
-        });
+        await axios.post("http://localhost:5000/products", {...obj_cate, id: new Date().getTime().toString()});
         toast.success("Product added successfully");
       }
-
       FetchAllproducts();
       closeModal();
 
