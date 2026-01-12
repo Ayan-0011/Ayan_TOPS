@@ -16,8 +16,10 @@ import orderSuccess from '../assets/success.json'
 
 const Cart = ({ location, getlocation }) => {
   const { cartitem, updateQuantity, deleteItem, placeOrder } = useCart()
- 
-  
+  const [phone, setPhone] = useState("");
+
+
+
   const [paymentMethod, setPaymentMethod] = useState();
   const navigate = useNavigate()
 
@@ -28,6 +30,17 @@ const Cart = ({ location, getlocation }) => {
   const handlePlaceOrder = async () => {
     if (!paymentMethod) {
       alert("Please select a payment method");
+      return;
+    }
+    
+    if (
+      !user?.fullName ||
+      !location?.state ||
+      !location?.postcode ||
+      !location?.country ||
+      !phone
+    ) {
+      alert("Please fill all delivery details");
       return;
     }
 
@@ -46,9 +59,11 @@ const Cart = ({ location, getlocation }) => {
 
 
 
+  const totalPrice = cartitem.reduce(
+    (total, item) => total + item.price * item.quantity,
+    0
+  );
 
-
-  const totalPrice = cartitem.reduce((total, item) => total + item.price, 0)
 
   const { user, isLoaded, isSignedIn } = useUser();
 
@@ -77,7 +92,7 @@ const Cart = ({ location, getlocation }) => {
 
   return (
     <div className="mt-10 max-w-6xl mx-auto px-1 md:px-0 mb-10">
-      
+
       {showAnimation && (
         <div className="fixed inset-0 bg-white z-50 flex flex-col items-center justify-center">
           <Lottie animationData={orderSuccess} loop={false} className="w-72 h-72" />
@@ -91,7 +106,7 @@ const Cart = ({ location, getlocation }) => {
       {
         cartitem.length > 0 ? <div>
           <div className="flex justify-between mx-5">
-            <h1 className="font-bold md:border border-gray-300 md:p-3 md:rounded-e-full md:bg-rose-600 md:text-white text-md md:text-lg mt-2">My Cart ({cartitem.length})</h1>
+            <h1 className="font-bold md:border border-gray-300 md:p-3 md:rounded-lg md:bg-rose-600 md:text-white text-md md:text-lg mt-2">My Cart ({cartitem.length})</h1>
             <button onClick={() => navigate('/myorder')} className='bg-gray-800 mb-5 text-white px-2 py-2 rounded-full text- cursor-pointer flex gap-1 items-center'><ChevronDownCircle />Show Previous Order</button>
           </div>
           <div>
@@ -153,7 +168,8 @@ const Cart = ({ location, getlocation }) => {
                   </div>
                   <div className='flex flex-col space-y-1 w-full'>
                     <label htmlFor="">Phone No</label>
-                    <input type="text" placeholder='Enter your Number' className='p-2 rounded-md bg-white w-full' />
+                    <input type="text" placeholder='Enter your Number' value={phone}
+                      onChange={(e) => setPhone(e.target.value)} className='p-2 rounded-md bg-white w-full' />
                   </div>
                 </div>
                 <div className="flex justify-center">
