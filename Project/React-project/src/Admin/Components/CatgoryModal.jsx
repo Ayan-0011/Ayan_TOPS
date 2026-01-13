@@ -1,30 +1,50 @@
 import axios from 'axios';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { toast } from 'react-toastify';
 
-const CategotryModal = ({ closeModal, fetchCategories }) => {
+const CategotryModal = ({ closeModal, fetchCategories, editCategory }) => {
 
     const [obj_cate, setData] = useState({
         id: "",
         name: "",
         images: ""
     });
+    useEffect(() => {
+        if (editCategory) {
+            setData({
+                id: editCategory.id,
+                name: editCategory.name,
+                images: editCategory.images
+            });
+        }
+    }, [editCategory]);
 
     const changeHandel = (e) => {
-        setData({ ...obj_cate, id: new Date().getTime().toString(), [e.target.name]: e.target.value });
+        setData({ ...obj_cate, [e.target.name]: e.target.value });
         //console.log(obj_cate);
     }
 
 
     const submitHandler = async (e) => {
         e.preventDefault()
-        const res = await axios.post("http://localhost:5000/categories", obj_cate)
-        setData({ ...obj_cate, name: "", images: "" });
-        toast.success("Categories add success");
-        fetchCategories();
-        closeModal()
-        return false;
-    }
+        try {
+            if (editCategory) {
+                await axios.put(`http://localhost:5000/categories/${obj_cate.id}`, obj_cate);
+                toast.success("Category updated successfully");
+            } else {
+                await axios.post("http://localhost:5000/categories", { ...obj_cate, id: new Date().getTime().toString(), });
+                toast.success("Category added successfully");
+            }
+
+            fetchCategories();
+            closeModal();
+            setData({ id: "", name: "", images: "" });
+
+        } catch (error) {
+            toast.error("Something went wrong");
+        }
+    };
+
 
 
     return (
@@ -37,14 +57,11 @@ const CategotryModal = ({ closeModal, fetchCategories }) => {
                         ✖
                     </button>
                     <h2 className="text-xl font-semibold mb-4 text-center">
-                        Add Product Details
+                        {editCategory ? "Update Category" : "Add Category"}
                     </h2>
 
                     <form onSubmit={submitHandler}
                         className="space-y-6 bg-white p-6 rounded-xl shadow-lg max-w-md mx-auto">
-                        <h2 className="text-xl font-semibold text-center text-gray-800">
-                            Add New Category
-                        </h2>
 
                         {/* Category Name */}
                         <div>

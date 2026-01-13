@@ -12,6 +12,7 @@ const Categories = () => {
     const [categoryData, setCategoryData] = useState();
     const [products, setProducts] = useState([]);
     const [openModal, setOpenModal] = useState(false);
+    const [editCategory, setEditCategory] = useState(null);
 
     const fetchCategories = async () => {
         try {
@@ -65,7 +66,7 @@ const Categories = () => {
                         Add New Category
                     </button>
                     {
-                        openModal && (<CategotryModal closeModal={() => setOpenModal(false)} fetchCategories={fetchCategories} />)
+                        openModal && (<CategotryModal closeModal={() => {setOpenModal(false); setEditCategory(null); }} fetchCategories={fetchCategories} editCategory={editCategory}/>)
                     }
                 </div>
 
@@ -98,7 +99,7 @@ const Categories = () => {
                             {/* Action Buttons */}
                             <div className="flex gap-4 mt-auto opacity-80 group-hover:opacity-100 transition">
 
-                                <button className="flex cursor-pointer items-center gap-1 px-4 py-2 text-sm font-medium   text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition"  >
+                                <button onClick={()=> { setEditCategory(product); setOpenModal(true); }} className="flex cursor-pointer items-center gap-1 px-4 py-2 text-sm font-medium   text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition"  >
                                     <Edit size={18} />Edit
                                 </button>
 

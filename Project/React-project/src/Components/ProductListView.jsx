@@ -1,8 +1,11 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useCart } from '../Context/CartContext'
+import { useUser } from '@clerk/clerk-react'
 
 const ProductListView = ({ product }) => {
+
+  const { user } = useUser();
   const navigate = useNavigate()
   const { addToCart } = useCart()
   //console.log(product);
@@ -19,6 +22,8 @@ const ProductListView = ({ product }) => {
     });
   };
 
+  const role = user?.publicMetadata?.role === "user";
+
 
   return (
     <div className='space-y-4 mt-2 rounded-md  line-clamp-1'>
@@ -29,7 +34,12 @@ const ProductListView = ({ product }) => {
           <p className='font-semibold flex items-center md:text-lg text-sm'>₹<span className='md:text-2xl text-2xl px-1'>{product.price.toLocaleString("en-IN")}</span>({product.discount}% off)</p>
           <p className='text-sm'>FREE delivery <span className='font-semibold'>{getFutureDayDate(2)}</span> <br />
             Or fastest delivery <span className='font-semibold'>{getFutureDayDate(1)}</span></p>
-          <button onClick={() => addToCart(product)} className='bg-red-500 text-white cursor-pointer px-3 py-1 rounded-md'>Add to Cart</button>
+            {
+              (role ? 
+                <button onClick={() => addToCart(product)} className='bg-red-500 text-white cursor-pointer px-3 py-1 rounded-md'>Add to Cart</button>
+                :null
+              ) 
+            }
         </div>
       </div>
     </div>
