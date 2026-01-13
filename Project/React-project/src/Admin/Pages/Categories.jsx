@@ -89,7 +89,7 @@ const Categories = () => {
                                     {product.name}
                                 </h1>
                                 <p className='flex items-center gap-2'>
-                                    {categoryCounts[product.name] || 0} Products <Eye size={20} onClick={()=> navigate() } className='text-blue-500 cursor-pointer' />
+                                    {categoryCounts[product.name] || 0} Products <Eye size={20} onClick={()=> navigate(`/category/${product.name}`) } className='text-blue-500 cursor-pointer' />
                                 </p>
                             </div>
 
@@ -110,12 +110,7 @@ const Categories = () => {
                         </div>
                     ))}
                 </div>
-
-
-
             </div>
-
-
         </>
     )
 }

@@ -33,7 +33,7 @@ const Category_products = () => {
         <>
             {
                 Category_products.length > 0 ? <div className='max-w-6xl mx-auto mt-10 mb-10 px-4'>
-                    <button onClick={() => navigate('/')} className='bg-gray-800 mb-5 text-white px-3 py-1 rounded-md cursor-pointer flex gap-1 items-center'><ChevronLeft /> Back</button>
+                    <button onClick={() => navigate(-1)} className='bg-gray-800 mb-5 text-white px-3 py-1 rounded-md cursor-pointer flex gap-1 items-center'><ChevronLeft /> Back</button>
                     {
                         Category_products.map((product, index) => {
                             return <ProductListView key={index} product={product} category={category} />
