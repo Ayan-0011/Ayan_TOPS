@@ -10,13 +10,16 @@ import { useUser } from '@clerk/clerk-react';
 
 const SingleProduct = () => {
 
-    const {user, isSignedIn } = useUser()
+    const { user, isSignedIn } = useUser()
     const [activeImg, setActiveImg] = useState(0);
     const [SingleProduct, setSingleProduct] = useState("");
     const params = useParams()
     const { addToCart } = useCart()
     const navigator = useNavigate()
     //console.log(params);
+
+    
+    const role = user?.publicMetadata?.role === "admin";
 
     const getSingleProduct = async () => {
 
@@ -83,9 +86,14 @@ const SingleProduct = () => {
                             </div>
 
                             <div className='flex justify-center md:justify-start gap-4 mt-4'>
-                                <button onClick={() => {(isSignedIn) ?  addToCart(SingleProduct) : navigator("/cart") }} className='px-6 flex gap-2 py-2 text-lg bg-red-500 text-white rounded-md cursor-pointer'><IoCartOutline className='w-6 h-6' /> Add to Cart</button>
+
+                                { !role ? (  
+                                    <button onClick={() => { (isSignedIn) ? addToCart(SingleProduct) : navigator("/cart") }} className='px-6 flex gap-2 py-2 text-lg bg-red-500 text-white rounded-md cursor-pointer'><IoCartOutline className='w-6 h-6' /> Add to Cart</button>
+                                ): null 
+                                }
+                             
                             </div>
-    
+
                         </div>
                     </div>
                 </div > :
