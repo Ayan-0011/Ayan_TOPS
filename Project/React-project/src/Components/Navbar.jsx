@@ -24,9 +24,9 @@ const Navbar = ({ location, getlocation, opendropdown, setOpendropdown }) => {
 
   return (
 
-    <div className="max-w-7xl mx-auto nav flex justify-between md:px-5 ps-4 pe-3 py-5 items-center ">
+    <div className="sticky top-0 z-10 bg-white flex justify-between md:px-5 ps-4 pe-3 py-5 items-center">
 
-      <div className='flex gap-7 item-center'>
+      <div className='flex gap-7 item-center md:ms-40 mx-3'>
         <h1 className='font-semibold text-3xl'><span className='text-red-500 font-serif'>Z</span>aptro</h1>
         <div className='md:flex gap-1 cursor-pointer text-gray-700 items-center hidden'>
           <MapPin className="text-red-500" />
@@ -47,7 +47,7 @@ const Navbar = ({ location, getlocation, opendropdown, setOpendropdown }) => {
         </div>
       </div>
 
-      <nav className='flex md:gap-7 gap-1 items-center'>
+      <nav className='flex md:gap-7 gap-1 items-center md:me-30'>
         <ul className='md:flex gap-7 font-semibold text-lg items-center hidden'>
           <NavLink to={'/'} className={({ isActive }) => `${isActive ? " border-b-3 transition border-red-500 " : "text-black"}cursor-pointer`} > <li>Home</li></NavLink>
           <NavLink to={'/about'} className={({ isActive }) => `${isActive ? " border-b-3 transition border-red-500 " : ""}cursor-pointer`}><li>About</li></NavLink>
