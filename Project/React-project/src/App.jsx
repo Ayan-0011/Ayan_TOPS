@@ -26,6 +26,7 @@ import CartNotOpen from './pages/CartNotOpen'
 import MainLayout from './pages/MainLayout'
 import PageNotFound from './pages/PageNotFound'
 import Feedback from './Admin/Pages/Feedback'
+import ScrollToTop from './Components/ScrollToTop'
 
 const App = () => {
   const [location, setLocation] = useState();
@@ -126,11 +127,11 @@ const App = () => {
   return (
     <div>
       <BrowserRouter>
+         {/* smooth transtion when other page open  */}
+            <ScrollToTop/>
         <Routes>
-
           {/* navbar and footer routing */}
           <Route path="/" element={<MainLayout location={location} getlocation={getlocation} opendropdown={opendropdown} setOpendropdown={setOpendropdown} />}>
-
             <Route path='/' element={<Home />}></Route>
             <Route path='/about' element={<About />}></Route>
             <Route path='/product' element={<Products />}></Route>
@@ -145,7 +146,6 @@ const App = () => {
             </Route>
           </Route>
             
-
           {/* Routing for admin side  */}
           <Route path="/admin" element={<AdminRoute> <Sidebar /> </AdminRoute>}>
             <Route path="dashbord" element={<Dashboard />} />
@@ -155,12 +155,8 @@ const App = () => {
             <Route path="users" element={<Users />} />
             <Route path="fb" element={<Feedback />} />
           </Route>
-
-
           {/* Page not Found */}
           <Route path="*" element={<PageNotFound />} />
-
-
         </Routes>
       </BrowserRouter>
 
