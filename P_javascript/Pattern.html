@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="num" placeholder="Enter no">
+    <button onclick="console.log(ex());">Submit</button>
+    <script>
+
+        function ex() {
+
+            let n = (document.getElementById("num").value);
+
+            let i;
+            let j;
+
+            let result = "";
+
+            for (i = 1; i <= n; i++) { // for row
+                for (j = 1; j <= i; j++) { // for colum 
+                    result += j; // store in result
+                }
+
+                result += "\n"; // for a new line 
+            }
+
+            return result //store data 
+        }
+
+
+
+    </script>
+</body>
+
+</html>

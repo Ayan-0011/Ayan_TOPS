@@ -1,0 +1,9 @@
+.hero{
+    font-size: 25px;
+    margin: 0px 50px;
+}
+.loading{
+    text-align: center;
+    font-size: 50px;
+    color: red;;
+}
