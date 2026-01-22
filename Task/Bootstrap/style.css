@@ -1,0 +1,129 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Sarabun', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar-nav .nav-link {
+    padding: 30px 25px;
+    width: 120px;
+    transition: 0.3s;
+    display: inline-block;
+    height: 90px;
+    text-align: center;
+    margin-right: 1px;
+    position: sticky;
+    top: 5px;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+
+.navbar-nav .nav-link:active {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+
+.main {
+    background-image: url("https://www.tooplate.com/templates/2095_level/img/bg-img-1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    position: relative;
+}
+
+.form {
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    background: #ffffff;
+    z-index: 99;
+    width: 50%;
+    margin: auto;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.info {
+    padding: 15px;
+}
+
+.form-control {
+    margin: 4px;
+}
+
+.btn1 {
+    margin: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.msg {
+    padding-top: 15px;
+    padding-left: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner {
+    text-align: center;
+    background: #dc3545;
+    color: white;
+    height: 200px;
+    clip-path: polygon(0 0, 100% 0%, 100% 80%, 50% 100%, 0 80%);
+    margin-bottom: 30px;
+    padding: 25px;
+}
+
+.banner button {
+    padding: 8px;
+    border-radius: 5px;
+    width: 150px;
+    margin-top: 15px;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    margin-top: -30px;
+    margin-bottom: 50px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+
+.card i {
+    font-size: 55px;
+}
+
+
+#section2 {
+    width: 100%;
+    height: auto;
+    background: rgb(216, 215, 215);
+    padding: 50px;
+    margin-top: 15px;
+}
+#section3{
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://www.tooplate.com/templates/2095_level/img/bg-img-2.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+}

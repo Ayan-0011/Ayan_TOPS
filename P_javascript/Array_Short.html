@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Sum of Total Arrays value 
+        let a = [10, 22, 54, 42, 86];
+        let i, j, temp;
+
+        for (i = 0; i <= 5; i++)
+         {
+            for (j = i + 1; j <= 5; j++)
+             {
+                if (a[i] > a[j]) 
+                {
+                    temp=a[i];  // Swapping two value with 3rd variable
+                    a[i]=a[j];
+                    a[j]=temp
+                }
+            }
+        }
+
+        for(i=0; i<5; i++){
+            document.writeln("accending no:" + a[i] + "<br>")
+        }
+
+
+
+    </script>
+</body>
+
+</html>
