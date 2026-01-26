@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+        let a=[1,2,3,2,1];
+
+        let left =0;
+        let right=a.length-1;
+        let ans="yes";
+
+        while(left<right){
+
+            if((a[left]==a[right])){
+
+                left++;
+                right--;
+                continue
+            }
+            else{
+                ans="no"
+                break
+            }
+            
+        }
+        console.log(ans);
+
+    </script>
+</body>
+</html>

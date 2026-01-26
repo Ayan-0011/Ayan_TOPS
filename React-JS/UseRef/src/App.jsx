@@ -18,7 +18,7 @@ function UseRef() {
 
    const changeHandel=()=>{
      count.current=count.current+1;
-     console.log(countqqqq.current);
+     console.log(count.current);
     }    
     
   return (
