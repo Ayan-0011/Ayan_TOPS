@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="number" placeholder="enter marks 1" id="sub1">
+    <input type="number" placeholder="enter marks 2" id="sub2">
+    <input type="number" placeholder="enter marks 3" id="sub3">
+    <input type="number" placeholder="enter marks 4" id="sub4">
+    <input type="number" placeholder="enter marks 5" id="sub5">
+
+    <button onclick="per()">Submit</button>
+
+    <h2 id="tm"></h2>
+    <h2 id="pr"></h2>
+    <script>
+        //Find Percentage of 5 Subjects in javascript.
+
+
+        function per(){
+
+            let m1=Number(document.getElementById("sub1").value);
+            let m2=Number(document.getElementById("sub2").value);
+            let m3=Number(document.getElementById("sub3").value);
+            let m4=Number(document.getElementById("sub4").value);
+            let m5=Number(document.getElementById("sub5").value);
+
+            
+            
+            let total = m1 + m2 + m3 + m4 + m5;
+            
+            let percentage = (total / 500) * 100;
+            
+            document.getElementById("tm").innerHTML ="Total Marks:" + total+ "/500";
+            document.getElementById("pr").innerHTML ="Percentage:" + percentage.toFixed(2) +"%";
+
+            console.log("total number",total+ "/500");
+            console.log("percentage",percentage.toFixed(2) +"%");
+        }
+
+        
+        
+
+    </script>
+</body>
+</html>

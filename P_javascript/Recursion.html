@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function fibonaci(n)
+        {
+            if(n <= 1){
+                return n;
+            }
+            return fibonaci(n - 1) + fibonaci(n - 2);
+        }
+
+        n=10;
+
+        for(let i=0; i< n; i++){
+            console.log(fibonaci(i));    
+        }
+
+    </script>
+</body>
+</html>

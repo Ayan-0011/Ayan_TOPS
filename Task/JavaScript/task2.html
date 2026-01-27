@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // *Convert a Person's Name in Abbreviated Form in javascript. 
+
+
+        function abbreviateName(fullName) {
+
+            let words = fullName.trim().split(" "); // trim() use to remove extra space(starting and ending) from word like " ayan " -> "ayan"
+                                                    // split("") use to String ko words ke array me convert karta hai
+                                                    
+            let initials = words.map(word => word[0].toUpperCase());
+
+            return initials.join("."); // join(".") Array ko string me dot ke saath join karta hai
+        }
+
+        let name1 = prompt("Enter Your Name")
+        console.log(abbreviateName(name1));
+
+
+    </script>
+</body>
+</html>
