@@ -13,4 +13,5 @@ const res=[];
 for(let i=rev.length-1;i>=0;i--){
     res.push(rev[i]);
 }
-comsole.log(res); // Output: [50,40,30,20,10]
+console.log(res); // Output: [50,40,30,20,10]
+
