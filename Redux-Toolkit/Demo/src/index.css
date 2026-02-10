@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f2f5;
+  padding: 20px;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 600px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 20px;
+}
+
+.title {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.user-name {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.user-name span {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.counter-display {
+  text-align: center;
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.counter-display h2 {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.counter-value {
+  font-size: 56px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+.btn-change {
+  background-color: #28a745;
+  color: white;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn-change:hover {
+  background-color: #218838;
+}
+
+.input-group {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.input-button-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.input-field {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.btn-success {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #138496;
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .counter-value {
+    font-size: 42px;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .input-button-wrapper {
+    flex-direction: column;
+  }
+}
