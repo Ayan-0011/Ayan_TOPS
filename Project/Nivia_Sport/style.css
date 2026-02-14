@@ -140,6 +140,7 @@
         height: 70px;
         display: flex;
         align-items: center;
+        justify-content:space-between;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: 600;
         font-size: 15px;
@@ -148,8 +149,9 @@
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         padding: 0 20px;
         width: 100%;
+        margin: 0;
+        z-index: 1100;
     }
-
     .hamburger {
         display: none;
         flex-direction: column;
@@ -201,6 +203,7 @@
         gap: 5px;
         flex: 1;
         align-items: center;
+        padding-left: 200px;
     }
 
     .nav a {
@@ -210,7 +213,7 @@
         display: flex;
         align-items: center;
         position: relative;
-        font-size: 13px;
+        font-size: 15px;
         font-weight: 600;
         transition: var(--hover-transition);
         white-space: nowrap;
@@ -329,7 +332,8 @@
         .logos,
         .clear_hover {
             display: none !important;
-            visibility: hidden !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
         }
     }
 
@@ -398,7 +402,8 @@
 
     @media (max-width: 480px) {
         .main img {
-            max-height: 200px;
+            max-height:100vh;
+            object-fit:cover;
         }
     }
 
@@ -858,7 +863,7 @@
 
     hr.new3 {
         border: 1px solid var(--border-color);
-        margin-top: 15px;
+        margin-top: 1px;
         margin-bottom: 0;
     }
 
@@ -1063,17 +1068,24 @@
 
     .items {
         margin: 50px 0px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        align-items: flex-start;
 
     }
 
     .ts {
-        width: 25%;
+        flex: 0 0 calc(25% - 30px);
+        box-sizing: border-box;
         height: 420px;
-        float: left;
-        margin-right: 60px;
-        margin-bottom: 40px;
-        transition-duration: 0.7s;
-        margin-left: 20px;
+        margin: 0;
+        transition: transform 0.35s ease, box-shadow 0.35s ease;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        border-radius: 8px;
+        overflow: hidden;
     }
 
     .ts button {
@@ -1081,38 +1093,47 @@
         height: 40px;
         background-color: black;
         color: white;
-        visibility: hidden;
+        opacity: 0;
+        transform: translateY(8px);
+        transition: opacity 0.25s ease, transform 0.25s ease;
+        border: none;
+        cursor: pointer;
     }
 
     .ts:hover {
-        border: 1px solid rgb(114, 103, 103);
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    }
 
+    .ts img {
+        width: 100%;
+        height: auto;
+        flex: 1 1 auto;
+        object-fit: cover;
+        transition: var(--hover-transition);
     }
 
     .ts img:hover {
-        transform: scaleX(-1);
+        transform: scale(1.05);
     }
 
     .ts:hover button {
-        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
     }
 
     .ts h3 {
-        margin-left: 30px;
+        margin: 12px 16px 8px;
         text-align: center;
-
-    }
-
-    .ts h4 {
-        text-align: center;
+        font-size: 16px;
     }
 
     .ts p {
-        margin-left: 70px;
-        padding-top: 10px;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        font-weight: 1200;
-
+        margin: 0 16px 16px;
+        padding-top: 8px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        text-align: center;
     }
 
     /* all sport li css*/
@@ -1173,11 +1194,11 @@
         /* Flex layout me sticky ko kaam karne me help karta hai */
         background: #fff;
         /* Zarurat ho to background color fix kar do */
-        z-index: -10;
+        z-index: 10;
     }
 
     .items p {
-        padding-bottom: 50px;
+        padding-bottom: 5px;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 400;
         font-size: 16px;
@@ -1386,8 +1407,6 @@
     }
 
 
-    }
-
     .clubs_img p {
         text-align: center;
     }
@@ -1395,17 +1414,20 @@
     /* nav me all sport div hide/remove ke css */
 
     .ashover {
-        position: absolute;
+        position: fixed;
         top: 70px;
         left: 0;
+        right: 0;
         background-color: white;
         width: 100%;
-        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
         font-size: 18px;
         display: flex !important;
-        z-index: 1000;
+        z-index: 9999;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         padding: 20px;
+        transition: opacity 0.3s ease-in-out;
     }
 
 
@@ -1438,23 +1460,28 @@
         padding: 7px;
     }
 
-    .allhover:hover .ashover {
-        visibility: visible;
+    .allhover:hover ~ .ashover,
+    .ashover:hover {
+        opacity: 0 !important;
+        pointer-events: none !important;
     }
 
     /* nav me apprale div hide/remove ke css */
 
     .apparel_hover {
-        position: absolute;
+        position: fixed;
         top: 70px;
         left: 0;
+        right: 0;
         background-color: white;
         width: 100%;
         display: flex !important;
-        visibility: hidden;
-        z-index: 1000;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 999;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         padding: 20px;
+        transition: opacity 0.3s ease-in-out;
     }
 
     .APPAREL {
@@ -1481,61 +1508,76 @@
         padding-top: 30px;
     }
 
-    .APl:hover .apparel_hover {
-        visibility: visible;
+    .APl:hover ~ .apparel_hover,
+    .apparel_hover:hover {
+        opacity: 0 !important;
+        pointer-events: none !important;
     }
 
     /* nav me footwaear div hide/remove ke css */
 
     .foot_hover {
-        position: absolute;
+        position: fixed;
         top: 70px;
         left: 0;
+        right: 0;
         background-color: white;
         width: 100%;
         display: flex !important;
-        visibility: hidden;
-        z-index: 1000;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 999;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         padding: 20px;
+        transition: opacity 0.3s ease-in-out;
     }
 
-    .foot:hover .foot_hover {
-        visibility: visible;
+    .foot:hover ~ .foot_hover,
+    .foot_hover:hover {
+        opacity: 0 !important;
+        pointer-events: none !important;
     }
 
     /* nav me fitness div hide/remove ke css */
 
     .fit_hover {
-        position: absolute;
+        position: fixed;
         top: 70px;
         left: 0;
+        right: 0;
         background-color: white;
         width: 100%;
         display: flex !important;
-        visibility: hidden;
-        z-index: 1000;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 999;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         padding: 20px;
+        transition: opacity 0.3s ease-in-out;
     }
 
-    .fit:hover .fit_hover {
-        visibility: visible;
+    .fit:hover ~ .fit_hover,
+    .fit_hover:hover {
+        opacity: 0 !important;
+        pointer-events: none !important;
     }
 
     /* Accessories div hide/show css  */
 
     .acc_hover {
-        position: absolute;
+        position: fixed;
         top: 70px;
         left: 0;
+        right: 0;
         background-color: white;
         width: 100%;
         display: flex !important;
-        visibility: hidden;
-        z-index: 1000;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 999;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         padding: 20px;
+        transition: opacity 0.3s ease-in-out;
     }
 
     .acc {
@@ -1562,22 +1604,26 @@
         padding-top: 30px;
     }
 
-    .Accessories:hover .acc_hover {
-        visibility: visible;
+    .Accessories:hover ~ .acc_hover,
+    .acc_hover:hover {
+        opacity: 0 !important;
+        pointer-events: none !important;
     }
 
     /*offer div hide/show ki css  */
     .clear_hover {
-        position: absolute;
+        position: fixed;
         width: 200px;
         top: 70px;
         left: 0;
         background-color: white;
         color: black;
-        visibility: hidden;
-        z-index: 1000;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 99999;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         padding: 15px;
+        transition: opacity 0.3s ease-in-out;
     }
 
     .clear p {
@@ -1587,23 +1633,28 @@
         padding: 8px;
     }
 
-    .clearness:hover .clear_hover {
-        visibility: visible;
+    .clearness:hover ~ .clear_hover,
+    .clear_hover:hover {
+        opacity: 0 !important;
+        pointer-events: none !important;
     }
 
     /* nav me mucle sport div hide/remove ke css */
 
     .mucle_hover {
-        position: absolute;
+        position: fixed;
         top: 70px;
         left: 0;
+        right: 0;
         background-color: white;
         width: 100%;
         display: flex !important;
-        visibility: hidden;
-        z-index: 1000;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 999;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         padding: 20px;
+        transition: opacity 0.3s ease-in-out;
     }
 
     .mucle_sport {
@@ -1623,8 +1674,10 @@
         margin-top: 20px;
     }
 
-    .mucle:hover .mucle_hover {
-        visibility: visible;
+    .mucle:hover ~ .mucle_hover,
+    .mucle_hover:hover {
+        opacity: 0 !important;
+        pointer-events: none !important;
     }
 
     /*  appelepage ke css */
@@ -1656,6 +1709,60 @@
 
     .green {
         background-color: green;
+    }
+
+    /* Responsive adjustments: ensure main items appear before sidebar on small screens
+       and convert card layout to a stacked flow to avoid the sidebar jumping above content */
+    @media (max-width: 768px) {
+        .club {
+            order: 2;
+            width: 100% !important;
+            padding: 20px;
+            display: none;
+        }
+
+        .items {
+            order: 1;
+            gap: 16px;
+            margin: 20px 0;
+        }
+
+        .asid {
+            position: static;
+            z-index: 10;
+            display: none;
+        }
+
+        .ts {
+            flex: 0 0 100%;
+            gap: 7px;
+            height: auto;
+            border: 2px solid slategray;
+            text-align: center;
+        }
+
+        .ts img {
+            max-height: 420px;
+            height: auto;
+        }
+
+        .ts h3 {
+            font-size: 18px;
+        }
+
+        .ts p {
+            font-size: 18px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .club {
+            padding: 16px;
+        }
+
+        .ts img {
+            max-height: 360px;
+        }
     }
 
     .gray {

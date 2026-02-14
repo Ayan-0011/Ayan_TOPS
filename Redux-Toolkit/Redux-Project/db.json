@@ -6,6 +6,13 @@
             "email":"jhon@gmail.com",
             "Password":"john123",
             "image":""
+        },
+        {
+            "id":"02",
+            "name":"ayan",
+            "email":"ayan00@gmail.com",
+            "Password":"ayan2255",
+            "image":""
         }
     ]
 }
