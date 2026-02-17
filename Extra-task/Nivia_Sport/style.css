@@ -126,7 +126,6 @@
         header {
             font-size: 10px;
             height: 35px;
-            display: none;
         }
 
         header p {
@@ -275,11 +274,6 @@
             position: sticky;
             top: 0px;
         }
-        nav{
-            position: sticky;
-            top: 0;
-            z-index: 999999;
-        }
 
         .hamburger {
             display: flex;
@@ -290,7 +284,7 @@
         .nav-menu {
             position: fixed;
             left: 0;
-            top: 54px;
+            top: 90px;
             width: 100%;
             max-height: 0;
             overflow-y: auto;
@@ -997,12 +991,10 @@
     /* club ki css */
 
     .club {
-        padding: 26px 22px 24px;
-        font-size: 18px;
-        background: linear-gradient(145deg, #ffffff 0%, #f7f7f7 40%, #fdfdfd 100%);
-        border-radius: 18px;
-        box-shadow: 0 14px 35px rgba(0, 0, 0, 0.08);
-        border: 1px solid rgba(0, 0, 0, 0.04);
+        padding: 30px 20px;
+        font-size: 20px;
+
+
     }
 
     hr.new1 {
@@ -1021,12 +1013,9 @@
     }
 
     .club h2 {
-        margin-top: 18px;
-        margin-bottom: 18px;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        font-size: 22px;
-        font-weight: 700;
-        letter-spacing: 0.5px;
+        margin-top: 70px;
+        margin-bottom: 30px;
+        font-family: cursive;
     }
 
     .club p {
@@ -1040,61 +1029,42 @@
     }
 
     .siz button {
-        padding: 6px 14px;
-        margin: 6px 6px;
-        min-width: 60px;
-        font-size: 13px;
-        border-radius: 999px;
-        border: 1px solid #d2d2d2;
-        background-color: #ffffff;
-        color: #333;
-        cursor: pointer;
-        transition: background-color var(--hover-transition), color var(--hover-transition), box-shadow var(--hover-transition), transform var(--hover-transition), border-color var(--hover-transition);
+
+        padding: 20px;
+        padding-top: 10px;
+        margin: 10px 10px;
+        height: 20px;
+        width: 80px;
+        font-size: 15px;
+        background-color: white;
+        color: black;
     }
 
     .siz button:hover {
-        background-color: #000;
-        color: #fff;
-        border-color: #000;
-        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
-        transform: translateY(-1px);
+        background-color: black;
+        color: white;
     }
 
     .prc {
-        margin-top: 28px;
-        font-size: 15px;
-        font-weight: 600;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
+        margin-top: 50px;
+        font-size: 30px;
     }
 
     .prc button {
-        padding: 6px 10px;
-        margin-right: 10px;
-        min-width: 90px;
-        font-size: 13px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        border-radius: 999px;
-        border: 1px solid #d2d2d2;
-        background-color: #ffffff;
-        cursor: pointer;
-        transition: background-color var(--hover-transition), color var(--hover-transition), box-shadow var(--hover-transition), transform var(--hover-transition), border-color var(--hover-transition);
+        padding-right: 10px;
+        margin-right: 40px;
+        height: 30px;
+        width: 80px;
+        font-size: 15px;
+        font-family: fantasy;
+        margin-top: 10px;
+
+
     }
 
-    .prc button span {
-        padding-right: 4px;
-        padding-left: 0;
-        font-weight: 700;
-    }
-
-    .prc button:hover {
-        background-color: #000;
-        color: #fff;
-        border-color: #000;
-        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
-        transform: translateY(-1px);
+    .prc span {
+        padding-right: 20px;
+        padding-left: 5px;
     }
 
     .items {
@@ -1109,15 +1079,14 @@
     .ts {
         flex: 0 0 calc(25% - 30px);
         box-sizing: border-box;
-        min-height: 420px;
+        height: 420px;
         margin: 0;
         transition: transform 0.35s ease, box-shadow 0.35s ease;
         display: flex;
         flex-direction: column;
         background: #fff;
-        border-radius: 12px;
+        border-radius: 8px;
         overflow: hidden;
-        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
     }
 
     .ts button {
@@ -1171,98 +1140,61 @@
     /* all sport li css*/
 
     .as {
-        font-size: 26px;
-        padding: 18px 30px 8px;
-        font-weight: 700;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        letter-spacing: 0.4px;
+        font-size: 25px;
+        padding: 20px 30px;
     }
 
     .asid {
-        padding: 26px 22px 24px;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        background: linear-gradient(145deg, #ffffff 0%, #f7f7f7 40%, #fdfdfd 100%);
-        border-radius: 18px;
-        box-shadow: 0 14px 35px rgba(0, 0, 0, 0.08);
-        border: 1px solid rgba(0, 0, 0, 0.04);
+        padding: 29px 30px;
+        font-family: sans-serif;
     }
 
     .scr {
         height: 230px;
-        padding: 4px 6px 4px 4px;
-        overflow-y: auto;
-        margin-bottom: 18px;
-        width: 100%;
-        border-radius: 12px;
-        background: #fafafa;
-        border: 1px solid #ececec;
+        padding-left: 20px;
+        padding-right: 50px;
+        overflow-x: auto;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        width: 90%;
+
     }
 
     .cate {
         display: flex;
         justify-content: space-between;
-        align-items: center;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        padding: 8px 10px;
-        font-weight: 400;
-        font-size: 14px;
-        border-radius: 8px;
-        transition: background-color var(--hover-transition), transform var(--hover-transition);
-    }
-
-    .cate span {
-        font-size: 12px;
-        color: #888;
-    }
-
-    .cate:hover {
-        background-color: rgba(0, 0, 0, 0.03);
-        transform: translateX(2px);
+        padding-top: 10PX;
+        font-weight: 300;
     }
 
     .size {
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        padding: 6px 10px;
+        padding-top: 10px;
+        padding-right: 20px;
+        margin-right: 20px;
+        padding-left: 20px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 15px;
-        font-weight: 400;
-        border-radius: 8px;
-        transition: background-color var(--hover-transition), transform var(--hover-transition);
-    }
+        font-size: 18px;
+        font-weight: 300;
 
-    .size span:first-child {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-    }
-
-    .size span:last-child {
-        font-size: 12px;
-        color: #888;
-    }
-
-    .size:hover {
-        background-color: rgba(0, 0, 0, 0.03);
-        transform: translateX(2px);
     }
 
     .sz {
+
         height: 200px;
-        width: 100%;
-        overflow-y: auto;
-        padding: 4px;
-        border-radius: 12px;
-        background: #fafafa;
-        border: 1px solid #ececec;
+        width: 90%;
+        overflow-x: auto;
     }
 
     .asid {
         position: sticky;
         top: 0;
         align-self: flex-start;
+        /* Flex layout me sticky ko kaam karne me help karta hai */
         background: #fff;
+        /* Zarurat ho to background color fix kar do */
         z-index: 10;
     }
 
@@ -1780,32 +1712,38 @@
         background-color: green;
     }
 
-    /* Responsive sidebar + cards: mobile layout */
+    /* Responsive adjustments: ensure main items appear before sidebar on small screens
+       and convert card layout to a stacked flow to avoid the sidebar jumping above content */
     @media (max-width: 768px) {
-        .items {
+        .club {
             order: 2;
+            width: 100% !important;
+            padding: 20px;
+            display: none;
+        }
+
+        .items {
+            order: 1;
             gap: 16px;
             margin: 20px 0;
         }
 
-        .asid,
-        .club {
+        .asid {
             position: static;
             z-index: 10;
-            width: 100% !important;
-            padding: 18px 18px 14px;
-            margin: 10px 10px 16px;
+            display: none;
         }
 
         .ts {
             flex: 0 0 100%;
             gap: 7px;
             height: auto;
+            border: 2px solid slategray;
             text-align: center;
         }
 
         .ts img {
-            max-height: 360px;
+            max-height: 420px;
             height: auto;
         }
 
@@ -1814,18 +1752,17 @@
         }
 
         .ts p {
-            font-size: 16px;
-        }
-
-        /* hide unused mobile filter pill now that sidebar is always visible */
-        .filter-toggle {
-            display: none;
+            font-size: 18px;
         }
     }
 
     @media (max-width: 480px) {
+        .club {
+            padding: 16px;
+        }
+
         .ts img {
-            max-height: 320px;
+            max-height: 360px;
         }
     }
 
@@ -1843,101 +1780,4 @@
 
     .white {
         background-color: rgba(219, 209, 209, 0.4)
-    }
-
-    /* Filter toggle button for mobile sidebar */
-    .filter-toggle {
-        display: none;
-        align-items: center;
-        justify-content: space-between;
-        gap: 8px;
-        padding: 10px 16px;
-        margin: 16px;
-        border-radius: 999px;
-        border: 1px solid var(--border-color);
-        background: #fff;
-        font-size: 14px;
-        font-weight: 600;
-        cursor: pointer;
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-        transition: background-color var(--hover-transition), box-shadow var(--hover-transition), transform var(--hover-transition);
-    }
-
-    .filter-toggle span {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-    }
-
-    .filter-toggle-icon {
-        width: 16px;
-        height: 16px;
-        border-radius: 3px;
-        border: 2px solid var(--primary-color);
-        position: relative;
-        transition: var(--hover-transition);
-    }
-
-    .filter-toggle-icon::after {
-        content: '';
-        position: absolute;
-        inset: 3px;
-        border-radius: 2px;
-        background: var(--secondary-color);
-        opacity: 0;
-        transform: scale(0.6);
-        transition: var(--hover-transition);
-    }
-
-    .filter-toggle.active {
-        background: #000;
-        color: #fff;
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
-        transform: translateY(-1px);
-    }
-
-    .filter-toggle.active .filter-toggle-icon {
-        border-color: #fff;
-    }
-
-    .filter-toggle.active .filter-toggle-icon::after {
-        opacity: 1;
-        transform: scale(1);
-    }
-
-    @media (max-width: 768px) {
-        .filter-toggle {
-            display: inline-flex;
-        }
-    }
-
-    /* Smooth hover for category tiles, launches and blog cards */
-    .cricket_cat,
-    .footabll_cat,
-    .launch,
-    .blogs {
-        transition: transform var(--hover-transition), box-shadow var(--hover-transition), background-color var(--hover-transition);
-    }
-
-    .cricket_cat:hover,
-    .footabll_cat:hover,
-    .launch:hover,
-    .blogs:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
-        background-color: #ffffff;
-    }
-
-    .cricket_cat img,
-    .footabll_cat img,
-    .launch img,
-    .blogs img {
-        transition: transform var(--hover-transition);
-    }
-
-    .cricket_cat:hover img,
-    .footabll_cat:hover img,
-    .launch:hover img,
-    .blogs:hover img {
-        transform: scale(1.05);
     }

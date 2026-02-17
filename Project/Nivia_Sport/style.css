@@ -126,6 +126,7 @@
         header {
             font-size: 10px;
             height: 35px;
+            display: none;
         }
 
         header p {
@@ -274,6 +275,11 @@
             position: sticky;
             top: 0px;
         }
+        nav{
+            position: sticky;
+            top: 0;
+            z-index: 999999;
+        }
 
         .hamburger {
             display: flex;
@@ -284,7 +290,7 @@
         .nav-menu {
             position: fixed;
             left: 0;
-            top: 90px;
+            top: 54px;
             width: 100%;
             max-height: 0;
             overflow-y: auto;
@@ -991,10 +997,12 @@
     /* club ki css */
 
     .club {
-        padding: 30px 20px;
-        font-size: 20px;
-
-
+        padding: 26px 22px 24px;
+        font-size: 18px;
+        background: linear-gradient(145deg, #ffffff 0%, #f7f7f7 40%, #fdfdfd 100%);
+        border-radius: 18px;
+        box-shadow: 0 14px 35px rgba(0, 0, 0, 0.08);
+        border: 1px solid rgba(0, 0, 0, 0.04);
     }
 
     hr.new1 {
@@ -1013,9 +1021,12 @@
     }
 
     .club h2 {
-        margin-top: 70px;
-        margin-bottom: 30px;
-        font-family: cursive;
+        margin-top: 18px;
+        margin-bottom: 18px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
     }
 
     .club p {
@@ -1029,42 +1040,61 @@
     }
 
     .siz button {
-
-        padding: 20px;
-        padding-top: 10px;
-        margin: 10px 10px;
-        height: 20px;
-        width: 80px;
-        font-size: 15px;
-        background-color: white;
-        color: black;
+        padding: 6px 14px;
+        margin: 6px 6px;
+        min-width: 60px;
+        font-size: 13px;
+        border-radius: 999px;
+        border: 1px solid #d2d2d2;
+        background-color: #ffffff;
+        color: #333;
+        cursor: pointer;
+        transition: background-color var(--hover-transition), color var(--hover-transition), box-shadow var(--hover-transition), transform var(--hover-transition), border-color var(--hover-transition);
     }
 
     .siz button:hover {
-        background-color: black;
-        color: white;
+        background-color: #000;
+        color: #fff;
+        border-color: #000;
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+        transform: translateY(-1px);
     }
 
     .prc {
-        margin-top: 50px;
-        font-size: 30px;
+        margin-top: 28px;
+        font-size: 15px;
+        font-weight: 600;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
     }
 
     .prc button {
-        padding-right: 10px;
-        margin-right: 40px;
-        height: 30px;
-        width: 80px;
-        font-size: 15px;
-        font-family: fantasy;
-        margin-top: 10px;
-
-
+        padding: 6px 10px;
+        margin-right: 10px;
+        min-width: 90px;
+        font-size: 13px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border-radius: 999px;
+        border: 1px solid #d2d2d2;
+        background-color: #ffffff;
+        cursor: pointer;
+        transition: background-color var(--hover-transition), color var(--hover-transition), box-shadow var(--hover-transition), transform var(--hover-transition), border-color var(--hover-transition);
     }
 
-    .prc span {
-        padding-right: 20px;
-        padding-left: 5px;
+    .prc button span {
+        padding-right: 4px;
+        padding-left: 0;
+        font-weight: 700;
+    }
+
+    .prc button:hover {
+        background-color: #000;
+        color: #fff;
+        border-color: #000;
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+        transform: translateY(-1px);
     }
 
     .items {
@@ -1079,14 +1109,15 @@
     .ts {
         flex: 0 0 calc(25% - 30px);
         box-sizing: border-box;
-        height: 420px;
+        min-height: 420px;
         margin: 0;
         transition: transform 0.35s ease, box-shadow 0.35s ease;
         display: flex;
         flex-direction: column;
         background: #fff;
-        border-radius: 8px;
+        border-radius: 12px;
         overflow: hidden;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
     }
 
     .ts button {
@@ -1140,61 +1171,98 @@
     /* all sport li css*/
 
     .as {
-        font-size: 25px;
-        padding: 20px 30px;
+        font-size: 26px;
+        padding: 18px 30px 8px;
+        font-weight: 700;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        letter-spacing: 0.4px;
     }
 
     .asid {
-        padding: 29px 30px;
-        font-family: sans-serif;
+        padding: 26px 22px 24px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: linear-gradient(145deg, #ffffff 0%, #f7f7f7 40%, #fdfdfd 100%);
+        border-radius: 18px;
+        box-shadow: 0 14px 35px rgba(0, 0, 0, 0.08);
+        border: 1px solid rgba(0, 0, 0, 0.04);
     }
 
     .scr {
-        height: 230px;
-        padding-left: 20px;
-        padding-right: 50px;
-        overflow-x: auto;
-        margin-right: 20px;
-        margin-bottom: 20px;
-        width: 90%;
-
+        height: 150px;
+        padding: 4px 6px 4px 4px;
+        overflow-y: auto;
+        margin-bottom: 10px;
+        width: 100%;
+        border-radius: 12px;
+        background: #fafafa;
+        border: 1px solid #ececec;
     }
 
     .cate {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        padding-top: 10PX;
-        font-weight: 300;
+        padding: 8px 10px;
+        font-weight: 400;
+        font-size: 14px;
+        border-radius: 8px;
+        transition: background-color var(--hover-transition), transform var(--hover-transition);
+    }
+
+    .cate span {
+        font-size: 12px;
+        color: #888;
+    }
+
+    .cate:hover {
+        background-color: rgba(0, 0, 0, 0.03);
+        transform: translateX(2px);
     }
 
     .size {
         display: flex;
         justify-content: space-between;
-        padding-top: 10px;
-        padding-right: 20px;
-        margin-right: 20px;
-        padding-left: 20px;
+        align-items: center;
+        padding: 6px 10px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 18px;
-        font-weight: 300;
+        font-size: 15px;
+        font-weight: 400;
+        border-radius: 8px;
+        transition: background-color var(--hover-transition), transform var(--hover-transition);
+    }
 
+    .size span:first-child {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .size span:last-child {
+        font-size: 12px;
+        color: #888;
+    }
+
+    .size:hover {
+        background-color: rgba(0, 0, 0, 0.03);
+        transform: translateX(2px);
     }
 
     .sz {
-
         height: 200px;
-        width: 90%;
-        overflow-x: auto;
+        width: 100%;
+        overflow-y: auto;
+        padding: 4px;
+        border-radius: 12px;
+        background: #fafafa;
+        border: 1px solid #ececec;
     }
 
     .asid {
         position: sticky;
         top: 0;
         align-self: flex-start;
-        /* Flex layout me sticky ko kaam karne me help karta hai */
         background: #fff;
-        /* Zarurat ho to background color fix kar do */
         z-index: 10;
     }
 
@@ -1234,7 +1302,7 @@
 
     .launch {
         width: 20%;
-        height: 350px;
+        height: 400px;
         float: left;
         padding-left: 10px;
     }
@@ -1261,7 +1329,7 @@
     }
 
     .blogs {
-        height: 550px;
+        height: 600px;
         width: 30%;
         margin-left: 40px;
         border: 1px solid black;
@@ -1639,6 +1707,10 @@
         opacity: 0 !important;
         pointer-events: none !important;
     }
+    .blogs img{
+            height: 300px;
+        }
+
 
     /* nav me mucle sport div hide/remove ke css */
 
@@ -1712,18 +1784,10 @@
         background-color: green;
     }
 
-    /* Responsive adjustments: ensure main items appear before sidebar on small screens
-       and convert card layout to a stacked flow to avoid the sidebar jumping above content */
+    /* Responsive sidebar + cards: mobile layout */
     @media (max-width: 768px) {
-        .club {
-            order: 2;
-            width: 100% !important;
-            padding: 20px;
-            display: none;
-        }
-
         .items {
-            order: 1;
+            order: 2;
             gap: 16px;
             margin: 20px 0;
         }
@@ -1731,19 +1795,58 @@
         .asid {
             position: static;
             z-index: 10;
-            display: none;
+            width: 100% !important;
+            padding: 0;
+            margin: 0;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out, padding 0.4s ease-in-out;
+            background: #fff;
+            border-radius: 0;
+            box-shadow: none;
+            border: none;
+        }
+
+        .asid.active {
+            max-height: 1000px;
+            opacity: 1;
+            padding: 18px 18px 14px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .club {
+            position: static;
+            z-index: 10;
+            width: 100% !important;
+            padding: 0;
+            margin: 0;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out, padding 0.4s ease-in-out;
+            background: #fff;
+            border-radius: 0;
+            box-shadow: none;
+            border: none;
+        }
+
+        .club.active {
+            max-height: 1000px;
+            opacity: 1;
+            padding: 18px 18px 14px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .ts {
             flex: 0 0 100%;
             gap: 7px;
             height: auto;
-            border: 2px solid slategray;
             text-align: center;
         }
 
         .ts img {
-            max-height: 420px;
+            max-height: 360px;
             height: auto;
         }
 
@@ -1752,17 +1855,18 @@
         }
 
         .ts p {
-            font-size: 18px;
+            font-size: 16px;
+        }
+
+        /* Show filter toggle on mobile */
+        .filter-toggle {
+            display: inline-flex;
         }
     }
 
     @media (max-width: 480px) {
-        .club {
-            padding: 16px;
-        }
-
         .ts img {
-            max-height: 360px;
+            max-height: 320px;
         }
     }
 
@@ -1780,4 +1884,304 @@
 
     .white {
         background-color: rgba(219, 209, 209, 0.4)
+    }
+
+    /* Filter toggle button for mobile sidebar */
+    .filter-toggle {
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        padding: 10px 16px;
+        margin: 16px;
+        border-radius: 999px;
+        border: 1px solid var(--border-color);
+        background: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        transition: background-color var(--hover-transition), box-shadow var(--hover-transition), transform var(--hover-transition);
+    }
+
+    .filter-toggle span {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .filter-toggle-icon {
+        width: 16px;
+        height: 16px;
+        border-radius: 3px;
+        border: 2px solid var(--primary-color);
+        position: relative;
+        transition: var(--hover-transition);
+    }
+
+    .filter-toggle-icon::after {
+        content: '';
+        position: absolute;
+        inset: 3px;
+        border-radius: 2px;
+        background: var(--secondary-color);
+        opacity: 0;
+        transform: scale(0.6);
+        transition: var(--hover-transition);
+    }
+
+    .filter-toggle.active {
+        background: #000;
+        color: #fff;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+        transform: translateY(-1px);
+    }
+
+    .filter-toggle.active .filter-toggle-icon {
+        border-color: #fff;
+    }
+
+    .filter-toggle.active .filter-toggle-icon::after {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    @media (max-width: 768px) {
+        .filter-toggle {
+            display: inline-flex;
+        }
+
+        /* Cricket page responsive styles */
+        .category {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 8px;
+            padding-top: 20px;
+            padding: 20px 10px;
+        }
+
+        .cricket_cat {
+            width: calc(50% - 4px);
+            height: 120px;
+            text-align: center;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .cricket_cat img {
+            max-height: 80px;
+            max-width: 100%;
+            object-fit: cover;
+            width: auto;
+        }
+
+        .cricket_cat p {
+            font-size: 12px;
+            padding-top: 8px;
+            margin: 0;
+        }
+
+        .main h1 {
+            padding: 20px 15px;
+            font-size: 20px;
+        }
+
+        .main img {
+            width: 100%;
+            height: 80vh;
+            object-fit: cover;
+        }
+
+        .launch {
+            width: 100%;
+            height: auto;
+            float: none;
+            padding: 10px 0;
+            margin-bottom: 15px;
+        }
+
+        .launch img {
+            width: 100%;
+            height: auto;
+            max-height: 250px;
+        }
+
+        .dis {
+            font-size: 14px;
+            padding-left: 10px;
+            padding-top: 8px;
+        }
+
+        .price {
+            padding-left: 10px;
+            padding-top: 3px;
+            color: red;
+            font-size: 18px;
+        }
+
+        .blg h1 {
+            padding: 20px 15px;
+            font-size: 20px;
+        }
+
+        .blogs {
+            height: auto;
+            width: 100%;
+            margin-left: 0;
+            margin-bottom: 15px;
+            border: 1px solid #e0e0e0;
+            font-size: 14px;
+            font-weight: 100;
+            font-family: sans-serif;
+            float: none;
+            border-radius: 8px;
+            padding: 15px;
+        }
+        
+        .blogs a {
+            text-decoration: none;
+            color: gray;
+            font-size: 13px;
+            font-weight: 200;
+            padding-top: 0;
+            padding-left: 0;
+        }
+
+        .blogs h3 {
+            padding: 10px 0;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        .blogs span {
+            padding: 10px 0;
+            font-size: 12px;
+        }
+
+        .blogs p {
+            padding: 5px 0;
+            margin-bottom: 10px;
+            font-size: 13px;
+        }
+
+        .footabll_cat {
+            width: 100%;
+            max-width: 150px;
+            height: 120px;
+            padding: 10px 5px;
+            padding-left: 0;
+        }
+
+        .footabll_cat img {
+            max-height: 80px;
+            object-fit: contain;
+        }
+
+        .footabll_cat p {
+            font-size: 12px;
+            padding-top: 5px;
+        }
+
+        /* Football & Other Sports Pages Responsive */
+        .fc {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-top: 20px;
+        }
+
+        .level {
+            width: 100%;
+            padding: 20px 15px;
+        }
+
+        .level h1 {
+            padding: 20px 0;
+            font-size: 20px;
+        }
+
+        .shop_level {
+            width: 100%;
+            margin-left: 0;
+            margin-bottom: 15px;
+            float: none;
+        }
+
+        .shop_level img {
+            width: 100%;
+            height: auto;
+            max-height: 250px;
+        }
+
+        .partner {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 0;
+        }
+
+        .partner img {
+            width: 100%;
+            height: auto;
+        }
+
+        .partner2 {
+            width: 100%;
+        }
+
+        .prt1 {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .prt1 img {
+            width: 100%;
+            height: auto;
+            max-height: 250px;
+        }
+
+        .bner {
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .bner img,
+        .bner2 img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    /* Smooth hover for category tiles, launches and blog cards */
+    .cricket_cat,
+    .footabll_cat,
+    .launch,
+    .blogs {
+        transition: transform var(--hover-transition), box-shadow var(--hover-transition), background-color var(--hover-transition);
+    }
+
+    .cricket_cat:hover,
+    .footabll_cat:hover,
+    .launch:hover,
+    .blogs:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+        background-color: #ffffff;
+    }
+
+    .cricket_cat img,
+    .footabll_cat img,
+    .launch img,
+    .blogs img {
+        transition: transform var(--hover-transition);
+    }
+
+    .cricket_cat:hover img,
+    .footabll_cat:hover img,
+    .launch:hover img,
+    .blogs:hover img {
+        transform: scale(1.05);
     }
