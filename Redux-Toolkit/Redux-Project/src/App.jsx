@@ -8,10 +8,14 @@ import Add_user from './Website/Pages/Add_user'
 import Manage_user from './Website/Pages/Manage_user'
 import Dashbord from './Website/Pages/Dashbord'
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const App = () => {
   return (
     <div>
       <BrowserRouter>
+         <ToastContainer></ToastContainer>
         <Routes>
           <Route path="/" element={<><Header /><Dashbord /><Footer /></>}></Route>
           <Route path="/contact" element={<><Header /><Contact /><Footer /></>}></Route>

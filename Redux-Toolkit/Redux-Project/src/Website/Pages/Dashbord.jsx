@@ -1,13 +1,16 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 
 function Dashbord() {
+
+    const { name } = useSelector((s)=> s.data)
     return (
         <div>
             <section className="bg-success py-5">
                 <div className="container">
                     <div className="row align-items-center py-5">
                         <div className="col-md-8 text-white">
-                            <h1>About Us</h1>
+                            <h1>About Us {name}</h1>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
