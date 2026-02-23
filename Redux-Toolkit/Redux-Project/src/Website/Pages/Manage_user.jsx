@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { delete_data, get_data } from '../../Redux/Slices/FetchdataSlice'
-import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 
 const Manage_user = () => {
@@ -15,13 +14,13 @@ const Manage_user = () => {
     const { users } = useSelector((state) => state.data);
     //console.log(users);
 
-    const redirect = useNavigate();
-    
+  
     const deleteitme = (id) => { 
         dispatch(delete_data(id))
         toast.success("user deleted successfully")
     }
-
+    
+  
     return (
         <div>
             <div>
@@ -62,7 +61,7 @@ const Manage_user = () => {
                                                     </td>
                                                     <td className="text-center">
                                                         <button onClick={() => deleteitme(items.id)} className="btn btn-danger me-2">Delete</button>
-                                                        <button onClick={() => redirect("/")} className="btn btn-primary">Edit</button>
+                                                        <button className="btn btn-primary">Edit</button>
                                                     </td>
                                                 </tr>
 
