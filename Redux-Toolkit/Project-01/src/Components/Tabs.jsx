@@ -12,7 +12,7 @@ const Tabs = () => {
 
   return (
 
-    <div className='flex gap-10 p-10'>
+    <div className='flex justify-center gap-10 p-5'>
       {
         tab.map((value,idx)=>{
           return(

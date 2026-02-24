@@ -8,9 +8,13 @@ const ResultCard = ({ items }) => {
         {items.type == 'video' ? <video autoPlay muted loop src={items.src} className='h-full w-full object-cover'></video> : ""}
         {items.type == 'gif' ? <img src={items.src} className=' h-full w-full object-cover' /> : ""}
       </a>
-      <div id='bottom' className="absolute bottom-0 h-[35%] w-full px-2 py-4 text-white">
-        <h2 className='text-xl font-semibold capitalize'>{items.title}</h2>
-      </div>
+      <div id='bottom' className='flex justify-between gap-3 items-center w-full px-4 py-6 absolute bottom-0 text-white'>
+                <h2 className='text-lg font-semibold capitalize h-14 overflow-hidden'>{items.title}</h2>
+                <button
+                    className='bg-indigo-600 active:scale-95 text-white rounded px-3 py-1 cursor-pointer font-medium'>
+                    Save
+                </button>
+            </div>
     </div>
   )
 }

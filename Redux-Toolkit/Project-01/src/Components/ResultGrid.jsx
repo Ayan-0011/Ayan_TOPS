@@ -68,21 +68,40 @@ const ResultGrid = () => {
   }, [quary, activeTab]);
 
 
-  if(error) return <h1>Error</h1>
-  if(loading) return <h1>Loading....</h1>
+  // if (error) return <h1>Error</h1>
+
+  if (loading){
+
+    return <div className='bg-gray-950 w-full h-[61vh] flex items-center justify-center'>
+
+     <div className='animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-blue-500'></div>
+
+  </div>
+  } else if(error) {
+    return <div className='bg-gray-950 w-full h-[61vh] flex items-center justify-center'>
+
+    <h1 className='font-extrabold text-4xl'>Error: {error}</h1>
+  </div>
+  }else if(quary === "" || quary === null){
+    return <div className='bg-gray-950 w-full h-[61vh] flex items-center justify-center'>
+      <h1 className='font-extrabold text-4xl'>No results found</h1>
+      </div>
+  }
+  
+
 
 
 
   return (
     <div className='flex justify-between px-10 w-full flex-wrap gap-6 h-auto py-5'>
       {
-        results.map((items, idx)=>{
+        results.map((items, idx) => {
           return <>
             <div key={idx}>
-                <ResultCard items={items}/>
+              <ResultCard items={items} />
             </div>
           </>
-        })  
+        })
       }
     </div>
   )
