@@ -70,39 +70,35 @@ const ResultGrid = () => {
 
   // if (error) return <h1>Error</h1>
 
-  if (loading){
+  if (loading) {
 
     return <div className='bg-gray-950 w-full h-[61vh] flex items-center justify-center'>
 
-     <div className='animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-blue-500'></div>
+      <div className='animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-blue-500'></div>
 
-  </div>
-  } else if(error) {
+    </div>
+  } else if (error) {
     return <div className='bg-gray-950 w-full h-[61vh] flex items-center justify-center'>
 
-    <h1 className='font-extrabold text-4xl'>Error: {error}</h1>
-  </div>
-  }else if(quary === "" || quary === null){
+      <h1 className='font-extrabold text-4xl'>Error: {error}</h1>
+    </div>
+  } else if (quary === "" || quary === null) {
     return <div className='bg-gray-950 w-full h-[61vh] flex items-center justify-center'>
       <h1 className='font-extrabold text-4xl'>No results found</h1>
-      </div>
+    </div>
   }
-  
+
 
 
 
 
   return (
-    <div className='flex justify-between px-10 w-full flex-wrap gap-6 h-auto py-5'>
-      {
-        results.map((items, idx) => {
-          return <>
-            <div key={idx}>
-              <ResultCard items={items} />
-            </div>
-          </>
-        })
-      }
+    <div className="columns-2 sm:columns-3 md:columns-4 lg:columns-5 gap-3 px-5 py-5">
+      {results.map((items, idx) => (
+        <div key={idx} className="mb-4 break-inside-avoid">
+          <ResultCard items={items} />
+        </div>
+      ))}
     </div>
   )
 }

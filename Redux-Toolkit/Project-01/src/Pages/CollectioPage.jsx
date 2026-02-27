@@ -16,29 +16,23 @@ const CollectioPage = () => {
   }
 
   return (
-    <div className='px-10 py-6 '>
+    <div className='md:px-10 px-5 py-6 '>
       {
         items.length > 0 ?
           <div className='flex justify-between mb-5'>
-            <h2 className='font-semibold text-2xl'>Your Collections: {items.length}</h2>
-            <button onClick={() => clearall()} className='bg-red-700 active:scale-95 px-4 py-2 rounded-full cursor-pointer'>Clear Collections</button>
+            <h2 className='font-semibold md:text-2xl'>Your Collections: {items.length}</h2>
+            <button onClick={() => clearall()} className='bg-red-700 active:scale-95 md:px-4 md:py-2 py-1 px-2 rounded-full cursor-pointer'>Clear Collections</button>
           </div>
-          : 
-           <h2 className='font-semibold text-center text-4xl'>Collections is Empty</h2>
+          :
+          <h2 className='font-semibold text-center md:text-4xl text-2xl'>Collections is Empty</h2>
       }
 
-
-      <div className='flex justify-start w-full flex-wrap gap-6 h-auto'>
-        {
-          items.map((items) => {
-            return (
-              <div>
-                <CollectionCard items={items} />
-              </div>
-            )
-          })
-
-        }
+      <div className="columns-2 sm:columns-3 md:columns-4 lg:columns-5 gap-3 px-5 py-5">
+        { items.map((items, idx) => (
+          <div key={idx} className="mb-4 break-inside-avoid">
+            <CollectionCard items={items}  />
+          </div>
+        ))}
       </div>
     </div>
   )

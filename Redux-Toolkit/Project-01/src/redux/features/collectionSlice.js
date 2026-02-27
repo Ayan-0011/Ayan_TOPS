@@ -1,10 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { toast } from "react-toastify";
 
 
-const initialState ={
-    
-    items: JSON.parse(localStorage.getItem('collection')) || [] 
-} 
+const initialState = {
+
+    items: JSON.parse(localStorage.getItem('collection')) || []
+}
 
 const CollectionSlice = createSlice({
     name: "collection",
@@ -17,6 +18,10 @@ const CollectionSlice = createSlice({
             if (!Exitsitems) {
                 state.items.push(action.payload);
                 localStorage.setItem('collection', JSON.stringify(state.items))
+                toast.success("add to Collection")
+            }
+            else {
+                toast.error("already added to colletion")
             }
         },
         removeCollection: (state, action) => {
@@ -32,8 +37,8 @@ const CollectionSlice = createSlice({
 
     }
 
-})  
+})
 
-export const { addCollection, removeCollection, clearCollection  } = CollectionSlice.actions;
+export const { addCollection, removeCollection, clearCollection } = CollectionSlice.actions;
 
 export default CollectionSlice.reducer

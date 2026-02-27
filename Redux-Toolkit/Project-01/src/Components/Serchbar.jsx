@@ -22,10 +22,10 @@ const Serchbar = () => {
   return (
     <div>
 
-      <form onSubmit={(e)=>submithandle(e)} className='flex gap-10 bg-(--c2) w-full px-10 p-10'>
+      <form onSubmit={(e)=>submithandle(e)} className='flex gap-10 bg-(--c2) w-full md:px-10 md:p-10 p-5'>
         <input type="text" className='border-2 w-full px-4 py-2 text-xl outline-none rounded' placeholder='serch anything...' required value={serch} 
         onChange={(e)=> setSerch(e.target.value)} />
-        <button className='active:scle-95 curor-pointer border-2 px-4 py-2 rounded'>Serch</button>
+        <button className='active:scle-95 cursor-pointer border-2 px-4 py-2 rounded'>Serch</button>
       </form>
 
     </div>

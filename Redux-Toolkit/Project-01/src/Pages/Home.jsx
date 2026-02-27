@@ -10,12 +10,11 @@ const Home = () => {
     return (
         <div>
             <Serchbar />
-
-
             {
-                (quary && quary.trim() !== "") ? <div><Tabs />
-            <ResultGrid /></div> : ""
+                (quary && quary.trim() !== "") ? <div><Tabs /><ResultGrid /></div> : ""
             }
+
+            
             
 
         </div>
