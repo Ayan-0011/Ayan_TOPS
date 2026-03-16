@@ -1,0 +1,10 @@
+{ "name"         : "rea"
+, "description"  : "Rea is a fancy wrapper over connect.router"
+, "version"      : "0.0.1"
+, "author"       : "George Stagas <gstagas@gmail.com>"
+, "engines"      : { "node": ">=0.4.0" }
+, "dependencies" : { "connect": ">=1.4.1" }
+, "main"         : "./rea"
+, "repository"   : { "type": "git", "url": "https://github.com/stagas/rea" }
+, "bugs"         : { "web": "https://github.com/stagas/rea/issues" }
+}
