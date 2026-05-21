@@ -276,8 +276,8 @@ nav i {
 }
 
 .skill img {
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 40px;
     object-fit: contain;
     margin-top: -5px;
     transition: transform 0.3s ease, color 0.3s ease;
@@ -289,7 +289,7 @@ nav i {
 
 .skill span {
     display: block;
-    margin-left: 10px;
+    margin-left: 15px;
     color: var(--bgcolor);
 }
 
@@ -316,6 +316,17 @@ nav i {
 
 #section4 h2 {
     color: var(--bgcolor);
+}
+
+.project-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .project-row {
+        flex-direction: column-reverse;
+    }
 }
 
 .project-card {
