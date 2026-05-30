@@ -95,44 +95,150 @@
     document.querySelectorAll('.skills-bento').forEach(el => skillObserver.observe(el));
 
     /* ---- Contact form ---- */
-    document.getElementById('contactForm').addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const form = e.target;
-      const btn = form.querySelector('.btn-submit');
-      btn.textContent = 'Sending...';
-      btn.disabled = true;
+const form = document.getElementById("contactForm");
 
-      try {
-        const res = await fetch('https://formspree.io/f/xovzzgeg', {
-          method: 'POST',
-          body: new FormData(form),
-          headers: { Accept: 'application/json' }
-        });
+const nameInput = document.getElementById("cName");
+const emailInput = document.getElementById("cEmail");
+const subjectInput = document.getElementById("cSubject");
+const messageInput = document.getElementById("cMessage");
 
-        if (res.ok) {
-          form.reset();
-          Swal.fire({
-            icon: 'success',
-            title: 'Message sent!',
-            text: 'Thanks for reaching out. I\'ll get back to you soon.',
-            confirmButtonColor: '#00d4aa',
-            background: '#161b22',
-            color: '#e2e8f0'
-          });
-        } else {
-          throw new Error('Form error');
-        }
-      } catch {
-        Swal.fire({
-          icon: 'error',
-          title: 'Oops!',
-          text: 'Something went wrong. Please try again.',
-          confirmButtonColor: '#00d4aa',
-          background: '#161b22',
-          color: '#e2e8f0'
-        });
-      } finally {
-        btn.innerHTML = 'Send message <i class="bi bi-send"></i>';
-        btn.disabled = false;
-      }
+const nameError = document.getElementById("nameError");
+const emailError = document.getElementById("emailError");
+const subjectError = document.getElementById("subjectError");
+const messageError = document.getElementById("messageError");
+
+
+// Name Validation
+function validateName() {
+  const namePattern = /^[A-Za-z\s]+$/;
+
+  if (nameInput.value.trim() === "") {
+    nameError.textContent = "* Name is required";
+    return false;
+  }
+
+  if (!namePattern.test(nameInput.value.trim())) {
+    nameError.textContent = "* Only letters are allowed";
+    return false;
+  }
+
+  nameError.textContent = "";
+  return true;
+}
+
+
+// Email Validation
+function validateEmail() {
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (emailInput.value.trim() === "") {
+    emailError.textContent = "* Email is required";
+    return false;
+  }
+
+  if (!emailPattern.test(emailInput.value.trim())) {
+    emailError.textContent = "* Enter valid email";
+    return false;
+  }
+
+  emailError.textContent = "";
+  return true;
+}
+
+
+// Subject Validation
+function validateSubject() {
+  const subjectPattern = /^[A-Za-z\s]+$/;
+
+  if (subjectInput.value.trim() === "") {
+    subjectError.textContent = "* Subject is required";
+    return false;
+  }
+  if (!subjectPattern.test(subjectInput.value.trim())) {
+    subjectError.textContent = "* Only letters are allowed";
+    return false;
+  }
+
+  subjectError.textContent = "";
+  return true;
+}
+
+
+// Message Validation
+function validateMessage() {
+  if (messageInput.value.trim() === "") {
+    messageError.textContent = "* Message is required";
+    return false;
+  }
+
+  if (messageInput.value.trim().length < 10) {
+    messageError.textContent = "Message must be at least 10 characters";
+    return false;
+  }
+
+  messageError.textContent = "";
+  return true;
+}
+
+
+// Real-time Validation
+nameInput.addEventListener("input", validateName);
+emailInput.addEventListener("input", validateEmail);
+subjectInput.addEventListener("input", validateSubject);
+messageInput.addEventListener("input", validateMessage);
+
+
+// Form Submit
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const isNameValid = validateName();
+  const isEmailValid = validateEmail();
+  const isSubjectValid = validateSubject();
+  const isMessageValid = validateMessage();
+
+  if (
+    !isNameValid ||
+    !isEmailValid ||
+    !isSubjectValid ||
+    !isMessageValid
+  ) {
+    return;
+  }
+
+  const btn = form.querySelector(".btn-submit");
+
+  btn.innerHTML = "Sending...";
+  btn.disabled = true;
+
+  try {
+    const res = await fetch("https://formspree.io/f/xovzzgeg", {
+      method: "POST",
+      body: new FormData(form),
+      headers: {
+        Accept: "application/json",
+      },
     });
+
+    if (res.ok) {
+      form.reset();
+
+      Swal.fire({
+        icon: "success",
+        title: "Message Sent!",
+        text: "Thanks for contacting me.",
+      });
+    } else {
+      throw new Error();
+    }
+  } catch (error) {
+    Swal.fire({
+      icon: "error",
+      title: "Oops!",
+      text: "Something went wrong.",
+    });
+  } finally {
+    btn.innerHTML = "Send Message";
+    btn.disabled = false;
+  }
+});

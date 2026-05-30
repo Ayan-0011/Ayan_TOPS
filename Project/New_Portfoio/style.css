@@ -1102,6 +1102,19 @@ section {
   box-shadow: 0 0 0 3px var(--accent-dim);
 }
 
+.input-error {
+  display: block;
+  margin-top: 5px;
+  font-size: 13px;
+  color: #ff6b6b;
+  min-height: 18px;
+}
+
+.input-error-active {
+  border-color: #ff6b6b !important;
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.18);
+}
+
 .btn-submit {
   width: 100%;
   padding: 14px;
