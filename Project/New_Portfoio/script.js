@@ -1,100 +1,140 @@
- /* ---- Loader ---- */
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        document.getElementById('loader').classList.add('loader--hidden');
-      }, 1200);
-    });
+/* ---- Loader ---- */
+window.addEventListener('load', () => {
+  const loaderEl = document.getElementById('loader');
+  const loaderText = document.getElementById('loader-text');
+  const maskText = document.getElementById('mask-text');
+  const overlay = document.getElementById('loader-overlay');
 
-    /* ---- Navbar scroll ---- */
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 60);
-      document.getElementById('topBtn').classList.toggle('visible', window.scrollY > 300);
-    });
+  maskText.setAttribute('transform-origin', '50 50');
+  loaderText.setAttribute('transform-origin', '50 50');
 
-    /* ---- Mobile menu ---- */
-    function openMenu() {
-      document.getElementById('navLinks').classList.add('open');
-      document.getElementById('navOverlay').classList.add('open');
-      document.body.style.overflow = 'hidden';
+  const dur = 2200;
+  const startTime = performance.now();
+
+  function easeInOutCubic(t) {
+    return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  }
+
+  function tick(now) {
+    const raw = Math.min((now - startTime) / dur, 1);
+    const t = easeInOutCubic(raw);
+
+    const scale = 1 + t * 18;
+    const s = scale.toFixed(3);
+
+    loaderText.setAttribute('transform', `scale(${s})`);
+    maskText.setAttribute('transform', `scale(${s})`);
+
+    const strokeOpacity = raw < 0.65
+      ? 1
+      : Math.max(0, 1 - (raw - 0.65) / 0.35);
+    loaderText.style.opacity = strokeOpacity;
+
+    const overlayOpacity = raw < 0.72
+      ? 1
+      : Math.max(0, 1 - (raw - 0.72) / 0.28);
+    overlay.style.opacity = overlayOpacity;
+
+    if (raw < 1) {
+      requestAnimationFrame(tick);
+    } else {
+      loaderEl.classList.add('loader--hidden');
     }
-    function closeMenu() {
-      document.getElementById('navLinks').classList.remove('open');
-      document.getElementById('navOverlay').classList.remove('open');
-      document.body.style.overflow = '';
+  }
+
+  setTimeout(() => requestAnimationFrame(tick), 300);
+});
+
+/* ---- Navbar scroll ---- */
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 60);
+  document.getElementById('topBtn').classList.toggle('visible', window.scrollY > 300);
+});
+
+/* ---- Mobile menu ---- */
+function openMenu() {
+  document.getElementById('navLinks').classList.add('open');
+  document.getElementById('navOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeMenu() {
+  document.getElementById('navLinks').classList.remove('open');
+  document.getElementById('navOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+/* ---- Scroll reveal ---- */
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
     }
+  });
+}, { threshold: 0.12 });
 
-    /* ---- Scroll reveal ---- */
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-        }
+document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right').forEach(el => {
+  revealObserver.observe(el);
+});
+
+/* ---- Active nav link ---- */
+const sections = document.querySelectorAll('section[id], div[id="footer"]');
+const navLinks = document.querySelectorAll('.nav-links a');
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navLinks.forEach(a => a.classList.remove('active'));
+      const id = e.target.id;
+      const match = document.querySelector(`.nav-links a[href="#${id}"]`);
+      if (match) match.classList.add('active');
+    }
+  });
+}, { threshold: 0.4 });
+sections.forEach(s => sectionObserver.observe(s));
+
+/* ---- Back to top ---- */
+document.getElementById('topBtn').addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+/* ---- Vanta waves ---- */
+VANTA.WAVES({
+  el: '#vanta-bg',
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0x0a1628,
+  shininess: 40.00,
+  waveHeight: 18.00,
+  waveSpeed: 0.6,
+  zoom: 0.85
+});
+
+/* ---- Typed.js ---- */
+new Typed('#typed-about', {
+  strings: ['Frontend Developer', 'React Developer', 'Web Designer', 'web developer', 'Tech Enthusiast'],
+  typeSpeed: 55,
+  backSpeed: 35,
+  loop: true
+});
+
+/* ---- Skill bar animation ---- */
+const skillObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('.skill-fill').forEach(bar => {
+        bar.style.width = bar.style.getPropertyValue('--pct') || bar.getAttribute('style').match(/--pct:\s*([\d%]+)/)?.[1] || '0%';
       });
-    }, { threshold: 0.12 });
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.skills-bento').forEach(el => skillObserver.observe(el));
 
-    document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right').forEach(el => {
-      revealObserver.observe(el);
-    });
-
-    /* ---- Active nav link ---- */
-    const sections = document.querySelectorAll('section[id], div[id="footer"]');
-    const navLinks = document.querySelectorAll('.nav-links a');
-    const sectionObserver = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          navLinks.forEach(a => a.classList.remove('active'));
-          const id = e.target.id;
-          const match = document.querySelector(`.nav-links a[href="#${id}"]`);
-          if (match) match.classList.add('active');
-        }
-      });
-    }, { threshold: 0.4 });
-    sections.forEach(s => sectionObserver.observe(s));
-
-    /* ---- Back to top ---- */
-    document.getElementById('topBtn').addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    /* ---- Vanta waves ---- */
-    VANTA.WAVES({
-      el: '#vanta-bg',
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: false,
-      minHeight: 200.00,
-      minWidth: 200.00,
-      scale: 1.00,
-      scaleMobile: 1.00,
-      color: 0x0a1628,
-      shininess: 40.00,
-      waveHeight: 18.00,
-      waveSpeed: 0.6,
-      zoom: 0.85
-    });
-
-    /* ---- Typed.js ---- */
-    new Typed('#typed-about', {
-      strings: ['Frontend Developer', 'React Developer', 'Web Designer','web developer', 'Tech Enthusiast'],
-      typeSpeed: 55,
-      backSpeed: 35,
-      loop: true
-    });
-
-    /* ---- Skill bar animation ---- */
-    const skillObserver = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.querySelectorAll('.skill-fill').forEach(bar => {
-            bar.style.width = bar.style.getPropertyValue('--pct') || bar.getAttribute('style').match(/--pct:\s*([\d%]+)/)?.[1] || '0%';
-          });
-        }
-      });
-    }, { threshold: 0.3 });
-    document.querySelectorAll('.skills-bento').forEach(el => skillObserver.observe(el));
-
-    /* ---- Contact form ---- */
+/* ---- Contact form ---- */
 const form = document.getElementById("contactForm");
 
 const nameInput = document.getElementById("cName");

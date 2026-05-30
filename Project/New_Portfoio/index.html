@@ -35,14 +35,25 @@
 
   <!-- ===================== LOADER ===================== -->
   <div id="loader">
-    <div class="loader-inner">
-      <span class="loader-name">AA</span>
-      <div class="loader-bar">
-        <div class="loader-fill"></div>
-      </div>
-    </div>
-  </div>
+    <svg id="loader-svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"
+      style="position:fixed;inset:0;width:100%;height:100%;z-index:9999;">
+      <defs>
+        <mask id="textMask">
+          <rect width="100" height="100" fill="white" />
+          <text id="mask-text" x="50" y="50" font-family="'YourHeadingFont', 'Arial Black', sans-serif" font-size="22"
+            font-weight="900" fill="black" text-anchor="middle" dominant-baseline="middle" textLength="90"
+            lengthAdjust="spacingAndGlyphs" transform-origin="50 50" transform-box="fill-box">AYAN</text>
+        </mask>
+      </defs>
 
+      <rect id="loader-overlay" width="100" height="100" fill="#0d0f14" mask="url(#textMask)" />
+
+      <text id="loader-text" x="50" y="50" font-family="'YourHeadingFont', 'Arial Black', sans-serif" font-size="22"
+        font-weight="900" fill="none" stroke="#00d4aa" stroke-width="0.3" text-anchor="middle"
+        dominant-baseline="middle" textLength="90" lengthAdjust="spacingAndGlyphs" transform-origin="50 50"
+        transform-box="fill-box">AYAN</text>
+    </svg>
+  </div>
   <!-- ===================== NAVBAR ===================== -->
   <nav id="navbar">
     <a href="#home" class="nav-brand">
