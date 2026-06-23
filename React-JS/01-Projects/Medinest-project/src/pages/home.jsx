@@ -2,840 +2,842 @@ import React from 'react'
 
 const Home = () => {
     return (
-        <div className='container'>
-                {/*main page*/}
-                <div className="row mt-3">
-                    <div className="col-md-6 col-sm-12 main-img">
-                        <img src="img/staff-8.webp" className="img mt-5" width="85%" />
-                    </div>
-                    {/*main part 2*/}
-                    <div className="col-md-6 col-sm-12">
-                        <span className="badge rounded-pill bg-primary mt-4" style={{ fontSize: 18 }}>Trusted Healthcare
-                            Provider</span>
-                        <h1 className="display-3" style={{ fontWeight: 500 }}> Excellence in Medical Care Since 1985</h1>
-                        <p className="mt-4" style={{ fontSize: 21, fontWeight: 300 }}><small>Mauris blandit aliquet elit, eget
-                            tincidunt nibh pulvinar a. Pellentesque in ipsum id orci porta dapibus. Vivamus magna justo,
-                            lacinia eget consectetur sed, convallis at tellus.</small></p>
-                        <div className="row mt-5">
-                            <div className="col-md-4 col-sm-12">
-                                <div className="card mb-3" id="card-1">
-                                    <div className="row g-0">
-                                        <div className="col-md-4">
-                                            <img src="img/award.svg" className="img-fluid rounded-start ms-3 mt-3 p-2" style={{ width: 55, border: '2px solid', height: 80, backgroundColor: 'rgba(19, 159, 177, 0.292)', color: 'rgb(63, 170, 184)' }} />
-                                        </div>
-                                        <div className="col-md">
-                                            <div className="card-body">
-                                                <h5 className="card-title">35+</h5>
-                                                <p className="card-text">Years Experience</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-4">
-                                <div className="card mb-3" id="card-1">
-                                    <div className="row g-0">
-                                        <div className="col-md-4">
-                                            <img src="img/people-fill.svg" className="img-fluid rounded-start ms-3 mt-3 p-2" style={{ width: 55, border: '2px solid', height: 80, backgroundColor: 'rgba(19, 159, 177, 0.292)', color: 'rgb(63, 170, 184)' }} />
-                                        </div>
-                                        <div className="col-md">
-                                            <div className="card-body">
-                                                <h5 className="card-title">150+</h5>
-                                                <p className="card-text">Medical Specialists</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-4">
-                                <div className="card mb-3" id="card-1">
-                                    <div className="row g-0">
-                                        <div className="col-md-4">
-                                            <img src="img/geo-alt-fill.svg" className="img-fluid rounded-start ms-3 mt-3 p-2" style={{ width: 55, border: '2px solid', height: 80, backgroundColor: 'rgba(19, 159, 177, 0.292)', color: 'rgb(63, 170, 184)' }} />
-                                        </div>
-                                        <div className="col-md">
-                                            <div className="card-body">
-                                                <h5 className="card-title">12</h5>
-                                                <p className="card-text">Clinic Locations</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="mt-4">
-                            <button type="button" className="btn btn-primary me-3 " style={{ width: 180, height: 50 }}>schedule
-                                Consulation</button>
-                            <button type="button" className="btn btn-outline-info" style={{ width: 180, height: 50, color: 'black' }}> <i className="bi bi-play-circle-fill" /> Watch
-                                our story</button>
-                        </div>
-                        <div className="row mt-3 mb-5">
-                            <div className="col-md-4 p-2 col-sm-5" style={{ fontSize: 18 }}>
-                                <i className="bi bi-calendar-check text-primary" />
-                                Find Available Times
-                            </div>
-                            <div className="col-md-4 p-2 col-sm-5" style={{ fontSize: 18 }}>
-                                <i className="bi bi-chat-dots text-primary" /> Chat
-                                with Support</div>
-                            <div className="col-md-4 p-2 col-sm-5" style={{ fontSize: 18 }}>
-                                <i className="bi bi-journal-medical text-primary" /> Patient Portal</div>
-                        </div>
-                    </div>
-                </div>
-                {/*second page*/}
-                <div className="row mt-3 mb-4">
-                    <div className="offset-md-2 col-md-8 col-sm-12 text-center">
-                        <h1 className="display-5" style={{ fontWeight: 700, color: 'rgb(15, 62, 62)' }}>Excellence in Healthcare Since
-                            1985</h1>
-                        <p className="h5" style={{ fontWeight: 300 }}>We are committed to providing world-class medical care through
-                            <br /> innovation, compassion, and unwavering dedication to our<br /> patients' wellbeing and recovery.
-                        </p>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-md-5 pt-3 col-sm-12">
-                        <div className="img-card">
-                            <img src="img/facilities-6.webp" />
-                        </div>
-                    </div>
-                    <div className="col-md-3 pt-3 col-sm-12">
-                        <div className="first">
-                            <img src="img/surgery-2.webp" width="100%" />
-                        </div>
-                        <div className="two">
-                            <img src="img/consultation-3.webp" width="100%" />
-                        </div>
-                    </div>
-                    <div className="col-md-4 mt-3">
-                        <div className="box">
-                            <div className="row">
-                                <div className="col-md-2">
-                                    <i className="bi bi-heart-pulse-fill" />
-                                </div>
-                                <div className="col-md-10">
-                                    <h4>Patient-Centered Approach</h4>
-                                    <p>Every treatment plan is carefully customized to meet individual patient needs and medical
-                                        history.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row mt-4">
-                            <div className="title">
-                                <div className="col-md-12 d-flex">
-                                    <i className="bi bi-check-circle-fill" />
-                                    <p style={{ marginLeft: 10 }}>Advanced diagnostic technology and imaging</p>
-                                </div>
-                                <div className="row mt-1">
-                                    <div className="col-md-12 d-flex">
-                                        <i className="bi bi-check-circle-fill" />
-                                        <p style={{ marginLeft: 10 }}>Board-certified physicians and specialists</p>
-                                    </div>
-                                </div>
-                                <div className="row mt-1">
-                                    <div className="col-md-12 d-flex">
-                                        <i className="bi bi-check-circle-fill" />
-                                        <p style={{ marginLeft: 10 }}>Comprehensive rehabilitation programs</p>
-                                    </div>
-                                </div>
-                                <div className="row mt-1">
-                                    <div className="col-md-12 d-flex">
-                                        <i className="bi bi-check-circle-fill" />
-                                        <p style={{ marginLeft: 10 }}>24/7 emergency and critical care services</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="num">
-                            <div className="row">
-                                <div className="col-md-5 col-5">
-                                    <span style={{ paddingLeft: 45, fontSize: 25, color: 'rgb(39, 166, 166)' }}>98%</span>
-                                    <p style={{ fontWeight: 400 }}>Patient Satisfaction</p>
-                                </div>
-                                <div className="col-md-5 col-6">
-                                    <span style={{ paddingLeft: 45, fontSize: 25, color: 'rgb(39, 166, 166)' }}>35K+</span>
-                                    <p style={{ paddingLeft: 20, fontWeight: 400 }}>Lives Improved</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-md-6 col-6 batan">
-                                <button type="button" className="btn btn-primary">Explore our services</button>
-                            </div>
-                            <div className="col-md-6 col-6 batan2">
-                                <button type="button" className="btn btn-outline-info">schedule Consulation</button>
-                            </div>
-                        </div>
-                    </div>
-                    {/*third page*/}
-                    <div className="row mt-5">
-                        <div className="col-md-12 text-center">
-                            <h2 style={{ fontFamily: '"Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif' }}>
-                                Featured Departments</h2>
-                            <p style={{ fontWeight: 50 }}>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-                                consectetur velit</p>
-                        </div>
-                    </div>
-                    <div className="row mt-4">
-                        <div className=" offset-md-1 col-md-5">
-                            <p style={{ color: 'rgb(20, 153, 153)', fontSize: 20 }}>Emergency Medicine</p>
-                            <h1>24/7 Emergency Care Services</h1>
-                            <p className="mt-4 mb-3" style={{ fontWeight: 400, fontFamily: 'Verdana, Geneva, Tahoma, sans-serif', fontSize: 17 }}>Sed
-                                ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                                totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                                dicta sunt explicabo</p>
-                            <div className="con">
-                                <div className="col-md-12 mt-5 d-flex">
-                                    <i className="bi bi-check-circle-fill" />
-                                    <p style={{ marginLeft: 10 }}>24/7 Emergency Response</p>
-                                </div>
-                                <div className="col-md-12 d-flex">
-                                    <i className="bi bi-check-circle-fill" />
-                                    <p style={{ marginLeft: 10 }}>Advanced Life Support</p>
-                                </div>
-                                <div className="col-md-12 d-flex">
-                                    <i className="bi bi-check-circle-fill" />
-                                    <p style={{ marginLeft: 10 }}>Trauma Care Specialists</p>
-                                </div>
-                            </div>
-                            <div className="link">
-                                <a href="#">Learn More <i className="fa-solid fa-arrow-right" /> </a>
-                            </div>
-                        </div>
-                        <div className="col-md-5">
-                            <div className="img-card2">
-                                <img src="img/emergency-3.webp" width="100%" />
-                            </div>
-                        </div>
-                    </div>
-                    {/*fourth page*/}
-                    <div className="row mt-5">
-                        <div className="offset-md-1 col-md-3 p-3">
-                            <div className="card" id="card-2">
-                                <div className="icon"><i className="bi bi-heart-pulse-fill" /></div>
-                                <div className="card-body">
-                                    <h3 className="card-title">Cardiology</h3>
-                                    <p className="card-text">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-                                        fugit, sed quia consequuntur magni dolores.</p>
-                                    <div className="row">
-                                        <div className="col-md-6 col-6 dr">
-                                            <span>15+</span>
-                                            <p>Specialists</p>
-                                        </div>
-                                        <div className="col-md-6 col-6 dr">
-                                            <span>500+</span>
-                                            <p>Procedures</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-3 p-3">
-                            <div className="card" id="card-2">
-                                <div className="icon"><i className="fa-solid fa-brain" /></div>
-                                <div className="card-body">
-                                    <h3 className="card-title">Neurology</h3>
-                                    <p className="card-text">Eos qui ratione voluptatem sequi nesciunt neque porro quisquam est, qui
-                                        dolorem ipsum quia dolor sit amet..</p>
-                                    <div className="row">
-                                        <div className="col-md-6 col-6 dr">
-                                            <span>8+</span>
-                                            <p>Specialists</p>
-                                        </div>
-                                        <div className="col-md-6 col-6 dr">
-                                            <span>200+</span>
-                                            <p>Treatments</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-3 p-3">
-                            <div className="card" id="card-2">
-                                <div className="icon"><i className="fa-solid fa-scissors" /></div>
-                                <div className="card-body">
-                                    <h3 className="card-title">Surgery</h3>
-                                    <p className="card-text">Consectetur adipisci velit sed quia non numquam eius modi tempora
-                                        incidunt ut labore et dolore magnam aliquam.</p>
-                                    <div className="row">
-                                        <div className="col-md-6 col-6 dr">
-                                            <span>12+</span>
-                                            <p>Surgeons</p>
-                                        </div>
-                                        <div className="col-md-6 col-6 dr">
-                                            <span>1000+</span>
-                                            <p>Operations</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row mt-5 mb-5">
-                        <div className="offset-md-1 col-md-3  p-3">
-                            <div className="card" id="card-2">
-                                <div className="icon"><i className="fa-solid fa-person-circle-check" /></div>
-                                <div className="card-body">
-                                    <h3 className="card-title">Pediatrics</h3>
-                                    <p className="card-text">Quaerat voluptatem ut enim ad minima veniam quis nostrum exercitationem
-                                        ullam corporis suscipit laboriosam.</p>
-                                    <div className="row">
-                                        <div className="col-md-6 col-6 dr">
-                                            <span>10+</span>
-                                            <p>Pediatricians</p>
-                                        </div>
-                                        <div className="col-md-6 col-6 dr">
-                                            <span>2000+</span>
-                                            <p>Young Patients</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-3 p-3">
-                            <div className="card" id="card-2">
-                                <div className="icon"><i className="fa-solid fa-eye" /></div>
-                                <div className="card-body">
-                                    <h3 className="card-title">Ophthalmology</h3>
-                                    <p className="card-text">Nisi ut aliquid ex ea commodi consequatur quis autem vel eum iure
-                                        reprehenderit qui in ea voluptate velit esse.</p>
-                                    <div className="row">
-                                        <div className="col-md-6 col-6 dr">
-                                            <span>6+</span>
-                                            <p>Eye Doctors</p>
-                                        </div>
-                                        <div className="col-md-6 col-6 dr">
-                                            <span>800+</span>
-                                            <p>Eye Exam</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-3 p-3">
-                            <div className="card" id="card-2">
-                                <div className="icon"><i className="fa-solid fa-bandage" /></div>
-                                <div className="card-body">
-                                    <h3 className="card-title">Dermatology</h3>
-                                    <p className="card-text">Quam nihil molestiae consequatur vel illum qui dolorem eum fugiat quo
-                                        voluptas lorum nulla pariatur at vero eos.</p>
-                                    <div className="row">
-                                        <div className="col-md-6 col-6 dr">
-                                            <span>7+</span>
-                                            <p>Dermatologist</p>
-                                        </div>
-                                        <div className="col-md-6 col-6 dr">
-                                            <span>600+</span>
-                                            <p style={{ fontSize: 15 }}>Skin Treatments</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row mt-3 mb-5">
-                        <div className="offset-md-1 col-md-10 text-center bg-light pt-4">
-                            <h2 className="mb-3">Explore All Our Medical Departments</h2>
-                            <p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis <br />
-                                praesentium voluptatum deleniti atque corrupti quos dolores.</p>
-                            <button type="button" className="btn batan3 mt-4 mb-3">View All Departments</button>
-                        </div>
-                    </div>
-                    {/*fifth page*/}
-                    <div className="row">
-                        <div className="col-md-12 text-center mt-3">
-                            <h1 style={{ fontFamily: '"Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif' }}>
-                                Featured Services</h1>
-                            <p style={{ fontWeight: 400 }}>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-                                consectetur velit</p>
-                        </div>
-                    </div>
-                    <div className="row mt-5 mb-5">
-                        <div className="col-md-4">
-                            <div className="card mb-3 cards">
-                                <div className="imageee"><img src="img/cardiology-2.webp" className="card-img-top" width="100%" /></div>
-                                <div className="icon2"><i className="bi bi-heart-pulse-fill" /></div>
-                                <div className="card-body">
-                                    <h5 className="card-title">Cardiology Excellence</h5>
-                                    <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-                                        ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
-                                    <p className="card-text">
-                                    </p><div className="link">
-                                        <a href="#">Learn More <i className="fa-solid fa-arrow-right" /> </a>
-                                    </div>
-                                    <p />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-4">
-                            <div className="card mb-3 cards">
-                                <div className="imageee"><img src="img/neurology-3.webp" className="card-img-top" width="100%" /></div>
-                                <div className="icon2"><i className="fa-solid fa-brain" /></div>
-                                <div className="card-body">
-                                    <h5 className="card-title">Neurology Care</h5>
-                                    <p className="card-text">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                                        enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
-                                    <p className="card-text">
-                                    </p><div className="link">
-                                        <a href="#">Learn More <i className="fa-solid fa-arrow-right" /> </a>
-                                    </div>
-                                    <p />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-4">
-                            <div className="card mb-3 cards">
-                                <div className="imageee"><img src="img/orthopedics-1.webp" className="card-img-top" width="100%" /></div>
-                                <div className="icon2"><i className="fa-solid fa-bone" /></div>
-                                <div className="card-body">
-                                    <h5 className="card-title">Orthopedic Surgery</h5>
-                                    <p className="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-                                    <p className="card-text">
-                                    </p><div className="link">
-                                        <a href="#">Learn More <i className="fa-solid fa-arrow-right" /> </a>
-                                    </div>
-                                    <p />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-4">
-                            <div className="card mb-3 cards">
-                                <div className="imageee"><img src="img/pediatrics-4.webp" className="card-img-top" width="100%" /></div>
-                                <div className="icon2"><i className="fa-solid fa-person-circle-check" /></div>
-                                <div className="card-body">
-                                    <h5 className="card-title">Pediatric Care</h5>
-                                    <p className="card-text">Sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut
-                                        perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
-                                    <p className="card-text">
-                                    </p><div className="link">
-                                        <a href="#">Learn More <i className="fa-solid fa-arrow-right" /> </a>
-                                    </div>
-                                    <p />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-4">
-                            <div className="card mb-3 cards">
-                                <div className="imageee"><img src="img/oncology-2.webp" className="card-img-top" width="100%" /></div>
-                                <div className="icon2"><i className="fa-solid fa-bone" /></div>
-                                <div className="card-body">
-                                    <h5 className="card-title">Oncology Treatment</h5>
-                                    <p className="card-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                                        blanditiis praesentium voluptatum corrupti quos dolores et quas molestias.</p>
-                                    <p className="card-text">
-                                    </p><div className="link">
-                                        <a href="#">Learn More <i className="fa-solid fa-arrow-right" /> </a>
-                                    </div>
-                                    <p />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-4">
-                            <div className="card mb-3 cards">
-                                <div className="imageee"><img src="img/laboratory-3.webp" className="card-img-top" width="100%" /></div>
-                                <div className="icon2"><i className="fa-solid fa-flask" /></div>
-                                <div className="card-body">
-                                    <h5 className="card-title">Laboratory Services</h5>
-                                    <p className="card-text">Temporibus autem quibusdam et aut officiis debitis aut rerum
-                                        necessitatibus saepe eveniet repudiandae sint et molestiae non recusandae.</p>
-                                    <p className="card-text">
-                                    </p><div className="link">
-                                        <a href="#">Learn More <i className="fa-solid fa-arrow-right" /> </a>
-                                    </div>
-                                    <p />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {/*six page*/}
-                    <div className="row">
-                        <div className="col-md-12 text-center">
-                            <h2 style={{ fontFamily: '"Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif' }}>
-                                Find A Doctor</h2>
-                            <p style={{ fontWeight: 300 }} className="mb-4">Necessitatibus eius consequatur ex aliquid fuga eum quidem
-                                sint consectetur velit</p>
-                            <h1 style={{ fontSize: 35 }} className="mb-3">Discover Your Ideal Medical Specialist</h1>
-                            <p style={{ fontWeight: 300 }}>Connect with our network of certified healthcare professionals across
-                                all <br />medical disciplines</p>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="offset-md-1 col-md-10">
-                            <div className="info">
-                                <div className="row  mt-3 p-3">
-                                    <div className="col-md-3 p-2">
-                                        <p>Practitioner Name</p>
-                                        <div className="form-floating mb-3">
-                                            <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com" />
-                                            <label htmlFor="floatingInput">Serch by name....</label>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-4 p-2">
-                                        <p>Medical Specialty</p>
-                                        <div className="form-floating">
-                                            <select className="form-select" id="floatingSelect">
-                                                <option selected>Select specialty</option>
-                                                <option value={1}>Cardiovascular Medicine</option>
-                                                <option value={2}>Neurological Sciences</option>
-                                                <option value={3}>Orthopedic Surgery</option>
-                                                <option value={4}>Pediatric Medicine</option>
-                                                <option value={5}>Dermatological Care</option>
-                                                <option value={6}>Oncological Treatment</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-4 p-2">
-                                        <p>Location</p>
-                                        <div className="form-floating">
-                                            <select className="form-select" id="floatingSelect">
-                                                <option selected>All Location</option>
-                                                <option value={1}>All Location</option>
-                                                <option value={2}>Downtoen medical center</option>
-                                                <option value={3}>North side clinic</option>
-                                                <option value={4}>Wesr End hospital</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-1 pt-3 mt-3 col-12">
-                                        <div className="but">
-                                            <button type="button" className="btn btn-outline-info w-100 text-center">
-                                                <i className="fa-solid fa-arrow-right" />
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {/*seventh page*/}
-                    <div className="row mt-5">
-                        <div className="col-md-4 p-3">
-                            <div className="card" id="card-3">
-                                <div className="container">
-                                    <div className="profile mt-3">
-                                        <img src="img/staff-1.webp" className="card-img" />
-                                        <h5>Dr. Jennifer Morgan</h5>
-                                        <p>Senior Cardiologist</p>
-                                        <span className="badge rounded-pill bg-primary">MD, FACC</span>
-                                        <p>18 years</p>
-                                        <i className="fa-solid fa-star" />
-                                        <i className="fa-solid fa-star" />
-                                        <i className="fa-solid fa-star" />
-                                        <i className="fa-solid fa-star" />
-                                        <i className="fa-solid fa-star" />
-                                        <p>4.9 <small style={{ fontWeight: 300 }}>(142 patients) </small></p>
-                                        <div className="row g-2">
-                                            <div className="d-grid offset-md-1 col-md-5">
-                                                <button className="btn btn-outline-dark" type="button">Profile</button>
-                                            </div>
-                                            <div className="d-grid col-md-5">
-                                                <button className="btn btn-primary" type="button">Consult</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-4 p-3">
-                            <div className="card" id="card-3-0">
-                                <div className="container">
-                                    <div className="profile mt-3">
-                                        <img src="img/staff-3.webp" className="card-img" />
-                                        <h5>Dr. Robert Kim</h5>
-                                        <p>Neurosurgeon</p>
-                                        <span className="badge rounded-pill bg-primary">MD, PhD</span>
-                                        <p>24 years</p>
-                                        <i className="fa-solid fa-star" />
-                                        <i className="fa-solid fa-star" />
-                                        <i className="fa-solid fa-star" />
-                                        <i className="fa-solid fa-star" />
-                                        <i className="fa-solid fa-star-half" />
-                                        <p>4.8 <small style={{ fontWeight: 300 }}>(198 patients) </small></p>
-                                        <div className="row g-2">
-                                            <div className="d-grid offset-md-1 col-md-5">
-                                                <button className="btn btn-outline-dark" type="button">Profile</button>
-                                            </div>
-                                            <div className="d-grid col-md-5">
-                                                <button className="btn btn-primary" type="button">Consult</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-4 p-3">
-                            <div className="card" id="card-3-0">
-                                <div className="container">
-                                    <div className="profile mt-3">
-                                        <img src="img/staff-5.webp" className="card-img" />
-                                        <h5>Dr. Sarah Thompson</h5>
-                                        <p>Senior Cardiologist</p>
-                                        <span className="badge rounded-pill bg-primary">MD, FACC</span>
-                                        <p>18 years</p>
-                                        <i className="fa-solid fa-star" />
-                                        <i className="fa-solid fa-star" />
-                                        <i className="fa-solid fa-star" />
-                                        <i className="fa-solid fa-star" />
-                                        <i className="fa-solid fa-star" />
-                                        <p>4.9 <small style={{ fontWeight: 300 }}>(142 patients) </small></p>
-                                        <div className="row g-2">
-                                            <div className="d-grid offset-md-1 col-md-5">
-                                                <button className="btn btn-outline-dark" type="button">Profile</button>
-                                            </div>
-                                            <div className="d-grid col-md-5">
-                                                <button className="btn btn-primary" type="button">Consult</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-4 p-3">
-                            <div className="card" id="card-3-0">
-                                <div className="container">
-                                    <div className="profile mt-3">
-                                        <img src="img/staff-7.webp" className="card-img" />
-                                        <h5>Dr. Michael Rivera</h5>
-                                        <p>Orthopedic Surgeon</p>
-                                        <span className="badge rounded-pill bg-primary">MD, FAAOS</span>
-                                        <p>20 years</p>
-                                        <i className="fa-solid fa-star" />
-                                        <i className="fa-solid fa-star" />
-                                        <i className="fa-solid fa-star" />
-                                        <i className="fa-solid fa-star" />
-                                        <i className="fa-solid fa-star-half" />
-                                        <p>4.7 <small style={{ fontWeight: 300 }}>(134 patients) </small></p>
-                                        <div className="row g-2">
-                                            <div className="d-grid offset-md-1 col-md-5">
-                                                <button className="btn btn-outline-dark" type="button">Profile</button>
-                                            </div>
-                                            <div className="d-grid col-md-5">
-                                                <button className="btn btn-primary" type="button">Consult</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-4 p-3">
-                            <div className="card" id="card-3-0">
-                                <div className="container">
-                                    <div className="profile mt-3">
-                                        <img src="img/staff-9.webp" className="card-img" />
-                                        <h5>Dr. Lisa Garcia</h5>
-                                        <p>Dermatologist</p>
-                                        <span className="badge rounded-pill bg-primary">MD, FACC</span>
-                                        <p>18 years</p>
-                                        <i className="fa-solid fa-star" />
-                                        <i className="fa-solid fa-star" />
-                                        <i className="fa-solid fa-star" />
-                                        <i className="fa-solid fa-star-half" />
-                                        <i className="fa-solid fa-star-half" />
-                                        <p>4.6 <small style={{ fontWeight: 300 }}>(85 patients) </small></p>
-                                        <div className="row g-2">
-                                            <div className="d-grid offset-md-1 col-md-5">
-                                                <button className="btn btn-outline-dark" type="button">Profile</button>
-                                            </div>
-                                            <div className="d-grid col-md-5">
-                                                <button className="btn btn-primary" type="button">Consult</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-4 p-3">
-                            <div className="card" id="card-3-0">
-                                <div className="container">
-                                    <div className="profile mt-3">
-                                        <img src="img/staff-12.webp" className="card-img" />
-                                        <h5>Dr. Daniel Wong</h5>
-                                        <p>Oncology Expert</p>
-                                        <span className="badge rounded-pill bg-primary">MD, FASCO</span>
-                                        <p>21 years</p>
-                                        <i className="fa-solid fa-star" />
-                                        <i className="fa-solid fa-star" />
-                                        <i className="fa-solid fa-star" />
-                                        <i className="fa-solid fa-star" />
-                                        <i className="fa-solid fa-star" />
-                                        <p>4.9 <small style={{ fontWeight: 300 }}>(152 patients) </small></p>
-                                        <div className="row g-2">
-                                            <div className="d-grid offset-md-1 col-md-5">
-                                                <button className="btn btn-outline-dark" type="button">Profile</button>
-                                            </div>
-                                            <div className="d-grid col-md-5">
-                                                <button className="btn btn-primary" type="button">Consult</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-3 col-12 d-block mx-auto mt-4 mb-3">
-                            <button type="button" className="btn btn-outline-info">Browse Complete Directory &gt;</button>
-                        </div>
-                    </div>
-                    <div className="row mt-5">
-                        <div className="col-md-6">
-                            <h1 style={{ fontSize: 45 }}>Exceptional Care for Your Health Journey</h1>
-                            <p style={{ fontSize: 20, marginTop: 30 }}>Discover comprehensive healthcare services delivered
-                                with compassion and expertise. Our dedicated team is committed to providing personalized medical
-                                care that puts you first.</p>
-                            <div className="batan2">
-                                <button type="button" className="btn btn-info me-3">schedule Consulation</button>
-                                <button type="button" style={{ border: 'none', backgroundColor: 'aliceblue' }}>Explore
-                                    services</button>
-                            </div>
-                        </div>
-                        <div className="col-md-6 mt-3">
-                            <img src="img/showcase-2.webp" width="100%" style={{ borderRadius: 15 }} />
-                        </div>
-                    </div>
-                    <div className="rate">
-                        <div className="row mt-5 text-center">
-                            <hr className="mb-4" />
-                            <div className="col-md-3">
-                                <span>25+</span>
-                                <p>Years Experience</p>
-                            </div>
-                            <div className="col-md-3">
-                                <span>15K+</span>
-                                <p>Happy Patients</p>
-                            </div>
-                            <div className="col-md-3">
-                                <span>50+</span>
-                                <p>Medical Experts</p>
-                            </div>
-                            <div className="col-md-3">
-                                <span>24/7</span>
-                                <p>Emergency Care</p>
-                            </div>
-                            <hr className="mt-4" />
-                        </div>
-                    </div>
-                    <div className="row mt-5">
-                        <div className="col-md-4 text-center p-2">
-                            <div className="card" id="card-4">
-                                <div className="icon3 mt-4"><i className="bi bi-heart-pulse-fill" /></div>
-                                <div className="card-body">
-                                    <h3 className="card-title">Cardiology Excellence</h3>
-                                    <p className="card-text mt-3">Advanced cardiac care with state-of-the-art diagnostic equipment
-                                        and experienced cardiologists dedicated to heart health.</p>
-                                    <div className="link mb-5">
-                                        <a href="#">Learn More <i className="fa-solid fa-arrow-right" /> </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-4 text-center p-2">
-                            <div className="card" id="card-4">
-                                <div className="icon3 mt-4"><i className="fa-solid fa-brain" /></div>
-                                <div className="card-body">
-                                    <h3 className="card-title">Neurology Center</h3>
-                                    <p className="card-text mt-3">Comprehensive neurological services including diagnosis and
-                                        treatment of brain, spine, and nervous system conditions.</p>
-                                    <div className="link mb-5">
-                                        <a href="#">Learn More <i className="fa-solid fa-arrow-right" /> </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-4 text-center p-2">
-                            <div className="card" id="card-4">
-                                <div className="icon3 mt-4"><i className="fa-solid fa-shield-halved" /></div>
-                                <div className="card-body">
-                                    <h3 className="card-title">Preventive Care</h3>
-                                    <p className="card-text mt-3"> Proactive health screenings and wellness programs designed to
-                                        prevent illness and maintain optimal health.</p>
-                                    <div className="link mb-5">
-                                        <a href="#">Learn More <i className="fa-solid fa-arrow-right" /> </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row mt-5 mb-4">
-                        <div className="col-md-12" style={{ backgroundColor: 'rgb(35, 189, 189)', borderRadius: 12 }}>
-                            <div className="row text-center pt-4">
-                                <div className="col-md-2 col-5">
-                                    <div className="icn  pt-2" style={{ display: 'flex', justifyContent: 'center' }}>
-                                        <i className="fa-solid fa-phone" />
-                                    </div>
-                                </div>
-                                <div className="col-md-7 col-12">
-                                    <h2>Need Immediate Assistance?</h2>
-                                    <p>Our medical team is available around the clock for urgent consultations and emergency
-                                        support.</p>
-                                </div>
-                                <div className="col-md-2">
-                                    <button type="button" className="btn btn-light mt-3"><i className="fa-solid fa-phone" /> (555)
-                                        123-4567</button>
-                                </div>
-                                <div className="col-md-1 pt-3">
-                                    <a href="#" style={{ color: 'white' }}> Directions</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="footer">
-                        <hr />
-                        <div className="row mt-5 mb-4">
-                            <div className="col-md-2 col-sm-4 col-12 p-2">
-                                <h3>MediNest</h3>
-                                <p>A108 Adam Street<br />
-                                    New York, NY 535022</p>
-                                <span><b>Phone:</b> +1 5589 55488 55</span><br />
-                                <span><b>Email:</b> info@example.com</span><br />
-                                <i className="fa-brands fa-square-x-twitter" />
-                                <i className="fa-brands fa-square-facebook" />
-                                <i className="fa-brands fa-square-instagram" />
-                                <i className="fa-brands fa-linkedin" />
-                            </div>
-                            <div className="offset-md-2 col-md-2 offset-sm-1 col-sm-4">
-                                <ul>
-                                    <h5>Useful Links</h5>
-                                    <li>Home</li>
-                                    <li>About us</li>
-                                    <li>Services</li>
-                                    <li>Terms of service</li>
-                                    <li>Privacy policy</li>
-                                </ul>
-                            </div>
-                            <div className="col-md-2 col-sm-4">
-                                <ul>
-                                    <h5>Our Services</h5>
-                                    <li>Web Design</li>
-                                    <li>Web Development</li>
-                                    <li>Product Management</li>
-                                    <li>Marketing</li>
-                                    <li>Graphic Design</li>
-                                </ul>
-                            </div>
-                            <div className="col-md-2 col-sm-4">
-                                <ul>
-                                    <h5>Hic solutasetp</h5>
-                                    <li>Molestiae accusamus</li>
-                                    <li>Excepturi dignissimos</li>
-                                    <li>Suscipit distinctio</li>
-                                    <li>Dilecta</li>
-                                    <li>Sit quas consectetur</li>
-                                </ul>
-                            </div>
-                            <div className="col-md-2 col-sm-4">
-                                <ul>
-                                    <h5>Nobis illum</h5>
-                                    <li>Ipsam</li>
-                                    <li>Laudantium dolorum</li>
-                                    <li>Dinera</li>
-                                    <li>Trodelas</li>
-                                    <li>Flexo</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <hr />
-                </div>
+    <div>
+  <div className="container pt-5">
+    <div className="row align-items-center g-5">
+      <div className="col-lg-6 text-center mb-4 position-relative shifted">
+        <img src="images/staff-8.webp" alt="Doctor" className="doctor_img   " />
+        <div className="info-card position-absolute top-0 start-0 m-3 d-flex align-items-center gap-2">
+          <i className="bi bi-telephone-fill text-info fs-4" />
+          <div>
+            <small className="d-block text-muted">24/7 Emergency</small>
+            <strong>+1 (555) 911-2468</strong>
+          </div>
+        </div>
+        <div className="info-card info-card2 position-absolute mb-3 d-flex justify-content-between w-80">
+          <div className="text-center px-3">
+            <h5 className="mb-0 text-info fw-bold fs-3">25K+</h5>
+            <small className="text-muted fs-6">Patients Treated</small>
+          </div>
+          <div className="text-center px-3">
+            <h5 className="mb-0 text-success   fw-bold fs-3">98%</h5>
+            <small className="text-muted fs-6">Satisfaction Rate</small>
+          </div>
+        </div>
+      </div>
+      <div className="col-lg-6">
+        <span className="badge bg-info text-dark mb-3 px-4 py-2 fs-6 rounded-pill">
+          TRUSTED HEALTHCARE PROVIDER
+        </span>
+        <h1 className="fw-bold display-5 mb-3">
+          Excellence in Medical Care Since 1985
+        </h1>
+        <p className="text-muted fs-5 mb-4">
+          Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Pellentesque in
+          ipsum id orci porta dapibus. Vivamus magna justo, lacinia eget consectetur sed,
+          convallis at tellus.
+        </p>
+        <div className="row g-3 mb-4">
+          <div className="col-4 col-md-3">
+            <div className="bg-light rounded-4 p-3 text-center shadow h-100">
+              <i className="bi bi-award text-info fs-2 mb-2 d-block" />
+              <h5 className="fw-bold mb-1">35+</h5>
+              <small className="text-muted">Years Experience</small>
             </div>
+          </div>
+          <div className="col-4 col-md-3">
+            <div className="bg-light rounded-4 p-3 text-center shadow h-100">
+              <i className="bi bi-people text-info fs-2 mb-2" />
+              <h5 className="fw-bold mb-1">150+</h5>
+              <small className="text-muted">Medical Specialists</small>
+            </div>
+          </div>
+          <div className="col-4 col-md-3">
+            <div className="bg-light rounded-4 p-3 text-center shadow h-100">
+              <i className="bi bi-geo-alt text-info fs-2 mb-2" />
+              <h5 className="fw-bold mb-1">12</h5>
+              <small className="text-muted">Clinic Locations</small>
+            </div>
+          </div>
+        </div>
+        <div className="d-flex gap-3">
+          <a href="#" className="btn btn-info text-white fw-bold px-4 py-2 rounded-3 shadow-sm">
+            Schedule Consultation
+          </a>
+          <a href="#" className="btn btn-outline-dark px-4 py-2 rounded-3">
+            <i className="bi bi-play-circle me-2" /> Watch Our Story
+          </a>
+        </div>
+        <div className="container">
+          <div className="row service-row mt-3">
+            <div className="col-md-auto">
+              <div className="service-box">
+                <i className="bi bi-calendar-check" />
+                <span>Find Available Times</span>
+              </div>
+            </div>
+            <div className="col-md-auto">
+              <div className="service-box">
+                <i className="bi bi-chat-dots" />
+                <span>Chat with Support</span>
+              </div>
+            </div>
+            <div className="col-md-auto">
+              <div className="service-box">
+                <i className="bi bi-file-earmark-medical" />
+                <span>Patient Portal</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section className="home">
+    <div className="container">
+      <div className="row">
+        <div className="col-12 text-center mt-5 mb-5">
+          <h1 className="display-5 fw-semibold mb-4 custom-text">Excellence in Healthcare Since 1985</h1>
+          <p className="text-muted fs-5">We are committed to providing world-class medical care through</p>
+          <p className="text-muted fs-5">innovation, compassion, and unwavering dedication to our</p>
+          <p className="text-muted fs-5">patients' wellbeing and recovery.</p>
+        </div>
+      </div>
+      <div className="container mb-5">
+        <div className="row align-items-center">
+          <div className="col-lg-5 col-md-12 mb-3 col-sm-12 image-large">
+            <div className="image-card">
+              <img src="images/facilities-6.webp" alt="facilities" className="rounded-4 img-fluid" />
+            </div>
+          </div>
+          <div className="col-lg-3 col-md-12 col-sm-12">
+            <div className="row g-3">
+              <div className="col-lg-12 col-md-6">
+                <div className="image-card">
+                  <img src="images/consultation-3.webp" alt="consultation" className="img-fluid rounded-4" />
+                </div>
+              </div>
+              <div className="col-lg-12 col-md-6 mb-3">
+                <div className="image-card">
+                  <img src="images/surgery-2.webp" alt="surgery" className="img-fluid rounded-4" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-4 mt-md-3">
+            <div className="info-box mb-4">
+              <div className="d-flex align-items-start gap-3">
+                <i className="bi bi-heart-pulse text-info fs-2" />
+                <div>
+                  <h5 className="fw-bold">Patient-Centered Approach</h5>
+                  <p className="text-muted">Every treatment plan is carefully customized to meet
+                    individual
+                    patient needs and medical history.</p>
+                </div>
+              </div>
+            </div>
+            <ul className="list-unstyled mb-4 ms-2">
+              <li className="mb-2"><i className="bi bi-check-circle-fill text-info me-3" />Advanced diagnostic
+                technology and imaging</li>
+              <li className="mb-2"><i className="bi bi-check-circle-fill text-info me-3" />Board-certified
+                physicians
+                and specialists</li>
+              <li className="mb-2"><i className="bi bi-check-circle-fill text-info me-3" />Comprehensive
+                rehabilitation
+                programs</li>
+              <li className="mb-2"><i className="bi bi-check-circle-fill text-info me-3" />24/7 emergency and
+                critical
+                care services</li>
+            </ul>
+            <div className="d-flex align-items-center mb-4 gap-5 ms-2">
+              <div className="align-items-center d-flex flex-column">
+                <h1 className="text-info fw-normal mb-0">98%</h1>
+                <small className="text-muted fs-6">Patient Satisfaction</small>
+              </div>
+              <div className="align-items-center d-flex flex-column">
+                <h1 className="text-info fw-normal mb-0">35K+</h1>
+                <small className="text-muted fs-6">Lives Improved</small>
+              </div>
+            </div>
+            <div className="d-flex gap-3 mb-4 ms-2">
+              <a href="#" className="btn btn-info text-white fw-bold px-4">Explore Our Services</a>
+              <a href="#" className="btn btn-outline-secondary px-4">
+                <i className="bi bi-telephone me-2" /> Schedule Consultation
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div></section>
+  <section className="featured-departments">
+    <div className="container">
+      <div className="row text-center">
+        <div className="col-lg-12">
+          <h1>Featured Departments</h1>
+          <p className="text-muted mt-2 mb-5">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+            consectetur velit</p>
+        </div>
+      </div>
+    </div>
+    <div className="container mt-3">
+      <div className="row align-items-center my-4">
+        <div className="col-lg-6 mb-4 mt-4">
+          <h6 className="text-uppercase text-info fw-bold mb-4" style={{letterSpacing: 1}}>Emergency Medicine
+          </h6>
+          <h2 className="fw-bold mt-2 mb-4">24/7 Emergency Care Services</h2>
+          <p className="mb-4 lh-md">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+            doloremque laudantium,
+            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+            dicta sunt explicabo.</p>
+          <ul className="list-unstyled mt-4 mb-4">
+            <li className="mb-3"><i className="bi bi-check-circle-fill me-3" />24/7 Emergency Response</li>
+            <li className="mb-3"><i className="bi bi-check-circle-fill me-3" />Advanced Life Support</li>
+            <li className="mb-3"><i className="bi bi-check-circle-fill me-3" />Trauma Care Specialists</li>
+          </ul>
+          <a href="#" className="learn-more mt-2 mb-3">Learn More </a>
+        </div>
+        <div className="col-lg-6 services-img">
+          <div className="image-card">
+            <img src="images/emergency-3.webp" alt="emergency-3" className="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="container py-5">
+      <div className="row g-4">
+        <div className="col-lg-4 col-md-6">
+          <div className="card service-card1 h-100">
+            <div className="icon-circle">
+              <i className="bi bi-heart-pulse" />
+            </div>
+            <div className="card-content text-start mt-2">
+              <h5 className="fs-3">Cardiology</h5>
+              <p className="text-muted mb-3">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+                aut fugit, sed quia
+                consequuntur magni dolores.</p>
+            </div>
+            <div className="row stats text-start mt-4">
+              <div className="col-6">
+                <strong className="d-block fs-4">15+</strong>
+                <small className="text-muted">SPECIALISTS</small>
+              </div>
+              <div className="col-6">
+                <strong className="d-block fs-4">500+</strong>
+                <small className="text-muted">PROCEDURES</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-4 col-md-6">
+          <div className="card service-card1 h-100">
+            <div className="icon-circle">
+              <i className="fa-solid fa-brain" />
+            </div>
+            <div className="card-content text-start mt-2">
+              <h5 className="fs-3">Neurology</h5>
+              <p className="text-muted mb-3">Eos qui ratione voluptatem sequi nesciunt neque porro quisquam
+                est, qui dolorem ipsum quia dolor sit amet.</p>
+            </div>
+            <div className="row stats text-start mt-4">
+              <div className="col-6">
+                <strong className="d-block fs-4">8+</strong>
+                <small className="text-muted">SPECIALISTS</small>
+              </div>
+              <div className="col-6">
+                <strong className="d-block fs-4">200+</strong>
+                <small className="text-muted">TREATMENTS</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-4 col-md-6">
+          <div className="card service-card1 h-100">
+            <div className="icon-circle">
+              <i className="bi bi-scissors" />
+            </div>
+            <div className="card-content text-start mt-2">
+              <h5 className="fs-3">Surgery</h5>
+              <p className="text-muted mb-3">Consectetur adipisci velit sed quia non numquam eius modi tempora
+                incidunt ut labore et dolore magnam aliquam.</p>
+            </div>
+            <div className="row stats text-start mt-4">
+              <div className="col-6">
+                <strong className="d-block fs-4">12+</strong>
+                <small className="text-muted">SURGEONS</small>
+              </div>
+              <div className="col-6">
+                <strong className="d-block fs-4">1000+</strong>
+                <small className="text-muted">OPERATIONS</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-4 col-md-6">
+          <div className="card service-card1 h-100">
+            <div className="icon-circle">
+              <i className="fas fa-baby" />
+            </div>
+            <div className="card-content text-start mt-2">
+              <h5 className="fs-3">Pediatrics</h5>
+              <p className="text-muted mb-3">Quaerat voluptatem ut enim ad minima veniam quis nostrum
+                exercitationem ullam corporis suscipit laboriosam.</p>
+            </div>
+            <div className="row stats text-start mt-4">
+              <div className="col-6">
+                <strong className="d-block fs-4">10+</strong>
+                <small className="text-muted">PEDIATRICIANS</small>
+              </div>
+              <div className="col-6">
+                <strong className="d-block fs-4">2000+</strong>
+                <small className="text-muted">YOUNG PATIENTS</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-4 col-md-6">
+          <div className="card service-card1 h-100">
+            <div className="icon-circle">
+              <i className="fas fa-eye" />
+            </div>
+            <div className="card-content text-start mt-2">
+              <h5 className="fs-3">Ophthalmology</h5>
+              <p className="text-muted mb-3">Nisi ut aliquid ex ea commodi consequatur quis autem vel eum iure
+                reprehenderit qui in ea voluptate velit esse.</p>
+            </div>
+            <div className="row stats text-start mt-4">
+              <div className="col-6">
+                <strong className="d-block fs-4">6+</strong>
+                <small className="text-muted">EYE DOCTORS</small>
+              </div>
+              <div className="col-6">
+                <strong className="d-block fs-4">800+</strong>
+                <small className="text-muted">EYE EXAMS</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-4 col-md-6">
+          <div className="card service-card1 h-100">
+            <div className="icon-circle">
+              <i className="fas fa-band-aid" />
+            </div>
+            <div className="card-content text-start mt-2">
+              <h5 className="fs-3">Dermatology</h5>
+              <p className="text-muted mb-3">Quam nihil molestiae consequatur vel illum qui dolorem eum fugiat
+                quo voluptas nulla pariatur at vero eos.</p>
+            </div>
+            <div className="row stats text-start mt-4">
+              <div className="col-6">
+                <strong className="d-block fs-4">7+</strong>
+                <small className="text-muted">DERMATOLOGIST</small>
+              </div>
+              <div className="col-6">
+                <strong className="d-block fs-4">600+</strong>
+                <small className="text-muted">SKIN TREATMENTS</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="container py-2">
+      <div className="row text-center">
+        <div className="col-lg-12">
+          <div className="department-all">
+            <div className="department-content">
+              <h3 className="mb-4">Explore all Our Medical Departments</h3>
+              <p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentiumv
+              </p><p className="mb-2"> voluptatum deleniti atque corrupti quos dolores.</p>
+              <p />
+              <a href="#" className="btn btn-info text-light p-3 rounded-11">View All Departments</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section className="featured-services">
+    <div className="container">
+      <div className="row text-center mt-5">
+        <div className="col-lg-12">
+          <h1>Featured Services</h1>
+          <p className="text-muted mt-2 mb-5">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+            consectetur velit</p>
+        </div>
+      </div>
+    </div>
+    <div className="container py-3">
+      <div className="row g-4 mb-5">
+        <div className="col-lg-4 col-md-6">
+          <div className="card service-card2 h-100">
+            <div className="service-img">
+              <img src="images/cardiology-2.webp" alt="Cardiology" />
+              <div className="icon-badge">
+                <i className="bi bi-heart-pulse text-white" />
+              </div>
+            </div>
+            <div className="service-body mt-3">
+              <h5>Cardiology Excellence</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in
+                faucibus orci luctus et ultrices posuere cubilia curae.</p>
+              <a href="#" className="learn-more">Learn More </a>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-4 col-md-6">
+          <div className="card service-card2 h-100">
+            <div className="service-img">
+              <img src="images/neurology-3.webp" alt="Cardiology" />
+              <div className="icon-badge">
+                <i className="fa-solid fa-brain text-white" />
+              </div>
+            </div>
+            <div className="service-body mt-3">
+              <h5>Neurology Care</h5>
+              <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+              <a href="#" className="learn-more">Learn More </a>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-4 col-md-6">
+          <div className="card service-card2 h-100">
+            <div className="service-img">
+              <img src="images/orthopedics-1.webp" alt="Cardiology" />
+              <div className="icon-badge">
+                <i className="fas fa-bone text-white" />
+              </div>
+            </div>
+            <div className="service-body mt-3">
+              <h5>Orthopedic Surgery</h5>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+              <a href="#" className="learn-more">Learn More </a>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-4 col-md-6">
+          <div className="card service-card2 h-100">
+            <div className="service-img">
+              <img src="images/pediatrics-4.webp" alt="Cardiology" />
+              <div className="icon-badge">
+                <i className="fas fa-baby text-white" />
+              </div>
+            </div>
+            <div className="service-body mt-3">
+              <h5>Pediatric Care</h5>
+              <p>Sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde
+                omnis iste natus error sit voluptatem accusantium.</p>
+              <a href="#" className="learn-more">Learn More </a>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-4 col-md-6">
+          <div className="card service-card2 h-100">
+            <div className="service-img">
+              <img src="images/oncology-2.webp" alt="Cardiology" />
+              <div className="icon-badge">
+                <i className="fas fa-ribbon text-white" />
+              </div>
+            </div>
+            <div className="service-body mt-3">
+              <h5>Oncology Treatment</h5>
+              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                voluptatum deleniti atque corrupti quos dolores et quas molestias.</p>
+              <a href="#" className="learn-more">Learn More </a>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-4 col-md-6">
+          <div className="card service-card2 h-100">
+            <div className="service-img">
+              <img src="images/laboratory-3.webp" alt="Cardiology" />
+              <div className="icon-badge">
+                <i className="fas fa-flask text-white" />
+              </div>
+            </div>
+            <div className="service-body mt-3">
+              <h5>Laboratory Services</h5>
+              <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet
+                ut et voluptates repudiandae sint et molestiae non recusandae.</p>
+              <a href="#" className="learn-more">Learn More </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section className="find-a-doctor">
+    <div className="container">
+      <div className="row text-center my-5">
+        <div className="col-lg-12">
+          <h2>Find A Doctor</h2>
+          <p className="text-muted mt-2 mb-5">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+            consectetur velit</p>
+        </div>
+      </div>
+    </div>
+    <div className="container">
+      <div className="row">
+        <div className="col-lg-12 text-center">
+          <div className="search-header">
+            <h2 className="fw-bold">Discover Your Ideal Medical Specialist</h2>
+            <p className="fs-6 text-muted">Connect with our network of certified healthcare professionals across
+              all medical disciplines</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="container my-5">
+      <div className="search-box">
+        <form>
+          <div className="row g-3 align-items-end">
+            <div className="col-md-4">
+              <label className="fw-semibold fs-6 mb-2">Practitioner Name</label>
+              <div className="input-icon">
+                <i className="bi bi-search" />
+                <input type="text" className="form-control" placeholder="Search by name..." />
+              </div>
+            </div>
+            <div className="col-md-4">
+              <label className="fw-semibold fs-6 mb-2">Medical Specialty</label>
+              <div className="input-icon">
+                <i className="bi bi-plus-lg" />
+                <select className="form-control">
+                  <option>Select specialty</option>
+                  <option>Cardiovascular Medicine</option>
+                  <option>Neurological Sciences</option>
+                </select>
+              </div>
+            </div>
+            <div className="col-md-3">
+              <label className="fw-semibold fs-6 mb-2">Location</label>
+              <div className="input-icon">
+                <i className="bi bi-geo-alt" />
+                <select className="form-control">
+                  <option>All locations</option>
+                  <option>Ahmedabad</option>
+                  <option>Mumbai</option>
+                  <option>Delhi</option>
+                  <option>Bangalore</option>
+                  <option>Jaipur</option>
+                  <option>Bhopal</option>
+                  <option>Patna</option>
+                </select>
+              </div>
+            </div>
+            <div className="col-md-1 col-sm-12 d-flex justify-content-center">
+              <button type="submit" className="btn-search">
+                <i className="bi bi-arrow-right text-white" />
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div className="container py-5">
+      <div className="row g-4">
+        <div className="col-lg-4 col-md-6">
+          <div className="doctor-card h-100">
+            <div className="d-flex align-items-center mb-3">
+              <div className="position-relative">
+                <img src="images/staff-1.webp" className="doctor-img me-3 img-fluid rounded-4" />
+                <div className="badge active-class text-bg-success text-success rounded-circle">1</div>
+              </div>
+              <div>
+                <h5 className="mb-0 fw-bold">Dr. Jennifer Morgan</h5>
+                <small className="text-muted">Senior Cardiologist</small>
+                <div>
+                  <span className="badge bg-info text-dark mb-2 me-1">MD, FACC</span>
+                  <span className="text-muted">18 years</span>
+                </div>
+              </div>
+            </div>
+            <div className="d-flex align-items-center my-2">
+              <span className="text-warning">★★★★★</span>
+              <span className="fw-bold ms-2">4.9</span>
+              <small className="text-muted ms-2">(142 patients)</small>
+            </div>
+            <div className="d-flex justify-content-start mt-3 gap-2">
+              <button className="btn btn-outline-secondary btn-custom w-100">Profile</button>
+              <button className="btn btn-info text-white btn-custom w-100">Consult</button>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-4 col-md-6">
+          <div className="doctor-card h-100">
+            <div className="d-flex align-items-center mb-3">
+              <div className="position-relative">
+                <img src="images/staff-12.webp" className="doctor-img me-3 rounded-4" />
+                <div className="badge active-class text-bg-warning text-warning rounded-circle">1</div>
+              </div>
+              <div>
+                <h5 className="mb-0 fw-bold">Dr. Robert Kim</h5>
+                <small className="text-muted">Neurosurgeon</small>
+                <div>
+                  <span className="badge bg-info text-dark mb-2 me-1">MD, PhD</span>
+                  <span className="text-muted">24 years</span>
+                </div>
+              </div>
+            </div>
+            <div className="d-flex align-items-center my-2">
+              <span className="text-warning">★★★★★</span>
+              <span className="fw-bold ms-2">4.8</span>
+              <small className="text-muted ms-2">(98 patients)</small>
+            </div>
+            <div className="d-flex justify-content-start mt-3 gap-2">
+              <button className="btn btn-outline-secondary btn-custom w-100">Profile</button>
+              <button className="btn btn-info text-white btn-custom w-100">Schedule</button>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-4 col-md-6">
+          <div className="doctor-card h-100">
+            <div className="d-flex align-items-center mb-3">
+              <div className="position-relative">
+                <img src="images/staff-3.webp" className="doctor-img me-3 rounded-4" />
+                <div className="badge active-class text-bg-dark text-dark rounded-circle">1</div>
+              </div>
+              <div>
+                <h5 className="mb-0 fw-bold">Dr. Sarah Thompson</h5>
+                <small className="text-muted">Pediatric Specialist</small>
+                <div>
+                  <span className="badge bg-info text-dark mb-2 me-1">MD, FAAP</span>
+                  <span className="text-muted">12 years</span>
+                </div>
+              </div>
+            </div>
+            <div className="d-flex align-items-center my-2">
+              <span className="text-warning">★★★★★</span>
+              <span className="fw-bold ms-2">5.0</span>
+              <small className="text-muted ms-2">(156 patients)</small>
+            </div>
+            <div className="d-flex justify-content-start mt-3 gap-2">
+              <button className="btn btn-outline-secondary btn-custom w-100">Profile</button>
+              <button className="btn btn-info text-white btn-custom w-100">Book Now</button>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-4 col-md-6">
+          <div className="doctor-card h-100">
+            <div className="d-flex align-items-center mb-3">
+              <div className="position-relative">
+                <img src="images/staff-5.webp" className="doctor-img me-3 rounded-4" />
+                <div className="badge active-class text-bg-success text-success rounded-circle">1</div>
+              </div>
+              <div>
+                <h5 className="mb-0 fw-bold">Dr. Michael Rivera</h5>
+                <small className="text-muted">Orthopedic Surgeon</small>
+                <div>
+                  <span className="badge bg-info text-dark mb-2 me-1">MD, FAAOS</span>
+                  <span className="text-muted">20 years</span>
+                </div>
+              </div>
+            </div>
+            <div className="d-flex align-items-center my-2">
+              <span className="text-warning">★★★★★</span>
+              <span className="fw-bold ms-2">4.7</span>
+              <small className="text-muted ms-2">(134 patients)</small>
+            </div>
+            <div className="d-flex justify-content-start mt-3 gap-2">
+              <button className="btn btn-outline-secondary btn-custom w-100">Profile</button>
+              <button className="btn btn-info text-white btn-custom w-100">Request</button>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-4 col-md-6">
+          <div className="doctor-card h-100">
+            <div className="d-flex align-items-center mb-3">
+              <div className="position-relative">
+                <img src="images/staff-7.webp" className="doctor-img me-3 rounded-4" />
+                <div className="badge active-class text-bg-success text-success rounded-circle">1</div>
+              </div>
+              <div>
+                <h5 className="mb-0 fw-bold">Dr. Lisa Garcia</h5>
+                <small className="text-muted">Dermatologist</small>
+                <div>
+                  <span className="badge bg-info text-dark mb-2 me-1">MD, FAAD</span>
+                  <span className="text-muted">15 years</span>
+                </div>
+              </div>
+            </div>
+            <div className="d-flex align-items-center my-2">
+              <span className="text-warning">★★★★★</span>
+              <span className="fw-bold ms-2">4.6</span>
+              <small className="text-muted ms-2">(89 patients)</small>
+            </div>
+            <div className="d-flex justify-content-start mt-3 gap-2">
+              <button className="btn btn-outline-secondary btn-custom w-100">Profile</button>
+              <button className="btn btn-info text-white btn-custom w-100">Consult</button>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-4 col-md-6">
+          <div className="doctor-card h-100">
+            <div className="d-flex align-items-center mb-3">
+              <div className="position-relative">
+                <img src="images/staff-9.webp" className="doctor-img me-3 rounded-4" />
+                <div className="badge active-class text-bg-success text-success rounded-circle">1</div>
+              </div>
+              <div>
+                <h5 className="mb-0 fw-bold">Dr. Daniel Wong</h5>
+                <small className="text-muted">Oncology Expert</small>
+                <div>
+                  <span className="badge bg-info text-dark mb-2 me-1">MD, FASCO</span>
+                  <span className="text-muted">21 years</span>
+                </div>
+              </div>
+            </div>
+            <div className="d-flex align-items-center my-2">
+              <span className="text-warning">★★★★★</span>
+              <span className="fw-bold ms-2">4.9</span>
+              <small className="text-muted ms-2">(211 patients)</small>
+            </div>
+            <div className="d-flex justify-content-start mt-3 gap-2">
+              <button className="btn btn-outline-secondary btn-custom w-100">Profile</button>
+              <button className="btn btn-info text-white btn-custom w-100">Appointment</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="text-center mt-4">
+        <button className="btn btn-outline-info text-dark px-4 py-2 btn-custom">
+          Browse Complete Directory →
+        </button>
+      </div>
+    </div>
+  </section>
+  <section className="call-to-action">
+    <div className="container-fluid bg-color-cta my-4">
+      <div className="container py-5">
+        <div className="row">
+          <div className="col-lg-6">
+            <h1 className="fw-normal mt-2 mb-4 display-4">Exceptional Care for Your Health Journey</h1>
+            <p className="mb-4 lh-md fs-5 text-muted">Discover comprehensive healthcare services delivered with
+              compassion and
+              expertise. Our dedicated team is committed to providing personalized medical care that puts
+              you first.</p>
+            <a href="#" type="button" className="btn btn-info mt-2 mb-3 btn-lg text-white">Schedule
+              Consultation</a>
+            <a href="#" className="learn-more mb-5 mx-4 fs-5">Explore Services </a>
+          </div>
+          <div className="col-lg-6">
+            <div className="image-showcase">
+              <img src="images/showcase-2.webp" alt="emergency-3" className="img-fluid rounded-3 " />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="container my-5">
+      <div className="row border-top border-bottom py-4">
+        <div className="col-lg-3 col-md-6 col-sm-6 mb-2">
+          <div className="align-items-center d-flex flex-column">
+            <h1 className="text-info fw-normal mb-0">25+</h1>
+            <small className="text-muted fs-6">Years Experienc</small>
+          </div>
+        </div>
+        <div className="col-lg-3 col-md-6 col-sm-6 mb-2">
+          <div className="align-items-center d-flex flex-column">
+            <h1 className="text-info fw-normal mb-0">15K+</h1>
+            <small className="text-muted fs-6">Happy Patients</small>
+          </div>
+        </div>
+        <div className="col-lg-3 col-md-6 col-sm-6 mb-2">
+          <div className="align-items-center d-flex flex-column">
+            <h1 className="text-info fw-normal mb-0">50+</h1>
+            <small className="text-muted fs-6">Medical Experts</small>
+          </div>
+        </div>
+        <div className="col-lg-3 col-md-6 col-sm-6 mb-2">
+          <div className="align-items-center d-flex flex-column">
+            <h1 className="text-info fw-normal mb-0">24/7</h1>
+            <small className="text-muted fs-6">Emergency Care</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="container py-3">
+      <div className="row g-4">
+        <div className="col-lg-4 col-md-6">
+          <div className="card h-100 service-card3 text-center p-3">
+            <div className="icon-circle2 mb-3">
+              <i className="bi bi-heart-pulse fs-1" />
+            </div>
+            <div className="card-body">
+              <h5 className="card-title fs-3">Cardiology</h5>
+              <p className="card-text text-muted">
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                consequuntur magni dolores.
+              </p>
+            </div>
+            <div className="card-footer bg-transparent border-0">
+              <a href="#" className="s3-learn-more fs-5 text-decoration-none">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-4 col-md-6">
+          <div className="card h-100 service-card3 text-center p-3">
+            <div className="icon-circle2 mb-3">
+              <i className="fa-solid fa-brain fs-1" />
+            </div>
+            <div className="card-body">
+              <h5 className="card-title fs-3">Neurology Center</h5>
+              <p className="card-text text-muted">
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                consequuntur magni dolores.
+              </p>
+            </div>
+            <div className="card-footer bg-transparent border-0">
+              <a href="#" className="s3-learn-more fs-5 text-decoration-none">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-4 col-md-6">
+          <div className="card h-100 service-card3 text-center p-3">
+            <div className="icon-circle2 mb-3">
+              <i className="fas fa-shield-alt fs-1" />
+            </div>
+            <div className="card-body">
+              <h5 className="card-title fs-3">Preventive Care</h5>
+              <p className="card-text text-muted">
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                consequuntur magni dolores.
+              </p>
+            </div>
+            <div className="card-footer bg-transparent border-0">
+              <a href="#" className="s3-learn-more fs-5 text-decoration-none">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="container my-5">
+      <div className="assistance-box">
+        <div className="row align-items-center">
+          <div className="col-md-8 d-flex align-items-center mb-3 mb-md-0">
+            <div className="contact-icon bg-white bg-opacity-25 me-3">
+              <i className="fas fa-phone fs-4 text-white" />
+            </div>
+            <div>
+              <h5 className="mb-1">Need Immediate Assistance?</h5>
+              <p className="mb-0">Our medical team is available around the clock for urgent consultations and
+                emergency support.</p>
+            </div>
+          </div>
+          <div className="col-md-4 d-flex justify-content-md-end align-items-center">
+            <a href="tel:5551234567" className="btn btn-light fw-semibold me-3">
+              <i className="bi bi-telephone-fill me-2" /> (555) 123-4567
+            </a>
+            <a href="#" className="text-dark fw-semibold text-decoration-none btn btn-outline-light">Get
+              Directions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ </div>
+
   )
 }
 

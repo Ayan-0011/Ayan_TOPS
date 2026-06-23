@@ -3,362 +3,376 @@ import { Link } from 'react-router-dom'
 
 const Doctor = () => {
   return (
-    <div>
-      <div>
-  <div className="row">
-    <div className="col-md-12 text-center pt-5 pb-5 mb-4">
-      <h1>Doctors</h1>
-      <p>Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a
-        odio voluptatem.<br /> Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum
-        dolorem.</p>
-    </div>
-    <div className="container-fluid">
-      <nav aria-label="breadcrumb" className="bg-body-secondary ps-5 pt-4 pb-3">
-        <ol className="breadcrumb joint">
-          <li className="breadcrumb-item"><Link to="/">Home</Link></li>
-          <li className="breadcrumb-item active" aria-current="page">Doctors</li>
-        </ol>
-      </nav>
+   <div>
+   <section id="heading">
+  <div className="container my-5">
+    <div className="row d-flex justify-content-center text-center">
+      <div className="col-lg-8">
+        <div className="heading-title my-5">
+          <h1>Doctors</h1>
+          <p className="text-muted">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio
+            sint voluptas
+            consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione
+            sint. Sit quaerat ipsum dolorem.</p>
+        </div>
+      </div>
     </div>
   </div>
-  <div className="container">
-    <div className="row mt-4">
-      <div className="col-12" id="serch">
-        <div className="row pt-3">
-          <div className="col-md-4 p-2 ps-3">
-            <p>Search Doctors</p>
-            <div className="form-floating mb-3">
-              <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com" />
-              <label htmlFor="floatingInput">Types a name or keybord</label>
+  <n className="breadcrumbs">
+    <div className="container-fluid  bg-secondary-subtle py-3">
+      <div className="container">
+        <ol className="list-unstyled gap-3 d-flex mb-0">
+          <li><Link to='/' className="text-decoration-none text-primary">Home</Link></li>
+          <li className="current">Doctors</li>
+        </ol>
+      </div>
+    </div>
+  </n>
+</section>
+
+
+
+  <section>
+    <div className="container my-5">
+      <div className="search-box">
+        <form>
+          <div className="row g-3 align-items-end">
+            <div className="col-md-3">
+              <label className="fw-semibold fs-6 mb-2">Search Doctors</label>
+              <div className="input-icon">
+                <i className="bi bi-search" />
+                <input type="text" className="form-control" placeholder="Search by name..." />
+              </div>
+            </div>
+            <div className="col-md-3">
+              <label className="fw-semibold fs-6 mb-2">Departments</label>
+              <div className="input-icon">
+                <i className="bi bi-plus-lg" />
+                <select className="form-control">
+                  <option hidden>All Departments</option>
+                  <option>Cardiology</option>
+                  <option>Pediatrics</option>
+                  <option>Dermatology</option>
+                  <option>Orthopedics</option>
+                </select>
+              </div>
+            </div>
+            <div className="col-md-3">
+              <label className="fw-semibold fs-6 mb-2">Location</label>
+              <div className="input-icon">
+                <i className="bi bi-geo-alt" />
+                <select className="form-control">
+                  <option hidden>All locations</option>
+                  <option>Downtown Clinic</option>
+                  <option>Westside Center</option>
+                  <option>Riverside Center</option>
+                </select>
+              </div>
+            </div>
+            <div className="col-md-3 col-sm-12 d-flex justify-content-center">
+              <button type="submit" className="btn-search1 w-100">
+                Apply Filters
+              </button>
             </div>
           </div>
-          <div className="col-md-3 p-2">
-            <p>Department</p>
-            <div className="form-floating">
-              <select className="form-select" id="floatingSelect">
-                <option selected>All Department</option>
-                <option value={1}>Cardiology</option>
-                <option value={2}>Neurological</option>
-                <option value={3}>Orthopedic</option>
-                <option value={4}>Pediatric</option>
-                <option value={5}>Dermatological</option>
-                <option value={6}>Oncological</option>
-              </select>
-            </div>
-          </div>
-          <div className="col-md-3 p-2">
-            <p>Location</p>
-            <div className="form-floating">
-              <select className="form-select" id="floatingSelect">
-                <option selected>All Location</option>
-                <option value={1}>All Location</option>
-                <option value={2}>Downtoen medical center</option>
-                <option value={3}>North side clinic</option>
-                <option value={4}>Wesr End hospital</option>
-              </select>
-            </div>
-          </div>
-          <div className="col-md-2 pt-3 mt-5 col-12 mb-3">
-            <button type="button" className="btn btn-info w-100">Apply filter</button>
-          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div className="container">
+      <h2 className="text-center mb-4">Our Doctors</h2>
+      {/* Filter Buttons */}
+      <div className="row gap-5 mb-4">
+        <div className="col-lg-12 col-md-12 col-sm-6">
+          <button className="btn filter-btn active" data-filter="all">All</button>
+          <button className="btn filter-btn" data-filter="pediatrics">Pediatrics</button>
+          <button className="btn filter-btn" data-filter="dermatology">Dermatology</button>
+          <button className="btn filter-btn" data-filter="orthopedics">Orthopedics</button>
+          <button className="btn filter-btn" data-filter="cardiology">Cardiology</button>
         </div>
       </div>
-      <div className="col-12 mt-3" id="bd">
-        <span className="badge rounded-pill bg-primary">All</span>
-        <span className="badge rounded-pill bg-light text-dark">Cardiology</span>
-        <span className="badge rounded-pill bg-light text-dark">Pediatric</span>
-        <span className="badge rounded-pill bg-light text-dark">Dermatorogy</span>
-        <span className="badge rounded-pill bg-light text-dark">Orthopedic</span>
-      </div>
-      {/*-dr profile*/}
-      <div className="row mt-3">
-        <div className="col-md-3 col-sm-6 mb-3">
-          <div className="card" id="dr-card">
-            <img src="img/staff-3.webp" className="card-img-top" height="200px" />
-            <span className="badge bg-info" style={{position: 'absolute', top: 10, left: 10}}>Cardiology</span><br />
+      {/* Doctors Grid */}
+      <div className="row g-4">
+        {/* Cardiology Doctor */}
+        <div className="col-lg-3 col-md-6 doctor-item cardiology">
+          <div className="card doctor-card2 h-100">
+            <img src="images/staff-3.webp" className="card-img-top" alt="Doctor 1" />
             <div className="card-body">
               <h5 className="card-title">Dr. Amelia Brooks</h5>
-              <h5 className="card-title" style={{fontWeight: 300, fontSize: 15}}>Cardiologist • MD, FACC
-              </h5>
-              <p className="card-text">Nostrud tempor magna minim excepteur, id cillum laboris aute proident.
-              </p>
-              <span className="badge bg-secondary mb-3">Cardiology</span><br />
-              <button type="button" className="btn btn-primary btn-sm me-2">Book Appointment</button>
-              <button type="button" className="btn btn-outline-info btn-sm">View Profile</button>
+              <p className="text-muted">Cardiologist • MD, FACC</p>
+              <p>Nostrud tempor magna minim excepteur, id cillum laboris aute proident.</p>
+              <span className="badge bg-info text-dark">Cardiology</span>
+            </div>
+            <div className="card-footer d-flex justify-content-between">
+              <a href="#" className="btn btn-primary btn-sm">Book Appointment</a>
+              <a href="#" className="btn btn-outline-secondary btn-sm">View Profile</a>
             </div>
           </div>
         </div>
-        <div className="col-md-3 col-sm-6 mb-2">
-          <div className="card" id="dr-card">
-            <img src="img/staff-7.webp" className="card-img-top" height="200px" />
+        {/* Pediatrics Doctor */}
+        <div className="col-lg-3 col-md-6 doctor-item pediatrics">
+          <div className="card doctor-card2 h-100">
+            <img src="images/staff-7.webp" className="card-img-top" alt="Doctor 2" />
             <div className="card-body">
-              <h5 className="card-title">Dr. Noah Turner</h5>
-              <h5 className="card-title" style={{fontWeight: 300, fontSize: 15}}>Pediatrician • DO</h5>
-              <p className="card-text">Quis irure pariatur sed eiusmod, elit laboris consequat cupidatat.</p>
-              <span className="badge bg-secondary mb-3">Pediatrics</span><br />
-              <button type="button" className="btn btn-primary btn-sm me-2">Book Appointment</button>
-              <button type="button" className="btn btn-outline-info btn-sm">View Profile</button>
+              <h5 className="card-title">Dr. John Smith</h5>
+              <p className="text-muted">Pediatrician • MD</p>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+              <span className="badge bg-success">Pediatrics</span>
+            </div>
+            <div className="card-footer d-flex justify-content-between">
+              <a href="#" className="btn btn-primary btn-sm">Book Appointment</a>
+              <a href="#" className="btn btn-outline-secondary btn-sm">View Profile</a>
             </div>
           </div>
         </div>
-        <div className="col-md-3 col-sm-6 mb-2">
-          <div className="card" id="dr-card">
-            <img src="img/staff-12.webp" className="card-img-top" height="200px" />
-            <span className="badge bg-info" style={{position: 'absolute', top: 10, left: 10}}>New</span><br />
+        {/* Dermatology Doctor */}
+        <div className="col-lg-3 col-md-6 doctor-item dermatology">
+          <div className="card doctor-card2 h-100">
+            <img src="images/staff-12.webp" className="card-img-top" alt="Doctor 3" />
             <div className="card-body">
-              <h5 className="card-title">Dr. Sofia Bennett</h5>
-              <h5 className="card-title" style={{fontWeight: 300, fontSize: 15}}>Dermatologist • MBBS, MD
-              </h5>
-              <p className="card-text">Dolor commodo laboris lorem ad, amet consequat mollit deserunt.</p>
-              <span className="badge bg-secondary mb-3">Dermatology</span><br />
-              <button type="button" className="btn btn-primary btn-sm me-2">Book Appointment</button>
-              <button type="button" className="btn btn-outline-info btn-sm">View Profile</button>
+              <h5 className="card-title">Dr. Sarah Lee</h5>
+              <p className="text-muted">Dermatologist • MD</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <span className="badge bg-warning text-dark">Dermatology</span>
+            </div>
+            <div className="card-footer d-flex justify-content-between">
+              <a href="#" className="btn btn-primary btn-sm">Book Appointment</a>
+              <a href="#" className="btn btn-outline-secondary btn-sm">View Profile</a>
             </div>
           </div>
         </div>
-        <div className="col-md-3 col-sm-6 mb-2">
-          <div className="card" id="dr-card">
-            <img src="img/staff-5.webp" className="card-img-top" height="200px" />
+        {/* Orthopedics Doctor */}
+        <div className="col-lg-3 col-md-6 doctor-item orthopedics">
+          <div className="card doctor-card2 h-100">
+            <img src="images/staff-5.webp" className="card-img-top" alt="Doctor 4" />
             <div className="card-body">
-              <h5 className="card-title">Dr. Ethan Cole</h5>
-              <h5 className="card-title" style={{fontWeight: 300, fontSize: 15}}>Orthopedic Surgeon • MS,
-                FRCS</h5>
-              <p className="card-text">Velit laborum minim laboris, eiusmod elit irure in exercitation.</p>
-              <span className="badge bg-secondary mb-3">Orthopedics</span><br />
-              <button type="button" className="btn btn-primary btn-sm me-2">Book Appointment</button>
-              <button type="button" className="btn btn-outline-info btn-sm">View Profile</button>
+              <h5 className="card-title">Dr. Kevin White</h5>
+              <p className="text-muted">Orthopedic Surgeon • MD</p>
+              <p>Curabitur blandit tempus porttitor.</p>
+              <span className="badge bg-danger">Orthopedics</span>
+            </div>
+            <div className="card-footer d-flex justify-content-between">
+              <a href="#" className="btn btn-primary btn-sm">Book Appointment</a>
+              <a href="#" className="btn btn-outline-secondary btn-sm">View Profile</a>
             </div>
           </div>
         </div>
-        <div className="col-md-3 col-sm-6 mb-2">
-          <div className="card" id="dr-card">
-            <img src="img/staff-6.webp" className="card-img-top" height="200px" />
+        {/* Cardiology Doctor */}
+        <div className="col-lg-3 col-md-6 doctor-item cardiology">
+          <div className="card doctor-card2 h-100">
+            <img src="images/staff-6.webp" className="card-img-top" alt="Doctor 1" />
             <div className="card-body">
-              <h5 className="card-title">Dr. Liam Carter</h5>
-              <h5 className="card-title" style={{fontWeight: 300, fontSize: 15}}>Sports Medicine • MD</h5>
-              <p className="card-text">Deserunt pariatur eiusmod duis, officia aute laboris consectetur.</p>
-              <span className="badge bg-secondary mb-3">Orthopedics</span><br />
-              <button type="button" className="btn btn-primary btn-sm me-2">Book Appointment</button>
-              <button type="button" className="btn btn-outline-info btn-sm">View Profile</button>
+              <h5 className="card-title">Dr. Amelia Brooks</h5>
+              <p className="text-muted">Cardiologist • MD, FACC</p>
+              <p>Nostrud tempor magna minim excepteur, id cillum laboris aute proident.</p>
+              <span className="badge bg-info text-dark">Cardiology</span>
+            </div>
+            <div className="card-footer d-flex justify-content-between">
+              <a href="#" className="btn btn-primary btn-sm">Book Appointment</a>
+              <a href="#" className="btn btn-outline-secondary btn-sm">View Profile</a>
             </div>
           </div>
         </div>
-        <div className="col-md-3 col-sm-6 mb-2">
-          <div className="card" id="dr-card">
-            <img src="img/staff-10.webp" className="card-img-top" height="200px" />
+        {/* Pediatrics Doctor */}
+        <div className="col-lg-3 col-md-6 doctor-item pediatrics">
+          <div className="card doctor-card2 h-100">
+            <img src="images/staff-10.webp" className="card-img-top" alt="Doctor 2" />
             <div className="card-body">
-              <h5 className="card-title">Dr. Maya Patel</h5>
-              <h5 className="card-title" style={{fontWeight: 300, fontSize: 15}}>Interventional
-                Cardiologist • MD</h5>
-              <p className="card-text">Cupidatat fugiat sint enim laboris, sed do ut aliquip dolor.</p>
-              <span className="badge bg-secondary mb-3">Cardiology</span><br />
-              <button type="button" className="btn btn-primary btn-sm me-2">Book Appointment</button>
-              <button type="button" className="btn btn-outline-info btn-sm">View Profile</button>
+              <h5 className="card-title">Dr. John Smith</h5>
+              <p className="text-muted">Pediatrician • MD</p>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+              <span className="badge bg-success">Orthopedics</span>
+            </div>
+            <div className="card-footer d-flex justify-content-between">
+              <a href="#" className="btn btn-primary btn-sm">Book Appointment</a>
+              <a href="#" className="btn btn-outline-secondary btn-sm">View Profile</a>
             </div>
           </div>
         </div>
-        <div className="col-md-3 col-sm-6 mb-2">
-          <div className="card" id="dr-card">
-            <img src="img/staff-2.webp" className="card-img-top" height="200px" />
+        {/* Dermatology Doctor */}
+        <div className="col-lg-3 col-md-6 doctor-item dermatology">
+          <div className="card doctor-card2 h-100">
+            <img src="images/staff-2.webp" className="card-img-top" alt="Doctor 3" />
             <div className="card-body">
-              <h5 className="card-title">Dr. Oliver Hayes</h5>
-              <h5 className="card-title" style={{fontWeight: 300, fontSize: 15}}>Pediatric Specialist • MD
-              </h5>
-              <p className="card-text">Exercitation id ea nisi fugiat, ullamco veniam cillum nostrud.</p>
-              <span className="badge bg-secondary mb-3">Pediatrics</span><br />
-              <button type="button" className="btn btn-primary btn-sm me-2">Book Appointment</button>
-              <button type="button" className="btn btn-outline-info btn-sm">View Profile</button>
+              <h5 className="card-title">Dr. Sarah Lee</h5>
+              <p className="text-muted">Dermatologist • MD</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <span className="badge bg-warning text-dark">Orthopedics</span>
+            </div>
+            <div className="card-footer d-flex justify-content-between">
+              <a href="#" className="btn btn-primary btn-sm">Book Appointment</a>
+              <a href="#" className="btn btn-outline-secondary btn-sm">View Profile</a>
             </div>
           </div>
         </div>
-        <div className="col-md-3 col-sm-6 mb-2">
-          <div className="card" id="dr-card">
-            <img src="img/staff-9.webp" className="card-img-top" height="200px" />
+        {/* Orthopedics Doctor */}
+        <div className="col-lg-3 col-md-6 doctor-item orthopedics">
+          <div className="card doctor-card2 h-100">
+            <img src="images/staff-9.webp" className="card-img-top" alt="Doctor 4" />
             <div className="card-body">
-              <h5 className="card-title">Dr. Harper Lane</h5>
-              <h5 className="card-title" style={{fontWeight: 300, fontSize: 15}}>Cosmetic Dermatologist •
-                MD</h5>
-              <p className="card-text">Aliquip laboris anim minim, irure commodo qui occaecat velit.</p>
-              <span className="badge bg-secondary mb-3">Dermatology</span><br />
-              <button type="button" className="btn btn-primary btn-sm me-2">Book Appointment</button>
-              <button type="button" className="btn btn-outline-info btn-sm">View Profile</button>
+              <h5 className="card-title">Dr. Kevin White</h5>
+              <p className="text-muted">Orthopedic Surgeon • MD</p>
+              <p>Curabitur blandit tempus porttitor.</p>
+              <span className="badge bg-danger">Pediatrics</span>
+            </div>
+            <div className="card-footer d-flex justify-content-between">
+              <a href="#" className="btn btn-primary btn-sm">Book Appointment</a>
+              <a href="#" className="btn btn-outline-secondary btn-sm">View Profile</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div className="row mt-5 mb-3">
-      <div className="col-md-5">
-        <img src="img/staff-12.webp" width="95%" className="rounded-4" />
-      </div>
-      <div className="col-md-7 mt-5">
-        <span className="badge bg-secondary">Chief Surgeon</span>
-        <span className="badge bg-light" style={{color: 'rgb(24, 194, 216)'}}>12+ Years Experience</span>
-        <span className="badge bg-light" style={{color: 'rgb(24, 194, 216)'}}>Board Certified</span>
-        <h4 className="mt-3">Dr. Natalia Rivera</h4>
-        <p style={{fontSize: 15, fontWeight: 300}}>General Surgery • MD, FACS</p>
-        <p className="mb-4">Commodo incididunt aliqua minim, eiusmod in laboris nulla. Amet do occaecat quis,
-          excepteur in magna id dolore incididunt. Tempor in aute ullamco, irure officia aliqua nostrud.</p>
-        <p><i className="fa-solid fa-graduation-cap text-info" /> Residency: St. Mary’s Medical Center</p>
-        <p><i className="fa-solid fa-school text-info" /> Fellowship: Advanced Laparoscopy</p>
-        <p><i className="fa-solid fa-award text-info" /> Publications: 14 peer-reviewed articles</p>
-        <button type="button" className="btn btn-info me-3">Book Appointment</button>
-        <button type="button" className="btn btn-outline-info">View CV</button>
-      </div>
-    </div>
-    <div className="row g-2 mt-3 mb-3">
-      <div className="col-md-2 col-sm-6">
-        <div className="card" id="dr-profile">
-          <img src="img/staff-2.webp" className="rounded-pill m-2" width="35%" />
-          <span>Dr. Oliver Hayes</span>
-          <p style={{fontWeight: 300}}>Pediatrics</p>
+    {/* Filter Script */}
+  </section>
+  <section className="my-5 bg-light">
+    <div className="container py-3">
+      <div className="row g-4">
+        <div className="col-md-5">
+          <div>
+            <img src="images/staff-12.webp" alt className="img-fluid rounded-4" />
+          </div>
         </div>
-      </div>
-      <div className="col-md-2 col-sm-6">
-        <div className="card" id="dr-profile">
-          <img src="img/staff-7.webp" className="rounded-pill m-2" width="35%" />
-          <span>Dr. Noah Turner</span>
-          <p style={{fontWeight: 300}}>Pediatrics</p>
-        </div>
-      </div>
-      <div className="col-md-2 col-sm-6">
-        <div className="card" id="dr-profile">
-          <img src="img/staff-6.webp" className="rounded-pill m-2" width="35%" />
-          <span>Dr. Liam Carter</span>
-          <p style={{fontWeight: 300}}>Orthopedic</p>
-        </div>
-      </div>
-      <div className="col-md-2 col-sm-6">
-        <div className="card" id="dr-profile">
-          <img src="img/staff-3.webp" className="rounded-pill m-2" width="35%" />
-          <span>Dr. Amelia Brooks</span>
-          <p style={{fontWeight: 300}}>Cardiology</p>
-        </div>
-      </div>
-      <div className="col-md-2 col-sm-6">
-        <div className="card" id="dr-profile">
-          <img src="img/staff-9.webp" className="rounded-pill m-2" width="35%" />
-          <span>Dr. Harper Lane</span>
-          <p style={{fontWeight: 300}}>Dermatology</p>
-        </div>
-      </div>
-      <div className="col-md-2 col-sm-6">
-        <div className="card" id="dr-profile">
-          <img src="img/staff-11.webp" className="rounded-pill m-2" width="35%" />
-          <span>Dr. Lucas Grant</span>
-          <p style={{fontWeight: 300}}>Pulmonology</p>
-        </div>
-      </div>
-    </div>
-    <div className="row">
-      <div className="col-md-4">
-        <div className="card" style={{border: '1px solid'}}>
-          <img src="img/staff-4.webp" className="img-thumbnail card-img-top" width="30%" />
-          <h4 className="card-title ms-3">Dr. Henry James</h4>
-          <p className="card-title ms-3">Oncology • MBBS, MD</p>
-          <span className="card-link"><span className="badge bg-primary ms-3 mb-3">Board Certified</span></span>
-        </div>
-      </div>
-      <div className="col-md-8 mt-3">
-        <button type="button" className="btn btn-link dr-btn" data-bs-toggle="collapse" data-bs-target="#bio">Bio</button>
-        <button type="button" className="btn btn-link dr-btn" data-bs-toggle="collapse" data-bs-target="#Schedule">Schedule</button>
-        <button type="button" className="btn btn-link dr-btn" data-bs-toggle="collapse" data-bs-target="#Reviews">Reviews</button>
-        <div className="col-md-12 mt-4 collapse show" id="bio">
-          <p>Fugiat proident aliqua laboris, excepteur sunt ad pariatur occaecat. Veniam minim eu laboris,
-            magna irure velit anim excepteur exercitation.</p>
-          <p><i className="fa-solid fa-circle-check" /> Special interest in immunotherapy</p>
-          <p><i className="fa-solid fa-circle-check" /> Member of ASCO</p>
-          <p><i className="fa-solid fa-circle-check" /> Community outreach programs</p>
-        </div>
-        <div className="col-md-12  mt-4 mb-3 collapse" id="Schedule">
-          <div className="row g-2">
-            <div className="col-md-5 sch">
-              <span className="ps-3">Mon</span><span className="float-end me-3">9:00 AM - 1:00 PM</span>
+        <div className="col-md-7">
+          <div className="row mt-5">
+            <div className="col-lg-12 col-md-12 col-sm-6 upper-badges gap-3">
+              <small className="badge rounded-pill p-2 first">Chief Surgeonp</small>
+              <small className="badge rounded-pill p-2 second">12+ Years Experience</small>
+              <small className="badge rounded-pill p-2 third">Board Certified</small>
             </div>
-            <div className="offset-md-1 col-md-5 sch">
-              <span className="ps-3">Tue</span><span className="float-end me-3">12:00 PM - 6:00 PM</span>
-            </div>
-            <div className="col-md-5 sch">
-              <span className="ps-3">Wed</span><span className="float-end me-3">9:00 AM - 3:00 PM</span>
-            </div>
-            <div className="col-md-5 sch">
-              <span className="ps-3">Thu</span><span className="float-end me-3">10:00 AM - 4:00 PM</span>
-            </div>
-            <div className="col-md-5 sch">
-              <span className="ps-3">Fri</span><span className="float-end me-3">Closed</span>
+          </div>
+          <div className="row">
+            <h3 className="mt-5">Dr. Natalia Rivera</h3>
+            <p className="text-muted lh-1">General Surgery | MD, FACS</p>
+            <p>Commodo incididunt aliqua minim, eiusmod in laboris nulla. Amet do occaecat quis, excepteur
+              in magna id dolore incididunt. Tempor in aute ullamco, irure officia aliqua nostrud.</p>
+          </div>
+          <div className="row">
+            <ul className="list-unstyled highlights mb-4">
+              <li className="middle-li"><i className="bi bi-mortarboard me-3" />Residency: St. Mary's Medical
+                Center</li>
+              <li className="middle-li"><i className="bi bi-hospital me-3" />Fellowship: Advanced Laparoscopy
+              </li>
+              <li className="middle-li"><i className="bi bi-award me-3" />Publications: 14 peer-reviewed
+                articles</li>
+            </ul>
+          </div>
+          <div className="row">
+            <div className="lower-buttons d-flex flex-wrap gap-3">
+              <a href className="btn btn-appointment"><i className="bi bi-calendar2-check me-1" />Book
+                Appointment</a>
+              <a href className="btn soft"><i className="bi bi-file-earmark-text me-1" />View CV</a>
             </div>
           </div>
         </div>
-        <div className="col-md-12 mt-3" id="Reviews">
-          <i className="fa-solid fa-star" />
-          <i className="fa-solid fa-star" />
-          <i className="fa-solid fa-star" />
-          <i className="fa-solid fa-star" />
-          <i className="fa-solid fa-regular fa-star-half" />
-          <span>4.5/5 • 32 reviews</span>
-          <p>Id magna consequat minim in, lorem dolore fugiat. Officia irure ex anim, velit nulla cupidatat laboris enim.</p>
+      </div>
+    </div>
+  </section>
+  <section className="my-5">
+    <div className="container">
+      <div className="row g-4">
+        <div className="col-6 col-md-4 col-lg-2">
+          <div className="minimal-card text-center">
+            <img src="images/staff-2.webp" alt className="img-fluid avatar mb-2" />
+            <div className="info lh-1">
+              <h6>Dr. Oliver Hayes</h6>
+              <small> Pediatrics </small>
+            </div>
+          </div>
+        </div>
+        <div className="col-6 col-md-4 col-lg-2">
+          <div className="minimal-card text-center">
+            <img src="images/staff-7.webp" alt className="img-fluid avatar mb-2" />
+            <div className="info lh-1">
+              <h6>Dr. Noah Turner</h6>
+              <small> Pediatrics </small>
+            </div>
+          </div>
+        </div>
+        <div className="col-6 col-md-4 col-lg-2">
+          <div className="minimal-card text-center">
+            <img src="images/staff-6.webp" alt className="img-fluid avatar mb-2" />
+            <div className="info lh-1">
+              <h6>Dr. Liam Carter</h6>
+              <small> Orthopedics </small>
+            </div>
+          </div>
+        </div>
+        <div className="col-6 col-md-4 col-lg-2">
+          <div className="minimal-card text-center">
+            <img src="images/staff-3.webp" alt className="img-fluid avatar mb-2" />
+            <div className="info lh-1">
+              <h6>Dr. Amelia Brooks</h6>
+              <small> Cardiology </small>
+            </div>
+          </div>
+        </div>
+        <div className="col-6 col-md-4 col-lg-2">
+          <div className="minimal-card text-center">
+            <img src="images/staff-9.webp" alt className="img-fluid avatar mb-2" />
+            <div className="info lh-1">
+              <h6>Dr. Harper Lane</h6>
+              <small> Dermatology </small>
+            </div>
+          </div>
+        </div>
+        <div className="col-6 col-md-4 col-lg-2">
+          <div className="minimal-card text-center">
+            <img src="images/staff-11.webp" alt className="img-fluid avatar mb-2" />
+            <div className="info lh-1">
+              <h6>Dr. Lucas Grant</h6>
+              <small> Pulmonology </small>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div className="footer">
-      <hr />
-      <div className="row mt-5 mb-4">
-        <div className="col-md-2 col-sm-4 col-12 p-2">
-          <h3>MediNest</h3>
-          <p>A108 Adam Street<br />
-            New York, NY 535022</p>
-          <span><b>Phone:</b> +1 5589 55488 55</span><br />
-          <span><b>Email:</b> info@example.com</span><br />
-          <i className="fa-brands fa-square-x-twitter" />
-          <i className="fa-brands fa-square-facebook" />
-          <i className="fa-brands fa-square-instagram" />
-          <i className="fa-brands fa-linkedin" />
+  </section>
+  <section className="my-5 bg-light">
+    <div className="container py-4">
+      <div className="row g-4">
+        <div className="col-lg-4">
+          <div className="profile-card2">
+            <img src="images/staff-4.webp" alt className="rounded-4 img-fluid object-fit-cover" />
+            <div className="pt-3">
+              <h3 className="mb-1">Dr. Henry James</h3>
+              <p className="mb-2 text-muted">Oncology | MBBS, MD</p>
+              <div className="d-flex gap-2">
+                <span className="badge p-2 rounded-pill">Board Certified</span>
+                <span className="badge p-2 rounded-pill">8 Years</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="offset-md-2 col-md-2 offset-sm-1 col-sm-4">
-          <ul>
-            <h5>Useful Links</h5>
-            <li>Home</li>
-            <li>About us</li>
-            <li>Services</li>
-            <li>Terms of service</li>
-            <li>Privacy policy</li>
-          </ul>
-        </div>
-        <div className="col-md-2 col-sm-4">
-          <ul>
-            <h5>Our Services</h5>
-            <li>Web Design</li>
-            <li>Web Development</li>
-            <li>Product Management</li>
-            <li>Marketing</li>
-            <li>Graphic Design</li>
-          </ul>
-        </div>
-        <div className="col-md-2 col-sm-4">
-          <ul>
-            <h5>Hic solutasetp</h5>
-            <li>Molestiae accusamus</li>
-            <li>Excepturi dignissimos</li>
-            <li>Suscipit distinctio</li>
-            <li>Dilecta</li>
-            <li>Sit quas consectetur</li>
-          </ul>
-        </div>
-        <div className="col-md-2 col-sm-4">
-          <ul>
-            <h5>Nobis illum</h5>
-            <li>Ipsam</li>
-            <li>Laudantium dolorum</li>
-            <li>Dinera</li>
-            <li>Trodelas</li>
-            <li>Flexo</li>
-          </ul>
+        <div className="col-lg-8 mt-5">
+          <div className="profile-card-lower">
+            <ul className="mb-3 nb list-unstyled d-flex gap-3 px-4 py-3">
+              <li><a href className="text-decoration-none badge  px-4 py-3 rounded-pill">Bio</a></li>
+              <li><a href className="text-decoration-none badge p-3 rounded-pill" id="lower2">Schedule
+                </a>
+              </li>
+              <li><a href className="text-decoration-none badge p-3 rounded-pill" id="lower2">Reviews</a>
+              </li>
+            </ul>
+            <div className="px-4 lowertext-profilecard-section">
+              <p>Fugiat proident aliqua laboris, excepteur sunt ad pariatur occaecat. Veniam minim eu
+                laboris,
+                magna irure velit anim excepteur exercitation.</p>
+              <ul className="list-unstyled">
+                <li><i className="bi bi-check2-circle me-2" /> Special interest in immunotherapy</li>
+                <li><i className="bi bi-check2-circle me-2" /> Member of ASCO</li>
+                <li><i className="bi bi-check2-circle me-2" /> Community outreach programs</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div></div>
+  </section>
+</div>
 
-    </div>
+
   )
 }
 

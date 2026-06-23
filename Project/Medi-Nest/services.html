@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Font Awesome Cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-xl bg-white shadow-sm sticky-top">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand fs-2 fw-bold" href="#">
+                Medi<span class="text-info fw-semibold">Nest</span>
+            </a>
+
+            <!-- Hamburger Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-3 me-5">
+                    <li class="nav-item"><a class="nav-link text-dark" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="departments.html">Departments</a></li>
+                    <li class="nav-item"><a class="nav-link text-info active" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="doctor.html">Doctors</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#">More Pages</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" role="button"
+                            data-bs-toggle="dropdown">Dropdown</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Option 1</a></li>
+                            <li><a class="dropdown-item" href="#">Option 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="contact.html">Contact</a></li>
+                </ul>
+                <!-- Appointment Button -->
+                <a href="#" class="btn btn-info px-4 text-white ms-lg-5">Appointment</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="heading">
+        <div class="container my-5">
+            <div class="row d-flex justify-content-center text-center">
+                <div class="col-lg-8">
+                    <div class="heading-title my-5">
+                        <h1>Services</h1>
+                        <p class="text-muted">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio
+                            sint voluptas
+                            consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione
+                            sint. Sit quaerat ipsum dolorem.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <n class="breadcrumbs">
+            <div class="container-fluid  bg-secondary-subtle py-3">
+                <div class="container">
+                    <ol class="list-unstyled gap-3 d-flex mb-0">
+                        <li><a href="index.html" class="text-decoration-none text-primary">Home</a></li>
+                        <li class="current">Services</li>
+                    </ol>
+                </div>
+            </div>
+        </n av>
+    </section>
+
+    <div class="container py-5">
+        <div class="row g-4 align-items-stretch text-center">
+
+            <!-- Card 1 -->
+            <div class="col-md-4">
+                <div class="p-4 card-service h-100">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div class="icon-circle3">
+                            <i class="bi bi-heart-pulse"></i>
+                        </div>
+                        <span class="tag">PRIMARY CARE</span>
+                    </div>
+                    <div class="card-body text-start mt-3">
+                        <h5 class="fw-bold">General Consultation</h5>
+                        <p class="text-muted">Comprehensive health assessments and preventive care planning for all
+                            family members.</p>
+                        <div class="badge-group">
+                            <span class="badge bg-secondary-subtle text-dark">Health Monitor</span>
+                            <span class="badge bg-secondary-subtle text-dark">Wellness Program</span>
+                            <span class="badge bg-secondary-subtle text-dark">Preventive</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-light btn-custom2 mt-auto">Schedule Visit →</button>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-4">
+                <div class="p-4 card-service h-100 active">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div class="icon-circle3">
+                            <i class="bi bi-heart-fill"></i>
+                        </div>
+                        <span class="tag">Most Popular · SPECIALTY</span>
+                    </div>
+                    <div class="card-body text-start mt-3">
+                        <h5 class="fw-bold">Cardiology Services</h5>
+                        <p class="text-muted">Advanced heart care including diagnostics, treatment, and post-operative
+                            rehabilitation programs.</p>
+                        <div class="badge-group">
+                            <span class="badge bg-secondary-subtle text-dark">Heart Surgery</span>
+                            <span class="badge bg-secondary-subtle text-dark">ECG Testing</span>
+                            <span class="badge bg-secondary-subtle text-dark">Cardiac Rehab</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-light btn-custom2 mt-auto">Book Appointment →</button>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-4">
+                <div class="p-4 card-service h-100">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div class="icon-circle3">
+                            <i class="fas fa-vials"></i>
+                        </div>
+                        <span class="tag">DIAGNOSTICS</span>
+                    </div>
+                    <div class="card-body text-start mt-3">
+                        <h5 class="fw-bold">Laboratory Testing</h5>
+                        <p class="text-muted">Complete range of diagnostic tests with quick turnaround times and
+                            accurate results.</p>
+                        <div class="badge-group">
+                            <span class="badge bg-secondary-subtle text-dark">Blood Work</span>
+                            <span class="badge bg-secondary-subtle text-dark">Pathology</span>
+                            <span class="badge bg-secondary-subtle text-dark">Same-Day Results</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-light btn-custom2 mt-auto">Order Tests →</button>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-md-4">
+                <div class="p-4 card-service h-100">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div class="icon-circle3 bg-danger">
+                            <i class="bi bi-truck"></i>
+                        </div>
+                        <div>
+                            <span class="tag">EMERGENCY</span>
+                            <span class="badge bg-success">24/7 Available</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="fw-bold">Emergency Care</h5>
+                        <p class="text-muted">Round-the-clock emergency services with trauma center and critical care
+                            capabilities.</p>
+                        <div class="badge-group">
+                            <span class="badge bg-light text-dark">Trauma Center</span>
+                            <span class="badge bg-light text-dark">Critical Care</span>
+                            <span class="badge bg-light text-dark">Emergency Surgery</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-danger btn-custom2 mt-auto">Call Emergency <i
+                            class="bi bi-telephone-fill"></i></button>
+                </div>
+            </div>
+
+            <!-- Card 5-->
+            <div class="col-md-4">
+                <div class="p-4 card-service h-100">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div class="icon-circle3">
+                            <i class="bi bi-person-heart"></i>
+                        </div>
+                        <span class="tag">MATERNAL HEALTH</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="fw-bold">Women's Health</h5>
+                        <p class="text-muted">Comprehensive maternal care from prenatal checkups to delivery and
+                            postnatal support.</p>
+                        <div class="badge-group">
+                            <span class="badge bg-light text-dark">Prenatal Care</span>
+                            <span class="badge bg-light text-dark">Delivery Support</span>
+                            <span class="badge bg-light text-dark">Family Planning</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-info text-white btn-custom2 mt-auto">Learn More →</button>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col-md-4">
+                <div class="p-4 card-service h-100">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div class="icon-circle3">
+                            <i class="fas fa-syringe"></i>
+                        </div>
+                        <span class="tag">PREVENTION</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="fw-bold">Vaccination Services</h5>
+                        <p class="text-muted">Complete immunization programs for all ages including travel vaccines and
+                            seasonal shots.</p>
+                        <div class="badge-group">
+                            <span class="badge bg-light text-dark">Travel Vaccines</span>
+                            <span class="badge bg-light text-dark">Flu Shots</span>
+                            <span class="badge bg-light text-dark">Child Immunizations</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-light btn-custom2 mt-auto">Schedule Shot →</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="assistance-box">
+            <div class="row align-items-center">
+
+                <div class="col-md-8 d-flex align-items-center mb-3 mb-md-0">
+                    <div>
+                        <h5 class="mb-1">Need Immediate Assistance?</h5>
+                        <p class="mb-0">Our medical team is available around the clock for urgent consultations and
+                            emergency support.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 d-flex justify-content-md-end align-items-center">
+                    <a href="tel:5551234567" class="btn btn-light fw-semibold me-3">
+                        <i class="bi bi-telephone-fill me-2"></i> (555) 123-4567
+                    </a>
+                    <a href="#" class="text-dark fw-semibold text-decoration-none btn btn-outline-light">Get
+                        Directions</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container py-3 mt-5 border-top border-bottom">
+            <div class="row gy-5">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold fs-4 mb-4 text-primary   ">MediNest</h5>
+                    <p>A108 Adam Street <br>
+                        New York, NY 535022</p>
+                    <p><strong>Phone: </strong>+1 5589 55488 55</p>
+                    <p><strong>Email:</strong> info@example.com</p>
+
+                    <div class="footer-social d-flex gap-2 mt-3">
+                        <a href="#" class="bg-dark text-decoration-none"><i class="fab fa-x-twitter text-white"></i></a>
+                        <a href="#" class="bg-primary text-decoration-none"><i
+                                class="fab fa-facebook-f text-white"></i></a>
+                        <a href="#" class="bg-danger text-decoration-none"><i
+                                class="fab fa-instagram text-white"></i></a>
+                        <a href="#" class="bg-info text-decoration-none"><i
+                                class="fab fa-linkedin-in text-white"></i></a>
+                    </div>
+                </div>
+
+                <div class="offset-lg-1 col-lg-2 col-md-6">
+                    <h6 class="fw-bold fs-5 mb-3">Useful Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none d-block mb-2 text-muted">Home</a></li>
+                        <li><a href="#" class="text-decoration-none d-block mb-2 text-muted">About</a></li>
+                        <li><a href="#" class="text-decoration-none d-block mb-2 text-muted">Services</a></li>
+                        <li><a href="#" class="text-decoration-none d-block mb-2 text-muted">Terms Of Service</a></li>
+                        <li><a href="#" class="text-decoration-none d-block mb-2 text-muted">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold fs-5 mb-3">Our Services</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none d-block mb-2 text-muted">Web Design</a></li>
+                        <li><a href="#" class="text-decoration-none d-block mb-2 text-muted">Web Developement</a></li>
+                        <li><a href="#" class="text-decoration-none d-block mb-2 text-muted">Product Management</a></li>
+                        <li><a href="#" class="text-decoration-none d-block mb-2 text-muted">Marketing</a></li>
+                        <li><a href="#" class="text-decoration-none d-block mb-2 text-muted">Graphic Design</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold fs-5 mb-3">Hic solutasetp</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none d-block mb-2 text-muted">Molestiae accusamus
+                                iure</a></li>
+                        <li><a href="#" class="text-decoration-none d-block mb-2 text-muted">Excepturi dignissimos</a>
+                        </li>
+                        <li><a href="#" class="text-decoration-none d-block mb-2 text-muted">Suscipit distinctio</a>
+                        </li>
+                        <li><a href="#" class="text-decoration-none d-block mb-2 text-muted">Dilecta</a></li>
+                        <li><a href="#" class="text-decoration-none d-block mb-2 text-muted">Sit quas consectetur</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold fs-5 mb-3">Nobis illum</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none d-block mb-2 text-muted">Ipsam</a></li>
+                        <li><a href="#" class="text-decoration-none d-block mb-2 text-muted">Laudantium dolorum</a></li>
+                        <li><a href="#" class="text-decoration-none d-block mb-2 text-muted">Dinera</a></li>
+                        <li><a href="#" class="text-decoration-none d-block mb-2 text-muted">Trodelas</a></li>
+                        <li><a href="#" class="text-decoration-none d-block mb-2 text-muted">Flexo</a></li>
+                    </ul>
+                </div>
+
+                <div class="text-center border-top mt-4 pt-3">
+                    <p class="mb-1">© Copyright <strong>MediNest</strong> All Rights Reserved</p>
+                    <p class="mb-0">Designed by <a href="https://bootstrapmade.com/" target="_blank"
+                            class="text-primary fw-semibold text-decoration-none">BootstrapMade</a></p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
